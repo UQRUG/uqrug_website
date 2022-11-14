@@ -2,10 +2,10 @@ project:
   type: website
 
 website:
-  title: "UQRUG"
-  favicon: "uqrug_nt.png"
+  title: "UQRUG"   
+  favicon: "uqrug.png"
   navbar:
-    logo: "uqrug_nt.png"
+    logo: "uqrug.png"
     background: "#48206c"  
     foreground: "white" 
     right:
