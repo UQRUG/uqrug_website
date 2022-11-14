@@ -17,6 +17,23 @@ about:
       href: https://github.com/uqlibrary/technology-training
 
 ---
+
+<style>
+
+#title-block-header {
+  position: relative;
+}
+
+
+
+#quarto-content{
+margin-top: -205px;
+padding-top: 175px; 
+}
+
+</style>
+
+
 Welcome to the UQRUG monthly meetup!
 
 ### Who are we?
