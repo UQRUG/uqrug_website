@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  title: "UQRUG"
+  favicon: "uqrug_nt.png"
+  navbar:
+    logo: "uqrug_nt.png"
+    background: "#48206c"  
+    foreground: "white" 
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/uqlibrary/technology-training
+        aria-label: github
+      - icon: twitter
+        href: https://twitter.com/UQ_RUG
+        aria-label: Twitter 
+      - icon: file-earmark-text
+        href: https://frama.link/uqrug 
+        aria-label: Collaborative Document
+      - icon: chat-right
+        href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
+        aria-label: UQ Chat
+
+    
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
