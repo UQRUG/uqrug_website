@@ -19,18 +19,10 @@ about:
 ---
 
 <style>
-
-#title-block-header {
-  position: relative;
-}
-
-
-
 #quarto-content{
 margin-top: -205px;
 padding-top: 175px; 
 }
-
 </style>
 
 
