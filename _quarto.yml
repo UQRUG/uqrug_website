@@ -3,6 +3,7 @@ project:
 
 website:
   title: "UQRUG"   
+  image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
   navbar:
     logo: "uqrug.png"
