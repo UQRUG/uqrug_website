@@ -5,7 +5,7 @@ website:
   title: "UQRUG"   
   image: "uqrug_preview.png"
   twitter-card:
-    image: "https://quarto.org/docs/websites/images/tools.png"
+    image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
   navbar:
     logo: "uqrug.png"
@@ -33,4 +33,4 @@ format:
     toc: true
 
 editor: visual
-
+ 
