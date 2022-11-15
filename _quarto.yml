@@ -3,13 +3,13 @@ project:
 
 website:
   title: "UQRUG"   
-  favicon: "uqrug.png"
+  favicon: "uqrug_fav.png"  
   navbar:
     logo: "uqrug.png"
     background: "#48206c"  
     foreground: "white" 
     right:
-      - about.qmd
+      - events.qmd
       - icon: github
         href: https://github.com/uqlibrary/technology-training
         aria-label: github

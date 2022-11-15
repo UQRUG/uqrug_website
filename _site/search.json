@@ -4,13 +4,20 @@
     "href": "index.html",
     "title": "UQRUG",
     "section": "",
-    "text": "Welcome to the UQRUG monthly meetup!\n\nWho are we?\nThis is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.\n\n\nWhen do we meet?\nWe meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event on the Library training page\nYou can also reach out any other time on chat.uq.edu.au\n\n\nWho can attend?\nAnyone who wants to learn or share their knowledge are welcome to attend UQRUG.\n\n\nHow do I get the Zoom link?\nIf you have a UQ affiliated account, you can sign up to the next event on the Library training page\nOtherwise you can email the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "UQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.\n\nWhen do we meet?\nWe meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event on the Library training page\n\n\nWho can attend?\nAnyone who wants to learn or share their knowledge are welcome to attend UQRUG.\n\n\nHow do I get the Zoom link?\nIf you have a UQ affiliated account, you can sign up to the next event on the Library training page\nOtherwise you can email the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Upcoming Events",
     "section": "",
-    "text": "We meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event on the Library training page\nYou can find our monthly Collaborative Document here.\nFor more information, reach out to the UQ Library training team: training@library.uq.edu.au"
+    "text": "We’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nOur main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.\nThis week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "events.html",
+    "href": "events.html",
+    "title": "Upcoming Events",
+    "section": "",
+    "text": "We’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nOur main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.\nThis week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team: training@library.uq.edu.au"
   }
 ]
