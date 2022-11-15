@@ -8,7 +8,7 @@ website:
     logo: "uqrug.png"
     background: "#48206c"  
     foreground: "white" 
-    right:
+    right: 
       - events.qmd
       - icon: github
         href: https://github.com/uqlibrary/technology-training
@@ -21,8 +21,7 @@ website:
         aria-label: Collaborative Document
       - icon: chat-right
         href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
-        aria-label: UQ Chat
-
+        aria-label: UQ Chat 
     
 format:
   html:

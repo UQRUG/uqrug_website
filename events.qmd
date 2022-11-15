@@ -16,6 +16,10 @@ about:
     - icon: chat-right
       text: UQ Chat
       href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
+    - icon: globe
+      text: Created with quarto
+      href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
+
 ---
 
 ## December 7th UQRUG Drop-in
@@ -26,12 +30,10 @@ Our main purpose is to serve as a drop-in help session for help with R and RStud
 
 This week Nick will be briefly going over creating animated and interactive plots in R using the packages [gganimate](https://gganimate.com/) and [plotly](https://plotly.com/r/animations/).
 
-
 <p float="left">
-  <img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;" />
-  <img src="https://community.rstudio.com/uploads/default/original/3X/4/4/44b540951af86190ea817a3333ba114e335aed35.jpeg" height="100" style="margin-right:-0.2em;" /> 
-  <img src="https://gganimate.com/reference/figures/logo.png" height="100" style="margin-right:-0.89em;" />
-  <img src="https://raw.githubusercontent.com/plotly/plotly.R/master/man/figures/plotly.png" height="100" />
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="https://community.rstudio.com/uploads/default/original/3X/4/4/44b540951af86190ea817a3333ba114e335aed35.jpeg" height="100" style="margin-right:-0.2em;"/> <img src="https://gganimate.com/reference/figures/logo.png" height="100" style="margin-right:-0.89em;"/> <img src="https://raw.githubusercontent.com/plotly/plotly.R/master/man/figures/plotly.png" height="100"/>
+
 </p>
 
 **When** Wednesday 7th December, 12 - 2pm
