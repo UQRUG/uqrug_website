@@ -26,7 +26,6 @@ about:
 
 ```{=html}
 
-<img src="uqrug_preview3.png" class="about-image " style="width: 100%;display: none;">
 
 <style>
 #title-block-header{

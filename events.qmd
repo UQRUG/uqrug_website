@@ -2,7 +2,7 @@
 title: "Upcoming Events"
  
 about:
-  template: marquee
+  template: marquee 
   links:
     - icon: twitter
       text: Twitter
