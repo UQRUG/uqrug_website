@@ -1,7 +1,7 @@
 project:
   type: website
 
-website: 
+website:
   title: "UQRUG"   
   image: "uqrug_preview3.png"
   twitter-card: 
