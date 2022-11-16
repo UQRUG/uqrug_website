@@ -1,6 +1,6 @@
 ---
 title: "Upcoming Events"
-
+ 
 about:
   template: marquee
   links:
