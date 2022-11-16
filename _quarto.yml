@@ -3,8 +3,9 @@ project:
 
 website: 
   title: "UQRUG"   
-  twitter-card:
-    image: "uqrug_preview"
+  image: "uqrug_preview3.png"
+  twitter-card: 
+    image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
   description: "UQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community."
   navbar:

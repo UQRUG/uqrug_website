@@ -25,6 +25,10 @@ about:
 ---
 
 ```{=html}
+
+<meta property="og:image" content="https://uqrug.netlify.app/uqrug_preview3.png">
+<meta property="og:description" content="UQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.">
+
 <style>
 #title-block-header{
 display: none;
