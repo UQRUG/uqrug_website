@@ -25,9 +25,6 @@ about:
 ---
 
 ```{=html}
-
-<meta property="og:image"           content="https://uqrug.netlify.app/uqrug_preview.png" /> 
-
 <style>
 #title-block-header{
 display: none;
