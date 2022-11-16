@@ -19,7 +19,6 @@ about:
     - icon: globe
       text: Created with quarto
       href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
-
 ---
 
 ## December 7th UQRUG Drop-in
