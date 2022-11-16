@@ -8,7 +8,7 @@ website:
     image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
   navbar:
-    logo: "uqrug.png"
+    logo: "uqrug_preview.png"
     background: "#48206c"  
     foreground: "white" 
     right: 
