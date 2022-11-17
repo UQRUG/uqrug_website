@@ -3,7 +3,7 @@ project:
 
 website: 
   title: "UQRUG"   
-  image: "uqrug_preview.png"
+  image: "uqrug.png"
   twitter-card: 
     image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
