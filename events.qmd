@@ -4,6 +4,9 @@ title: "Upcoming Events"
 about:
   template: marquee 
   links:
+    - icon: hexagon-fill
+      text: R Workshops
+      href: https://web.library.uq.edu.au/library-services/training#keyword=Rstudio
     - icon: twitter
       text: Twitter
       href: https://twitter.com/UQ_RUG
