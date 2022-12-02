@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "UQRUG",
     "section": "",
-    "text": "UQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.\n\nWhen do we meet?\nWe meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event by searching for UQRUG on the Library training page\n\n\nHow do I get the Zoom link?\nIf you have a UQ affiliated account, you can sign up to the event directly through StudentHub:\n\nUQRUG - 7 December 2022\n\nOtherwise you can email the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "# meta details to add to index.html when updating this page\n#\n#\n\n\n  The University of Queensland R Users Group\n\n\nUQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.\n\nWhen do we meet?\nWe meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event by searching for UQRUG on the Library training page\n\n\nHow do I get the Zoom link?\nIf you have a UQ affiliated account, you can sign up to the event directly through StudentHub:\n\nUQRUG - 7 December 2022\n\nOtherwise you can email the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
     "objectID": "about.html",
@@ -19,5 +19,26 @@
     "title": "Upcoming Events",
     "section": "",
     "text": "We’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nOur main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.\nThis week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "community.html",
+    "href": "community.html",
+    "title": "Community Groups",
+    "section": "",
+    "text": "For UQ researchers to get support with research-related technical issues.\nWhen: Weekly on Tuesdays, 3pm–4pm (AEST)\nWhere: Online. For Zoom meeting details please email rcc-support@uq.edu.au\nMore Details: The RCC Hacky Hour UQ website"
+  },
+  {
+    "objectID": "community.html#uq-geospatial-analysis-community-of-practice",
+    "href": "community.html#uq-geospatial-analysis-community-of-practice",
+    "title": "Community Groups",
+    "section": "UQ GeoSpatial Analysis Community of Practice",
+    "text": "UQ GeoSpatial Analysis Community of Practice\nA monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.\nWhen: The last Thursday of the month, 2:30pm–4:30pm (AEST)\nWhere: Online. For meeting details please email Mitch at mitchel.rudge@uq.edu.au\nMore Details: The UQ GeoSpatial Analysis Community website"
+  },
+  {
+    "objectID": "community.html#qutuq-office-hours",
+    "href": "community.html#qutuq-office-hours",
+    "title": "Community Groups",
+    "section": "QUT/UQ Office Hours",
+    "text": "QUT/UQ Office Hours\nFor Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.\nWhen: Fortnightly on Tuesdays, 2pm–3pm (AEDT).\nWhere: Online. For Zoom meeting details please register to attend here.\nMore Details: The QUT Digital Observatory website."
   }
 ]

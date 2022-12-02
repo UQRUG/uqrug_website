@@ -13,7 +13,10 @@ website:
     background: "#48206c"  
     foreground: "white" 
     right: 
+      - text: Home
+        href: index.qmd
       - events.qmd 
+      - community.qmd
       - icon: github
         href: https://github.com/uqlibrary/technology-training
         aria-label: github

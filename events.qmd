@@ -34,7 +34,7 @@ This week Nick will be briefly going over creating animated and interactive plot
 
 <p float="left">
 
-<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="https://community.rstudio.com/uploads/default/original/3X/4/4/44b540951af86190ea817a3333ba114e335aed35.jpeg" height="100" style="margin-right:-0.2em;"/> <img src="https://gganimate.com/reference/figures/logo.png" height="100" style="margin-right:-0.89em;"/> <img src="https://raw.githubusercontent.com/plotly/plotly.R/master/man/figures/plotly.png" height="100"/>
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="images/rstudio_logo.jpeg" height="100" style="margin-right:-0.2em;"/> <img src="images/gganimate_logo.png" height="100" style="margin-right:-0.89em;"/> <img src="images/plotly_logo.png" height="100"/>
 
 </p>
 
