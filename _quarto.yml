@@ -4,6 +4,9 @@ project:
 website: 
   title: "UQRUG"   
   image: "uqrug.png"
+  open-graph:
+    image: "uqrug_preview3.png"
+    description: "The University of Queensland R Users Group"
   twitter-card: 
     image: "uqrug_preview.png"
   favicon: "uqrug_fav.png"  
