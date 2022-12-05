@@ -24,32 +24,42 @@ about:
       href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
 ---
 
+## R-Ladies Brisbane
+
+R-Ladies Brisbane welcomes members of all R proficiency levels. The community is designed to develop our members' R skills & knowledge through social, collaborative learning & sharing. Supporting minority identity access to STEM skills & careers, the Free Software Movement, and contributing to the global R community!
+
+|     **When**: Find their events on [MeetUP](https://www.meetup.com/rladies-brisbane/)
+
+|     **Where**: Online and in Person.
+
+|     **More Details**: The [R Ladies Brisbane GitHub](https://github.com/rladies/meetup-presentations_brisbane)
+
 ## Hacky Hour UQ
 
 For UQ researchers to get support with research-related technical issues.
 
-**When**: Weekly on Tuesdays, 3pm--4pm (AEST)
+|     **When**: Weekly on Tuesdays, 3pm--4pm (AEST)
 
-**Where**: Online. For Zoom meeting details please email rcc-support\@uq.edu.au
+|     **Where**: Online. For Zoom meeting details please email rcc-support\@uq.edu.au
 
-**More Details**: The [RCC Hacky Hour UQ website](https://rcc.uq.edu.au/meetups#hacky-hour)
+|     **More Details**: The [RCC Hacky Hour UQ website](https://rcc.uq.edu.au/meetups#hacky-hour)
 
 ## UQ GeoSpatial Analysis Community of Practice
 
 A monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.
 
-**When**: The last Thursday of the month, 2:30pm--4:30pm (AEST)
+|     **When**: The last Thursday of the month, 2:30pm--4:30pm (AEST)
 
-**Where**: Online. For meeting details please email Mitch at mitchel.rudge\@uq.edu.au
+|     **Where**: Online. For meeting details please email Mitch at mitchel.rudge\@uq.edu.au
 
-**More Details**: The [UQ GeoSpatial Analysis Community website](https://geospatial-community.netlify.app/)
+|     **More Details**: The [UQ GeoSpatial Analysis Community website](https://geospatial-community.netlify.app/)
 
 ## QUT/UQ Office Hours
 
 For Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.
 
-**When**: Fortnightly on Tuesdays, 2pm--3pm (**AEDT**).
+|     **When**: Fortnightly on Tuesdays, 2pm--3pm (**AEDT**).
 
-**Where**: Online. For Zoom meeting details please [register to attend here](https://qut.zoom.us/meeting/register/tZEvcOqrrjkvHNH2ZqG5yed7Gh15Rp19Vatm).
+|     **Where**: Online. For Zoom meeting details please [register to attend here](https://qut.zoom.us/meeting/register/tZEvcOqrrjkvHNH2ZqG5yed7Gh15Rp19Vatm).
 
-**More Details**: The [QUT Digital Observatory website](https://research.qut.edu.au/digitalobservatory/office-hours/).
+|     **More Details**: The [QUT Digital Observatory website](https://research.qut.edu.au/digitalobservatory/office-hours/).
