@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -72,43 +77,50 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <img src="./uqrug.png" alt="">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./uqrug.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">UQRUG</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./events.html" aria-current="page">Upcoming Events</a>
+    <a class="nav-link active" href="./events.html" aria-current="page">
+ <span class="menu-text">Upcoming Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html">Community Groups</a>
+    <a class="nav-link" href="./community.html">
+ <span class="menu-text">Community Groups</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/uqlibrary/technology-training"><i class="bi bi-github" role="img" aria-label="github">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/UQ_RUG"><i class="bi bi-twitter" role="img" aria-label="Twitter">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://frama.link/uqrug"><i class="bi bi-file-earmark-text" role="img" aria-label="Collaborative Document">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au"><i class="bi bi-chat-right" role="img" aria-label="UQ Chat">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -133,15 +145,15 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
   </div>
 </header> <main class="content" id="quarto-document-content">
-<section id="december-7th-uqrug-drop-in" class="level2">
-<h2 data-anchor-id="december-7th-uqrug-drop-in">December 7th UQRUG Drop-in</h2>
+<section id="january-25th-uqrug-drop-in" class="level2">
+<h2 data-anchor-id="january-25th-uqrug-drop-in">January 25th UQRUG Drop-in</h2>
 <p>We’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.</p>
 <p>Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.</p>
-<p>This week Nick will be briefly going over creating animated and interactive plots in R using the packages <a href="https://gganimate.com/">gganimate</a> and <a href="https://plotly.com/r/animations/">plotly</a>.</p>
+<p>This week Nick will be briefly going over creating quick and easy interactive dashboards to display your data with R using the package <a href="https://pkgs.rstudio.com/flexdashboard/">flexdashboard</a> (it’s surprisingly straightforward, and uses RMarkdown, so you can export as HTML).</p>
 <p float="left">
-</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="images/rstudio_logo.jpeg" height="100" style="margin-right:-0.2em;"> <img src="images/gganimate_logo.png" height="100" style="margin-right:-0.89em;"> <img src="images/plotly_logo.png" height="100"></p>
+</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="images/rstudio_logo.jpeg" height="100" style="margin-right:-0.2em;"> <img src="https://pkgs.rstudio.com/flexdashboard/reference/figures/logo.png" height="100" style="margin-right:-0.89em;"></p>
 <p></p>
-<p><strong>When</strong> Wednesday 7th December, 12 - 2pm</p>
+<p><strong>When</strong> Wednesday 25th January, 12 - 2pm</p>
 <p><strong>Where</strong> St Lucia, Duhig North Central Library (12), Training room <strong>12-N109</strong>, and on Zoom</p>
 <p>Sign up to the next event on the <a href="https://web.library.uq.edu.au/library-services/training#keyword=UQRUG">Library training page</a></p>
 <p>For more information, reach out to the UQ Library training team: training@library.uq.edu.au</p>
@@ -213,7 +225,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -241,31 +270,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
