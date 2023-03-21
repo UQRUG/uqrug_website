@@ -13,6 +13,8 @@ DisableComments: no
 
 Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a **customisable website or blog in R** using the [quarto](https://quarto.org/) package.
 
+We were considering a spatial session this month, but the [Geospatial Community](https://brisbane-geocommunity.netlify.app) are running an [R Spatial session this Thursday March 23rd](https://brisbane-geocommunity.netlify.app/posts/2023-03-10-newletter/).
+
 <p float="left">
 
 <img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="quarto.svg" height="100" style="margin-right:-0.2em;"/>
