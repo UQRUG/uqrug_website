@@ -25,7 +25,20 @@ about:
 ---
 
 ## R-Ladies Brisbane
+:::: {.columns}
 
+::: {.column width="17%"}
+<p float="left">
+<img src="images/rladies.jpg" height="100%" width="100%"/>
+</p>
+
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
 R-Ladies Brisbane welcomes members of all R proficiency levels. The community is designed to develop our members' R skills & knowledge through social, collaborative learning & sharing. Supporting minority identity access to STEM skills & careers, the Free Software Movement, and contributing to the global R community!
 
 |     **When**: Find their events on [MeetUP](https://www.meetup.com/rladies-brisbane/)
@@ -34,8 +47,27 @@ R-Ladies Brisbane welcomes members of all R proficiency levels. The community is
 
 |     **More Details**: The [R Ladies Brisbane GitHub](https://github.com/rladies/meetup-presentations_brisbane)
 
-## Hacky Hour UQ
+:::
 
+::::
+
+
+
+## Hacky Hour UQ
+:::: {.columns}
+
+::: {.column width="17%"}
+<p float="left">
+<img src="images/uqhackyhour.png" height="100%" width="100%"/>
+</p>
+
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
 For UQ researchers to get support with research-related technical issues.
 
 |     **When**: Weekly on Tuesdays, 3pm--4pm (AEST)
@@ -44,8 +76,25 @@ For UQ researchers to get support with research-related technical issues.
 
 |     **More Details**: The [RCC Hacky Hour UQ website](https://rcc.uq.edu.au/meetups#hacky-hour)
 
-## UQ GeoSpatial Analysis Community of Practice
+:::
 
+::::
+
+## UQ GeoSpatial Analysis Community of Practice
+:::: {.columns}
+
+::: {.column width="17%"}
+<p float="left">
+<img src="images/turkeypin.svg" height="100%" width="100%"/>
+</p>
+
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
 A monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.
 
 |     **When**: The last Thursday of the month, 2:30pm--4:30pm (AEST)
@@ -53,13 +102,35 @@ A monthly geospatial skill sharing tutorial sessions where a member of the commu
 |     **Where**: Online. For meeting details please email Mitch at mitchel.rudge\@uq.edu.au
 
 |     **More Details**: The [UQ GeoSpatial Analysis Community website](https://geospatial-community.netlify.app/)
+:::
+
+::::
+
+
 
 ## QUT/UQ Office Hours
+:::: {.columns}
 
+::: {.column width="17%"}
+<p float="left">
+<img src="images/ado.png" height="100%" width="100%"/>
+</p>
+
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
 For Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.
 
-|     **When**: Fortnightly on Tuesdays, 2pm--3pm (**AEDT**).
+|     **When**: Fortnightly on Tuesdays, 2pm--3pm **AEDT** (1pm AEST).
 
 |     **Where**: Online. For Zoom meeting details please [register to attend here](https://qut.zoom.us/meeting/register/tZEvcOqrrjkvHNH2ZqG5yed7Gh15Rp19Vatm).
 
-|     **More Details**: The [QUT Digital Observatory website](https://research.qut.edu.au/digitalobservatory/office-hours/).
+|     **More Details**: The [Australian Digital Observatory website](https://www.digitalobservatory.net.au/office-hours/).
+
+:::
+
+::::

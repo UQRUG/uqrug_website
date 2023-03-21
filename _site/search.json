@@ -32,21 +32,21 @@
     "href": "community.html#uq-geospatial-analysis-community-of-practice",
     "title": "Community Groups",
     "section": "UQ GeoSpatial Analysis Community of Practice",
-    "text": "UQ GeoSpatial Analysis Community of Practice\nA monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.\n    When: The last Thursday of the month, 2:30pm–4:30pm (AEST)\n    Where: Online. For meeting details please email Mitch at mitchel.rudge@uq.edu.au\n    More Details: The UQ GeoSpatial Analysis Community website"
+    "text": "UQ GeoSpatial Analysis Community of Practice\n\n\n\n\n\n\n\n\nA monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.\n    When: The last Thursday of the month, 2:30pm–4:30pm (AEST)\n    Where: Online. For meeting details please email Mitch at mitchel.rudge@uq.edu.au\n    More Details: The UQ GeoSpatial Analysis Community website"
   },
   {
     "objectID": "community.html#qutuq-office-hours",
     "href": "community.html#qutuq-office-hours",
     "title": "Community Groups",
     "section": "QUT/UQ Office Hours",
-    "text": "QUT/UQ Office Hours\nFor Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.\n    When: Fortnightly on Tuesdays, 2pm–3pm (AEDT).\n    Where: Online. For Zoom meeting details please register to attend here.\n    More Details: The QUT Digital Observatory website."
+    "text": "QUT/UQ Office Hours\n\n\n\n\n\n\n\n\nFor Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.\n    When: Fortnightly on Tuesdays, 2pm–3pm AEDT (1pm AEST).\n    Where: Online. For Zoom meeting details please register to attend here.\n    More Details: The Australian Digital Observatory website."
   },
   {
     "objectID": "community.html#hacky-hour-uq",
     "href": "community.html#hacky-hour-uq",
     "title": "Community Groups",
     "section": "Hacky Hour UQ",
-    "text": "Hacky Hour UQ\nFor UQ researchers to get support with research-related technical issues.\n    When: Weekly on Tuesdays, 3pm–4pm (AEST)\n    Where: Online. For Zoom meeting details please email rcc-support@uq.edu.au\n    More Details: The RCC Hacky Hour UQ website"
+    "text": "Hacky Hour UQ\n\n\n\n\n\n\n\n\nFor UQ researchers to get support with research-related technical issues.\n    When: Weekly on Tuesdays, 3pm–4pm (AEST)\n    Where: Online. For Zoom meeting details please email rcc-support@uq.edu.au\n    More Details: The RCC Hacky Hour UQ website"
   },
   {
     "objectID": "UQRUG_flex.html",
@@ -93,7 +93,7 @@
   {
     "objectID": "posts/2023-01-25-January-flexdashboard/index.html",
     "href": "posts/2023-01-25-January-flexdashboard/index.html",
-    "title": "March 29th UQRUG Drop-in + Websites with Quarto",
+    "title": "January 25th UQRUG Drop-in + Dashboard with Flexdashboard",
     "section": "",
     "text": "This week Nick will be briefly going over creating quick and easy interactive dashboards to display your data with R using the package flexdashboard (it’s surprisingly straightforward, and uses RMarkdown, so you can export as HTML).\n\n  \n\nWhen Wednesday 25th January, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   },
