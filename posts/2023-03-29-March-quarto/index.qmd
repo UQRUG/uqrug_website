@@ -1,0 +1,28 @@
+---
+title: "March 29th UQRUG Drop-in + Websites with Quarto"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-03-21'
+image: quarto.svg
+slug: mar2023
+categories:
+  - workshop
+tags: [quarto, drop-in, help, website, blog]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a **customisable website or blog in R** using the [quarto](https://quarto.org/) package.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="quarto.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 29th March, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://web.library.uq.edu.au/library-services/training#keyword=UQRUG)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>

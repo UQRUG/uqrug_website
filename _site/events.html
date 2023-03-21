@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./uqrug_fav.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -58,7 +60,37 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-workshops .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-workshops'] = new List('listing-workshops', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="UQRUG - Upcoming Events">
@@ -145,20 +177,107 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
   </div>
 </header> <main class="content" id="quarto-document-content">
-<section id="february-22th-uqrug-drop-in" class="level2">
-<h2 data-anchor-id="february-22th-uqrug-drop-in">February 22th UQRUG Drop-in</h2>
-<p>Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.</p>
-<p>This week Nick will be briefly going over how to create a customisable online form in R using the <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a> and <a href="https://shiny.rstudio.com/">Shiny</a> packages.</p>
-<p float="left">
-</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="https://googlesheets4.tidyverse.org/logo.png" height="100" style="margin-right:-0.2em;"> <img src="https://raw.githubusercontent.com/rstudio/shiny/main/man/figures/logo.png" height="100" style="margin-right:-0.89em;"></p>
-<p></p>
-<p><strong>When</strong> Wednesday 22th February, 12 - 2pm</p>
-<p><strong>Where</strong> St Lucia, Duhig North Central Library (12), Training room <strong>12-N109</strong>, and on Zoom</p>
-<p>Sign up to the next event on the <a href="https://web.library.uq.edu.au/library-services/training#keyword=UQRUG">Library training page</a></p>
-<p>For more information, reach out to the UQ Library training team: training@library.uq.edu.au</p>
+<style>
+div.quarto-post .metadata{
+display: none;
+}
+</style>
+<p>Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. <br></p>
+<div id="listing-workshops" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1679320800000" data-listing-file-modified-sort="1679370703978" data-listing-reading-time-sort="0.465">
+<div class="thumbnail">
+<p><a href="./posts/2023-03-29-March-quarto/index.html"> <img src="./posts/2023-03-29-March-quarto/quarto.svg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2023-03-29-March-quarto/index.html">
+<h3 class="no-anchor listing-title">
+March 29th UQRUG Drop-in + Websites with Quarto
+</h3>
+<div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a <strong>customisable website or blog in R</strong> using the …
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2023-03-29-March-quarto/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="workshop" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1679372231926" data-listing-reading-time-sort="0.43">
+<div class="thumbnail">
+<p><a href="./posts/2023-02-22-February-forms/index.html"> <img src="./posts/2023-02-22-February-forms/googlesheets4.svg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2023-02-22-February-forms/index.html">
+<h3 class="no-anchor listing-title">
+February 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4
+</h3>
+<div class="listing-subtitle">
+</div>
+<div class="listing-description">
+This week Nick will be briefly going over how to create a <strong>customisable online form in R</strong> using the googlesheets4 and Shiny packages.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2023-02-22-February-forms/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="workshop" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1679372302534" data-listing-reading-time-sort="0.495">
+<div class="thumbnail">
+<p><a href="./posts/2023-01-25-January-flexdashboard/index.html"> <img src="./posts/2023-01-25-January-flexdashboard/flexdashboard.svg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2023-01-25-January-flexdashboard/index.html">
+<h3 class="no-anchor listing-title">
+January 25th UQRUG Drop-in + Dashboard with Flexdashboard
+</h3>
+<div class="listing-subtitle">
+</div>
+<div class="listing-description">
+This week Nick will be briefly going over <strong>creating quick and easy interactive dashboards to display your data with R</strong> using the package flexdashboard (it’s surprisingly straightforward, and uses…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2023-01-25-January-flexdashboard/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="workshop" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1679372363637" data-listing-reading-time-sort="0.5">
+<div class="thumbnail">
+<p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> <img src="./posts/2022-12-07-December-gganimate-plotly/gganimate.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2022-12-07-December-gganimate-plotly/index.html">
+<h3 class="no-anchor listing-title">
+December 7th UQRUG Drop-in + Animated and Interactive Plots
+</h3>
+<div class="listing-subtitle">
+</div>
+<div class="listing-description">
+This week Nick will be briefly going over creating <strong>animated and interactive plots in R</strong> using the packages gganimate and plotly.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
-</section>
 </main> 
     <div class="about-footer"><div class="about-links">
   <a href="https://web.library.uq.edu.au/library-services/training#keyword=Rstudio" class="about-link">

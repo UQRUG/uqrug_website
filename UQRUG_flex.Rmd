@@ -1,0 +1,50 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+
+owid <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv", na.strings=c("","NA")) %>% 
+  select('iso_code', 'country', 'year', 'population', 'gdp', 'co2', 'methane', 'nitrous_oxide') %>% 
+  filter(iso_code != is.na(iso_code))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+owid %>% 
+  group_by(country) %>% 
+  ggplot(aes(x=year, 
+             y=co2)) +
+  geom_bar(stat = "identity") +
+    geom_label(aes(x = 1980, y = 28000, label = "This is fine"))
+    
+ 
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+

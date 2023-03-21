@@ -1,6 +1,12 @@
 ---
 title: "Upcoming Events"
- 
+listing:
+    - id: workshops
+      contents: posts
+      sort: "date desc"
+      type: default
+      filter-ui: true
+      fields: [image, title, description]
 about:
   template: marquee 
   links:
@@ -24,22 +30,15 @@ about:
       href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
 ---
 
-## February 22th UQRUG Drop-in
+```{=html}
+<style>
+div.quarto-post .metadata{
+display: none;
+}
+</style>
+```
+Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. 
+</br>
 
-Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.
-
-This week Nick will be briefly going over how to create a customisable online form in R using the [googlesheets4](https://googlesheets4.tidyverse.org/) and [Shiny](https://shiny.rstudio.com/) packages.
-
-<p float="left">
-
-<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="https://googlesheets4.tidyverse.org/logo.png" height="100" style="margin-right:-0.2em;"/> <img src="https://raw.githubusercontent.com/rstudio/shiny/main/man/figures/logo.png" height="100" style="margin-right:-0.89em;"/>
-
-</p>
-
-**When** Wednesday 22th February, 12 - 2pm
-
-**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
-
-Sign up to the next event on the [Library training page](https://web.library.uq.edu.au/library-services/training#keyword=UQRUG)
-
-For more information, reach out to the UQ Library training team: training\@library.uq.edu.au
+::: {#workshops}
+:::

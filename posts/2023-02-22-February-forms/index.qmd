@@ -1,0 +1,28 @@
+---
+title: "February 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-02-22'
+image: googlesheets4.svg
+slug: mar2023
+categories:
+  - workshop
+tags: [shiny, googlesheets4, forms, drop-in, help, workshop]
+DisableComments: no
+---
+
+This week Nick will be briefly going over how to create a **customisable online form in R** using the [googlesheets4](https://googlesheets4.tidyverse.org/) and [Shiny](https://shiny.rstudio.com/) packages.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="googlesheets4.svg" height="100" style="margin-right:-0.2em;"/> <img src="shiny.svg" height="100" style="margin-right:-0.89em;"/>
+
+</p>
+
+**When** Wednesday 22th February, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://web.library.uq.edu.au/library-services/training#keyword=UQRUG)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>

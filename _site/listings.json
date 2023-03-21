@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/events.html",
+    "items": [
+      "/posts/2023-03-29-March-quarto/index.html",
+      "/posts/2023-02-22-February-forms/index.html",
+      "/posts/2023-01-25-January-flexdashboard/index.html",
+      "/posts/2022-12-07-December-gganimate-plotly/index.html"
+    ]
+  },
+  {
+    "listing": "/workshops.html",
+    "items": [
+      "/posts/2023-03-29-March-quarto/index.html",
+      "/posts/2023-02-22-February-forms/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/2023-03-29-March-quarto/index.html",
+      "/posts/2023-02-22-February-forms/index.html",
+      "/posts/2023-01-25-January-flexdashboard/index.html",
+      "/posts/2022-12-07-December-gganimate-plotly/index.html"
+    ]
+  }
+]

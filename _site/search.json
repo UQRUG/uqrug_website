@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "UQRUG",
     "section": "",
-    "text": "The University of Queensland R Users Group\n\n\nUQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.\n\nWhen do we meet?\nWe meet every last Wednesday of the month (12-2 pm, currently online and in person): sign up to the next event by searching for UQRUG on the Library training page\n\n\nHow do I get the Zoom link?\nIf you have a UQ affiliated account, you can sign up to the event directly through StudentHub:\n\nUQRUG - 22 February 2023\n\nOtherwise you can email the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "The University of Queensland R Users Group\nUQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community."
   },
   {
     "objectID": "about.html",
@@ -18,7 +18,7 @@
     "href": "events.html",
     "title": "Upcoming Events",
     "section": "",
-    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week.\nThis week Nick will be briefly going over how to create a customisable online form in R using the googlesheets4 and Shiny packages.\n\n  \n\nWhen Wednesday 22th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team: training@library.uq.edu.au"
+    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "community.html",
@@ -47,5 +47,61 @@
     "title": "Community Groups",
     "section": "Hacky Hour UQ",
     "text": "Hacky Hour UQ\nFor UQ researchers to get support with research-related technical issues.\n    When: Weekly on Tuesdays, 3pm–4pm (AEST)\n    Where: Online. For Zoom meeting details please email rcc-support@uq.edu.au\n    More Details: The RCC Hacky Hour UQ website"
+  },
+  {
+    "objectID": "UQRUG_flex.html",
+    "href": "UQRUG_flex.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "owid %>% \n  group_by(country) %>% \n  ggplot(aes(x=year, \n             y=co2)) +\n  geom_bar(stat = \"identity\") +\n    geom_label(aes(x = 1980, y = 28000, label = \"This is fine\"))\n\nWarning: Removed 15174 rows containing missing values (`position_stack()`)."
+  },
+  {
+    "objectID": "UQRUG_flex.html#column-1",
+    "href": "UQRUG_flex.html#column-1",
+    "title": "Untitled",
+    "section": "Column",
+    "text": "Column\n\nChart B\n\n\n\n\n\nChart C"
+  },
+  {
+    "objectID": "posts/2023-02-22-February-forms/index.html",
+    "href": "posts/2023-02-22-February-forms/index.html",
+    "title": "February 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4",
+    "section": "",
+    "text": "This week Nick will be briefly going over how to create a customisable online form in R using the googlesheets4 and Shiny packages.\n\n  \n\nWhen Wednesday 22th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-03-29-March-quarto/index.html",
+    "href": "posts/2023-03-29-March-quarto/index.html",
+    "title": "March 29th UQRUG Drop-in + Websites with Quarto",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a customisable website or blog in R using the quarto package.\n\n \n\nWhen Wednesday 29th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "workshops.html",
+    "href": "workshops.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2022-12-07-December-gganimate-plotly/index.html",
+    "href": "posts/2022-12-07-December-gganimate-plotly/index.html",
+    "title": "December 7th UQRUG Drop-in + Animated and Interactive Plots",
+    "section": "",
+    "text": "This week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWe’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-01-25-January-flexdashboard/index.html",
+    "href": "posts/2023-01-25-January-flexdashboard/index.html",
+    "title": "March 29th UQRUG Drop-in + Websites with Quarto",
+    "section": "",
+    "text": "This week Nick will be briefly going over creating quick and easy interactive dashboards to display your data with R using the package flexdashboard (it’s surprisingly straightforward, and uses RMarkdown, so you can export as HTML).\n\n  \n\nWhen Wednesday 25th January, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "index.html#next-workshop",
+    "href": "index.html#next-workshop",
+    "title": "UQRUG",
+    "section": "Next Workshop",
+    "text": "Next Workshop\n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n\n\nMar 21, 2023\n\n\nNicholas Wiggins\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -1,0 +1,32 @@
+---
+title: "December 7th UQRUG Drop-in + Animated and Interactive Plots"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2022-12-07'
+image: gganimate.png
+slug: dec2022
+categories:
+  - workshop
+tags: [plotly, gganimate, plots, interactive, animated, drop-in, help, workshop]
+DisableComments: no
+---
+
+
+
+This week Nick will be briefly going over creating **animated and interactive plots in R** using the packages [gganimate](https://gganimate.com/) and [plotly](https://plotly.com/r/animations/).
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="70"/> <img src="RStudio.svg" height="70"/> <img src="gganimate.png" height="70"/> <img src="plotly.png" height="70"/>
+
+</p>
+
+We've pushed back this month's UQRUG to December 7th due to clashes with end of year events.
+
+**When** Wednesday 7th December, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://web.library.uq.edu.au/library-services/training#keyword=UQRUG)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
