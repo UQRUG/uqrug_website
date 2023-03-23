@@ -20,6 +20,7 @@ website:
         href: index.qmd
       - events.qmd 
       - community.qmd
+    tools:
       - icon: github
         href: https://github.com/uqlibrary/technology-training
         aria-label: github
