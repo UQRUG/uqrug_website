@@ -1,5 +1,6 @@
 ---
 title: "Events"
+toc: true
 listing:
     - id: workshops
       contents: posts
