@@ -3,7 +3,7 @@ project:
 
 website:
   title: "UQRUG"   
-  image: "uqrug.png"
+  image: "images/uqrug.png"
   open-graph:
     image: "images/uqrug_og.png"
     description: "The University of Queensland R Users Group"
