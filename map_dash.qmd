@@ -1,0 +1,86 @@
+---
+title: "Data Dashboard"
+---
+
+```{=html}
+<style>
+.column-margin{
+  grid-column: screen-start-inset/page-start !important;
+}
+.page-columns .column-screen-inset-right{
+  grid-column: page-start/screen-end-inset !important;
+}
+</style>
+```
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(tmap)
+library(crosstalk)
+library(DT)
+library(sf)
+library(dplyr)
+data(World)
+World <- filter(World, iso_a3 != "ATA" & iso_a3 != "ATF") %>% 
+  mutate(area = round(area), 
+         pop_est_dens = round(pop_est_dens),
+         gdp_cap_est = round(gdp_cap_est))
+wsd <- SharedData$new(World)
+
+knitr::opts_chunk$set(
+	fig.width = 8,
+	message = FALSE,
+	warning = FALSE,
+	echo=FALSE
+)
+```
+
+::: column-margin
+### Side
+
+```{r}
+
+filter_slider("gdp_cap_est", "GDP per cap ", wsd, ~gdp_cap_est, width = "97%", min = 0)
+
+filter_checkbox("continent", "Continent", wsd, ~continent, inline = TRUE)
+
+filter_select("income_grp", "Income Group", wsd, ~income_grp)
+
+```
+:::
+
+```{r}
+#| column: screen-inset-right
+#| layout-nrow: 1
+
+### Chart A
+
+plot_geo(wsd, text = ~paste(name, "<br />", "Life Exp:", life_exp, "<br />", "GDP per cap:", round(gdp_cap_est)), hoverinfo = 'text', color = ~continent, showlegend=FALSE, fill='tonext') %>% 
+    highlight("plotly_click")
+
+### Chart B
+
+  plot_ly(wsd) %>% 
+    add_trace(x = ~life_exp, color = ~continent, type="histogram")%>% layout(barmode = "stack") %>% 
+    highlight("plotly_selected")
+```
+
+```{r}
+#| column: screen-inset-right
+#| layout-nrow: 1
+
+### Chart C 
+
+  plot_ly(wsd) %>% 
+    add_trace(x = ~gdp_cap_est, y = ~life_exp, color = ~continent, size = ~pop_est, type="scatter",text = ~paste(name, "<br />", "Life Exp:", life_exp, "<br />", "GDP per cap:", round(gdp_cap_est)), hoverinfo = 'text')%>% 
+  layout(xaxis = list(type = "log")) %>% 
+    highlight("plotly_selected")
+
+### Chart D
+
+datatable(wsd, class = "compact",options=list(
+       pageLength = 5,
+       lengthMenu = c(5, 10, 15)))%>%
+
+   formatStyle( 0, target= 'row',  lineHeight='80%')
+```

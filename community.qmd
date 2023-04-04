@@ -80,7 +80,7 @@ For UQ researchers to get support with research-related technical issues.
 
 ::::
 
-## UQ GeoSpatial Analysis Community of Practice
+## The GeoSpatial Community
 :::: {.columns}
 
 ::: {.column width="17%"}
@@ -97,11 +97,11 @@ For UQ researchers to get support with research-related technical issues.
 ::: {.column width="80%"}
 A monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.
 
-|     **When**: The last Thursday of the month, 2:30pm--4:30pm (AEST)
+|     **When**: Around the last Thursday of the month in the afternoon.
 
-|     **Where**: Online. For meeting details please email Mitch at mitchel.rudge\@uq.edu.au
+|     **Where**: Online. For meeting details please email geocommunity @ gmail dot com
 
-|     **More Details**: The [UQ GeoSpatial Analysis Community website](https://geospatial-community.netlify.app/)
+|     **More Details**: The [GeoSpatial Community website](https://brisbane-geocommunity.netlify.app/)
 :::
 
 ::::
