@@ -25,13 +25,14 @@ about:
 ---
 
 ## R-Ladies Brisbane
-:::: {.columns}
 
+::: columns
 ::: {.column width="17%"}
 <p float="left">
-<img src="images/rladies.jpg" height="100%" width="100%"/>
-</p>
 
+[![](images/rladies.jpg){fig-alt="RLadies Logo" width="100%"}](https://github.com/rladies/meetup-presentations_brisbane)
+
+</p>
 :::
 
 ::: {.column width="3%"}
@@ -46,21 +47,18 @@ R-Ladies Brisbane welcomes members of all R proficiency levels. The community is
 |     **Where**: Online and in Person.
 
 |     **More Details**: The [R Ladies Brisbane GitHub](https://github.com/rladies/meetup-presentations_brisbane)
-
+:::
 :::
 
-::::
-
-
-
 ## Hacky Hour UQ
-:::: {.columns}
 
+::: columns
 ::: {.column width="17%"}
 <p float="left">
-<img src="images/uqhackyhour.png" height="100%" width="100%"/>
-</p>
 
+[![](images/uqhackyhour.png){fig-alt="UQ Hack Hour" width="100%"}](https://rcc.uq.edu.au/meetups#hacky-hour)
+
+</p>
 :::
 
 ::: {.column width="3%"}
@@ -75,19 +73,18 @@ For UQ researchers to get support with research-related technical issues.
 |     **Where**: Online. For Zoom meeting details please email rcc-support\@uq.edu.au
 
 |     **More Details**: The [RCC Hacky Hour UQ website](https://rcc.uq.edu.au/meetups#hacky-hour)
-
+:::
 :::
 
-::::
-
 ## The GeoSpatial Community
-:::: {.columns}
 
+::: columns
 ::: {.column width="17%"}
 <p float="left">
-<img src="images/turkeypin.svg" height="100%" width="100%"/>
-</p>
 
+[![](images/turkeypin.svg){fig-alt="GeoSpatial Community Logo" width="100%"}](https://brisbane-geocommunity.netlify.app/)
+
+</p>
 :::
 
 ::: {.column width="3%"}
@@ -99,23 +96,21 @@ A monthly geospatial skill sharing tutorial sessions where a member of the commu
 
 |     **When**: Around the last Thursday of the month in the afternoon.
 
-|     **Where**: Online. For meeting details please email geocommunity @ gmail dot com
+|     **Where**: Online. For meeting details please email geocommunity \@ gmail dot com
 
 |     **More Details**: The [GeoSpatial Community website](https://brisbane-geocommunity.netlify.app/)
 :::
-
-::::
-
-
+:::
 
 ## QUT/UQ Office Hours
-:::: {.columns}
 
+::: columns
 ::: {.column width="17%"}
 <p float="left">
-<img src="images/ado.png" height="100%" width="100%"/>
-</p>
 
+[![](images/ado.png){fig-alt="Australia Digital Observatory Logo" width="100%"}](https://www.digitalobservatory.net.au/office-hours/)
+
+</p>
 :::
 
 ::: {.column width="3%"}
@@ -130,7 +125,5 @@ For Australian researchers working with linguistics, text analytics, digital and
 |     **Where**: Online. For Zoom meeting details please [register to attend here](https://qut.zoom.us/meeting/register/tZEvcOqrrjkvHNH2ZqG5yed7Gh15Rp19Vatm).
 
 |     **More Details**: The [Australian Digital Observatory website](https://www.digitalobservatory.net.au/office-hours/).
-
 :::
-
-::::
+:::

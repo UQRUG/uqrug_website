@@ -3,7 +3,7 @@ title: "UQRUG"
 subtitle: "The University of Queensland R Users Group"
 image: images/uqrug.png
 toc: false
-image-height: "10em"
+image-height: "10em" 
 listing:
     - id: latest
       contents: posts
