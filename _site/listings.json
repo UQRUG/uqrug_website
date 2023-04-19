@@ -2,6 +2,7 @@
   {
     "listing": "/events.html",
     "items": [
+      "/posts/2023-04-26-April-AI/index.html",
       "/posts/2023-03-29-March-quarto/index.html",
       "/posts/2023-02-22-February-forms/index.html",
       "/posts/2023-01-25-January-flexdashboard/index.html",
@@ -18,6 +19,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-04-26-April-AI/index.html",
       "/posts/2023-03-29-March-quarto/index.html",
       "/posts/2023-02-22-February-forms/index.html",
       "/posts/2023-01-25-January-flexdashboard/index.html",
