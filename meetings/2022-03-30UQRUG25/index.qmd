@@ -1,0 +1,78 @@
+---
+title: UQRUG 25
+date: '2022-03-30'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-03-30: UQRUG 25
+
+#### Attendees
+
+* **Steph** (Library): helping out!
+* **Vicki Martin**: Postdoc, SEES
+* **Nisa Abeysinghe**
+* **Richard Bell**: PhD, POLSIS
+* **Chris Mancini**: HDR - MPhil, School of Civil Engineering
+* ... and 6 more UQRUGers!
+
+
+#### Topics discussed and code
+
+##### Big raster files
+
+Use terra instead of raster, and use a temporary directory:
+
+
+```{r}
+library(terra)
+terraOptions(tempdir = "path to somewhere with lots of space")
+as.points() # instead of rasterToPoints()
+```
+
+The [Research Computing Centre](https://rcc.uq.edu.au/) can also provide access to supercomputers
+
+
+##### [Patchwork](https://patchwork.data-imaginist.com/) for joining plots made with [ggforestplot](https://nightingalehealth.github.io/ggforestplot/articles/ggforestplot.html)
+
+To merge two plots with the same y-axis. After creating Forest plot 1 (with y-axis labels), create Forest plot 2 with y-axis labels removed:
+
+
+```{r}
+library(ggforestplot)
+F2plot <- 
+  forestplot(
+    df = F2,
+    name = term,
+    estimate = estimate,
+    se = std.error,
+    pvalue = p.value,
+    psignif = 0.05, 
+    title = "Plot 2",
+    xlab = "estimate",
+    ylab = element_text(family = "", size = 10)
+  )+ 
+  theme(axis.text.y = element_blank())
+```
+
+Or try replacing text in ylab (above) to ylab = ""
+
+Then merge the plots:
+
+
+```{r}
+library(patchwork)
+F1plot / F2plot
+```
+
+##### Slow `check_model()`
+
+`check_model()` in [performance](https://easystats.github.io/performance/) package: weird behaviour in R Markdown, takes too long to execute. Richard might come back later with the answer!
+
+

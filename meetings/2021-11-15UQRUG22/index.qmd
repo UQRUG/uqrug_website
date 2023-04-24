@@ -1,0 +1,46 @@
+---
+title: UQRUG 22
+date: '2021-11-15'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-11-15: UQRUG 22
+
+#### Attendees
+
+* **Catherine**: Biology/Library, publish data for a paper 
+* **Grechel**: PhD candidate/ PACE temporal trend analysis
+* **Siu**: Bachelor of Biomedical Science
+* **Einat**: PhD candidate / Civil Engineering School 
+
+
+#### Code snippets
+
+Example of for loop vs map() function from purrr package.
+
+
+```{r}
+# for loop to calculate the median of every column in mtcars
+output <- vector("double", ncol(mtcars))
+for (i in seq_along(mtcars)) {
+   output[[i]] <- median(mtcars[[i]])
+}
+output # see the output
+
+# same as above using a map() function
+map_dbl(mtcars, median)
+```
+
+#### Shared resources
+
+* See Stéphane's [tidyverse lesson](https://gitlab.com/stragu/DSH/-/blob/master/R/tidyverse_next_steps/tidyverse_next_steps.md) for more on purrr
+* [ResBazQLD 2021](https://resbaz.github.io/resbaz2021/brisbane/) running 24-26th of Nov at UQ. Regsitration is $25.
+
+

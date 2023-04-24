@@ -1,0 +1,129 @@
+---
+title: UQRUG 28
+date: '2022-06-29'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-06-29: UQRUG 28
+
+#### Attendees
+
+* **Stéphane**: Library | here to help and say goodbye
+* **Chris**: Civil Engineering - Transport | just tagging along
+* **Luke**: Library | here to help and say hello
+* **Olalekan** Biological Sciences | here to say hello...
+
+
+#### Topics discussed and code
+
+##### Iterating instead of using repetitive code
+
+The trick here is to:
+
+1. Encapsulate the repetitive code into a function, exposing the things that are likely to change as arguments
+2. Create a vector of values (or several)
+3. Use a for loop, or an `apply()` function, or a `map()` function (from purrr) to map the function to each element
+
+
+```{r}
+# iterating
+
+?mean
+# custom function
+custom_mean <- function (numbers, trim_ratio) {
+  # process the data
+  my_mean <- mean(x = numbers, trim = trim_ratio, na.rm = TRUE)
+  # save the it as file
+  saveRDS(my_mean, file = paste0(numbers[1], trim_ratio, ".rds"))
+}
+
+# use the function
+custom_mean(c(1,5,NA), 0.2)
+
+# iterate
+list_to_iterate_on <- list(c(1,5,NA),
+     c(1,4,6,8),
+     c(1,2,7,9,NA))
+
+trim_ratios <- c(0.2, 0.7, 0.1)
+
+library(purrr)
+# alternative to apply functions or for loops
+map2(list_to_iterate_on, trim_ratios, custom_mean)
+
+# pmap(): construct a dataframe of all combinations,
+# with each column containing the argument values to use
+
+# construct the dataframe of all combinations
+animal <- c("magpie", "pelican", "ibis")
+treatment <- c("dry food", "sludge", "grain")
+# only three rows
+experiment <- data.frame(animal, treatment)
+# all combinations
+library(tidyr)
+all_combinations <- expand(experiment, animal, treatment)
+
+```
+
+##### List files
+
+```{r}
+# listing files
+list.files() # all files in working directory
+only_rds <- list.files(pattern = "rds")
+only_rds <- list.files("analysis", "rds")
+only_rds
+# full path (from working directory)
+only_rds <- list.files("analysis", "rds", full.names = TRUE)
+only_rds
+```
+
+##### Remove file extension from path
+
+```{r}
+# remove file extension from path
+library(stringr)
+str_replace("filename.txt", ".txt", "")
+```
+
+##### Extract information from filenames
+
+Using the tidyverse and pdftools for preparing PDF text before analysis with quanteda. pdftools was used for its specific ability to return the page numbers of the pdfs.
+
+
+```{r}
+library(pdftools)
+library(tidyverse)
+
+# create a list of the PDF file paths
+myfiles <- list.files(path = "./pdfs", pattern = "*.pdf", all.files = FALSE,
+                      full.names = TRUE, recursive = TRUE,
+                      ignore.case = FALSE, include.dirs = TRUE, no.. = FALSE)
+
+# Function to import each pdf file, and place the text in a dataframe
+import_pdf <- function(k){
+    # turn the pdf into a text list each page will become a row
+  pdf.text <- pdftools::pdf_text(k)
+    # flatten the list
+  pdf.text<-unlist(pdf.text)
+  pdfdf <- data_frame(pdf.text)
+    # turn the list into a dataframe, extracting the year from the path and using the separate function to extract the state from the path
+  data_frame(pdf.text) %>%
+    mutate(year = str_extract(k, "[:digit:]{4}") %>% as.integer(), pagenumber = row.names(pdfdf), filename = k) %>% 
+    separate(filename, c(NA,NA,"state",NA), sep = "/")
+  
+}
+    # run the function on all pdf files
+all_pdfs<- map_dfr(myfiles, import_pdf)
+```
+
+See the [quanteda tutorials](https://tutorials.quanteda.io/)
+
+

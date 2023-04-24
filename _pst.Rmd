@@ -1,0 +1,1480 @@
+
+## Past meetings
+
+A history of what was discussed during our meetups. In reverse chronological order.
+    
+### 2022-12-07: UQRUG 33
+    
+#### Attendees
+
+* **Nick** | Library | here to help
+* Kim Henville | EAIT | Lurking
+* Pierre Bodroux | P&F | Learning about gganimate
+* **Luke** | Library | Here shortly to help if can
+* Kar Ng | Student Affair | Recap gganimate and plotly
+* Chuan | PhD UQ biol | R questions on barplot 
+* Bel | QAEHS | To learn intro level skills
+* Ainnatul Adawiyah Ahmad Termizi | SAFS | I need help to do statistics for my PhD
+* Imsu | PhD | New to RStudio 
+* Barbara Azevedo de Oliveira | School of Biological Sciences | improve my knowledge
+* Debbie | Postdoc in Sees | find different applications of R
+* Chris Mancini | Civil Transport Engineering | Learn about gganimate
+* Olive Dang | SAFS | ggplot2 question
+
+#### **Topics discussed and code**
+
+**Presentation on gganimate and plotly animations**
+Nick Wiggins did a presentation on animations in gganimate and plotly. He showed some examples of how these can be used to make your graphs somewhat more interesting, and in the case of plotly, interactive.
+[gganimate](https://gganimate.com/)
+[plotly](https://plotly.com/r/animations/)
+
+**Chuan questions about using barplot**
+Chuan was using a barplot to show data which referred to the responses of multiple species across a number of tests.
+When using the same code for a slightly different sample group, the colours on the chart changed. We spent some time trying to find the cause of this, such as slight differences in the code, but we didn't come to a solution.
+We will next try converting the data to fit into a ggplot.
+
+**Olive Dang ggplot2 legend order**
+Olive needed help changing the order of some variables in a ggplot legend. We accomplished this by turning that column of the dataframe into a facotr with levels. E.g. :
+```
+df$col <- factor(df$col, levels=c('a', 'b', 'c'))
+```
+**Olive Dang ggplot2 and ggarrange making all the graphs the same size**
+Olive had a second question about ggplot when exporting them onto the same page. There was an issue where they weren't lining up very well (the top graph was smaller). We spent some time trying to resolve this issue, however, it turns out that there is an argument in **ggarrange** which allows you to quickly make them the same size. The `align` argument allows you to align graphs along the vertical axis, horizontal axis, or both.
+
+**Ainnatul Adawiyah Ahmad Termizi on using R over Excel**
+Ainnatul wanted to recreate some graphs and statistical analyses that had been made in Excel in R. We recommended checking out some of the [introduction to R classes](https://github.com/uqlibrary/technology-training/blob/master/R/rstudio_intro/rstudio_intro.md) that we run, as well as the [ANOVA class](https://github.com/uqlibrary/technology-training/blob/master/R/ANOVA-lm/anova-lm.md) that we have a guide for.
+
+### 2022-10-26: UQRUG 32
+
+             
+#### Attendees
+
+* **Nick**: Library | here to help
+* **Luke**: Library | here to help
+* **Valentina**: Library | here to help
+* **Pierre**: P&F | Listen and learn
+* **Sophie**: 
+* **Robyn**: 
+* **Semira**:
+* **David**: UQ-RCC | hopefully helpful ;-)
+* **Christina**: Psychology | Learn text analysis for R
+* **Danelle**:
+* **Jaye**:
+* **Rene**: Pharmacy | listen and learn
+* **Rovan**:
+* **Roman**: 
+* **Semira**: 
+* **Sogra**:
+* **Kar**:
+
+
+
+#### Topics discussed and code
+
+##### Presentation on quanteda
+Nick Wiggins did a presentation on the quanteda package  to give an overview and introduction to the package and how he has recently used it to assist a researcher.
+https://quanteda.io/
+
+##### Kar ggplot facet_wrap label issue
+Kar has the below sample data set:
+```
+MyID	eventA review	eventB review	eventC review
+id_68	very good	neutral	
+id_30	very good	very good	
+id_15	good	very good	
+id_1	neutral	very good	
+![](https://s3.hedgedoc.org/demo/uploads/6f9d7f0d-202b-4549-b7b1-186dbe9bb093.png)
+
+```
+He is trying to create a facet_wrap in ggplot that includes labels that are missing from the data, but needed to scale "bad" & "very bad", while having the y labels showing on every facet. Without manually creating each y scale.
+```{r}
+# Data transformation
+trial %>% 
+  pivot_longer(c(2:3), names_to = "events", values_to = "review") %>% 
+  count(events, review) %>% 
+  rbind(tibble(events = c("eventA review", "eventA review"),
+               review = c("bad", "very bad"),
+               n = c(NA, NA))) %>%
+  mutate(events = as.factor(events),
+         review = as.factor(review)) %>% 
+# plot
+  ggplot(aes(y = review, x = n, fill = events)) +
+  geom_col(width = 0.5) +
+  facet_wrap(~events) +
+  theme(legend.position = "none")
+```
+##### Sogra stat comparison issue
+
+Sogra has a large dataset of protein observations and needs to compare between different groups.
+
+Using the package **MSstats** Sogra needs to re-export that data.
+
+##### Semira
+
+Semira is trying to change the colours of the diamonds in a forest plot created using the **meta** package.
+We've tried change the col.diamonds to set the colours, however this changed all of the boxes in the forest plot.
+    
+### 2022-09-28: UQRUG 31
+
+#### Attendees
+
+* **Luke**: Library | here to help
+* **Valentina**: Library | Listen, learn and help
+* **Tianjian**: Economics | Listen and learn
+* **Nick**: Library | here to help
+
+#### Topics discussed and code
+
+Covered some of the basics around creating, and the differences between, arrays and dataframes.
+
+Worked on reviving the R-based mailing list for RUG.
+    
+### 2022-08-24: UQRUG 30
+
+#### Attendees
+
+* **Luke**: Library | here to help
+* **Chris Mancini**: Civil Engineering | Read multiple CSVs and Shiny question
+* **Tayla Lawrie**: NA | Listen and learn
+* **Wilson**: Student Affairs | Listen and learn
+* **Valentina**: Library | Listen, learn and help
+* **Nick**: Library | here to help
+
+
+#### Topics discussed and code
+
+How to read multiple csv files in as separate variables efficiently for a Shiny app.
+Looked at creating a list of files, and then using the read_csv function in rdrr package to read them in.
+
+Tried a lapply(files,read_csv) but this just creates a list of the files.
+Found a package known as easycsv which has a function called loadcsv_multi()
+
+```
+loadcsv_multi(directory)
+```
+
+### 2022-07-27: UQRUG 29
+
+#### Attendees
+
+* **Luke**: Library | here to help and say hello
+* **Rene**: Pharmacy | Listen and learn
+* **David**: Honours in Science | Histogram ggplot2 issue
+* **Wilson**: Student Affairs | Listen and learn
+* **Lily**: Honours in Economics | Learning R for course
+
+
+#### Topics discussed and code
+
+Creating a normal distribution line for a histogram.
+Using ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled differently on the y axis. 
+
+Needed to scale the stat_function() by the binwidth times observations using a defined function.
+
+```
+bw = .5
+
+ggplot(SS, aes(DIA)) +
+  geom_histogram( binwidth =  bw)+ 
+  stat_function(fun =function(x)
+dnorm(x,mean = mean(SS$DIA),sd = sd(SS$DIA))*bw*64) +
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+  panel.grid.major.y  = element_line(colour = "grey"),
+  axis.text = element_text(size=12,family = ("TT Times New Roman"), 
+  colour =  'black')) +
+  xlab("Inhibitory zone diameter (mm)")+ylab("number of isolates")
+```
+
+### 2022-06-29: UQRUG 28
+
+#### Attendees
+
+* **Stéphane**: Library | here to help and say goodbye
+* **Chris**: Civil Engineering - Transport | just tagging along
+* **Luke**: Library | here to help and say hello
+* **Olalekan** Biological Sciences | here to say hello...
+
+#### Topics discussed and code
+
+##### Iterating instead of using repetitive code
+
+The trick here is to:
+
+1. Encapsulate the repetitive code into a function, exposing the things that are likely to change as arguments
+2. Create a vector of values (or several)
+3. Use a for loop, or an `apply()` function, or a `map()` function (from purrr) to map the function to each element
+
+```r
+# iterating
+
+?mean
+# custom function
+custom_mean <- function (numbers, trim_ratio) {
+  # process the data
+  my_mean <- mean(x = numbers, trim = trim_ratio, na.rm = TRUE)
+  # save the it as file
+  saveRDS(my_mean, file = paste0(numbers[1], trim_ratio, ".rds"))
+}
+
+# use the function
+custom_mean(c(1,5,NA), 0.2)
+
+# iterate
+list_to_iterate_on <- list(c(1,5,NA),
+     c(1,4,6,8),
+     c(1,2,7,9,NA))
+
+trim_ratios <- c(0.2, 0.7, 0.1)
+
+library(purrr)
+# alternative to apply functions or for loops
+map2(list_to_iterate_on, trim_ratios, custom_mean)
+
+# pmap(): construct a dataframe of all combinations,
+# with each column containing the argument values to use
+
+# construct the dataframe of all combinations
+animal <- c("magpie", "pelican", "ibis")
+treatment <- c("dry food", "sludge", "grain")
+# only three rows
+experiment <- data.frame(animal, treatment)
+# all combinations
+library(tidyr)
+all_combinations <- expand(experiment, animal, treatment)
+
+```
+
+##### List files
+
+```r
+# listing files
+list.files() # all files in working directory
+only_rds <- list.files(pattern = "rds")
+only_rds <- list.files("analysis", "rds")
+only_rds
+# full path (from working directory)
+only_rds <- list.files("analysis", "rds", full.names = TRUE)
+only_rds
+```
+
+##### Remove file extension from path
+
+```r
+# remove file extension from path
+library(stringr)
+str_replace("filename.txt", ".txt", "")
+```
+
+##### Extract information from filenames
+
+Using the tidyverse and pdftools for preparing PDF text before analysis with quanteda. pdftools was used for its specific ability to return the page numbers of the pdfs.
+
+```r
+library(pdftools)
+library(tidyverse)
+
+# create a list of the PDF file paths
+myfiles <- list.files(path = "./pdfs", pattern = "*.pdf", all.files = FALSE,
+                      full.names = TRUE, recursive = TRUE,
+                      ignore.case = FALSE, include.dirs = TRUE, no.. = FALSE)
+
+# Function to import each pdf file, and place the text in a dataframe
+import_pdf <- function(k){
+    # turn the pdf into a text list each page will become a row
+  pdf.text <- pdftools::pdf_text(k)
+    # flatten the list
+  pdf.text<-unlist(pdf.text)
+  pdfdf <- data_frame(pdf.text)
+    # turn the list into a dataframe, extracting the year from the path and using the separate function to extract the state from the path
+  data_frame(pdf.text) %>%
+    mutate(year = str_extract(k, "[:digit:]{4}") %>% as.integer(), pagenumber = row.names(pdfdf), filename = k) %>% 
+    separate(filename, c(NA,NA,"state",NA), sep = "/")
+  
+}
+    # run the function on all pdf files
+all_pdfs<- map_dfr(myfiles, import_pdf)
+```
+
+See the [quanteda tutorials](https://tutorials.quanteda.io/)
+
+### 2022-06-01: UQRUG 27
+
+#### Attendees
+
+* **Stéphane**: Library, here to help!
+* **Emma**: looking for some help editing a graphic with ggplot2
+* **Rene**: just tagging along
+* **Laura**: working on GLMs
+* **Leonie**: both tagging along and hoping for some help with the adehabitat package
+* **Chris**: just tagging along
+* **David**: using R on HPC 
+* **Astrid**: R Markdown issues
+* **Olalekan**: just tagging along
+* 
+* ...and 6 other UQRUGers!
+
+#### Topics discussed and code
+
+* ggplot2 customisation: moving legend, filtering data out
+    * [Cédric Scherer's slides](https://www.cedricscherer.com/slides/OutlierConf2021_ggplot-wizardry.pdf) (with customisation of legend using the `guides()` function)
+
+```r
+library(dplyr)
+# do not keep these three eye colours
+starwars %>% 
+  filter(!eye_color %in% c("blue", "yellow", "green"))
+```
+* Preparation for species distribution modelling. Convert dataframe to sf object with `st_as_sf()`, and will probably need to go from vector data to raster data with `terra::rasterize()`
+    * The [CRAN Task View on spatial data](https://CRAN.R-project.org/view=Spatial) lists a lot of useful packages
+* Importing spatial points for dolphin occurences, using sf. Constructing a convex hull from them and visualising on an interactive map:
+
+```r
+# read CSV as dataframe
+dolph <- read.csv("Adehabitat.csv")
+
+library(sf)
+# convert the dataframe to an sf object
+dolph_sf <- st_as_sf(dolph, coords = c("Longitude", "Latitude"))
+# see it with default plot method
+plot(dolph_sf)
+
+# interactive map
+library(tmap)
+tmap_mode("view")
+tm_shape(dolph_sf) +
+  tm_dots()
+
+# convex hull
+dolph_hull <- st_convex_hull(st_union(dolph_sf))
+
+# visualise both
+tm_shape(dolph_hull) +
+  tm_borders() +
+tm_shape(dolph_sf) +
+  tm_dots()
+```
+
+* Detecting anomalies in chronological sequence of a dataframe. `dplyr::lag()` and `dplyr::lead()` functions can be used for comparisons. `any()` and `all()` help reducing many logical values to one.
+* R Markdown troubles: Rmd is self-contained and needs to include all the necessary code. Its working directory is by default the directory where the .Rmd file is saved.
+* factoextra's `fviz_pca*()` functions for PCA, colouring points per group.
+    * [STHDA has examples](http://www.sthda.com/english/wiki/fviz-pca-quick-principal-component-analysis-data-visualization-r-software-and-data-mining)
+
+#### Links
+
+* [R Ladies Brisbane YouTube channel](https://www.youtube.com/channel/UC9oOCJe8kwkZ_6IgTmet9oQ)
+* [Geospatial Analysis Community of Practice](https://geospatial-community.netlify.app/)
+
+### 2022-04-27: UQRUG 26
+
+#### Attendees
+
+* Stéphane
+* Veronika
+* Chris
+* Thuong
+* Lily
+* David
+
+#### Topics discussed and code
+
+* Machine learning with caret and glmnet
+* High-performance computing: https://rcc.uq.edu.au/high-performance-computing
+* Spatial data: sf, sfnetworks... Austroad dashboard
+* Interactive viusalisations: plotly, highcharter, networkD3, leaflet, tmap, crosstalk, Shiny...
+* API / direct link for accessing government data that gets updated weekly (see below)
+
+##### Tide data
+
+```r=
+# Whyte island, station measuring tide level
+
+path <- "http://opendata.tmr.qld.gov.au/Whyte_Island.txt"
+# read with base function, ignore first lines, keep two columns
+tide_data <- read.table(path, skip = 5)[,1:2]
+# name the column
+names(tide_data) <- c("date_time", "LAT")
+
+# same with readr
+library(readr)
+library(dplyr)
+tide_data <- read_table(path, skip = 5,
+                        col_names = FALSE) %>% 
+  select(1:2) %>% 
+  rename(date_time = 1, LAT = 2)
+
+# split the date time
+library(lubridate)
+tide_data <- tide_data %>% 
+  mutate(date_time = dmy_hm(date_time))
+# filter and visualise
+library(ggplot2)
+tide_data %>% 
+  filter(LAT > 0.01) %>% 
+  ggplot(aes(x = date_time, y = LAT)) +
+  geom_line()
+
+# save only the first time:
+# write.csv(tide_data, "all_tide_data.csv", row.names = FALSE)
+
+# append new data
+all_tide_data <- read_csv("all_tide_data.csv")
+all_tide_data <- bind_rows(all_tide_data, tide_data) %>% 
+  unique() # check for duplicates
+# overwrite file
+write.csv(all_tide_data, "all_tide_data.csv", row.names = FALSE)
+```
+
+Automate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html
+
+
+
+### 2022-03-30: UQRUG 25
+
+#### Attendees
+
+* **Steph** (Library): helping out!
+* **Vicki Martin**: Postdoc, SEES
+* **Nisa Abeysinghe**
+* **Richard Bell**: PhD, POLSIS
+* **Chris Mancini**: HDR - MPhil, School of Civil Engineering
+* ... and 6 more UQRUGers!
+
+#### Topics discussed and code
+
+##### Big raster files
+Use terra instead of raster, and use a temporary directory:
+
+```r
+library(terra)
+terraOptions(tempdir = "path to somewhere with lots of space")
+as.points() # instead of rasterToPoints()
+```
+
+The [Research Computing Centre](https://rcc.uq.edu.au/) can also provide access to supercomputers
+
+##### [Patchwork](https://patchwork.data-imaginist.com/) for joining plots made with [ggforestplot](https://nightingalehealth.github.io/ggforestplot/articles/ggforestplot.html)
+
+To merge two plots with the same y-axis. After creating Forest plot 1 (with y-axis labels), create Forest plot 2 with y-axis labels removed:
+
+```r
+library(ggforestplot)
+F2plot <- 
+  forestplot(
+    df = F2,
+    name = term,
+    estimate = estimate,
+    se = std.error,
+    pvalue = p.value,
+    psignif = 0.05, 
+    title = "Plot 2",
+    xlab = "estimate",
+    ylab = element_text(family = "", size = 10)
+  )+ 
+  theme(axis.text.y = element_blank())
+```
+Or try replacing text in ylab (above) to ylab = ""
+
+Then merge the plots:
+
+```r
+library(patchwork)
+F1plot / F2plot
+```
+
+##### Slow `check_model()`
+
+`check_model()` in [performance](https://easystats.github.io/performance/) package: weird behaviour in R Markdown, takes too long to execute. Richard might come back later with the answer!
+
+### 2022-02-23: UQRUG 24
+
+#### Attendees
+
+* **Stéphane Guillou**: just helping out
+* **Svetlina Vasileva**
+* **Trinh Huynh** (USC)
+* **Richard Bell**
+* **Luke Gaiter** (ggplot2 lesson)
+* ...and 5 other UQRUGers!
+
+#### Code
+
+Convert a table to a `gt` object and then save it to RTF (which can be opened by Word).
+
+```r=
+library(gt)
+gt(mtcars) %>% 
+  gtsave("test.rtf")
+```
+
+Attempting to highlight/label outliers in linear regression plot
+```r=
+### geom_text_repel
+# only label players with QoG >  1 or < 0.2
+# align text vertically with nudge_y and allow the labels to 
+# move horizontally with direction = "x"
+ggplot(linear_regression, aes(x= QOG, y = ten_political_conflict, label = district)) + 
+        geom_point(color = dplyr::case_when(linear_regression$QOG > 1 ~ "#1b9e77", 
+                                            linear_regression$QOG < 0.2 ~ "#d95f02",
+                                            TRUE ~ "#7570b3"), 
+                   size = 3, alpha = 0.8) +
+        geom_text_repel(data          = subset(linear_regression, QOG > 1),
+                        nudge_y       = 32 - subset(linear_regression, QOG > 1)$QOG,
+                        size          = 4,
+                        box.padding   = 1.5,
+                        point.padding = 0.5,
+                        force         = 100,
+                        segment.size  = 0.2,
+                        segment.color = "grey50",
+                        direction     = "x") +
+        geom_label_repel(data         = subset(linear_regression, QOG < 0.2),
+                         nudge_y       = 16 - subset(linear_regression, QOG < 0.2)$QOG,
+                         size          = 4,
+                         box.padding   = 0.5,
+                         point.padding = 0.5,
+                         force         = 100,
+                         segment.size  = 0.2,
+                         segment.color = "grey50",
+                         direction     = "x") +
+        scale_x_continuous(expand = expansion(mult = c(0.2, .2))) +
+        scale_y_continuous(expand = expansion(mult = c(0.1, .1))) +
+        theme_classic(base_size = 16)
+```
+
+
+
+
+#### Shared resources and topics discussed
+
+* Using Cloudstor's SWAN: [documentation](https://support.aarnet.edu.au/hc/en-us/articles/360000575395-What-is-CloudStor-SWAN-)
+* Export tables to DOC or DOCX:
+    * Svet tried to use [arsenal's write2word() function](https://mayoverse.github.io/arsenal/reference/write2specific.html), but didn't work... inside a R Markdown chunk! Had to run it outside, possibly because the function itself uses knitr...
+    * Richard suggested using [stargazer](https://cran.r-project.org/web/packages/stargazer/index.html)
+    * [gt](https://gt.rstudio.com) is a powerful package for customised tables, and can export to RTF, and its website has a useful [list of R packages for creating tables](https://gt.rstudio.com/#how-gt-fits-in-with-other-packages-that-generate-display-tables).
+* [forcats](https://forcats.tidyverse.org/index.html) has been used twice during the session, once for changing the order of the levels to something arbitrary with `forcats::fct_relevel()`, and once for ordering them by value (with `dplyr::arrange()` followed by `forcats::fct_inorder()`)
+* Sustainable transport planning with [stplanr](https://docs.ropensci.org/stplanr/)
+* [lidR](https://cran.r-project.org/web/packages/lidR/news/news.html) moves away from sp/raster and uses sf/terra/stars instead
+* [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html) was suggested to easily highlight (an label) cases on ggplot2 visualisations
+
+### 2021-11-15: UQRUG 22
+
+#### Attendees
+
+* **Catherine**: Biology/Library, publish data for a paper 
+* **Grechel**: PhD candidate/ PACE temporal trend analysis
+* **Siu**: Bachelor of Biomedical Science
+* **Einat**: PhD candidate / Civil Engineering School 
+
+#### Code snippets
+
+Example of for loop vs map() function from purrr package.
+
+```r
+# for loop to calculate the median of every column in mtcars
+output <- vector("double", ncol(mtcars))
+for (i in seq_along(mtcars)) {
+   output[[i]] <- median(mtcars[[i]])
+}
+output # see the output
+
+# same as above using a map() function
+map_dbl(mtcars, median)
+```
+#### Shared resources
+
+* See Stéphane's [tidyverse lesson](https://gitlab.com/stragu/DSH/-/blob/master/R/tidyverse_next_steps/tidyverse_next_steps.md) for more on purrr
+* [ResBazQLD 2021](https://resbaz.github.io/resbaz2021/brisbane/) running 24-26th of Nov at UQ. Regsitration is $25.
+
+### 2021-10-18: UQRUG 21
+
+#### Attendees
+
+* Stéphane
+* Aklilu
+* Uttara
+
+### 2021-09-21: UQRUG 20
+
+#### Participants: 14
+
+* **Stéphane** (Library): thinking a lot about an "OpenStreetMap Recipes" package...
+* **Catherine**: Library/Postdoc Biology, code/data into a repository for a paper
+* **Shaoyang**: QAAFI PhD student.  Wine sensory/consumer science.  Data modelling.  Multivariate statistics.  Multi-block data.
+* **Evan**: PhD Student, Developmental Neuroscience. Interested in moving from disorganised scripts to organised modules and packages.
+* **Fathin**: PhD Student, SAFS. Looking to extract raster and use it to create model.
+* **Huiyang**: PhD student, Faculty of Medicine, Diamantina Institute, Immunology. Would like to learn something about bioinformatics and data science related to R.
+* **Muhammad Abdullah** PhD Student,QAAFI, I want to learn bioinformatics and data science releated R.
+* **Luzia Bukali**: PhD Student, QIMR, Infection and Immunology. Relatively new to R. Looking to learn more about data analysis and creating figures in R.
+* **Xiongzhi Wang**: PhD student, School of Communication and Arts. I want to learn and refresh knowledge of using R.
+* **Muhammad Yahya**: PhD candidate at QAAFI. 
+* **Gazi**: Masters's student, School of Economics. I just started learning R.
+* ... **and 3 more UQRUGers**!
+
+#### Shared resources
+
+* Resources here!
+* *R packages* book by Jenny Bryan and Hadley Wickham: https://r-pkgs.org/
+* The Library's R packaging course: https://gitlab.com/stragu/DSH/-/blob/master/R/packaging/packaging.md
+* usethis package to set up R packages: https://usethis.r-lib.org/
+    * usethis for R packages kbroman: https://kbroman.org/AdvData/18_rpack_demo.html
+* unit testing with the testthat package: https://testthat.r-lib.org/ 
+* Input-output analysis:
+    * iotables package: https://iotables.ceemid.eu/
+    * ioanalysis package: https://cran.r-project.org/web/packages/ioanalysis/
+* Exercism online coding practice! https://exercism.org/
+* working with netcdf files for CMIP6 data: https://www.researchgate.net/publication/337991369_User-Friendly_R-Code_for_Data_Extraction_from_CMIP6_outputs; https://ui.adsabs.harvard.edu/abs/2019AGUFMPA33C1098K/abstract
+* tax_name function for taxonomic, genetic data (from taxize package): https://cran.r-project.org/web/packages/taxize/taxize.pdf
+* 
+### 2021-08-16: UQRUG 19
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just here to help!
+* **Catherine Kim** (Library/Biology): working on publishing code with a paper
+* **Jordan Pennells** (ANOVA structure)
+* **Violeta Berdejo-Espinola** (make my code more efficient)
+* **Omkar Ravindranatha Katagi** (Here to learn R)
+* ... and 8 more UQRUGers!
+
+#### Shared resources
+
+Links we talked about today:
+
+* Great books / resources to get started:
+    * ***R for Data Science*** (aka "R4DS"): https://r4ds.had.co.nz/
+        * [Slack community of R4DS](https://rfordatascience.slack.com/join/shared_invite/zt-n46lijeb-2RRzQ70U34eH530~PyZsmg#/shared-invite/email)
+        * On Twitter: https://twitter.com/R4DScommunity
+    * **R Cookbook**: https://www.cookbook-r.com/
+    * **RStudio Education**: https://education.rstudio.com and https://education.rstudio.com/learn/
+    * **learnr** package (also integrated in the RStudio "tutorial" tab): https://rstudio.github.io/learnr/
+    * **article on linked points between boxplots**: https://datavizpyr.com/how-to-connect-data-points-on-boxplot-with-lines/
+
+#### Code snippets
+
+Change the order of categorical variable levels (so ggplot2 uses that order instead of the alphabetical order):
+
+```r
+library(dplyr)
+library(ggplot2)
+                          
+# relevel factors using forcats package
+library(forcats)
+f <-  factor(c("a", "b", "c", "d"), levels = c("b", "c", "d", "a"))
+fct_relevel(f, "a", "c", "d", "b")
+
+# relevel eye_color of starwars data
+
+starwars %>% 
+   mutate(eye_color = fct_relevel(eye_color, "yellow")) %>% 
+   ggplot(aes(x = eye_color)) +
+   geom_bar()
+```
+
+Use case_when to rate or recode data:
+
+```r
+library(dplyr)
+
+starwars
+range(starwars$height, na.rm = TRUE)
+
+# just based on height
+starwars_rated <-  starwars %>% 
+   mutate(height_rating = case_when(height < 70 ~ "very small",
+                                    height < 140 ~ "quite small",
+                                    height < 200 ~ "medium",
+                                    TRUE ~ "tall"))                                       
+                                    
+# recode based on multiple conditions
+range(starwars$mass, na.rm = TRUE) # check range of mass, second vairable to recode by
+
+starwars_rated <-  starwars %>% 
+   mutate(height_rating = case_when((height < 70) & (mass < 700)~ "very small and light",
+                                    height < 140 ~ "quite small",
+                                    height < 200 ~ "medium",
+                                    TRUE ~ "tall"))
+          
+```
+
+### 2021-07-19: UQRUG 18
+Technical difficulties! No notes.
+
+### 2021-06-21: UQRUG 17
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just here to share help!
+* **Catherine Kim** (Library/Biology): playing around spatial and open datasets from this [World's Oceans Day R-blogger post](https://www.r-bloggers.com/2021/06/celebrating-world-ocean-day-ropensci-style/)
+* ... and 8 more UQRUGers!
+
+#### Shared resources
+
+* World Ocean Day post: https://www.r-bloggers.com/2021/06/celebrating-world-ocean-day-ropensci-style/
+* performance package, `check_model()` function to check model assumptions: https://rdrr.io/cran/performance/man/check_model.html
+* Create custom ggplot2 themes: https://rpubs.com/mclaire19/ggplot2-custom-themes
+* Regular expression + stringr cheatsheet: http://edrub.in/CheatSheets/cheatSheetStringr.pdf
+    * Read more about regexes: https://en.wikipedia.org/wiki/Regular_expression
+* stargazer package for nice tables:
+    * On CRAN: https://cran.r-project.org/web/packages/stargazer/index.html
+    * Manual: https://cran.r-project.org/web/packages/stargazer/stargazer.pdf
+    * warning: takes dataframes(!), not tibbles! (Might silently fail)
+* The sf package now uses a spherical geometry by default: https://r-spatial.github.io/sf/articles/sf7.html
+
+#### Tips for newcomers
+
+* Projects for everything! Using R Projects allows you to keep separate projects... separate! And find files easily. Start organised to stay organised.
+* *R 4 Data Science* book: https://r4ds.had.co.nz/
+
+
+#### Code snippets
+
+##### Export to CSV
+
+```r
+# export with write.csv()
+write.csv(ToothGrowth,
+          file = "exports/tooth_growth.csv",
+          row.names = FALSE, # remove rowname column
+          na = "") # empty cell instead of "NA"
+```
+
+##### Missing data handling in `dplyr::filter()`
+
+```r
+# insert missing data:
+ToothGrowth[27,3] <- NA
+library(dplyr)
+# dplyr filtering:
+filtered_dplyr <- filter(ToothGrowth, dose > 0.5)
+    # dplyr filter gets rid of rows returning NA
+# base indexing:
+filtered_base <- ToothGrowth[ToothGrowth$dose > 0.5, ]
+    # base subsetting with [] keeps rows returning NA
+# check documentation:
+?dplyr::filter
+```
+
+> "[In `dplyr::filter`], note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with `[`."
+
+##### New `alt` argument in ggplot2
+
+Great news for accessibility in the new ggplot2 version 3.3.4: https://cloud.r-project.org/web/packages/ggplot2/news/news.html
+
+For example:
+
+```r
+library(ggplot2)
+ggplot(ToothGrowth, aes(x = supp, y = len)) +
+  geom_boxplot() +
+  labs(alt = "Boxplot of tooth growth rate with different supplements.\n
+       The length is generally higher with the OJ supplement.")
+```
+
+This will allow tools that create documents that include ggplot2 visualisations to make use of the alternative text, for screen readers for example.
+
+Know that R Markdown has the chunk option `fig.alt` for that purpose as well.
+
+### 2021-05-31: UQRUG 16
+
+#### Participants
+
+* **Catherine Kim** (Library/Biology): using the R package boral for multivariate data ...
+* **Stéphane Guillou** (Library): playing with APIs, trying the MusicBrainz one at the moment to build a Shiny app...?
+* **David Green** (UQ RCC) helping HPC users to get R code running on the HPC ...
+*  ** Roman Scheurer (UQ QCMHR): Interested in using RStudio for large population-level and time series data, applying geographic information systems to identify patterns of health utilisation
+*  ... and a few more!
+
+
+#### TidyTuesday datasets
+
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+
+Share code and pictures here!
+
+#### Shared resources
+
+* R-Ladies Brisbane has a YouTube channel! First video is a presentation by Julie Vercelloni: https://www.youtube.com/watch?v=L_8e2xuyttI
+* R 4.1 and RStudio: https://community.rstudio.com/t/psa-r-4-1-0-release-requires-rstudio-preview/105209
+    * What's new in R 4.1: https://cran.r-project.org/doc/manuals/r-release/NEWS.html
+    * If you need the preview version to fix the graphics issues: https://www.rstudio.com/products/rstudio/download/preview/
+* useR 2021 conference: https://user2021.r-project.org/participation/registration/
+* Share code on GitHub: https://github.com/
+* Import LAS dataset with lidR package: https://jean-romain.github.io/lidRbook/
+* `after_stat()` function in ggplot2: https://www.tidyverse.org/blog/2020/03/ggplot2-3-3-0/#more-control-over-aesthetic-evaluation
+
+### 2021-04-19: UQRUG 15
+
+#### Participants
+
+* **Stéphane Guillou** (Library): I'd like start working on a package to query the MusicBrainz API
+* **Catherine Kim** (Library/Biology): Write a function to automate coral reef image download from US NOAA database CoRIS.  Cleaning up code for sharing.
+* **Rene Erhardt** (Pharmacy): beginner, just listening...
+* **Andy Cui** (Engineering): First time attendance with aim of reshaping spectral data for visualisation purposes
+* **Rhiannon Jeans** (Neuroscience): First time attending the meeting but not new to R. Looking to help others or learn from others. 
+* ...
+#### TidyTuesday datasets
+
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+
+Share code and pictures here!
+
+#### Shared resources
+
+* R Markdown news: https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/
+* reshape2 tutorial: https://www.datacamp.com/community/tutorials/long-wide-data-R
+* Tidyverse information: https://www.tidyverse.org/
+* ggplot2 visualisation wizardry: https://www.cedricscherer.com/slides/useR2021.pdf
+* pipe operator:
+    * first introduced by magrittr: https://github.com/tidyverse/magrittr
+    * but coming to R base: https://cran.r-project.org/doc/manuals/r-devel/NEWS.html
+* R Markdown gallery: https://rmarkdown.rstudio.com/gallery.html
+* Tables
+    * flextable: https://davidgohel.github.io/flextable/
+    * officer: https://davidgohel.github.io/officer/
+    * frequency (for tables similar to SPSS' `FREQUENCIES`): https://github.com/wilcoxa/frequency
+
+For example, try this:
+
+```r
+library(dplyr)
+library(frequency)
+options(frequency_open_output = TRUE)
+mtcars %>% 
+  select(carb, cyl) %>% 
+  freq()
+```
+
+### 2021-03-15: UQRUG 14
+
+#### Participants
+
+* **Stéphane Guillou** (Library): ...
+* **Paula Andrea Martinez** (ReSA): are you interested in a Markdown workshop? two hours on the 24th of March by [NeSI](https://www.eventbrite.co.nz/e/rmarkdown-for-researchers-weave-together-narrative-text-and-code-registration-144069029345)
+* **Fathin Azizan** (HDR SAFS): Need help to check on coding for the multiple linear regression using raster data.
+* **Robyn**
+* **Phoebe**: Hi everyone!
+* **Tmnit**
+* **Violeta**
+* **Patrick**
+* **Aljay**
+
+#### This week's TidyTuesday dataset
+
+[Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test) dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md
+
+Get the data and play with it:
+
+```r
+raw_bechdel <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/raw_bechdel.csv')
+movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv')
+```
+
+Share code and pictures here!
+
+#### Shared resources
+
+* Intro slides by Grant McDermott: https://raw.githack.com/uo-ec607/lectures/master/04-rlang/04-rlang.html#1
+* mapsf is the successor to cartography: https://rgeomatic.hypotheses.org/2212
+* Open Science Foundation: https://osf.io/
+* OpenStreetMap data:
+    * Geofabrik to get bulk OpenStreetMap downloads: http://download.geofabrik.de/
+    * osmextract package: https://cran.r-project.org/web/packages/osmextract/index.html
+    * osmdata package: https://docs.ropensci.org/osmdata/
+
+
+### 2021-02-15: UQRUG 13
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just happy to help and share resources! Looking for a quick way to do adress lookups.
+*  **Paula Andrea Martinez** (co-organiser/ helper) Happy to share new ways of doing things. looking to plot answers from mentimeter.
+* David
+* Einat
+* Alphabet
+* Patrick
+
+#### Shared resources
+
+* Tidytext interactive course: https://juliasilge.com/blog/learn-tidytext-learnr/
+* Pattern-based analysis with motif: https://nowosad.github.io/motif/
+* ROpenSci Newsletter: https://news.ropensci.org/
+* R Markdown:
+    * Slides: https://slides.djnavarro.net/starting-rmarkdown
+    * Training at UQ: search for "Reproducible Reports"
+    * QCIF training: https://www.qcif.edu.au/training/training-courses/
+    * Carpentries chapter on R Markdown: https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html
+* New Shiny version with easier theming: https://blog.rstudio.com/2021/02/01/shiny-1-6-0/
+
+### 2021-01-25: UQRUG 12
+
+**This is our first anniversary! UQRUG has one year!!**
+
+#### Attendees and questions
+
+* **Paula Martinez** I'm a keen R user, I also founded R Ladies Brisbane and you are welcome to join https://www.meetup.com/rladies-brisbane/
+* **Kathy**: Phd SSI, wants to learn more R
+* **David Green**: RCC, hacky hour
+* **Stéphane Guillou** (Library): keen to start UQRUG again for 2021! 
+* **Phoebe**: Just hanging to learn something :)
+* **Isabel** (IMB), microbiologist, here to meet other R folks and learn :) 
+
+#### Naming things
+
+Paula presented these very useful slides by [Jenny Bryan](https://jennybryan.org/) about how to name files and directory for profit!
+
+* Link to the slides: https://speakerdeck.com/jennybc/how-to-name-files
+* Steph couldn't remember what that padding function was, but discovered stringr has a great one, `str_pad()`: https://www.rdocumentation.org/packages/stringr/versions/1.4.0/topics/str_pad
+
+For example, try this:
+
+```r
+stringr::str_pad(c(0, 14, 178), width = 3, pad = 0)
+```
+
+#### This week's TidyTuesday
+
+Have fun with this week's [TidyTuesday](https://github.com/rfordatascience/tidytuesday): the rKenyaCensus dataset.
+
+```r
+# Get the Data manually
+
+gender <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/gender.csv')
+crops <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/crops.csv')
+households <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/households.csv')
+```
+
+#### Resources shared
+
+* RStudio Global conference was last week. Recordings will be available on the [RStudio website](https://blog.rstudio.com/) soon.
+    * Stéphane really recommends the presentation: _How to do things with words: learning to program in R with a "communicative approach"_, by [Riva Quiroga](https://rivaquiroga.cl/)
+* Main R terms for beginners: https://gitlab.com/stragu/DSH/-/blob/master/R/terminology.md
+    * Don't hesitate to send Steph some feedback!
+* Converting Windows style to Unix:
+https://support.nesi.org.nz/hc/en-gb/articles/218032857-Converting-from-Windows-style-to-UNIX-style-line-endings
+* Notepad++, useful (open source) text editor which has an option to change file endings: https://notepad-plus-plus.org/
+* `theme_publish()`, a ggplot2 theme provided by the package envalysis: https://rdrr.io/github/zsteinmetz/envalysis/man/theme_publish.html
+* https://rstudio.com/resources/webinars/ to watch the presentations from the last RStudio conferences
+* Visual Markdown editor in the new RStudio 1.4: https://blog.rstudio.com/2020/09/30/rstudio-v1-4-preview-visual-markdown-editing/
+* Bar plots guide: https://michaeltoth.me/detailed-guide-to-the-bar-chart-in-r-with-ggplot.html
+* Two-way anova: http://www.sthda.com/english/wiki/two-way-anova-test-in-r
+* Other packages built on top of ggplot2: https://exts.ggplot2.tidyverse.org/gallery/
+
+
+#### Phoebe's faceted visualisation
+
+Phoebe needed to reshape her dataset to then visualise it in separate facets.
+
+```r
+ CBMI %>% 
+        select(Gender, contains("BMI")) %>% 
+        pivot_longer(contains("BMI"), names_to="Year", values_to="BMI") %>% 
+        mutate(Year=fct_inorder(Year)) %>% 
+        ggplot(aes(x=Gender, y=BMI)) + 
+        geom_boxplot() +
+        facet_grid(cols=vars(Year)) +
+        theme_pubr()
+```
+
+#### Recommendations for Katherine's bar chart
+
+```r
+library(ggplot2)
+
+# useful geometries:
+geom_bar() # height of a bar is a count
+geom_col() # if you already have the value for the height of the bar
+
+# to have bars side by side, change the position to "dodge"
+# (instead of the default "stack"), for example:
+ggplot(mpg, aes(x = as.character(cyl), fill = class)) +
+  geom_bar(position = "dodge")
+
+# for adding error bars
+geom_errorbar()
+# you have to provide the values for the size of the bars (xmin, xmax)
+# and their position (x, y)
+```
+
+You might find that an extra package to add on top of ggplot2 will do the hard work for you. Many are listed here: https://exts.ggplot2.tidyverse.org/gallery/
+
+More resources:
+* Bar plots guide: https://michaeltoth.me/detailed-guide-to-the-bar-chart-in-r-with-ggplot.html
+* Two way anova: http://www.sthda.com/english/wiki/two-way-anova-test-in-r
+
+### 2020-11-16: UQRUG 11 (cancelled)
+
+### 2020-10-19: UQRUG 10
+
+#### Attendees and problems
+
+Please add your name and the problem you'd like some help with!
+
+* **Stéphane** (Library): here to help! 
+* **Chantelle**: Biological Sciences. I can't stay to long as I have to go track carpet pythons at 4pm ;)
+* **Einat** (Social Sciences, R studio beginner): Apologies in advance would have to leave early. have some issues wiTh minor and basic procedures, like ...CONDITIONS!! and also with reading labels from csv/excel file. 
+* **Patrick** (Agricultural Science) Honours student
+* **Gabriel**: Hydrologist, spatial data analyst. PhD candidate at SMI. R beginner and Python enthusiast !
+* **Natalie** (Mathematics): Undergraduate Mathematics and Statistics student
+* **Phoebe**: learn more about data viz!
+* ... and few more!
+
+#### Today's challenge
+
+Try playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-10-13/readme.md
+
+Share your findings and cool visualisations with the group!
+
+#### Recoding data
+
+This is a working example of recoding using dplyr's `case_when()`:
+
+```r
+library(dplyr)
+CO2 %>% 
+  mutate(uptake = case_when(
+    uptake > 12 ~ "yay!",
+    uptake > 10 ~ "OK.",
+    TRUE ~ "oh no..."
+  ))
+```
+
+The `TRUE` line is for "everything else".
+
+#### Finding files
+
+The "working directory" is the default location:
+
+```r
+getwd() # know where you are
+setwd("path/to/correct/location") # change it
+
+# functions will look there by default
+read.csv("filename.csv")
+# but you can use longer, absolute filepaths
+read.csv("C:/Users/myname/filename.csv")
+```
+
+If you don't want to deal with that: **use R Projects**! Creating an R Project will set the working directory for you.
+
+#### Dealing with overflowing labels
+
+```r
+library(ggplot2)
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar()
+
+# horizontal bar chart
+ggplot(diamonds, aes(y = cut)) +
+  geom_bar()
+
+# abbreviate the labels
+abbreviate(diamonds$cut)
+
+# using it in the visualisation is nice and concise
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar() +
+  scale_x_discrete(labels = abbreviate)
+```
+
+On the other hand, if labels are overflowing inside the canvas, we can expand axis limits:
+
+```r
+# expand limits
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar() +
+  ylim(c(0, 25000))
+```
+
+However, ggplot2 should expand the plot area to include all the geometries automatically, including a `geom_label()` or `geom_text()`.
+
+#### Shared resources
+
+Resources shared during the meetup can be listed here:
+
+* Packages:
+    * epiDisplay: https://rdrr.io/cran/epiDisplay/
+    * lme4: https://www.rdocumentation.org/packages/lme4/versions/1.1-23/topics/lme4-package
+    * Seurat: https://cran.r-project.org/web/packages/Seurat/index.html
+    * reshape2: https://cran.r-project.org/web/packages/reshape2/index.html
+* Functions:
+    * `case_when()` to recode a variable: https://dplyr.tidyverse.org/reference/case_when.html
+* Data viz:
+    * ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/
+    * Data to Viz: https://www.data-to-viz.com/
+    * lattice: https://www.rdocumentation.org/packages/lattice/versions/0.20-41
+
+
+### 2020-09-21: UQRUG 9
+
+#### Attendees and problems
+
+Please add your name and the problem you'd like some help with!
+
+* **Stéphane** (Library): here to help! But challenged by using an API and turning the XML output into a dataframe...
+* **Dwan** (CHRC): Enjoying my first day, and learning what the group is about
+* Grace
+* Amelia
+* Mitch
+
+#### Today's challenge
+
+Try playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-15/readme.md
+
+Share your findings and cool visualisations with the group!
+
+#### Shared resources
+
+Resources shared during the meetup can be listed here
+
+* Base R gems: https://ihaddadenfodil.com/post/r-base-gems/#
+* ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/
+* Mitch is using the lidR package:
+    * Documentation: https://www.rdocumentation.org/packages/lidR/versions/3.0.3
+    * Book: https://jean-romain.github.io/lidRbook/index.html
+* the ggfortify package proved useful for PCA visualisation: https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_pca.html
+
+### 2020-08-17: UQRUG 8
+
+#### Attendees and problems
+
+Please add your name and the problem you'd like some help with!
+
+* **Stéphane** (Library): no specific problem, here to help! :)
+* **Dhananjeyan**: New to R, Trying to learn more
+* **Phoebe**: Hi everybody, I started learning R last week (self-directed). I have problems using the right code for missing data and doing linear regression with categorical data. I am happy to learn other things as well!
+* **Fathin** (SAFS): Problem yet to come, haha. I am going to add moving average on my boxplot. Don't know how can I do that.
+* **Patrick** ($SAFS$): I got a problem of GLM(). Plotting mutiple model over a time period. 
+* **Elspeth** Hi, I just started learning R last week as well. Just here to learn generally, no specific problem :)
+* **Paula** CAI. I want to show you between and near for filters, using tidyverse
+* **Evan** (QBI) Been using R for stats for about 3 years, will be doing some bioinformatics for PhD, and joining in to meet other people also using R (no specific problem - yet)
+* **Jemima** Want to understand some warning messages in my CLMM analyses
+
+#### Shared resources
+
+* Jemima's CLMM and stats questions:
+    * Patrick: "My biometrician recommended AIC the lower the better"
+    * Evan: "this guide to fitting clmm that mght be helpful as well": https://cran.r-project.org/web/packages/ordinal/vignettes/clmm2_tutorial.pdf 
+    * Paula: https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=The%20AIC%20function%20is%202K,it%20is%20being%20compared%20to 
+    * Fathin recommends this QCIF course: _Exploring and Predicting using Linear Regression in R_ -- https://www.qcif.edu.au/trainingcourses/exploring-and-predicting-using-linear-regression/ 
+    * Stéphane: the first warning you saw is related to recent R changes (in R 4.0) and it will be fixed in a future version of ordinal: https://github.com/runehaubo/ordinal/issues/34
+* Patrick's plotting of multiple models over time:
+    * Paula: http://www.sthda.com/english/articles/32-r-graphics-essentials/128-plot-time-series-data-using-ggplot/ 
+* Cheatsheets: https://rstudio.com/resources/cheatsheets/
+* Join R-Ladies!
+    * Brisbane: https://www.meetup.com/rladies-brisbane/
+        * on Twitter: https://twitter.com/RLadiesBrisbane/
+    * Global: https://rladies.org/
+
+### 2020-07-27: UQRUG 7
+
+On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
+
+#### Attendees and problems
+
+* **Stéphane** (Library): anyone with experience with Tidyverse + quosure / quasiquotation? I want to use strings in one column as object names in a function.
+* **Ruth** (HMNS): I don't have any specific issues this week. I am happy to listen and explore new packages.
+* **Chantelle Derez** (Biological Science): I don't have any specific issues, just popping in to learn. Current favourite package is Thermimage and colour palette 'rainbow' for analysing thermal images. :rainbow: 
+* **Paula Andrea M** (CAI) I'm here to help. Also I would like to invite you to the Rladies Brisbane events. https://www.meetup.com/rladies-brisbane/events/272075776 The topic of next month is R in Biology. 
+* **Fathin** (SAFS) No issue to date. 
+* **Damber** (I want to learn plotting glmm prediction) - shared on chat.uq.edu as well.
+* **Candice**: RNAseq in R.
+    * Found resources:
+    * https://osca.bioconductor.org
+    * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html 
+* **Greg** (Chemical Engineering) Late but here to help. Currently grappling with some nasty XML at the moment that I want to parse efficiently.  Writing my PhD thesis in RMarkdown.
+
+#### Favourite packages
+
+* tmap: https://mtennekes.github.io/tmap/
+* stylr: https://github.com/r-lib/styler
+* raster: https://rspatial.org/raster/pkg/index.html
+* ggplot2: https://ggplot2.tidyverse.org/
+    * ggpubr: https://rpkgs.datanovia.com/ggpubr/index.html
+* Thermimage: https://cran.r-project.org/web/packages/Thermimage/index.html
+* GGIR: https://cran.r-project.org/web/packages/GGIR/index.html
+
+#### From today's questions
+* Reading XML data into R
+    * https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781783989065/1/ch01lvl1sec11/reading-xml-data
+    * https://stackoverflow.com/questions/40977885/extracting-nodes-by-name
+    * Greg also this code worked well for missing nodes, but not for reapeated names. Have a try
+```
+library(XML)
+library(methods)
+
+xmldata <- xmlToDataFrame("data/plant_catalog_incomplete.xml")
+View(xmldata)
+```
+* For Single cell analysis
+    * https://osca.bioconductor.org/introduction.html
+    * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html
+* For plotting gml data 
+    * merTools https://rdrr.io/cran/merTools/man/plotREsim.html
+    * https://easystats.github.io/see/articles/performance.html
+* SAS to R migration
+    * https://www.r-bloggers.com/sas-to-r-migration/
+    * https://github.com/asnr/sas-to-r
+
+### 2020-06-15: UQRUG 6
+
+Anything you'd like to talk about? A problem? Resources? Feel free to add it here!
+
+* **Stéphane Guillou** (Library): I will maintain the package [rinat](https://github.com/ropensci/rinat) from now on. If you have time, I'd love *you* to test it and report issues!
+* **Ismail Garba** (SAFS): PhD researcher working on modeling covercropping in drylands for improved agronomic and environmental outcomes under current and future climates. I'm interested in using R to run APSIM model for multi-factor long term simulations.
+* **Ruth Brady** (HMNS): PhD researcher working with accelerometers to measure physical activity patterns of adults. The package I am most interested in, is GGIR and creating a code that runs. I have basic R and GGIR knowledge but constantly run into problems I am unsure how to correct them. 
+* **Chantelle Derez** (Biological Sciences): PhD researcher loving and hating making maps. I have an error relating to JAVA that would be great to get some help on. 
+* **Adriana Vega** (SAFS) PhD studying tropical tree water use. Currently trying to use dendrometer (tree stem radius variations) data to separate "growth" from "water deficit". Hoping to get some advice on how to run a line through time series to separate these two components.
+* **Clarisse Louvard**(SBS):PhD candidate studying parasites. First time at UQRUG. Currently searching for a way to do Principal Component Analyses with imputed datasets obtained with R package MICE.
+* **Paula Andrea Martinez** I work for the National Imaging Facility, happy to help people with data organisation, data cleaning and munging. I'm also quite interested in web scrapping and APIs. I've worked with Bioconductor packages for some years too.
+*  **Fathin Azizan** PhD student studying rubber phenological metrics using remote sensing data. Currently using R for extracting and analysing raster data.
+* **Greg Siemon** PhD Candidate working on optimisation of energy use within a steelworks. I have done most of my PhD work in R and I am going to be writing my Thesis using RMarkdown (See unofficial RMarkdown Thesis template below). At the moment I'm trying to parse some messy XML formatted output from some optimisation software. If anyone is familiar with the XML2 package I'd be interested to have a chat.
+* **Patrick Di** (*SAFS*) Undergraduate Honours student who is studying R for genetics and GIS. Data management and plotting nice figures. :1234: 
+
+### 2020-05-18: UQRUG 5
+
+We are meeting online again!
+
+Today, we talk about whatever issues you might have, as well as **reprex** and **R 4.0**.
+
+#### Attendees
+
+Feel free to share your contact, specialty and questions here.
+
+* **Steph** (UQ Library), technology trainer, likes R and maps and Open Science.
+    * Email (work): s.guillou@uq.edu.au ; Social (personal): [mastodon](https://mastodon.indie.host/@stragu/)
+* **Paula** 
+* I am wondering if some could help me to do **asymptotic regression model**. Thank you!
+* **Ruth** - I have seen online a package called "revtools" for screening abstracts and titles of journals, would someone help me with the code (for future reference/projects)
+* ... and **11 more R users**!
+
+
+#### reprex
+
+The **reprex** website introduces what the reprex package is useful for, i.e. creating **reproducible examples**: https://reprex.tidyverse.org/
+
+Share your reprex example here!
+
+Steph's:
+
+``` r
+# R 4.0 does not import strings as factors by default anymore!
+
+# create a fake dataframe:
+df <- data.frame(ID = LETTERS[1:10],
+                 gender = sample(c("man", "woman", "enby", "other", "PNS"),
+                                 10, replace = TRUE),
+                 age = sample(1:100,
+                              10, replace = TRUE))
+
+# check class
+class(df$gender)
+#> [1] "character"
+
+# summary() might be a bit less informative
+summary(df)
+#>       ID               gender               age       
+#>  Length:10          Length:10          Min.   : 5.00  
+#>  Class :character   Class :character   1st Qu.:18.00  
+#>  Mode  :character   Mode  :character   Median :65.50  
+#>                                        Mean   :56.00  
+#>                                        3rd Qu.:91.75  
+#>                                        Max.   :96.00
+```
+
+<sup>Created on 2020-05-18 by the [reprex package](https://reprex.tidyverse.org) (v0.3.0)</sup>
+
+#### Topics discussed
+
+* New in **R 4.0**:
+    * Improved default colour palette: https://developer.r-project.org/Blog/public/2019/11/21/a-new-palette-for-r/index.html
+    * New StringsAsFactors default value set to `FALSE`: https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/index.html
+    * Matrices inherit the "array" class
+* **reprex** package for reproducible examples:
+    * Official docs: https://reprex.tidyverse.org/
+* **Shiny** tutorials:
+    * Tutorial: https://shiny.rstudio.com/tutorial/
+* Ruth was interested in **revtools**, which provides "tools for evidence synthesis":
+    * Website: https://revtools.net
+    * Function documentation: https://cran.r-project.org/web/packages/revtools/revtools.pdf
+* Resources for **learning R**:
+    * exercism: https://exercism.io
+    * Upcoming 1.3 version of RStudio integrates [learnr](https://rstudio.github.io/learnr/) with a new "Tutorial" pane: https://rstudio.com/products/rstudio/download/preview-release-notes/
+* Patrick was interested in **uavRst**: _Unmanned Aerial Vehicle Remote Sensing Toolbox_ (not on CRAN):
+    * Website: https://gisma.github.io/uavRst/
+    * It requires quite a few libraries!
+
+Example code used during the meetup:
+
+```r
+# R 4.0 updates
+
+# does not import strings as factors by default anymore!
+
+# create a fake dataframe:
+df <- data.frame(ID = LETTERS[1:15],
+                 gender = sample(c("man", "woman", "enby", "fluid", "other", "PNS"),
+                                 15, replace = TRUE),
+                 age = sample(1:100, 15, replace = TRUE),
+                 score = sample(10:300, 15, replace = TRUE))
+
+# check class
+class(df$gender)
+
+typeof(as.factor(df$gender))
+
+
+# summary() might be a bit less informative
+summary(df)
+
+# default palette
+plot(df$age, df$score, col = as.factor(df$gender))
+# see the values
+palette()
+
+# class inheritance
+class(diag(1))
+
+# warning when joining datasets with different factor levels
+# create two datasets:
+df1 <- data.frame(name =  c("blah", "bloh"),
+                  height = c(123, 234),
+                  stringsAsFactors = TRUE)
+df2 <- data.frame(name =  c("blah", "blih"),
+                  weight = c(456, 678),
+                  stringsAsFactors = TRUE)
+
+# dplyr warns when joining by a key that does not share
+# the exact same levels between the two tables
+library(dplyr)
+joined <- left_join(df1, df2)
+# see that it converted to characters for safety
+str(joined)
+# see that original levels differ
+df1$name
+df2$name
+
+# revtools
+library(revtools)
+# show all available data objects
+data()
+
+?revtools
+
+```
+
+### 2020-04-20: UQRUG 4 - moving online!
+
+Because of physical isolation, we will be meeting online for now.
+
+Join the zoom meeting at 3 pm on Monday the 20th of April
+
+#### Attendees
+
+Please add your **name and a problem you'd like to work on**, or just something you'd like to chat about! Feel free to add links too, so others can have a look and contribute.
+
+* [Steph](https://mastodon.indie.host/@stragu/) (Library) - putting together a resource for learning reproducible reports with R Markdown.
+* **Greg** - working on my PhD thesis using RMarkdown (I have converted the UQ thesis template to RMarkdown). Also working on some data analysis which involves manipulating data contained in multiple files. Lots of dplyr code.  Note: R 4.0 coming this week. This is a major release and it involves reinstalling all of your packages. Be careful if you update and make sure you keep backups.
+* **Patrick** - Honours student in agriculture using R to analyse biomass of lettuce and genetic variations of weed species. 
+* **Aljay** - Working in  fruit/vegetable quality changes in supply chains and using R to predict changes in the chain.
+* **Fathiyya** - Currently I am working in remote sensing field for group of crops classification using R
+*  **Paula** - I'm here to help with questions.
+*  **Amelia** - Hello! I am a basic learner of R. I will start plotting some graphs, and if I have some questions I will let you know.
+*  **Debbie** - Postdoc at SEES using R for catchment restoration projects.
+We can create breakout rooms in Zoom for people to help each other.
+
+#### Topics discussed
+
+* **R 4.0** released in a few days. Find out more:
+    * https://developer.r-project.org/Blog/public/
+    * https://cran.r-project.org/doc/manuals/r-devel/NEWS.html
+* **dplyr** soon to hit 1.0 release, planned for around the end of May. Details about changes are on the Tidyverse blog, in a series of posts:
+    * https://www.tidyverse.org/categories/package/
+* **R Markdown UQ thesis template** by Greg: https://github.com/gsiemon/UQThesis
+    * Manage citations https://ropensci.org/technotes/2020/05/07/rmd-citations/
+* **Bookdown** for bigger, structured R Markdown documents: https://bookdown.org/
+* **Tidying** data with Tidyverse functions
+* **Iterating** over several vectors of values
+    * useful examples:
+        * https://github.com/jennybc/row-oriented-workflows/blob/master/ex06_runif-via-pmap.md
+        * https://github.com/jennybc/row-oriented-workflows/blob/master/iterate-over-rows.md
+        * https://serialmentor.com/blog/2016/6/13/reading-and-combining-many-tidy-data-files-in-R
+        * https://gitlab.com/stragu/DSH/-/blob/master/R/packaging/packaging.md#read-a-single-file
+
+The code we worked on:
+
+```r
+# construct dataframe containing relevant data
+site_number <- c(1, 2) # there are 2 numbers for this variable (1 and 2)
+year <- c(2001, 2002) # there are 2 years (2001, 2002) 
+veg_index <- c("EVI", "EVI2") # there are 2 VegIndices (EVI, EVI2)
+# put everything together
+df <- data.frame(site_number, year, veg_index)
+
+# find all combinations of values
+library(tidyr)
+expanded <- expand(df, site_number, year, veg_index)
+
+# create a path from other variables
+library(dplyr)
+with_paths <- expanded %>% 
+  mutate(path = paste0("beginning/", site_number, "_", year, "-", veg_index))
+
+# encapsulate code into a function
+do_stats <- function(df, numCores) {
+  siteShp <- readRDS(df$path)
+  calcPixelwiseStats(siteShp, Year = df$year, removeBadGrads = removeBadGrads, optionsYldIdx = setOptionsYldIdx(minevitrees = 999, ndaysbeforemax4yldidx = 60, ndaysaftermax4yldidx = 60, VegIndex = df$veg_index), numCores = numCores, getFromBricks = FALSE)
+}
+
+# apply the custom function on 1-row tibbles by splitting
+library(purrr)
+siteInfoAllYrs <- with_paths %>% 
+  split(1:nrow(with_paths)) %>% # create sequence as long as number of rows
+  map(do_stats, numCores = 4)
+# we end up with a list of results
+
+# Other option: with pmap, which will work row-wise
+# (which is why we have to have the df variables in the right order)
+do_stats2 <- function(site_number, year, veg_index, path, numCores) {
+  siteShp <- readRDS(path)
+  calcPixelwiseStats(siteShp, Year = year, removeBadGrads = removeBadGrads, optionsYldIdx = setOptionsYldIdx(minevitrees = 999, ndaysbeforemax4yldidx = 60, ndaysaftermax4yldidx = 60, VegIndex = veg_index), numCores = numCores, getFromBricks = FALSE)
+}
+
+# apply the function row-wise
+siteInfoAllYrs <- pmap(with_paths, do_stats2, numCore = 4)
+
+# small example of how pmap works row-wise:
+x <- c(1, 10, 100)
+y <- c(1, 2, 3)
+z <- c(5, 50, 500)
+examp <- data.frame(x, y, z)
+pmap(examp, sum)
+```
+
+### 2020-03-23: UQRUG 3
+
+_Canceled because of UQ recommendations related to COVID-19._
+
+### 2020-02-24: UQRUG 2
+- Learning R? jump here: https://rstudio.github.io/learnr/
+- Tidyverse tricks? https://suzan.rbind.io/
+- Greg Siemon, (unofficial) Rmarkdown UQ Thesis Template: https://github.com/gsiemon/UQThesis
+- Reka is here: https://rekadata.site/ Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. Member of the Software Sustainability Institute and an Honorary Lecturer at University College London.
+- Welcome everyone!
+
+### 2020-01-20: UQRUG 1
+
+Topics discussed:
+
+* Installing R and RStudio
+* Password-protected Shiny apps
+* Referencing with BibTex in R Markdown
+* Suppressing messages in custon functions
+* Data processing with Tidyverse
+* Sharing useful resources and available training
+* Mention upcoming changes in R 4.0 
+
+Useful Links
+
+* How to create fake data sets: https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf
+* Econ R Resources: 
+    - https://www.core-econ.org/doing-economics/book/text/0-3-contents.html
+    - https://otexts.com/fpp2/

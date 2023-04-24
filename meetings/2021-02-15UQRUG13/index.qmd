@@ -1,0 +1,38 @@
+---
+title: UQRUG 13
+date: '2021-02-15'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-02-15: UQRUG 13
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just happy to help and share resources! Looking for a quick way to do adress lookups.
+*  **Paula Andrea Martinez** (co-organiser/ helper) Happy to share new ways of doing things. looking to plot answers from mentimeter.
+* David
+* Einat
+* Alphabet
+* Patrick
+
+
+#### Shared resources
+
+* Tidytext interactive course: https://juliasilge.com/blog/learn-tidytext-learnr/
+* Pattern-based analysis with motif: https://nowosad.github.io/motif/
+* ROpenSci Newsletter: https://news.ropensci.org/
+* R Markdown:
+    * Slides: https://slides.djnavarro.net/starting-rmarkdown
+    * Training at UQ: search for "Reproducible Reports"
+    * QCIF training: https://www.qcif.edu.au/training/training-courses/
+    * Carpentries chapter on R Markdown: https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html
+* New Shiny version with easier theming: https://blog.rstudio.com/2021/02/01/shiny-1-6-0/
+
+

@@ -1,0 +1,22 @@
+---
+title: UQRUG 2
+date: '2020-02-24'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-02-24: UQRUG 2
+
+- Learning R? jump here: https://rstudio.github.io/learnr/
+- Tidyverse tricks? https://suzan.rbind.io/
+- Greg Siemon, (unofficial) Rmarkdown UQ Thesis Template: https://github.com/gsiemon/UQThesis
+- Reka is here: https://rekadata.site/ Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. Member of the Software Sustainability Institute and an Honorary Lecturer at University College London.
+- Welcome everyone!
+
+

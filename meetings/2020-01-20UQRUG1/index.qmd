@@ -1,0 +1,32 @@
+---
+title: UQRUG 1
+date: '2020-01-20'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-01-20: UQRUG 1
+
+Topics discussed:
+
+* Installing R and RStudio
+* Password-protected Shiny apps
+* Referencing with BibTex in R Markdown
+* Suppressing messages in custon functions
+* Data processing with Tidyverse
+* Sharing useful resources and available training
+* Mention upcoming changes in R 4.0 
+
+Useful Links
+
+* How to create fake data sets: https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf
+* Econ R Resources: 
+    - https://www.core-econ.org/doing-economics/book/text/0-3-contents.html
+    - https://otexts.com/fpp2/
+

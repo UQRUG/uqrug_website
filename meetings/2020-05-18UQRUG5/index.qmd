@@ -1,0 +1,43 @@
+---
+title: UQRUG 5
+date: '2020-05-18'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-05-18: UQRUG 5
+
+We are meeting online again!
+
+Today, we talk about whatever issues you might have, as well as **reprex** and **R 4.0**.
+
+
+#### Attendees
+
+Feel free to share your contact, specialty and questions here.
+
+* **Steph** (UQ Library), technology trainer, likes R and maps and Open Science.
+    * Email (work): s.guillou@uq.edu.au ; Social (personal): [mastodon](https://mastodon.indie.host/@stragu/)
+* **Paula** 
+* I am wondering if some could help me to do **asymptotic regression model**. Thank you!
+* **Ruth** - I have seen online a package called "revtools" for screening abstracts and titles of journals, would someone help me with the code (for future reference/projects)
+* ... and **11 more R users**!
+
+
+
+#### reprex
+
+The **reprex** website introduces what the reprex package is useful for, i.e. creating **reproducible examples**: https://reprex.tidyverse.org/
+
+Share your reprex example here!
+
+Steph's:
+
+``` r
+

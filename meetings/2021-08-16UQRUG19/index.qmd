@@ -1,0 +1,88 @@
+---
+title: UQRUG 19
+date: '2021-08-16'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-08-16: UQRUG 19
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just here to help!
+* **Catherine Kim** (Library/Biology): working on publishing code with a paper
+* **Jordan Pennells** (ANOVA structure)
+* **Violeta Berdejo-Espinola** (make my code more efficient)
+* **Omkar Ravindranatha Katagi** (Here to learn R)
+* ... and 8 more UQRUGers!
+
+
+#### Shared resources
+
+Links we talked about today:
+
+* Great books / resources to get started:
+    * ***R for Data Science*** (aka "R4DS"): https://r4ds.had.co.nz/
+        * [Slack community of R4DS](https://rfordatascience.slack.com/join/shared_invite/zt-n46lijeb-2RRzQ70U34eH530~PyZsmg#/shared-invite/email)
+        * On Twitter: https://twitter.com/R4DScommunity
+    * **R Cookbook**: https://www.cookbook-r.com/
+    * **RStudio Education**: https://education.rstudio.com and https://education.rstudio.com/learn/
+    * **learnr** package (also integrated in the RStudio "tutorial" tab): https://rstudio.github.io/learnr/
+    * **article on linked points between boxplots**: https://datavizpyr.com/how-to-connect-data-points-on-boxplot-with-lines/
+
+
+#### Code snippets
+
+Change the order of categorical variable levels (so ggplot2 uses that order instead of the alphabetical order):
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+                          
+# relevel factors using forcats package
+library(forcats)
+f <-  factor(c("a", "b", "c", "d"), levels = c("b", "c", "d", "a"))
+fct_relevel(f, "a", "c", "d", "b")
+
+# relevel eye_color of starwars data
+
+starwars %>% 
+   mutate(eye_color = fct_relevel(eye_color, "yellow")) %>% 
+   ggplot(aes(x = eye_color)) +
+   geom_bar()
+```
+
+Use case_when to rate or recode data:
+
+
+```{r}
+library(dplyr)
+
+starwars
+range(starwars$height, na.rm = TRUE)
+
+# just based on height
+starwars_rated <-  starwars %>% 
+   mutate(height_rating = case_when(height < 70 ~ "very small",
+                                    height < 140 ~ "quite small",
+                                    height < 200 ~ "medium",
+                                    TRUE ~ "tall"))                                       
+                                    
+# recode based on multiple conditions
+range(starwars$mass, na.rm = TRUE) # check range of mass, second vairable to recode by
+
+starwars_rated <-  starwars %>% 
+   mutate(height_rating = case_when((height < 70) & (mass < 700)~ "very small and light",
+                                    height < 140 ~ "quite small",
+                                    height < 200 ~ "medium",
+                                    TRUE ~ "tall"))
+          
+```
+

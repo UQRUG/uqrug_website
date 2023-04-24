@@ -1,0 +1,123 @@
+---
+title: UQRUG 10
+date: '2020-10-19'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-10-19: UQRUG 10
+
+#### Attendees and problems
+
+Please add your name and the problem you'd like some help with!
+
+* **Stéphane** (Library): here to help! 
+* **Chantelle**: Biological Sciences. I can't stay to long as I have to go track carpet pythons at 4pm ;)
+* **Einat** (Social Sciences, R studio beginner): Apologies in advance would have to leave early. have some issues wiTh minor and basic procedures, like ...CONDITIONS!! and also with reading labels from csv/excel file. 
+* **Patrick** (Agricultural Science) Honours student
+* **Gabriel**: Hydrologist, spatial data analyst. PhD candidate at SMI. R beginner and Python enthusiast !
+* **Natalie** (Mathematics): Undergraduate Mathematics and Statistics student
+* **Phoebe**: learn more about data viz!
+* ... and few more!
+
+
+#### Today's challenge
+
+Try playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-10-13/readme.md
+
+Share your findings and cool visualisations with the group!
+
+
+#### Recoding data
+
+This is a working example of recoding using dplyr's `case_when()`:
+
+
+```{r}
+library(dplyr)
+CO2 %>% 
+  mutate(uptake = case_when(
+    uptake > 12 ~ "yay!",
+    uptake > 10 ~ "OK.",
+    TRUE ~ "oh no..."
+  ))
+```
+
+The `TRUE` line is for "everything else".
+
+
+#### Finding files
+
+The "working directory" is the default location:
+
+
+```{r}
+getwd() # know where you are
+setwd("path/to/correct/location") # change it
+
+# functions will look there by default
+read.csv("filename.csv")
+# but you can use longer, absolute filepaths
+read.csv("C:/Users/myname/filename.csv")
+```
+
+If you don't want to deal with that: **use R Projects**! Creating an R Project will set the working directory for you.
+
+
+#### Dealing with overflowing labels
+
+```{r}
+library(ggplot2)
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar()
+
+# horizontal bar chart
+ggplot(diamonds, aes(y = cut)) +
+  geom_bar()
+
+# abbreviate the labels
+abbreviate(diamonds$cut)
+
+# using it in the visualisation is nice and concise
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar() +
+  scale_x_discrete(labels = abbreviate)
+```
+
+On the other hand, if labels are overflowing inside the canvas, we can expand axis limits:
+
+
+```{r}
+# expand limits
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar() +
+  ylim(c(0, 25000))
+```
+
+However, ggplot2 should expand the plot area to include all the geometries automatically, including a `geom_label()` or `geom_text()`.
+
+
+#### Shared resources
+
+Resources shared during the meetup can be listed here:
+
+* Packages:
+    * epiDisplay: https://rdrr.io/cran/epiDisplay/
+    * lme4: https://www.rdocumentation.org/packages/lme4/versions/1.1-23/topics/lme4-package
+    * Seurat: https://cran.r-project.org/web/packages/Seurat/index.html
+    * reshape2: https://cran.r-project.org/web/packages/reshape2/index.html
+* Functions:
+    * `case_when()` to recode a variable: https://dplyr.tidyverse.org/reference/case_when.html
+* Data viz:
+    * ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/
+    * Data to Viz: https://www.data-to-viz.com/
+    * lattice: https://www.rdocumentation.org/packages/lattice/versions/0.20-41
+
+
+

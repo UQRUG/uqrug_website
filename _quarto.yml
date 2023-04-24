@@ -1,5 +1,5 @@
 project:
-  type: website
+  type: website 
 
 website:
   title: "UQRUG"   
@@ -19,6 +19,7 @@ website:
       - text: Home
         href: index.qmd
       - events.qmd 
+      - pastmeetings.qmd
       - community.qmd
     tools:
       - icon: github

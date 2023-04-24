@@ -1,0 +1,68 @@
+---
+title: UQRUG 7
+date: '2020-07-27'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-07-27: UQRUG 7
+
+On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
+
+
+#### Attendees and problems
+
+* **Stéphane** (Library): anyone with experience with Tidyverse + quosure / quasiquotation? I want to use strings in one column as object names in a function.
+* **Ruth** (HMNS): I don't have any specific issues this week. I am happy to listen and explore new packages.
+* **Chantelle Derez** (Biological Science): I don't have any specific issues, just popping in to learn. Current favourite package is Thermimage and colour palette 'rainbow' for analysing thermal images. :rainbow: 
+* **Paula Andrea M** (CAI) I'm here to help. Also I would like to invite you to the Rladies Brisbane events. https://www.meetup.com/rladies-brisbane/events/272075776 The topic of next month is R in Biology. 
+* **Fathin** (SAFS) No issue to date. 
+* **Damber** (I want to learn plotting glmm prediction) - shared on chat.uq.edu as well.
+* **Candice**: RNAseq in R.
+    * Found resources:
+    * https://osca.bioconductor.org
+    * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html 
+* **Greg** (Chemical Engineering) Late but here to help. Currently grappling with some nasty XML at the moment that I want to parse efficiently.  Writing my PhD thesis in RMarkdown.
+
+
+#### Favourite packages
+
+* tmap: https://mtennekes.github.io/tmap/
+* stylr: https://github.com/r-lib/styler
+* raster: https://rspatial.org/raster/pkg/index.html
+* ggplot2: https://ggplot2.tidyverse.org/
+    * ggpubr: https://rpkgs.datanovia.com/ggpubr/index.html
+* Thermimage: https://cran.r-project.org/web/packages/Thermimage/index.html
+* GGIR: https://cran.r-project.org/web/packages/GGIR/index.html
+
+
+#### From today's questions
+
+* Reading XML data into R
+    * https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781783989065/1/ch01lvl1sec11/reading-xml-data
+    * https://stackoverflow.com/questions/40977885/extracting-nodes-by-name
+    * Greg also this code worked well for missing nodes, but not for reapeated names. Have a try
+```
+library(XML)
+library(methods)
+
+xmldata <- xmlToDataFrame("data/plant_catalog_incomplete.xml")
+View(xmldata)
+```
+* For Single cell analysis
+    * https://osca.bioconductor.org/introduction.html
+    * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html
+* For plotting gml data 
+    * merTools https://rdrr.io/cran/merTools/man/plotREsim.html
+    * https://easystats.github.io/see/articles/performance.html
+* SAS to R migration
+    * https://www.r-bloggers.com/sas-to-r-migration/
+    * https://github.com/asnr/sas-to-r
+
+

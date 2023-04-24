@@ -1,0 +1,47 @@
+---
+title: UQRUG 29
+date: '2022-07-27'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-07-27: UQRUG 29
+
+#### Attendees
+
+* **Luke**: Library | here to help and say hello
+* **Rene**: Pharmacy | Listen and learn
+* **David**: Honours in Science | Histogram ggplot2 issue
+* **Wilson**: Student Affairs | Listen and learn
+* **Lily**: Honours in Economics | Learning R for course
+
+
+
+#### Topics discussed and code
+
+Creating a normal distribution line for a histogram.
+Using ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled differently on the y axis. 
+
+Needed to scale the stat_function() by the binwidth times observations using a defined function.
+
+```
+bw = .5
+
+ggplot(SS, aes(DIA)) +
+  geom_histogram( binwidth =  bw)+ 
+  stat_function(fun =function(x)
+dnorm(x,mean = mean(SS$DIA),sd = sd(SS$DIA))*bw*64) +
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+  panel.grid.major.y  = element_line(colour = "grey"),
+  axis.text = element_text(size=12,family = ("TT Times New Roman"), 
+  colour =  'black')) +
+  xlab("Inhibitory zone diameter (mm)")+ylab("number of isolates")
+```
+
+

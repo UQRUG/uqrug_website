@@ -1,0 +1,47 @@
+---
+title: UQRUG 20
+date: '2021-09-21'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-09-21: UQRUG 20
+
+#### Participants: 14
+
+* **Stéphane** (Library): thinking a lot about an "OpenStreetMap Recipes" package...
+* **Catherine**: Library/Postdoc Biology, code/data into a repository for a paper
+* **Shaoyang**: QAAFI PhD student.  Wine sensory/consumer science.  Data modelling.  Multivariate statistics.  Multi-block data.
+* **Evan**: PhD Student, Developmental Neuroscience. Interested in moving from disorganised scripts to organised modules and packages.
+* **Fathin**: PhD Student, SAFS. Looking to extract raster and use it to create model.
+* **Huiyang**: PhD student, Faculty of Medicine, Diamantina Institute, Immunology. Would like to learn something about bioinformatics and data science related to R.
+* **Muhammad Abdullah** PhD Student,QAAFI, I want to learn bioinformatics and data science releated R.
+* **Luzia Bukali**: PhD Student, QIMR, Infection and Immunology. Relatively new to R. Looking to learn more about data analysis and creating figures in R.
+* **Xiongzhi Wang**: PhD student, School of Communication and Arts. I want to learn and refresh knowledge of using R.
+* **Muhammad Yahya**: PhD candidate at QAAFI. 
+* **Gazi**: Masters's student, School of Economics. I just started learning R.
+* ... **and 3 more UQRUGers**!
+
+
+#### Shared resources
+
+* Resources here!
+* *R packages* book by Jenny Bryan and Hadley Wickham: https://r-pkgs.org/
+* The Library's R packaging course: https://gitlab.com/stragu/DSH/-/blob/master/R/packaging/packaging.md
+* usethis package to set up R packages: https://usethis.r-lib.org/
+    * usethis for R packages kbroman: https://kbroman.org/AdvData/18_rpack_demo.html
+* unit testing with the testthat package: https://testthat.r-lib.org/ 
+* Input-output analysis:
+    * iotables package: https://iotables.ceemid.eu/
+    * ioanalysis package: https://cran.r-project.org/web/packages/ioanalysis/
+* Exercism online coding practice! https://exercism.org/
+* working with netcdf files for CMIP6 data: https://www.researchgate.net/publication/337991369_User-Friendly_R-Code_for_Data_Extraction_from_CMIP6_outputs; https://ui.adsabs.harvard.edu/abs/2019AGUFMPA33C1098K/abstract
+* tax_name function for taxonomic, genetic data (from taxize package): https://cran.r-project.org/web/packages/taxize/taxize.pdf
+* 
+

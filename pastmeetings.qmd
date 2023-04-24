@@ -1,0 +1,40 @@
+---
+title: "Past Meetings" 
+toc: true
+listing:
+  contents: meetings
+  type: default
+  sort: "date desc"
+  fields: [date, title]  
+  date-format: long
+about:
+  template: marquee 
+  links:
+    - icon: hexagon-fill
+      text: R Workshops
+      href: https://web.library.uq.edu.au/library-services/training#keyword=Rstudio
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/UQ_RUG
+    - icon: file-earmark-text
+      href: https://frama.link/uqrug
+      text: Collaborative Document
+    - icon: github
+      text: Github
+      href: https://github.com/uqlibrary/technology-training
+    - icon: chat-right
+      text: UQ Chat
+      href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
+    - icon: globe
+      text: Created with quarto
+      href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
+---
+
+```{=html}
+<style>
+div.quarto-post .metadata{
+flex-basis: 15%;
+}
+</style>
+```
+Here you can find the full repository of notes from previous UQRUG Meetings </br>

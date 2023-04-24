@@ -1,0 +1,45 @@
+---
+title: UQRUG 9
+date: '2020-09-21'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-09-21: UQRUG 9
+
+#### Attendees and problems
+
+Please add your name and the problem you'd like some help with!
+
+* **Stéphane** (Library): here to help! But challenged by using an API and turning the XML output into a dataframe...
+* **Dwan** (CHRC): Enjoying my first day, and learning what the group is about
+* Grace
+* Amelia
+* Mitch
+
+
+#### Today's challenge
+
+Try playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-15/readme.md
+
+Share your findings and cool visualisations with the group!
+
+
+#### Shared resources
+
+Resources shared during the meetup can be listed here
+
+* Base R gems: https://ihaddadenfodil.com/post/r-base-gems/#
+* ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/
+* Mitch is using the lidR package:
+    * Documentation: https://www.rdocumentation.org/packages/lidR/versions/3.0.3
+    * Book: https://jean-romain.github.io/lidRbook/index.html
+* the ggfortify package proved useful for PCA visualisation: https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_pca.html
+
+

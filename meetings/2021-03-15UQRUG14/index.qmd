@@ -1,0 +1,55 @@
+---
+title: UQRUG 14
+date: '2021-03-15'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-03-15: UQRUG 14
+
+#### Participants
+
+* **Stéphane Guillou** (Library): ...
+* **Paula Andrea Martinez** (ReSA): are you interested in a Markdown workshop? two hours on the 24th of March by [NeSI](https://www.eventbrite.co.nz/e/rmarkdown-for-researchers-weave-together-narrative-text-and-code-registration-144069029345)
+* **Fathin Azizan** (HDR SAFS): Need help to check on coding for the multiple linear regression using raster data.
+* **Robyn**
+* **Phoebe**: Hi everyone!
+* **Tmnit**
+* **Violeta**
+* **Patrick**
+* **Aljay**
+
+
+#### This week's TidyTuesday dataset
+
+[Bechdel Test](https://en.wikipedia.org/wiki/Bechdel_test) dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md
+
+Get the data and play with it:
+
+
+```{r}
+raw_bechdel <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/raw_bechdel.csv')
+movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv')
+```
+
+Share code and pictures here!
+
+
+#### Shared resources
+
+* Intro slides by Grant McDermott: https://raw.githack.com/uo-ec607/lectures/master/04-rlang/04-rlang.html#1
+* mapsf is the successor to cartography: https://rgeomatic.hypotheses.org/2212
+* Open Science Foundation: https://osf.io/
+* OpenStreetMap data:
+    * Geofabrik to get bulk OpenStreetMap downloads: http://download.geofabrik.de/
+    * osmextract package: https://cran.r-project.org/web/packages/osmextract/index.html
+    * osmdata package: https://docs.ropensci.org/osmdata/
+
+
+

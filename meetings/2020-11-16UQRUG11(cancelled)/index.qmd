@@ -1,0 +1,15 @@
+---
+title: UQRUG 11
+date: '2020-11-16'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2020-11-16: UQRUG 11 (cancelled)
+

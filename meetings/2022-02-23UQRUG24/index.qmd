@@ -1,0 +1,84 @@
+---
+title: UQRUG 24
+date: '2022-02-23'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-02-23: UQRUG 24
+
+#### Attendees
+
+* **Stéphane Guillou**: just helping out
+* **Svetlina Vasileva**
+* **Trinh Huynh** (USC)
+* **Richard Bell**
+* **Luke Gaiter** (ggplot2 lesson)
+* ...and 5 other UQRUGers!
+
+
+#### Code
+
+Convert a table to a `gt` object and then save it to RTF (which can be opened by Word).
+
+
+```{r}
+library(gt)
+gt(mtcars) %>% 
+  gtsave("test.rtf")
+```
+
+Attempting to highlight/label outliers in linear regression plot
+
+```{r}
+### geom_text_repel
+# only label players with QoG >  1 or < 0.2
+# align text vertically with nudge_y and allow the labels to 
+# move horizontally with direction = "x"
+ggplot(linear_regression, aes(x= QOG, y = ten_political_conflict, label = district)) + 
+        geom_point(color = dplyr::case_when(linear_regression$QOG > 1 ~ "#1b9e77", 
+                                            linear_regression$QOG < 0.2 ~ "#d95f02",
+                                            TRUE ~ "#7570b3"), 
+                   size = 3, alpha = 0.8) +
+        geom_text_repel(data          = subset(linear_regression, QOG > 1),
+                        nudge_y       = 32 - subset(linear_regression, QOG > 1)$QOG,
+                        size          = 4,
+                        box.padding   = 1.5,
+                        point.padding = 0.5,
+                        force         = 100,
+                        segment.size  = 0.2,
+                        segment.color = "grey50",
+                        direction     = "x") +
+        geom_label_repel(data         = subset(linear_regression, QOG < 0.2),
+                         nudge_y       = 16 - subset(linear_regression, QOG < 0.2)$QOG,
+                         size          = 4,
+                         box.padding   = 0.5,
+                         point.padding = 0.5,
+                         force         = 100,
+                         segment.size  = 0.2,
+                         segment.color = "grey50",
+                         direction     = "x") +
+        scale_x_continuous(expand = expansion(mult = c(0.2, .2))) +
+        scale_y_continuous(expand = expansion(mult = c(0.1, .1))) +
+        theme_classic(base_size = 16)
+```
+
+#### Shared resources and topics discussed
+
+* Using Cloudstor's SWAN: [documentation](https://support.aarnet.edu.au/hc/en-us/articles/360000575395-What-is-CloudStor-SWAN-)
+* Export tables to DOC or DOCX:
+    * Svet tried to use [arsenal's write2word() function](https://mayoverse.github.io/arsenal/reference/write2specific.html), but didn't work... inside a R Markdown chunk! Had to run it outside, possibly because the function itself uses knitr...
+    * Richard suggested using [stargazer](https://cran.r-project.org/web/packages/stargazer/index.html)
+    * [gt](https://gt.rstudio.com) is a powerful package for customised tables, and can export to RTF, and its website has a useful [list of R packages for creating tables](https://gt.rstudio.com/#how-gt-fits-in-with-other-packages-that-generate-display-tables).
+* [forcats](https://forcats.tidyverse.org/index.html) has been used twice during the session, once for changing the order of the levels to something arbitrary with `forcats::fct_relevel()`, and once for ordering them by value (with `dplyr::arrange()` followed by `forcats::fct_inorder()`)
+* Sustainable transport planning with [stplanr](https://docs.ropensci.org/stplanr/)
+* [lidR](https://cran.r-project.org/web/packages/lidR/news/news.html) moves away from sp/raster and uses sf/terra/stars instead
+* [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html) was suggested to easily highlight (an label) cases on ggplot2 visualisations
+
+

@@ -1,0 +1,30 @@
+---
+title: UQRUG 31
+date: '2022-09-28'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-09-28: UQRUG 31
+
+#### Attendees
+
+* **Luke**: Library | here to help
+* **Valentina**: Library | Listen, learn and help
+* **Tianjian**: Economics | Listen and learn
+* **Nick**: Library | here to help
+
+
+#### Topics discussed and code
+
+Covered some of the basics around creating, and the differences between, arrays and dataframes.
+
+Worked on reviving the R-based mailing list for RUG.
+    
+

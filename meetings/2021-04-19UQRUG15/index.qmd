@@ -1,0 +1,58 @@
+---
+title: UQRUG 15
+date: '2021-04-19'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-04-19: UQRUG 15
+
+#### Participants
+
+* **Stéphane Guillou** (Library): I'd like start working on a package to query the MusicBrainz API
+* **Catherine Kim** (Library/Biology): Write a function to automate coral reef image download from US NOAA database CoRIS.  Cleaning up code for sharing.
+* **Rene Erhardt** (Pharmacy): beginner, just listening...
+* **Andy Cui** (Engineering): First time attendance with aim of reshaping spectral data for visualisation purposes
+* **Rhiannon Jeans** (Neuroscience): First time attending the meeting but not new to R. Looking to help others or learn from others. 
+* ...
+
+#### TidyTuesday datasets
+
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+
+Share code and pictures here!
+
+
+#### Shared resources
+
+* R Markdown news: https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/
+* reshape2 tutorial: https://www.datacamp.com/community/tutorials/long-wide-data-R
+* Tidyverse information: https://www.tidyverse.org/
+* ggplot2 visualisation wizardry: https://www.cedricscherer.com/slides/useR2021.pdf
+* pipe operator:
+    * first introduced by magrittr: https://github.com/tidyverse/magrittr
+    * but coming to R base: https://cran.r-project.org/doc/manuals/r-devel/NEWS.html
+* R Markdown gallery: https://rmarkdown.rstudio.com/gallery.html
+* Tables
+    * flextable: https://davidgohel.github.io/flextable/
+    * officer: https://davidgohel.github.io/officer/
+    * frequency (for tables similar to SPSS' `FREQUENCIES`): https://github.com/wilcoxa/frequency
+
+For example, try this:
+
+
+```{r}
+library(dplyr)
+library(frequency)
+options(frequency_open_output = TRUE)
+mtcars %>% 
+  select(carb, cyl) %>% 
+  freq()
+```
+

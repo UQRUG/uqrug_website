@@ -1,0 +1,92 @@
+---
+title: UQRUG 32
+date: '2022-10-26'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-10-26: UQRUG 32
+
+             
+
+#### Attendees
+
+* **Nick**: Library | here to help
+* **Luke**: Library | here to help
+* **Valentina**: Library | here to help
+* **Pierre**: P&F | Listen and learn
+* **Sophie**: 
+* **Robyn**: 
+* **Semira**:
+* **David**: UQ-RCC | hopefully helpful ;-)
+* **Christina**: Psychology | Learn text analysis for R
+* **Danelle**:
+* **Jaye**:
+* **Rene**: Pharmacy | listen and learn
+* **Rovan**:
+* **Roman**: 
+* **Semira**: 
+* **Sogra**:
+* **Kar**:
+
+
+
+
+#### Topics discussed and code
+
+##### Presentation on quanteda
+
+Nick Wiggins did a presentation on the quanteda package  to give an overview and introduction to the package and how he has recently used it to assist a researcher.
+https://quanteda.io/
+
+
+##### Kar ggplot facet_wrap label issue
+
+Kar has the below sample data set:
+```
+MyID	eventA review	eventB review	eventC review
+id_68	very good	neutral	
+id_30	very good	very good	
+id_15	good	very good	
+id_1	neutral	very good	
+![](https://s3.hedgedoc.org/demo/uploads/6f9d7f0d-202b-4549-b7b1-186dbe9bb093.png)
+
+```
+He is trying to create a facet_wrap in ggplot that includes labels that are missing from the data, but needed to scale "bad" & "very bad", while having the y labels showing on every facet. Without manually creating each y scale.
+
+```{r}
+# Data transformation
+trial %>% 
+  pivot_longer(c(2:3), names_to = "events", values_to = "review") %>% 
+  count(events, review) %>% 
+  rbind(tibble(events = c("eventA review", "eventA review"),
+               review = c("bad", "very bad"),
+               n = c(NA, NA))) %>%
+  mutate(events = as.factor(events),
+         review = as.factor(review)) %>% 
+# plot
+  ggplot(aes(y = review, x = n, fill = events)) +
+  geom_col(width = 0.5) +
+  facet_wrap(~events) +
+  theme(legend.position = "none")
+```
+
+##### Sogra stat comparison issue
+
+Sogra has a large dataset of protein observations and needs to compare between different groups.
+
+Using the package **MSstats** Sogra needs to re-export that data.
+
+
+##### Semira
+
+Semira is trying to change the colours of the diamonds in a forest plot created using the **meta** package.
+We've tried change the col.diamonds to set the colours, however this changed all of the boxes in the forest plot.
+    
+

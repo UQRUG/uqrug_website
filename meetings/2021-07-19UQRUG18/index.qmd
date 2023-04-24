@@ -1,0 +1,18 @@
+---
+title: UQRUG 18
+date: '2021-07-19'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-07-19: UQRUG 18
+
+Technical difficulties! No notes.
+
+

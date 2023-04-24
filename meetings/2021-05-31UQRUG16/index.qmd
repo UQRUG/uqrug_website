@@ -1,0 +1,44 @@
+---
+title: UQRUG 16
+date: '2021-05-31'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-05-31: UQRUG 16
+
+#### Participants
+
+* **Catherine Kim** (Library/Biology): using the R package boral for multivariate data ...
+* **Stéphane Guillou** (Library): playing with APIs, trying the MusicBrainz one at the moment to build a Shiny app...?
+* **David Green** (UQ RCC) helping HPC users to get R code running on the HPC ...
+*  ** Roman Scheurer (UQ QCMHR): Interested in using RStudio for large population-level and time series data, applying geographic information systems to identify patterns of health utilisation
+*  ... and a few more!
+
+
+
+#### TidyTuesday datasets
+
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+
+Share code and pictures here!
+
+
+#### Shared resources
+
+* R-Ladies Brisbane has a YouTube channel! First video is a presentation by Julie Vercelloni: https://www.youtube.com/watch?v=L_8e2xuyttI
+* R 4.1 and RStudio: https://community.rstudio.com/t/psa-r-4-1-0-release-requires-rstudio-preview/105209
+    * What's new in R 4.1: https://cran.r-project.org/doc/manuals/r-release/NEWS.html
+    * If you need the preview version to fix the graphics issues: https://www.rstudio.com/products/rstudio/download/preview/
+* useR 2021 conference: https://user2021.r-project.org/participation/registration/
+* Share code on GitHub: https://github.com/
+* Import LAS dataset with lidR package: https://jean-romain.github.io/lidRbook/
+* `after_stat()` function in ggplot2: https://www.tidyverse.org/blog/2020/03/ggplot2-3-3-0/#more-control-over-aesthetic-evaluation
+
+

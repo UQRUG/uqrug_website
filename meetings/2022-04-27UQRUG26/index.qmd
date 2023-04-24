@@ -1,0 +1,80 @@
+---
+title: UQRUG 26
+date: '2022-04-27'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-04-27: UQRUG 26
+
+#### Attendees
+
+* Stéphane
+* Veronika
+* Chris
+* Thuong
+* Lily
+* David
+
+
+#### Topics discussed and code
+
+* Machine learning with caret and glmnet
+* High-performance computing: https://rcc.uq.edu.au/high-performance-computing
+* Spatial data: sf, sfnetworks... Austroad dashboard
+* Interactive viusalisations: plotly, highcharter, networkD3, leaflet, tmap, crosstalk, Shiny...
+* API / direct link for accessing government data that gets updated weekly (see below)
+
+
+##### Tide data
+
+```{r}
+# Whyte island, station measuring tide level
+
+path <- "http://opendata.tmr.qld.gov.au/Whyte_Island.txt"
+# read with base function, ignore first lines, keep two columns
+tide_data <- read.table(path, skip = 5)[,1:2]
+# name the column
+names(tide_data) <- c("date_time", "LAT")
+
+# same with readr
+library(readr)
+library(dplyr)
+tide_data <- read_table(path, skip = 5,
+                        col_names = FALSE) %>% 
+  select(1:2) %>% 
+  rename(date_time = 1, LAT = 2)
+
+# split the date time
+library(lubridate)
+tide_data <- tide_data %>% 
+  mutate(date_time = dmy_hm(date_time))
+# filter and visualise
+library(ggplot2)
+tide_data %>% 
+  filter(LAT > 0.01) %>% 
+  ggplot(aes(x = date_time, y = LAT)) +
+  geom_line()
+
+# save only the first time:
+# write.csv(tide_data, "all_tide_data.csv", row.names = FALSE)
+
+# append new data
+all_tide_data <- read_csv("all_tide_data.csv")
+all_tide_data <- bind_rows(all_tide_data, tide_data) %>% 
+  unique() # check for duplicates
+# overwrite file
+write.csv(all_tide_data, "all_tide_data.csv", row.names = FALSE)
+```
+
+Automate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html
+
+
+
+

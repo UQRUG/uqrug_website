@@ -1,0 +1,94 @@
+---
+title: UQRUG 17
+date: '2021-06-21'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-06-21: UQRUG 17
+
+#### Participants
+
+* **Stéphane Guillou** (Library): just here to share help!
+* **Catherine Kim** (Library/Biology): playing around spatial and open datasets from this [World's Oceans Day R-blogger post](https://www.r-bloggers.com/2021/06/celebrating-world-ocean-day-ropensci-style/)
+* ... and 8 more UQRUGers!
+
+
+#### Shared resources
+
+* World Ocean Day post: https://www.r-bloggers.com/2021/06/celebrating-world-ocean-day-ropensci-style/
+* performance package, `check_model()` function to check model assumptions: https://rdrr.io/cran/performance/man/check_model.html
+* Create custom ggplot2 themes: https://rpubs.com/mclaire19/ggplot2-custom-themes
+* Regular expression + stringr cheatsheet: http://edrub.in/CheatSheets/cheatSheetStringr.pdf
+    * Read more about regexes: https://en.wikipedia.org/wiki/Regular_expression
+* stargazer package for nice tables:
+    * On CRAN: https://cran.r-project.org/web/packages/stargazer/index.html
+    * Manual: https://cran.r-project.org/web/packages/stargazer/stargazer.pdf
+    * warning: takes dataframes(!), not tibbles! (Might silently fail)
+* The sf package now uses a spherical geometry by default: https://r-spatial.github.io/sf/articles/sf7.html
+
+
+#### Tips for newcomers
+
+* Projects for everything! Using R Projects allows you to keep separate projects... separate! And find files easily. Start organised to stay organised.
+* *R 4 Data Science* book: https://r4ds.had.co.nz/
+
+
+
+#### Code snippets
+
+##### Export to CSV
+
+```{r}
+# export with write.csv()
+write.csv(ToothGrowth,
+          file = "exports/tooth_growth.csv",
+          row.names = FALSE, # remove rowname column
+          na = "") # empty cell instead of "NA"
+```
+
+##### Missing data handling in `dplyr::filter()`
+
+```{r}
+# insert missing data:
+ToothGrowth[27,3] <- NA
+library(dplyr)
+# dplyr filtering:
+filtered_dplyr <- filter(ToothGrowth, dose > 0.5)
+    # dplyr filter gets rid of rows returning NA
+# base indexing:
+filtered_base <- ToothGrowth[ToothGrowth$dose > 0.5, ]
+    # base subsetting with [] keeps rows returning NA
+# check documentation:
+?dplyr::filter
+```
+
+> "[In `dplyr::filter`], note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with `[`."
+
+
+##### New `alt` argument in ggplot2
+
+Great news for accessibility in the new ggplot2 version 3.3.4: https://cloud.r-project.org/web/packages/ggplot2/news/news.html
+
+For example:
+
+
+```{r}
+library(ggplot2)
+ggplot(ToothGrowth, aes(x = supp, y = len)) +
+  geom_boxplot() +
+  labs(alt = "Boxplot of tooth growth rate with different supplements.\n
+       The length is generally higher with the OJ supplement.")
+```
+
+This will allow tools that create documents that include ggplot2 visualisations to make use of the alternative text, for screen readers for example.
+
+Know that R Markdown has the chunk option `fig.alt` for that purpose as well.
+
+

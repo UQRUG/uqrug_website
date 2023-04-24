@@ -1,0 +1,86 @@
+---
+title: UQRUG 27
+date: '2022-06-01'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-06-01: UQRUG 27
+
+#### Attendees
+
+* **Stéphane**: Library, here to help!
+* **Emma**: looking for some help editing a graphic with ggplot2
+* **Rene**: just tagging along
+* **Laura**: working on GLMs
+* **Leonie**: both tagging along and hoping for some help with the adehabitat package
+* **Chris**: just tagging along
+* **David**: using R on HPC 
+* **Astrid**: R Markdown issues
+* **Olalekan**: just tagging along
+* 
+* ...and 6 other UQRUGers!
+
+
+#### Topics discussed and code
+
+* ggplot2 customisation: moving legend, filtering data out
+    * [Cédric Scherer's slides](https://www.cedricscherer.com/slides/OutlierConf2021_ggplot-wizardry.pdf) (with customisation of legend using the `guides()` function)
+
+
+```{r}
+library(dplyr)
+# do not keep these three eye colours
+starwars %>% 
+  filter(!eye_color %in% c("blue", "yellow", "green"))
+```
+
+* Preparation for species distribution modelling. Convert dataframe to sf object with `st_as_sf()`, and will probably need to go from vector data to raster data with `terra::rasterize()`
+    * The [CRAN Task View on spatial data](https://CRAN.R-project.org/view=Spatial) lists a lot of useful packages
+* Importing spatial points for dolphin occurences, using sf. Constructing a convex hull from them and visualising on an interactive map:
+
+
+```{r}
+# read CSV as dataframe
+dolph <- read.csv("Adehabitat.csv")
+
+library(sf)
+# convert the dataframe to an sf object
+dolph_sf <- st_as_sf(dolph, coords = c("Longitude", "Latitude"))
+# see it with default plot method
+plot(dolph_sf)
+
+# interactive map
+library(tmap)
+tmap_mode("view")
+tm_shape(dolph_sf) +
+  tm_dots()
+
+# convex hull
+dolph_hull <- st_convex_hull(st_union(dolph_sf))
+
+# visualise both
+tm_shape(dolph_hull) +
+  tm_borders() +
+tm_shape(dolph_sf) +
+  tm_dots()
+```
+
+* Detecting anomalies in chronological sequence of a dataframe. `dplyr::lag()` and `dplyr::lead()` functions can be used for comparisons. `any()` and `all()` help reducing many logical values to one.
+* R Markdown troubles: Rmd is self-contained and needs to include all the necessary code. Its working directory is by default the directory where the .Rmd file is saved.
+* factoextra's `fviz_pca*()` functions for PCA, colouring points per group.
+    * [STHDA has examples](http://www.sthda.com/english/wiki/fviz-pca-quick-principal-component-analysis-data-visualization-r-software-and-data-mining)
+
+
+#### Links
+
+* [R Ladies Brisbane YouTube channel](https://www.youtube.com/channel/UC9oOCJe8kwkZ_6IgTmet9oQ)
+* [Geospatial Analysis Community of Practice](https://geospatial-community.netlify.app/)
+
+

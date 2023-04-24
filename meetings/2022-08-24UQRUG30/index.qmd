@@ -1,0 +1,39 @@
+---
+title: UQRUG 30
+date: '2022-08-24'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2022-08-24: UQRUG 30
+
+#### Attendees
+
+* **Luke**: Library | here to help
+* **Chris Mancini**: Civil Engineering | Read multiple CSVs and Shiny question
+* **Tayla Lawrie**: NA | Listen and learn
+* **Wilson**: Student Affairs | Listen and learn
+* **Valentina**: Library | Listen, learn and help
+* **Nick**: Library | here to help
+
+
+
+#### Topics discussed and code
+
+How to read multiple csv files in as separate variables efficiently for a Shiny app.
+Looked at creating a list of files, and then using the read_csv function in rdrr package to read them in.
+
+Tried a lapply(files,read_csv) but this just creates a list of the files.
+Found a package known as easycsv which has a function called loadcsv_multi()
+
+```
+loadcsv_multi(directory)
+```
+
+

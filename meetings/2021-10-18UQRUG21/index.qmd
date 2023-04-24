@@ -1,0 +1,22 @@
+---
+title: UQRUG 21
+date: '2021-10-18'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2021-10-18: UQRUG 21
+
+#### Attendees
+
+* Stéphane
+* Aklilu
+* Uttara
+
+
