@@ -5,10 +5,9 @@ listing:
   contents: meetings
   type: default
   sort: "date desc"
-  fields: [date, title, description]  
+  fields: [date, title]  
   date-format: long
-  max-description-length: 1000
-  filter-ui: [image, date, title, author, description]
+  filter-ui: false
 about:
   template: marquee 
   links:
@@ -38,9 +37,7 @@ div.quarto-post .metadata{
 flex-basis: 15%;
 }
 
-div.quarto-post .listing-description {
-    display: none;
-}
 </style>
 ```
-Here you can find the full repository of notes from previous UQRUG Meetings </br>
+Here you can find the full repository of notes from previous UQRUG Meetings.</br>
+Click the Search Icon in the top right to search all posts.</br>
