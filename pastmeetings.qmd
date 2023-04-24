@@ -5,8 +5,10 @@ listing:
   contents: meetings
   type: default
   sort: "date desc"
-  fields: [date, title]  
+  fields: [date, title, description]  
   date-format: long
+  max-description-length: 1000
+  filter-ui: [image, date, title, author, description]
 about:
   template: marquee 
   links:
@@ -34,6 +36,10 @@ about:
 <style>
 div.quarto-post .metadata{
 flex-basis: 15%;
+}
+
+div.quarto-post .listing-description {
+    display: none;
 }
 </style>
 ```

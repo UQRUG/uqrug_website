@@ -72,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-image","listing-date","listing-title","listing-author","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -175,11 +175,20 @@ ul.task-list li input[type="checkbox"] {
 div.quarto-post .metadata{
 flex-basis: 15%;
 }
+div.quarto-post .listing-description {
+    display: none;
+}
 </style>
 <p>Here you can find the full repository of notes from previous UQRUG Meetings <br></p>
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="meeting" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1682323046237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="body">
@@ -188,6 +197,9 @@ flex-basis: 15%;
 UQRUG 33
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+<strong>Presentation on gganimate and plotly animations</strong> Nick Wiggins did a presentation on animations in gganimate and plotly. He showed some examples of how these can be used to make your graphs somewhat more interesting, and in the case of plotly, interactive. gganimate plotly
 </div>
 </a>
 </div>
@@ -207,6 +219,9 @@ UQRUG 32
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+Nick Wiggins did a presentation on the quanteda package to give an overview and introduction to the package and how he has recently used it to assist a researcher. https://quanteda.io/
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -224,6 +239,9 @@ October 26, 2022
 UQRUG 31
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Covered some of the basics around creating, and the differences between, arrays and dataframes.
 </div>
 </a>
 </div>
@@ -243,6 +261,9 @@ UQRUG 30
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+How to read multiple csv files in as separate variables efficiently for a Shiny app. Looked at creating a list of files, and then using the read_csv function in rdrr package to read them in.
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -260,6 +281,9 @@ August 24, 2022
 UQRUG 29
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Creating a normal distribution line for a histogram. Using ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled differently on the y axis.
 </div>
 </a>
 </div>
@@ -279,6 +303,9 @@ UQRUG 28
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+The trick here is to:
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -296,6 +323,9 @@ June 29, 2022
 UQRUG 27
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+
 </div>
 </a>
 </div>
@@ -315,6 +345,9 @@ UQRUG 26
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+Automate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -332,6 +365,9 @@ April 27, 2022
 UQRUG 25
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Use terra instead of raster, and use a temporary directory:
 </div>
 </a>
 </div>
@@ -351,6 +387,9 @@ UQRUG 24
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+Convert a table to a <code>gt</code> object and then save it to RTF (which can be opened by Word).
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -368,6 +407,9 @@ February 23, 2022
 UQRUG 22
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Example of for loop vs map() function from purrr package.
 </div>
 </a>
 </div>
@@ -387,6 +429,9 @@ UQRUG 21
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -404,6 +449,9 @@ October 18, 2021
 UQRUG 20
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+
 </div>
 </a>
 </div>
@@ -423,6 +471,9 @@ UQRUG 19
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+Links we talked about today:
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -440,6 +491,9 @@ August 16, 2021
 UQRUG 18
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Technical difficulties! No notes.
 </div>
 </a>
 </div>
@@ -459,6 +513,9 @@ UQRUG 17
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+“[In <code>dplyr::filter</code>], note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with <code>[</code>.”
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -476,6 +533,9 @@ June 21, 2021
 UQRUG 16
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
 </div>
 </a>
 </div>
@@ -495,6 +555,9 @@ UQRUG 15
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -512,6 +575,9 @@ April 19, 2021
 UQRUG 14
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Bechdel Test dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md
 </div>
 </a>
 </div>
@@ -531,6 +597,9 @@ UQRUG 13
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -548,6 +617,9 @@ February 15, 2021
 UQRUG 12
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+<strong>This is our first anniversary! UQRUG has one year!!</strong>
 </div>
 </a>
 </div>
@@ -567,6 +639,9 @@ UQRUG 11
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -584,6 +659,9 @@ November 16, 2020
 UQRUG 10
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Please add your name and the problem you’d like some help with!
 </div>
 </a>
 </div>
@@ -603,6 +681,9 @@ UQRUG 9
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+Please add your name and the problem you’d like some help with!
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -620,6 +701,9 @@ September 21, 2020
 UQRUG 8
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Please add your name and the problem you’d like some help with!
 </div>
 </a>
 </div>
@@ -639,6 +723,9 @@ UQRUG 7
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -656,6 +743,9 @@ July 27, 2020
 UQRUG 6
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Anything you’d like to talk about? A problem? Resources? Feel free to add it here!
 </div>
 </a>
 </div>
@@ -675,6 +765,9 @@ UQRUG 5
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+We are meeting online again!
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -692,6 +785,9 @@ May 18, 2020
 UQRUG 4
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Because of physical isolation, we will be meeting online for now.
 </div>
 </a>
 </div>
@@ -711,6 +807,9 @@ UQRUG 3
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+<em>Canceled because of UQ recommendations related to COVID-19.</em>
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -729,6 +828,9 @@ UQRUG 2
 </h3>
 <div class="listing-subtitle">
 </div>
+<div class="listing-description">
+
+</div>
 </a>
 </div>
 <div class="metadata">
@@ -746,6 +848,9 @@ February 24, 2020
 UQRUG 1
 </h3>
 <div class="listing-subtitle">
+</div>
+<div class="listing-description">
+Topics discussed:
 </div>
 </a>
 </div>
