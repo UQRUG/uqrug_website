@@ -1,11 +1,12 @@
 ---
 title: "Past Meetings" 
 toc: true
+toc-depth: 4
 listing:
   contents: meetings
   type: default
   sort: "date desc"
-  fields: [date, title]  
+  fields: [date, title, description]  
   date-format: long
   filter-ui: false
 metadata-files:

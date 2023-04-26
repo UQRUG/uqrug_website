@@ -13,46 +13,34 @@ library(tidyverse)
 
 ### 2022-12-07: UQRUG 33
 
-    
-
 #### Attendees
 
-* **Nick** | Library | here to help
-* Kim Henville | EAIT | Lurking
-* Pierre Bodroux | P&F | Learning about gganimate
-* **Luke** | Library | Here shortly to help if can
-* Kar Ng | Student Affair | Recap gganimate and plotly
-* Chuan | PhD UQ biol | R questions on barplot 
-* Bel | QAEHS | To learn intro level skills
-* Ainnatul Adawiyah Ahmad Termizi | SAFS | I need help to do statistics for my PhD
-* Imsu | PhD | New to RStudio 
-* Barbara Azevedo de Oliveira | School of Biological Sciences | improve my knowledge
-* Debbie | Postdoc in Sees | find different applications of R
-* Chris Mancini | Civil Transport Engineering | Learn about gganimate
-* Olive Dang | SAFS | ggplot2 question
-
+-   **Nick** \| Library \| here to help
+-   Kim Henville \| EAIT \| Lurking
+-   Pierre Bodroux \| P&F \| Learning about gganimate
+-   **Luke** \| Library \| Here shortly to help if can
+-   Kar Ng \| Student Affair \| Recap gganimate and plotly
+-   Chuan \| PhD UQ biol \| R questions on barplot
+-   Bel \| QAEHS \| To learn intro level skills
+-   Ainnatul Adawiyah Ahmad Termizi \| SAFS \| I need help to do statistics for my PhD
+-   Imsu \| PhD \| New to RStudio
+-   Barbara Azevedo de Oliveira \| School of Biological Sciences \| improve my knowledge
+-   Debbie \| Postdoc in Sees \| find different applications of R
+-   Chris Mancini \| Civil Transport Engineering \| Learn about gganimate
+-   Olive Dang \| SAFS \| ggplot2 question
 
 #### **Topics discussed and code**
 
-**Presentation on gganimate and plotly animations**
-Nick Wiggins did a presentation on animations in gganimate and plotly. He showed some examples of how these can be used to make your graphs somewhat more interesting, and in the case of plotly, interactive.
-[gganimate](https://gganimate.com/)
-[plotly](https://plotly.com/r/animations/)
+**Presentation on gganimate and plotly animations** Nick Wiggins did a presentation on animations in gganimate and plotly. He showed some examples of how these can be used to make your graphs somewhat more interesting, and in the case of plotly, interactive. [gganimate](https://gganimate.com/) [plotly](https://plotly.com/r/animations/)
 
-**Chuan questions about using barplot**
-Chuan was using a barplot to show data which referred to the responses of multiple species across a number of tests.
-When using the same code for a slightly different sample group, the colours on the chart changed. We spent some time trying to find the cause of this, such as slight differences in the code, but we didn't come to a solution.
-We will next try converting the data to fit into a ggplot.
+**Chuan questions about using barplot** Chuan was using a barplot to show data which referred to the responses of multiple species across a number of tests. When using the same code for a slightly different sample group, the colours on the chart changed. We spent some time trying to find the cause of this, such as slight differences in the code, but we didn't come to a solution. We will next try converting the data to fit into a ggplot.
 
-**Olive Dang ggplot2 legend order**
-Olive needed help changing the order of some variables in a ggplot legend. We accomplished this by turning that column of the dataframe into a facotr with levels. E.g. :
-```
+**Olive Dang ggplot2 legend order** Olive needed help changing the order of some variables in a ggplot legend. We accomplished this by turning that column of the dataframe into a facotr with levels. E.g. :
+
+```         
 df$col <- factor(df$col, levels=c('a', 'b', 'c'))
 ```
-**Olive Dang ggplot2 and ggarrange making all the graphs the same size**
-Olive had a second question about ggplot when exporting them onto the same page. There was an issue where they weren't lining up very well (the top graph was smaller). We spent some time trying to resolve this issue, however, it turns out that there is an argument in **ggarrange** which allows you to quickly make them the same size. The `align` argument allows you to align graphs along the vertical axis, horizontal axis, or both.
 
-**Ainnatul Adawiyah Ahmad Termizi on using R over Excel**
-Ainnatul wanted to recreate some graphs and statistical analyses that had been made in Excel in R. We recommended checking out some of the [introduction to R classes](https://github.com/uqlibrary/technology-training/blob/master/R/rstudio_intro/rstudio_intro.md) that we run, as well as the [ANOVA class](https://github.com/uqlibrary/technology-training/blob/master/R/ANOVA-lm/anova-lm.md) that we have a guide for.
+**Olive Dang ggplot2 and ggarrange making all the graphs the same size** Olive had a second question about ggplot when exporting them onto the same page. There was an issue where they weren't lining up very well (the top graph was smaller). We spent some time trying to resolve this issue, however, it turns out that there is an argument in **ggarrange** which allows you to quickly make them the same size. The `align` argument allows you to align graphs along the vertical axis, horizontal axis, or both.
 
-
+**Ainnatul Adawiyah Ahmad Termizi on using R over Excel** Ainnatul wanted to recreate some graphs and statistical analyses that had been made in Excel in R. We recommended checking out some of the [introduction to R classes](https://github.com/uqlibrary/technology-training/blob/master/R/rstudio_intro/rstudio_intro.md) that we run, as well as the [ANOVA class](https://github.com/uqlibrary/technology-training/blob/master/R/ANOVA-lm/anova-lm.md) that we have a guide for.
