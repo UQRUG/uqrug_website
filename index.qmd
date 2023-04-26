@@ -10,27 +10,8 @@ listing:
       sort: "date desc"
       type: default
       max-items: 1
-about:
-  template: marquee
-  links:
-    - icon: hexagon-fill
-      text: R Workshops
-      href: https://web.library.uq.edu.au/library-services/training#keyword=Rstudio
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/UQ_RUG
-    - icon: file-earmark-text
-      href: https://frama.link/uqrug
-      text: Collaborative Document
-    - icon: github
-      text: Github
-      href: https://github.com/uqlibrary/technology-training
-    - icon: chat-right
-      text: UQ Chat
-      href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
-    - icon: globe
-      text: Created with quarto
-      href: https://quarto.org/
+metadata-files:
+  - _page.yml
 ---
 
 ```{=html}
