@@ -1,0 +1,54 @@
+---
+title: UQRUG 35
+date: '2023-02-22'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2023-02-22: UQRUG 35
+
+#### Attendees
+
+* Nicholas Wiggins | Library | Here to Help!
+* Pierre Bodroux | P&F | Learning
+* Kar Ng | Student Affairs | Learning
+* Brandon Fraser | QAAFI | Learning
+* Valentina Urrutia Guada | Library | Here to Help too!
+* Raul Riesco| ACE visiting postdoc | Learning and also willing to help ^_^
+* Wilson Lin | Student Affairs | Casually attending
+* Jocelyn | UQCCR | Still learning
+* Grechel
+* Hannah
+
+
+
+#### Questions
+
+##### Can you use text mining and machine learning in R to mark student essays?
+
+Is it ethical? But is it possible?
+
+There is an issue with marking free language data. You may want to be looking for certain keywords.
+
+You would likely run into issues with nuance and insight.
+
+If the questions can be answered by a machine, then it can be marked by a machine. If it requires insight, then no.
+
+To do this in R would likely require a lot of backend work to effectively create an AI similar to chatGPT which is capable of dealing with free text input, and providing feedback from there.
+
+
+##### What are you using R for?
+
+* I am using R for Reporting and data analysis.
+* I use R for data analysis and graphs
+* I use R to analyse data. Big data. Running loops in parallel has proved difficult. Using parallel and foreach
+* Environmental analysis - using seqinr and BALCONY
+* I use R for bioinformatics for dna sequencing analysis.
+
+

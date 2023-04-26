@@ -1,0 +1,52 @@
+---
+title: UQRUG 34
+date: '2023-01-25'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2023-01-25: UQRUG 34
+
+Please add your name to our attendee list. Edit this document by clicking the pencil :pencil2: in the top right corner, and then add:
+your name | your area of UQ | and why you're here.
+
+If you have question you need help with, put your name in **Bold** by putting two asterisks before and after your name, like so ``**name**``
+    
+
+#### Attendees
+
+* Nicholas Wiggins | Library | Here to Help!
+* Pierre Bodroux | P&F | Learning
+* Zoe MacLean | School Comm Arts | Just hanging out today
+* Jessica Hintzsche |QAAFI| I know nothing :) 
+* Karen Fang | Business School | learning and see how R can deal with dashboard :)
+* Dwan Vilcins | CHRC | Want to learn about flex
+* Jocelyn | UQCCR | still learning
+* Ayesha.Here for learning about R. I am from EAIT doing masters of data science
+* Jayne McGhie | |
+* Myra Khan
+* Paulo Baleeiro Souza
+
+#### **Topics discussed and code**
+
+#### Presentation on Flexdashboard (and crosstalk)
+
+Nick provided an overview of the dashboard creating package: Flexdashboard.
+He showed how you can easily create a dashboard from their templates, and include and R code and outputs in the dashboard.
+He also provided a fairly complex example.
+Here's an [intro guide for Flexdashboard](https://pkgs.rstudio.com/flexdashboard/articles/flexdashboard.html).
+
+
+#### Jayne's question on ggplot2
+
+Jayne was having difficulty using the map() function to create
+
+
+#### Presentation on Flexdashboard (and crosstalk)
+

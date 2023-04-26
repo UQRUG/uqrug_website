@@ -1,0 +1,74 @@
+---
+title: UQRUG 36
+date: '2023-03-29'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2023-03-29: UQRUG 36
+
+#### Attendees
+
+* Nicholas Wiggins | Library | Here to Help!
+* Rene Erhardt | School of Pharmacy |
+* Yufan Wang\School of Nursing\ Qs on Bayesian statistics\How to plot a probability density function on R\
+* Luke Gaiter | Library | Here to listen/help
+* Giulio Centorame | PhD student @ IMB | Qs on functional programming in R
+* Kar Ng | Data Analyst at Student Affair | Learning
+* Jianan REN | PhD student in Environmental Science | beginner in R
+* Jayne McGhie | PhD student in SAFS | beginner in R - not questions yet......
+* Katharine Hegerty | PhD student FoM | beginner in R so need to learn pretty much anything but also needing help with registry data project in R
+* Valentina
+* Lauren:) here to learn !
+* Anna Gibbs | Clinical research assistant CCHR | here to learn about GLM in r, offsets, and Rmarkdown
+* Lijalem Tesfaw|PhD student @UQ, SPH Biostatistics and Epidemiology division |here to learn how to create R Dashboard, shiny web page, Rmarkdawn and R-spatial analysis
+* Grant Taylor|PhD student|here to listen this month, but need help debugging script next time maybe
+* 
+
+
+#### Questions
+
+#### Yufan Wang - Qs on Bayesian statistics
+
+There's a shiny app called the [Shelf](https://shelf.sites.sheffield.ac.uk/software) package. 
+How do you interpret the code snippets from the user guide for shelf?
+Does anyone have experience plotting a probability density function on R?
+BRMS Package might be useful to run the models.
+ggplot has [geom_density](http://sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization) and geom_boxplot
+
+
+#### Giulio Centorame - Qs on functional programming in R
+
+Giulio has some functions that have nested loops on big data.
+The advice is to explore the R package parallel.
+RCC may have some suggestions. You could try attending Hacky Hour, and seeing if David Green.
+Nick will explore with GeoSpatial Community regarding using parallel.
+You can try making your code just a little more efficient and this will flow on to save a lot of time in loops.
+
+
+#### Anna - glm() function question
+
+What is the 
+A plus is adding it as a single interaction
+An Asterisk is adding the relationship between two factors as a factor
+A comma is a another argument in the function, and offset is an argument for the glm() function
+
+
+#### Anna - R Markdown 
+
+Yes you do need to do data wrangling in markdown before you run analyses on the data.
+You don't need to treat each block of code as an individual entity. You only need to run your wrangling once per document.
+
+
+#### Jayne - Eyes on my code
+
+Dog temperature code.
+
+
+
