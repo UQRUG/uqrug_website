@@ -18,7 +18,7 @@
     "href": "events.html",
     "title": "Events",
     "section": "",
-    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "community.html",
@@ -102,7 +102,7 @@
     "href": "index.html#next-workshop",
     "title": "UQRUG",
     "section": "Next Workshop",
-    "text": "Next Workshop\n\n\n\n\n  \n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\nNicholas Wiggins\n\n\n\n\n\n\nNo matching items"
+    "text": "Next Workshop\n\n\n\n\n  \n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n\n\nMay 24, 2023\n\n\nNicholas Wiggins\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "community.html#r-ladies-brisbane",
@@ -390,5 +390,12 @@
     "title": "UQRUG 36",
     "section": "",
     "text": "Nicholas Wiggins | Library | Here to Help!\nRene Erhardt | School of Pharmacy |\nYufan Wangof Nursing Qs on Bayesian statisticsto plot a probability density function on R\n\nLuke Gaiter | Library | Here to listen/help\nGiulio Centorame | PhD student @ IMB | Qs on functional programming in R\nKar Ng | Data Analyst at Student Affair | Learning\nJianan REN | PhD student in Environmental Science | beginner in R\nJayne McGhie | PhD student in SAFS | beginner in R - not questions yet……\nKatharine Hegerty | PhD student FoM | beginner in R so need to learn pretty much anything but also needing help with registry data project in R\nValentina\nLauren:) here to learn !\nAnna Gibbs | Clinical research assistant CCHR | here to learn about GLM in r, offsets, and Rmarkdown\nLijalem Tesfaw|PhD student @UQ, SPH Biostatistics and Epidemiology division |here to learn how to create R Dashboard, shiny web page, Rmarkdawn and R-spatial analysis\nGrant Taylor|PhD student|here to listen this month, but need help debugging script next time maybe\n\n\n\n\n\n\n\nThere’s a shiny app called the Shelf package. How do you interpret the code snippets from the user guide for shelf? Does anyone have experience plotting a probability density function on R? BRMS Package might be useful to run the models. ggplot has geom_density and geom_boxplot\n\n\n\nGiulio has some functions that have nested loops on big data. The advice is to explore the R package parallel. RCC may have some suggestions. You could try attending Hacky Hour, and seeing if David Green. Nick will explore with GeoSpatial Community regarding using parallel. You can try making your code just a little more efficient and this will flow on to save a lot of time in loops.\n\n\n\nWhat is the A plus is adding it as a single interaction An Asterisk is adding the relationship between two factors as a factor A comma is a another argument in the function, and offset is an argument for the glm() function\n\n\n\nYes you do need to do data wrangling in markdown before you run analyses on the data. You don’t need to treat each block of code as an individual entity. You only need to run your wrangling once per document.\n\n\n\nDog temperature code."
+  },
+  {
+    "objectID": "posts/2023-05-31-May-Sending-emails/index.html",
+    "href": "posts/2023-05-31-May-Sending-emails/index.html",
+    "title": "May 31st UQRUG Drop-in + Sending Emails from R",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will be going over how to send emails through R using the knitr and RDCOMClient packages.\n\n \n\nWhen Wednesday 31st May, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   }
 ]
