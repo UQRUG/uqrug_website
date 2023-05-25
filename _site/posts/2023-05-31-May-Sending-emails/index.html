@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-06-29">
+<meta name="author" content="Nicholas Wiggins">
+<meta name="dcterms.date" content="2023-05-24">
 
-<title>UQRUG - UQRUG 28</title>
+<title>UQRUG - May 31st UQRUG Drop-in + Sending Emails from R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -99,11 +66,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="UQRUG - UQRUG 28">
+<meta property="og:title" content="UQRUG - May 31st UQRUG Drop-in + Sending Emails from R">
 <meta property="og:description" content="">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG - UQRUG 28">
+<meta name="twitter:title" content="UQRUG - May 31st UQRUG Drop-in + Sending Emails from R">
+<meta name="twitter:description" content="The University of Queensland R Users Group">
 <meta name="twitter:image" content="images/uqrug_twitter.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -160,22 +128,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#uqrug-28" id="toc-uqrug-28" class="nav-link active" data-scroll-target="#uqrug-28">2022-06-29: UQRUG 28</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UQRUG 28</h1>
+<h1 class="title">May 31st UQRUG Drop-in + Sending Emails from R</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">meeting</div>
+    <div class="quarto-category">workshop</div>
   </div>
   </div>
 
@@ -183,11 +145,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nicholas Wiggins </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 29, 2022</p>
+      <p class="date">May 24, 2023</p>
     </div>
   </div>
   
@@ -197,121 +165,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="uqrug-28" class="level3">
-<h3 class="anchored" data-anchor-id="uqrug-28">2022-06-29: UQRUG 28</h3>
-<section id="attendees" class="level4">
-<h4 class="anchored" data-anchor-id="attendees">Attendees</h4>
-<ul>
-<li><strong>Stéphane</strong>: Library | here to help and say goodbye</li>
-<li><strong>Chris</strong>: Civil Engineering - Transport | just tagging along</li>
-<li><strong>Luke</strong>: Library | here to help and say hello</li>
-<li><strong>Olalekan</strong> Biological Sciences | here to say hello…</li>
-</ul>
-</section>
-<section id="topics-discussed-and-code" class="level4">
-<h4 class="anchored" data-anchor-id="topics-discussed-and-code">Topics discussed and code</h4>
-<section id="iterating-instead-of-using-repetitive-code" class="level5">
-<h5 class="anchored" data-anchor-id="iterating-instead-of-using-repetitive-code">Iterating instead of using repetitive code</h5>
-<p>The trick here is to:</p>
-<ol type="1">
-<li>Encapsulate the repetitive code into a function, exposing the things that are likely to change as arguments</li>
-<li>Create a vector of values (or several)</li>
-<li>Use a for loop, or an <code>apply()</code> function, or a <code>map()</code> function (from purrr) to map the function to each element</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># iterating</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>?mean</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># custom function</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>custom_mean <span class="ot">&lt;-</span> <span class="cf">function</span> (numbers, trim_ratio) {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># process the data</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  my_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="at">x =</span> numbers, <span class="at">trim =</span> trim_ratio, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># save the it as file</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">saveRDS</span>(my_mean, <span class="at">file =</span> <span class="fu">paste0</span>(numbers[<span class="dv">1</span>], trim_ratio, <span class="st">".rds"</span>))</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># use the function</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">custom_mean</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="cn">NA</span>), <span class="fl">0.2</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>list_to_iterate_on <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="cn">NA</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>     <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>     <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="cn">NA</span>))</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>trim_ratios <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.7</span>, <span class="fl">0.1</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative to apply functions or for loops</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">map2</span>(list_to_iterate_on, trim_ratios, custom_mean)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># pmap(): construct a dataframe of all combinations,</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># with each column containing the argument values to use</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># construct the dataframe of all combinations</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>animal <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"magpie"</span>, <span class="st">"pelican"</span>, <span class="st">"ibis"</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"dry food"</span>, <span class="st">"sludge"</span>, <span class="st">"grain"</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># only three rows</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>experiment <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(animal, treatment)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># all combinations</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>all_combinations <span class="ot">&lt;-</span> <span class="fu">expand</span>(experiment, animal, treatment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="list-files" class="level5">
-<h5 class="anchored" data-anchor-id="list-files">List files</h5>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># listing files</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>() <span class="co"># all files in working directory</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>only_rds <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">"rds"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>only_rds <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="st">"analysis"</span>, <span class="st">"rds"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>only_rds</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># full path (from working directory)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>only_rds <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="st">"analysis"</span>, <span class="st">"rds"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>only_rds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="remove-file-extension-from-path" class="level5">
-<h5 class="anchored" data-anchor-id="remove-file-extension-from-path">Remove file extension from path</h5>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove file extension from path</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace</span>(<span class="st">"filename.txt"</span>, <span class="st">".txt"</span>, <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="extract-information-from-filenames" class="level5">
-<h5 class="anchored" data-anchor-id="extract-information-from-filenames">Extract information from filenames</h5>
-<p>Using the tidyverse and pdftools for preparing PDF text before analysis with quanteda. pdftools was used for its specific ability to return the page numbers of the pdfs.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftools)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create a list of the PDF file paths</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>myfiles <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">"./pdfs"</span>, <span class="at">pattern =</span> <span class="st">"*.pdf"</span>, <span class="at">all.files =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">ignore.case =</span> <span class="cn">FALSE</span>, <span class="at">include.dirs =</span> <span class="cn">TRUE</span>, <span class="at">no.. =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to import each pdf file, and place the text in a dataframe</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>import_pdf <span class="ot">&lt;-</span> <span class="cf">function</span>(k){</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># turn the pdf into a text list each page will become a row</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  pdf.text <span class="ot">&lt;-</span> pdftools<span class="sc">::</span><span class="fu">pdf_text</span>(k)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># flatten the list</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  pdf.text<span class="ot">&lt;-</span><span class="fu">unlist</span>(pdf.text)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  pdfdf <span class="ot">&lt;-</span> <span class="fu">data_frame</span>(pdf.text)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># turn the list into a dataframe, extracting the year from the path and using the separate function to extract the state from the path</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_frame</span>(pdf.text) <span class="sc">%&gt;%</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">str_extract</span>(k, <span class="st">"[:digit:]{4}"</span>) <span class="sc">%&gt;%</span> <span class="fu">as.integer</span>(), <span class="at">pagenumber =</span> <span class="fu">row.names</span>(pdfdf), <span class="at">filename =</span> k) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate</span>(filename, <span class="fu">c</span>(<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="st">"state"</span>,<span class="cn">NA</span>), <span class="at">sep =</span> <span class="st">"/"</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># run the function on all pdf files</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>all_pdfs<span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(myfiles, import_pdf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>See the <a href="https://tutorials.quanteda.io/">quanteda tutorials</a></p>
+<p>Before we jump into our help session for everyone to ask questions, this month Nick will be going over <strong>how to send emails through R</strong> using the <a href="https://yihui.org/knitr/">knitr</a> and <a href="https://github.com/omegahat/RDCOMClient">RDCOMClient</a> packages.</p>
+<p float="left">
+</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="knitr.svg" height="100" style="margin-right:-0.2em;"></p>
+<p></p>
+<p><strong>When</strong> Wednesday 31st May, 12 - 2pm</p>
+<p><strong>Where</strong> St Lucia, Duhig North Central Library (12), Training room <strong>12-N109</strong>, and on Zoom</p>
+<p>Sign up to the next event on the <a href="https://studenthub.uq.edu.au/students/events/detail/4498765">Library training page</a></p>
+<p>For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
