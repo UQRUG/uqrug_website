@@ -1,0 +1,216 @@
+---
+title: UQRUG 38
+date: '2023-05-31'
+description: '**Overview**: Using R for Mailouts. <br /> **Questions**: Reloading packages, Combining multiple tables/kables, using HedgeDoc, using overlead for theses, formatting data for population genetics analysis'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-05-31: UQRUG 38
+
+### R Overview of the Month
+
+Nick will be going over how to send emails through R using the [knitr](https://yihui.org/knitr/) and [RDCOMClient](https://github.com/omegahat/RDCOMClient) packages. [This is a handy guide](https://mailtrap.io/blog/r-send-email/#Sending-emails-from-Outlook-RDCOMClient).
+
+#### Nick's Mailout Code
+<details>
+
+<summary>Click to view</summary>
+
+```{r eval=FALSE, include=TRUE}
+# Load packages
+#install.packages("RDCOMClient", repos = "http://www.omegahat.net/R")
+library(RDCOMClient)
+library(readr)
+library(readtext)
+library(knitr)
+
+
+rm(list = ls())
+# Mail Body ---------------------------------------------------------------
+
+knit2html("email_body.Rmd")
+eb <- read_lines("email_body.html")
+eb2 <- paste(eb, sep="", collapse="") 
+
+# Mail Signature ----
+knit2html("RUG_sig.Rmd")
+es <- read_lines("RUG_sig.html")     
+es2 <- paste(es, sep="", collapse="") 
+
+# Mail Setup ----
+olMailItem <- 0
+OutApp <- COMCreate("Outlook.Application")
+outMail = OutApp$CreateItem(olMailItem)
+
+# Attachment
+path_to_attachment <- paste0(getwd(), "/UQRUG.msg")
+
+# Prepping the email ----
+
+outMail[["To"]] <- "<insert email here>"
+outMail[["subject"]] <- "Email Subject"
+outMail[["BodyFormat"]] <- 2
+outMail[["HTMLbody"]] <- paste0(eb2, es2)
+outMail[["attachments"]]$Add(path_to_attachment) 
+outMail$Display()
+
+# Sending the mail ----
+outMail$Send()
+
+```
+
+</details>
+
+### Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name             | Where are you from? | What brings you here?                       |
+|-------------------|-------------------|-----------------------------------|
+| Tasneem          | SVS                 | Learning R                                  |
+| Nicholas Wiggins | Library             | Here to Help and learn!                     |
+| Bel              | QAEHS               | Ideas/to learn                              |
+| Raul Riesco      | ACE                 | Learning/helping                            |
+| Jocelyn          | UQCCR               | Still learning                              |
+| Laura Smith      | BIOL                | Learning how to do more cool things in R :) |
+| Nick Garner      | SBMS                | Listening and learning new R things         |
+| Mikesh Patel     | QCMHR               | Learning R capabilities                     |
+| Valentina        | Library             | Help and learn                              |
+| Raimundo         | SHRS                | Learning                                    |
+| Danelle          | CHSR                | Familiarity and skill building              |
+| Tri              | SBMS                | Learning                                    |
+| Agnieszka Mudge  | QAAFI               | a.mudge\@uq.edu.au                          |
+
+### Questions
+
+#### Q1: Reloading packages - Danelle
+
+Describe the problem Is there an easy way to reload packages across different versions of R Everytime you load a package in R, CRAN says that the package isn't available for your version of R
+
+**Answers**
+
+-   Nick G: Not sure about reloading (if it's already installed) but you can update R and transfer all packages with installr: https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/ *note: you need to use the R GUI not R Studio and only on windows.* Also, pacman may help otherwise. It checks the packages you want to load and installs them if not installed yet, then loads them all: http://trinker.github.io/pacman/vignettes/Introduction_to_pacman.html
+    -   Thanks Nick, I keep getting this message (and I've installed the current version)so wondering if you can ask R Studio to behave as if it's an earlier version?: Warning in install.packages : package 'RDCOMClient' is not available for this version of R
+-   Not sure how to fix that issue when it's genuine but I find it often happens to me when the package needs special installation. Like for RDCOMClient it says you need to use this: install.packages("RDCOMClient", repos = "http://www.omegahat.net/R", type = "win.binary") or using devtools
+
+------------------------------------------------------------------------
+
+#### Q2: Multiple / combining tables - Laura
+
+I have six dataframes that I am trying to combine into a single table using kableExtra package. I don't think it's possible... The dataframes each have 3 fields: variable/n/%. They can't easily be bound into a single df because each variable is different (e.g. gender, state, age). Ideally it would be six consecutive tables grouped maybe using packrows.
+
+(Raul): just to clarify: You are trying to merge them using the variable as reference or just attach them one after the other?\
+(Laura): Just attach them one after the other.
+
+**Answers**
+
+-   Raul: It's a little bit tacky, but it got what you wanted. I have made an example with 3 tables, but it can be used for 6.
+
+```{r}
+library(kableExtra)
+example DF 
+df1 <- data.frame(Gender = c("Male", "Female"), 
+                  Percentage = c("50%", "50%")) 
+df2 <- data.frame(State = c("NY", "New York", "California"), 
+                  Percentage = c("30%", "15%", "15%")) 
+df3 <- data.frame(Age = c("3-18", "18-24", "25-34"), 
+                  Percentage = c("20%", "10%", "10%"))
+```
+
+function to pick the colnames
+
+```{r}
+vector_of_first_names <- function(…) { dataframes <- list(…) 
+
+first_colnames <- character() 
+
+for (i in seq_along(dataframes)) { 
+
+first_colnames <- c(first_colnames, colnames(dataframes[[i]])[1]) 
+
+} 
+
+return(first_colnames) 
+
+}
+```
+
+function to change the first colname to "Variable"
+
+```{r}
+change_first_colname <- function(…) { 
+  dataframes <- list(…) 
+  for (i in seq_along(dataframes)) {
+    colnames(dataframes[[i]])[1] <- "Variable" 
+  } 
+  return(dataframes) 
+  }
+```
+
+Apply the function to the df
+
+```{r}
+vector_variables<-vector_of_first_names(df1, df2, df3) 
+list_of_dataframes<-change_first_colname(df1, df2, df3)
+```
+
+Create table with grouped rows (you have to specify the title you want for each df and the rows where the chunk start and end in the combined df, maybe you can automate that playing with the dimensions of the dataframe)
+
+```{r}
+table <- combined_df %>% 
+  kable(format = "html") %>% 
+  kable_styling() %>% 
+  pack_rows(vector_variables[1], 1,2)%>% 
+  pack_rows(vector_variables[2], 3,5)%>% 
+  pack_rows(vector_variables[3], 6, 8)
+```
+
+Display the table
+
+```{r}
+table
+```
+
+------------------------------------------------------------------------
+
+#### Q3: What is HedgeDoc Environment? - Mikesh (and can any team use it? - Danelle)
+
+Is the left hand side and R environment, and can we publish the right hand side as a webpage?
+
+**Answers**
+
+-   <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>
+
+------------------------------------------------------------------------
+
+#### Q4: using overleaf and Latex and R for theses - Laura
+
+I'm considering learning LaTex using Overleaf to write my thesis now that I am trying to integrate a results section. Word is not great for integrating outputs from R. I am just looking for input on people that have done this and how best to integrate things from Word and Endnote and R to Overleaf.
+
+**Answers**
+
+-   Nick G: I've just done this! Made my whole thesis using Overleaf. Was a learning curve to learn LaTex but eventually was worth it I think, feel free to send me an email if you need help later on. I used Mendley for my refs since it links to overleaf easily - You can transfer these by exporting from endnote. I did put R graphs in, but often moved them into illustrator first, made them look pretty, and then into the thesis. I didn't put R markdown doccuments in though if thats what you're looking to do, but likely theres LaTex packages to insert html pages in. I know you can stitch pdfs into it, but it can screw with chapter labeling.
+
+------------------------------------------------------------------------
+
+#### Q5: Formatting data of population genetics to be used in Structure
+
+Sexually reproducing population of a pathogen on a crop, but there may be asexual reproduction. Wanting to use population structure analysis to look at the SNIPs to determine what may be happening here - is there a population structure, or not, within that one geographical location? PCA doesn't show
+
+**Answers**
+
+-   Creating a plot to show the difference between genomes?
+-   Structure software
+
+Download Structure here: <https://web.stanford.edu/group/pritchardlab/structure.html>
+
+Guide on using Structure: <https://www.ccg.unam.mx/~vinuesa/tlem09/docs/structure_doc.pdf>
