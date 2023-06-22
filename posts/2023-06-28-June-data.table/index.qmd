@@ -1,0 +1,28 @@
+---
+title: "June 28th UQRUG Drop-in + data.table data manipulation basics"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-06-22'
+image: datatable.png
+slug: jun2023
+categories:
+  - workshop
+tags: [emails, data.table, dplyr, manipulation, drop-in, help]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, this month Nick G will be going over **the basics of data manipulation with [data.table](https://r-datatable.com/)** and how it compares to using the **[tidyverse](https://tidyverse.org/)**
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="datatable.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 28th June, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4688789)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>

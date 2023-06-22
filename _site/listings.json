@@ -2,6 +2,7 @@
   {
     "listing": "/events.html",
     "items": [
+      "/posts/2023-06-28-June-data.table/index.html",
       "/posts/2023-05-31-May-Sending-emails/index.html",
       "/posts/2023-04-26-April-AI/index.html",
       "/posts/2023-03-29-March-quarto/index.html",
@@ -20,6 +21,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-06-28-June-data.table/index.html",
       "/posts/2023-05-31-May-Sending-emails/index.html",
       "/posts/2023-04-26-April-AI/index.html",
       "/posts/2023-03-29-March-quarto/index.html",

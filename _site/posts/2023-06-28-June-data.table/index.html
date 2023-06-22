@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nicholas Wiggins">
+<meta name="dcterms.date" content="2023-06-22">
 
-<title>UQRUG</title>
+<title>UQRUG - June 28th UQRUG Drop-in + data.table data manipulation basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/uqrug_fav.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,61 +63,30 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest'] = new List('listing-latest', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="UQRUG">
-<meta property="og:description" content="The University of Queensland R Users Group">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="UQRUG - June 28th UQRUG Drop-in + data.table data manipulation basics">
+<meta property="og:description" content="">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG">
+<meta name="twitter:title" content="UQRUG - June 28th UQRUG Drop-in + data.table data manipulation basics">
 <meta name="twitter:description" content="The University of Queensland R Users Group">
 <meta name="twitter:image" content="images/uqrug_twitter.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/uqrug.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">UQRUG</span>
     </a>
   </div>
@@ -127,19 +97,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events.html" rel="" target="">
+    <a class="nav-link" href="../../events.html" rel="" target="">
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html" rel="" target="">
+    <a class="nav-link" href="../../pastmeetings.html" rel="" target="">
  <span class="menu-text">Past Meetings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html" rel="" target="">
+    <a class="nav-link" href="../../community.html" rel="" target="">
  <span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
@@ -157,143 +127,56 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-    <img src="images/uqrug.png" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UQRUG</h1>
-<p class="subtitle lead">The University of Queensland R Users Group</p>
-</div>
+<h1 class="title">June 28th UQRUG Drop-in + data.table data manipulation basics</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">workshop</div>
+  </div>
+  </div>
+
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nicholas Wiggins </p>
+          </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-<style>
-#title-block-header{
-display: none;
-}
-#quarto-content>* {
-    padding-top: 14px;
-}
-.quarto-about-marquee{
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-}
-.about-image-container{
-    width: 13em;
-}
-div.quarto-about-marquee .about-image{
-    margin-bottom: 0px;
-}
-main{
-    margin: 0px;
-}
-.page-rows-contents {
-    grid-template-rows: [content-top] minmax(max-content, 1fr) [content-bottom] minmax(30px, max-content) [page-bottom];
-}
-div.quarto-post .metadata{
-display: none;
-}
-</style>
-<div class="quarto-about-marquee">
-  <p class="subtitle lead">The University of Queensland R Users Group</p>
-</div>
-<script>
-    function copyEvent(id)
-    {
-        var str = document.getElementById(id);
-        window.getSelection().selectAllChildren(str);
-        document.execCommand("Copy")
-    }
-</script>
-<p>UQRUG is a <strong>gathering for R users of all skills</strong>, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.</p>
-<section id="when-do-we-meet" class="level3">
-<h3 data-anchor-id="when-do-we-meet">When do we meet?</h3>
-<p>We meet <strong>every last Wednesday of the month</strong> (12-2 pm, currently online and in person): sign up to the next event by searching for UQRUG on the <a href="https://web.library.uq.edu.au/library-services/training">Library training page</a></p>
-</section>
-<section id="how-do-i-get-the-zoom-link" class="level3">
-<h3 data-anchor-id="how-do-i-get-the-zoom-link">How do I get the Zoom link?</h3>
-<p>If you have a UQ affiliated account, you can sign up to the event directly through StudentHub:</p>
-<ul>
-<li><a href="https://studenthub.uq.edu.au/students/events/detail/4688789">UQRUG - 28 June 2023</a></li>
-</ul>
-<p>Otherwise you can email the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
-</section>
-<section id="next-workshop" class="level2">
-<h2 data-anchor-id="next-workshop">Next Workshop</h2>
-<div id="listing-latest" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1687356000000" data-listing-file-modified-sort="1687415562308" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2023-06-28-June-data.table/index.html"> <img src="./posts/2023-06-28-June-data.table/datatable.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-06-28-June-data.table/index.html">
-<h3 class="no-anchor listing-title">
-June 28th UQRUG Drop-in + data.table data manipulation basics
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick G will be going over <strong>the basics of data manipulation with data.table</strong> and how…<strong></strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-06-28-June-data.table/index.html">
-<div class="listing-date">
-Jun 22, 2023
-</div>
-<div class="listing-author">
-Nicholas Wiggins
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 22, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Before we jump into our help session for everyone to ask questions, this month Nick G will be going over <strong>the basics of data manipulation with <a href="https://r-datatable.com/">data.table</a></strong> and how it compares to using the <strong><a href="https://tidyverse.org/">tidyverse</a></strong></p>
+<p float="left">
+</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="datatable.png" height="100" style="margin-right:-0.2em;"></p>
+<p></p>
+<p><strong>When</strong> Wednesday 28th June, 12 - 2pm</p>
+<p><strong>Where</strong> St Lucia, Duhig North Central Library (12), Training room <strong>12-N109</strong>, and on Zoom</p>
+<p>Sign up to the next event on the <a href="https://studenthub.uq.edu.au/students/events/detail/4688789">Library training page</a></p>
+<p>For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
 
 
-</section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://web.library.uq.edu.au/library-services/training#keyword=Rstudio" class="about-link" rel="" target="">
-    <i class="bi bi-hexagon-fill"></i>
-     <span class="about-link-text">R Workshops</span>
-  </a>
-  <a href="https://twitter.com/UQ_RUG" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-text"></i>
-     <span class="about-link-text">Collaborative Document</span>
-  </a>
-  <a href="https://github.com/uqlibrary/technology-training" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au" class="about-link" rel="" target="">
-    <i class="bi bi-chat-right"></i>
-     <span class="about-link-text">UQ Chat</span>
-  </a>
-  <a href="https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/" class="about-link" rel="" target="">
-    <i class="bi bi-globe"></i>
-     <span class="about-link-text">Created with quarto</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -429,6 +312,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
