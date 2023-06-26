@@ -11,11 +11,15 @@ tags: [emails, data.table, dplyr, manipulation, drop-in, help]
 DisableComments: no
 ---
 
-Before we jump into our help session for everyone to ask questions, this month Nick G will be going over **the basics of data manipulation with [data.table](https://r-datatable.com/)** and how it compares to using the **[tidyverse](https://tidyverse.org/)**
+Before we jump into our help session for everyone to ask questions, this month [Nick Garner](https://github.com/N-Garner) will be providing an overview of **the basics of data manipulation with [data.table](https://r-datatable.com/)** and its advantages compared to using the  [**tidyverse**](https://tidyverse.org/)
 
 <p float="left">
 
-<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="datatable.png" height="100" style="margin-right:-0.2em;"/>
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> 
+<img src="datatable.png" height="100" style="margin-right:-0.2em;"/>
+<img src="tidyverse.svg" height="100" style="margin-right:-0.2em;"/>
+<img src="dplyr.svg" height="100" style="margin-right:-0.2em;"/>
+<img src="dtplyr.svg" height="100" style="margin-right:-0.2em;"/>
 
 </p>
 
