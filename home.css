@@ -1,0 +1,31 @@
+/* css styles */
+#title-block-header{
+display: none;
+}
+
+#quarto-content>* {
+    padding-top: 14px;
+}
+
+.quarto-about-marquee{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+.about-image-container{
+    width: 13em;
+}
+div.quarto-about-marquee .about-image{
+    margin-bottom: 0px;
+}
+main{
+    margin: 0px;
+}
+
+.page-rows-contents {
+    grid-template-rows: [content-top] minmax(max-content, 1fr) [content-bottom] minmax(30px, max-content) [page-bottom];
+}
+
+div.quarto-post .metadata{
+display: none;
+}

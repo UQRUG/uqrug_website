@@ -1,0 +1,165 @@
+---
+title: UQRUG 39
+date: '2023-06-28'
+description: '**Overview**: Using data.table for fast data manipulation. <br /> **Questions**: data.table and for loops, csv vs xlsx, LMER, keeping code tidy and readable, standard R operators, using .RData files, storing descriptive stats in a matrix, mutating all cells in dataframe, HPC help, RMarkdown errors'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+## 2023-06-28: UQRUG 39
+
+### R Overview of the Month
+
+[Nick Garner](https://github.com/N-Garner) will be providing an overview of **the basics of data manipulation with [data.table](https://r-datatable.com/)** and its advantages compared to using the  [**tidyverse**](https://tidyverse.org/)
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name             | Where are you from? | What brings you here?                  |
+|------------------------|------------------------|------------------------|
+| Tasneem          | SVS                 | Learning R                             |
+| Nicholas Wiggins | Library             | Here to help!                          |
+| Maddison Brown   | Biol Postgrad       | Keeping myself accountable to learn R! |
+| Raul Riesco      | ACE                 | Learning/helping                       |
+| Jay              | Computer Science    | Learning                               |
+| Ryan             | SOE                 | Learning                               |
+| Semira Hailu     | UQCCR               | learning R                             |
+| Nick Garner      | SBMS                | data.table!                            |
+| Rene Erhardt     | Pharmacy            | LMER                                   |
+| Kar Ng           | Data Analyst        | UQ Student Affairs                     |
+| Jinnat Ferdous   | SVS                 | Have a question and also for learning  |
+| Brett McKinnon   | IMB                 | Learning                               |
+| Hanh Dao         | CHSR                | introduction to R                      |
+| henry marshall   | tpch clinician      | learning - many thanks!                |
+| Ismail Garba     | AGFS                | R on Bunya HPC                         |
+| David Green      | UQ RCC              | Here to learn *and* help               |
+| Mikesh Patel     | QCMHR               | Learning                               |
+
+
+### Questions
+
+#### Q1 - What is the difference between data.table and tibble() from tidyverse? AND Can data.table be used for for-loops and creating functions? - Kar
+
+**Answers**
+
+*  dataframe vs tibble vs datatable - A dataframe is like a simple table that has rows and columns, a tibble() can handle more metadata than a basic dataframe, a data.table is structured to handle the data in a faster way
+*  Yes, and the processing speed is faster if data.table is used.
+
+---
+
+#### Q2 - Maddi: Just a general question...I am conducting a spatial analysis. Do you recommend any particular way to read tables, e.g. read_table, from_csv, read_excel? I can export data sets as excel or csv. Just want to chose what is easiest. Thanks!
+
+**Answers**
+
+* Raul: For convenience, I always use csv format(write.csv, read.csv), it is a simplified format that do not give much problems and most of downstream analysis will accept it
+    * Thank you Raul. 
+* Can be useful using readxl when you are using Excel a lot and need to pull in multiple sheets in from a single xlsx file.
+* Sometimes dates/times format can get a little weird when converting xlsx to csv
+* However, for most cases, it's often easiest using csv
+* https://brisbane-geocommunity.netlify.app/
+
+---
+
+#### Q3 - I've got a couple of general questions about LMER - Rene
+How to report results? I've got sequencing results and ran LMERs to evaluate if a variable can explain the outcome. The results differ greatly. I interpret it that the LMER don't explain the results. 
+
+**Answers**
+
+* No one was able to help with this one - will follow up with training@library.uq.edu.au
+
+---
+
+#### Q4 - How do you keep your code tidy and easy to understand? I sometimes go back to old code and it takes a long time to figure out what I've done. Also how do you keep up your skills? - Jocelyn
+
+**Answers**
+
+* Raul: I always take a little time adding comments within my code using # symbol (it does not run with the code). It actually helps a lot when you return to your code later on. If I want to publish the code I erase this comments or I organize them in sections. About how I improve... I think the only way is try to do new things in R, you have a lots of tools to help you, and you improve with every new thing. Also courses from time to time, to refresh things...
+
+* Kar: There are best practieses - many people and I suggest to use tidyverse style, having spaces between equals, comma,s brackets, and annotate all your codes using hash and add comments. In all my projects, I always have comments in my codes.
+
+* Nick: In addition to using comments in R using # you can use Github (or keeping it offline) where you can commit changes often with comments on what changes each time you edit the code. That can help you understand what you've done over time and backup your code in case you delete and save over old code. https://happygitwithr.com/index.html 
+
+* rmarkdown is quite good too
+
+* DavidG: we finish the Intro to R workshops with this general advice  https://swcarpentry.github.io/r-novice-gapminder/16-wrap-up.html
+
+
+---
+
+#### Q5 - How do you know where to put %>% or == or () or {} or []? -- Jinnat
+
+**Answers**
+
+* %>% OR |>  - pipes chain functions together. (Kar: Sometime I call it "then")
+* == - bool / boolean operator checks to see if one value is equal to the other 
+* !=  : Is "Not Equal"
+* () - generally refers to a function
+* {} - acts as a container for a block of code to be run together
+* [] - is for indexing a variable (Kar: mytable[row, column]), also for data.table functions
+
+---
+
+#### Q6 - How do we save the workspace with a data.table in it? .RData I think is single threaded read when we come back to load it again -- Ryan
+
+**Answers**
+
+* As a general rule I don't generally save my .RData files, I just re-run the code to bring things back into the workspace the next time round. This can make loading R faster, .RData files can balloon out and be quite large, and avoid complications.
+* Is there an advantage to saving things as an .RData file?
+* If you do export a data.table to a .RData file, it appears that it doesn't retain the data.table format
+
+* https://stackoverflow.com/questions/31250999/r-readrds-load-fail-to-give-identical-data-tables-as-the-original
+
+
+---
+
+#### Q7 - I am trying to produce a matrix and then will store the descriptive statistics of a dataset in the matrix. But somehow the code is not working. But I can't figure out what's wrong with the code also. -- Jinnat
+
+**Answers**
+
+* Compare two datasets using setdiff() could be a good way to compare the differences
+* Get it working with an example dataset, and see what the main differences are there
+* It may be the case that there is a column that is in the wrong format, or loaded in wrong
+
+---
+
+#### Q8 - I have a data frame of values that I would like to turn into an equivalent data frame (same rows and same columns) with the individual cells representing the percentage of values in the column. Not sure how to do this - Brett
+
+**Answers**
+
+* This can be done using a mutate() and across()
+```{r eval=FALSE, include=TRUE}
+# Calculate the percentages
+percentages <- proportions_all %>%
+  mutate(across(-Var1, ~ . / sum(.)) * 100)
+```
+
+---
+
+#### Q9 - I have bunch of R scripts (Multicriteria optimization using genetic algorithms) that requires a lot of computing time. Tried using the Bunya but struggling to get the singularity container working. Need help getting this working. - Ismail
+
+**Answers**
+
+* Does it need a container?  
+* DG: You could possibly build personal R packages for the version of R available on Bunya.
+* DG: Software containers can be used if the container has exactly what you need within the container.
+* DG: Please catch us at https://rcc.uq.edu.au/meetups (HackyHour  _and/or_ Virtual HPC sessions)
+
+---
+
+#### Q10 - When I knit a RMarkdown script, and if it fails half way through because of a bit of bugs, is there a way that I can continue to journey of the Markdown knitting after fixing the bug, instead of re-running the entire Rmarkdown script again? To save some times! - Kar
+
+**Answers**
+
+* Separate your computation from your visualisation from your reporting
+* Run your computation in an external script, then run your visualisation externally, then use RMarkdown to bring it all together
+* Run the ML scripts external to the RMarkdown document, and then pull the results in to the RMarkdown document
+* trycatch() - can pick up on an error, spit out an error message, and the continue running your code without it hanging and stopping https://www.r-bloggers.com/2020/10/basic-error-handing-in-r-with-trycatch/
+* Maybe a fancy version of RMarkdown (quarto) could have something that helps? https://quarto.org/docs/computations/r.html 
+
