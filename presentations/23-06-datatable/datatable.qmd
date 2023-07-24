@@ -55,7 +55,7 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: footer
-[Click for the external link to these slides](/presentations/23-06-datatable/datatable.html)
+<a href="/presentations/23-06-datatable/datatable.html" target="_blank">Click for the external link to these slides</a>
 :::
 
 ------------------------------------------------------------------------
