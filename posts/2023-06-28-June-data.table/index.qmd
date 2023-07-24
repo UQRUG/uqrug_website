@@ -32,6 +32,6 @@ Sign up to the next event on the [Library training page](https://studenthub.uq.e
 For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
 
 
-Browser the full slides from the June RUG:
+Browse the full slides from the June RUG:
 
 <iframe width="780" height="500" src="/presentations/23-06-datatable/datatable.html" title="data.table Quarto Presentation"></iframe>
