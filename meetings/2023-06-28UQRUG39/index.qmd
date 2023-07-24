@@ -19,6 +19,8 @@ library(tidyverse)
 
 [Nick Garner](https://github.com/N-Garner) will be providing an overview of **the basics of data manipulation with [data.table](https://r-datatable.com/)** and its advantages compared to using the  [**tidyverse**](https://tidyverse.org/)
 
+<iframe width="780" height="500" src="/presentations/23-06-datatable/datatable.html" title="data.table Quarto Presentation"></iframe>
+
 ### Attendees
 Add your name, where you're from, and why you're here:
 

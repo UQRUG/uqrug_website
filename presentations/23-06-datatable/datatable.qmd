@@ -1,0 +1,391 @@
+---
+format: 
+  revealjs:
+    theme: dark
+    controls: true
+---
+
+# data.table
+
+::: columns
+::: {.column width="60%"}
+</br>
+
+A basic overview and comparison to common tidyverse functions
+
+By: Nick Garner for [UQRUG](/)
+:::
+
+::: {.column width="40%"}
+![](img%5CDataTable%20UQRUG0.png)
+:::
+:::
+
+::: footer
+<https://rdatatable.gitlab.io/data.table/> 
+:::
+
+# {visibility="hidden"}
+## What is data.table and why use it?
+
+```{=html}
+<style>
+#what-is-data.table-and-why-use-it.h1 {
+  font-size: 1em !important;
+}
+#what-is-data.table-and-why-use-it.title-slide h1{
+  font-size: 1em !important;
+
+}
+</style>
+```
+
+
+::: r-fit-text
+-   It's the high performance version of base R's data.frame for manipulation
+    -   Very fast
+    -   Memory efficient
+    -   Lots of features similar to dplyr and other tidyverse functions
+    -   Great support and documentation + no other dependencies
+-   Downsides?
+    -   Can be complex to learn
+    -   Less intuitive than the tidyverse
+    -   Less niche features compared to the tidyverse (ie. The complete() function)
+    -   Isn't a complete 'verse' -- ie. No plotting
+:::
+
+::: footer
+[Click for the external link to these slides](/presentations/23-06-datatable/datatable.html)
+:::
+
+------------------------------------------------------------------------
+
+::: {.columns style="text-align: right"}
+::: {.column width="35%"}
+### How fast is it? {.r-stretch}
+
+500MB
+:::
+
+::: {.column width="65%"}
+![](img%5CDataTable%20UQRUG1.png)
+:::
+
+::: {.column width="35%"}
+5GB
+:::
+
+::: {.column width="65%"}
+![](img%5CDataTable%20UQRUG2.png)
+:::
+
+::: {.column width="35%"}
+50GB
+:::
+
+::: {.column width="65%"}
+![](img%5CDataTable%20UQRUG3.png)
+:::
+:::
+
+::: footer
+Not only faster but less onboard memory used <https://h2oai.github.io/db-benchmark/>
+:::
+
+## What can it do?
+
+::: columns
+::: {.column .r-fit-text width="30%"}
+Most of the functions of dplyr and a bit more:
+
+-   Manipulate
+
+-   Filter
+
+-   Sort
+
+-   Compute
+
+-   Group by
+
+-   Bind rows / columns
+
+-   Joining columns
+
+-   Wide -- Long format
+
+-   Read + Write files
+
+Almost everything you'd need to reshape data
+:::
+
+::: {.column width="70%"}
+![](img%5CDataTable%20UQRUG4.png)
+:::
+:::
+
+## Loading in and writing out data {.smaller}
+
+::: columns
+::: {.column width="15%"}
+![](img%5CDataTable%20UQRUG5.png)
+:::
+
+::: {.column width="85%"}
+-   Base/ Tidyverse R: **read.csv()** or **read.xls()** -\> Becomes a data frame
+    -   Works well and has a viewer for easy column determination
+    -   Can change to a data.table by **setDT** **()** or **as.data.table** **()**
+    -   Similar **write.csv()** etc. to write it to a file.
+:::
+
+::: {.column width="15%"}
+![](img%5CDataTable%20UQRUG0.png){width="120px"}
+:::
+
+::: {.column width="85%"}
+-   data.table: **fread** **()** -\> Straight into a data.table format
+    -   Functions identically to a data.frame
+    -   Very fast to read in data and doesn't load it all onto RAM (lazy loading)
+    -   Can read zipped and compressed files without saving a decompressed file
+    -   Use **fwrite** **()** to also write out data much faster (I've come across issues here)
+:::
+:::
+
+::: footer
+*If this is the only function you want, use "vroom" instead*
+:::
+
+## Syntax (The hard part!) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: {style="text-align: center; font-size: 130%"}
+![](img%5CDataTable%20UQRUG5.png) </br> tidyverse
+:::
+
+Ethos: Do one thing at a time
+
+Each function has an easy to understand name
+
+Example:
+
+``` r
+Ex2 <- Example %>%
+
+filter(Fruit == "Apples") %>%
+
+group_by*(Variety) %>%
+
+summarise(Weight.mean = mean(Weight))
+```
+:::
+
+::: {.column width="50%"}
+::: {style="text-align: center; font-size: 130%"}
+![](img%5CDataTable%20UQRUG0.png){width="129px"} </br> data.table
+:::
+
+Ethos: Do all functions similarly and concisely
+
+</br> Example:
+
+``` r
+Ex2 <- Example[Fruit == "Apples",
+                Weight.mean := mean(Weight)),
+                by = "Variety"]
+```
+
+Will run substantially faster on a big dataset
+
+![](img%5CDataTable%20UQRUG9.png){.absolute top="-20" right="-130" width="310"}
+:::
+:::
+
+## The basic data.table syntax
+
+::: columns
+::: {.column style="font-size: 50%; width:25%"}
+Example dataset:
+
+| Fruit  | Variety | Weight |
+|:------:|:-------:|:------:|
+| Orange |  Navel  |  400   |
+| Apple  |  Jazz   |  300   |
+| Apple  |  Jazz   |  400   |
+|  ...   |   ...   |  ...   |
+:::
+
+::: {.column style="font-size: 55%; width: 75%"}
+Filter a row:
+
+`Example[Fruit == "Orange"]`
+
+Filter and add a row:
+
+`Example[Fruit == "Apple", Fruit_Variety := paste(Variety,Fruit)]`
+
+Just add a row:
+
+`Example[,BaseCost := (Weight/1000) * 2]`
+
+Perform a grouped summary
+
+`Example[, by = "Fruit", Fruit_Weight := mean(Weight)]`
+:::
+
+![](img%5CDataTable%20UQRUG9.png){fig-align="center"}
+:::
+
+## Moving from the tidyverse to data.table {.smaller}
+
+-   Calling a data.table or data.frame: The same (almost)
+    -   In the tidyverse you can call the df within the function ie. *select(* *df* \_ , ...) \_ or before *df* \_ %\>% select()\_ . In data.table it's only df\[...\]
+-   Manipulating data:
+    -   In the tidyverse you just use *=* , ie. *mutate(* *df* *,* *ColB* \_ = \_ *ColA* \_ \* 10)\_
+    -   In data.table you use *:=* or *.()* , ie. *df* *\[,.(* *ColB* \_ = \_ *ColA* \_ \* 10 )\] \_ or \_ \_ *df* *\[,:= ...\]*
+    -   Important to note above *df* *\[, ... \]* not *df* *\[...\]* because this tries to subset (filter)
+-   Chaining functions:
+    -   In the tidyverse you use the pipe *%\>%*
+    -   In data.table you *can* use *%\>%* but better to use dt specific chaining *df* *\[...\]\[...\]\[...\]*
+    -   Using *%\>%* looks like *df* *\[...\] %\>% .\[...\] %\>% .\[...\]*
+
+## Chaining in data.table
+
+::: {.columns style="font-size: 49%;"}
+::: {.column style="width:49%"}
+Why Chain? Lots of concise alterations, and less objects saved
+
+-   data.table specific chaining looks like *df* *\[...\]\[...\]\[...\]*
+
+"I want to know all the types of fruit that will cost on average above \$1 per item in order of most to least expensive"
+
+`Example2 <- Example[, Fruit_Weight := mean(Weight), by = "Fruit"][, ItemCost := (Weight/1000) * Cost.kg][ItemCost >= 1]\[order(Item)]`
+
+-   Note: *mutate(* *df* *, A = 1, B = A + 2)* is not the same as *df* *\[,.(A = 1, B = A + 2)\]*
+:::
+
+::: {.column style="width:2%"}
+:::
+
+::: {.column style="font-size: 106%; width:49%"}
+**Tidyverse**
+
+``` r
+Example2 <- Example %>%
+group_by(Fruit) %>%
+summarise(Fruit_Weight = mean(Weight))  %>%
+Ungroup() %>%
+Mutate(ItemCost = (Weight/1000) * Cost.kg)  %>%
+Filter (ItemCost >= 1)  %>%
+Arrange(Item)
+```
+
+**data.table with pipes**
+
+``` r
+Example2 <- Example[,Fruit_Weight := mean(Weight), by = "Fruit"] %>%
+.[,ItemCost := (Weight/1000) * Cost.kg] %>%
+.[ItemCost >= 1] %>%
+.[order(Item)] 
+```
+:::
+
+Example dataset:
+
+| Fruit  | Variety | Weight | Cost.kg |
+|:------:|:-------:|:------:|:-------:|
+| Orange |  Navel  |  400   |    2    |
+| Apple  |  Jazz   |  300   |    4    |
+| Apple  |  Gala   |  400   |   4.5   |
+|  ...   |   ...   |  ...   |         |
+:::
+
+## Some similar functions:
+
+::: columns
+::: {.column width="50%" style="font-size: 75%"}
+::: {style="text-align: center"}
+![](img%5CDataTable%20UQRUG5.png)
+:::
+
+1.  filter() ,mutate(), group_by ()
+
+2.  summarise(df, sum(ColA), sd (ColB))
+
+3.  arrange(df, ColA)
+
+4.  select(df, ColA, ColB, ColD)
+
+5.  group_by(df, ColA)
+
+6.  gather()
+
+7.  spread()
+
+8.  full_join()
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+::: {style="text-align: center;"}
+![](img%5CDataTable%20UQRUG0.png){width="129px"}
+:::
+
+1.  Intrinsic df\[ filter, mutate, by = \]
+
+2.  df\[,.(sum = ColA, sd(ColB))\]
+
+3.  df\[order(ColA)\]
+
+4.  df\[,.(ColA, ColB, ColD)\]
+
+5.  df\[,by = ColA\] or df\[,keyby = ColA\]
+
+6.  melt()
+
+7.  dcast()
+
+8.  merge(all = "true")
+:::
+:::
+
+## The lazy way -- improve your code sooner {.smaller}
+
+![](img%5CDataTable%20UQRUG17.png){.absolute top="-10" right="-50"}
+
+You: \*"I really want to use \_ data.table\* \_ to speed things up but I don't have time to learn it or alter my pre-existing code"
+
+Me: Give *dtplyr* a try?
+
+dtplyr allows you to write dplyr code that is automatically translated to the equivalent data.table code under the hood.
+
+Just load the package *library(* *dtplyr* *)* and use *df2 \<-* *lazy_dt* *(* *df* *)* before performing your normal operations. At the end use *as.data.table* *()* or *as_tibble* *()*
+
+![](img%5CDataTable%20UQRUG18.png){fig-align="center"}
+
+::: footer
+<https://dtplyr.tidyverse.org/>
+:::
+
+## Final notes {.smaller}
+
+-   Some code doesn't translate well between the two -- Try to check on your data frames often especially when you start using this
+
+-   Be careful with ordering, grouping, and manipulating or joining.
+
+    -   The speed of data.table can deceive you into thinking you performed a simple normal mutation instead of creating 100x more rows with duplications everywhere
+
+-   Running some package functions within data.table that don't run efficiently won't be much faster. Ie. The package creator wrote the code using tidyverse dependencies
+
+## Extra Resources:
+
+Package information page:
+
+<https://rdatatable.gitlab.io/data.table/>
+
+Github wiki:
+
+<https://github.com/Rdatatable/data.table/wiki/Getting-started>
+
+A great comparison website between data.table and dplyr (I use this a lot):
+
+<https://atrebas.github.io/post/2019-03-03-datatable-dplyr/>

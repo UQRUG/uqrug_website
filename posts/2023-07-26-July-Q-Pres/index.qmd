@@ -3,7 +3,7 @@ title: "July 26th UQRUG Drop-in + Quarto Reveal.js Presentations"
 editor: visual
 author: 'Nicholas Wiggins'
 date: '2023-07-24'
-image: revealjs.svg
+image: revealjs_logo.svg
 slug: jul2023
 categories:
   - workshop
