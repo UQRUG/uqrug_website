@@ -18,7 +18,7 @@
     "href": "events.html",
     "title": "Events",
     "section": "",
-    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nJune 28th UQRUG Drop-in + data.table data manipulation basics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nJuly 26th UQRUG Drop-in + Quarto Reveal.js Presentations\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJune 28th UQRUG Drop-in + data.table data manipulation basics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nFebruary 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "community.html",
@@ -102,7 +102,7 @@
     "href": "index.html#next-workshop",
     "title": "UQRUG",
     "section": "Next Workshop",
-    "text": "Next Workshop\n\n\n\n\n  \n\n\n\n\nJune 28th UQRUG Drop-in + data.table data manipulation basics\n\n\n\n\n\n\n\n\n\n\n\nJun 22, 2023\n\n\nNicholas Wiggins\n\n\n\n\n\n\nNo matching items"
+    "text": "Next Workshop\n\n\n\n\n  \n\n\n\n\nJuly 26th UQRUG Drop-in + Quarto Reveal.js Presentations\n\n\n\n\n\n\n\n\n\n\n\nJul 24, 2023\n\n\nNicholas Wiggins\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "community.html#r-ladies-brisbane",
@@ -474,5 +474,12 @@
     "title": "test_presaaaa",
     "section": "Code",
     "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/2023-07-26-July-Q-Pres/index.html",
+    "href": "posts/2023-07-26-July-Q-Pres/index.html",
+    "title": "July 26th UQRUG Drop-in + Quarto Reveal.js Presentations",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on creating HTML based presentations in R with Quarto and reveal.js\n\n  \n\nWhen Wednesday 26th Jul7, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n Quarto uses the GNU GPL, and Reveal.js uses an MIT licence."
   }
 ]

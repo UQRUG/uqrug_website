@@ -1,0 +1,36 @@
+---
+title: "July 26th UQRUG Drop-in + Quarto Reveal.js Presentations"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-07-24'
+image: revealjs.svg
+slug: jul2023
+categories:
+  - workshop
+tags: [quarto, presentations, revealjs, pptx, md, powerpoint, markdown, knit, drop-in, help]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on **creating HTML based presentations in R with [Quarto](https://quarto.org/docs/presentations/) and [reveal.js](https://revealjs.com/)**
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/>
+<img src="quarto.svg" height="100" style="margin-right:-0.2em;"/> 
+<img src="revealjs.svg" height="100" style="margin-right:-0.2em;"/> 
+
+</p>
+
+**When** Wednesday 26th Jul7, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4688789)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+
+
+
+<span style="color:grey; font-size:80%;">  [Quarto uses the GNU GPL](https://github.com/quarto-dev/quarto-cli/blob/main/COPYRIGHT), and [Reveal.js uses an MIT licence](https://github.com/hakimel/reveal.js/blob/master/LICENSE)</span>.
+
