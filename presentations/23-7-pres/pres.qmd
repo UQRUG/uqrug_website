@@ -1,0 +1,463 @@
+---
+title: "UQRUG July - Quarto Presentations"
+subtitle: "Warning: This is going to be a very meta presentation"
+author: "By Nicholas Wiggins"
+format:
+  revealjs:
+    theme: default
+    logo: img/RUG_logo.jpg
+    footer: "UQRUG - Quarto Presentations"
+    smaller: false
+    scrollable: false
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation.
+
+To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>
+
+## Rendering
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown (such as a - creating bullets)
+-   Output from executable code
+
+## Executed Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document.
+
+```{r}
+1 + 1
+```
+
+## Raw code
+
+This is the code that created the last slide[^1]:
+
+[^1]: I did comment out the backticks to allow the code to run however
+
+``` {.r code-line-numbers="3"}
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. 
+
+#```{r}
+1 + 1
+#```
+```
+
+You add code by putting {r} after backticks.
+
+You can show raw code by adding a period: {.r}
+
+## Interactive R Outputs {.scrollable}
+
+This is just a simple plotly outplut using ggplot() and ggplotly()
+
+```{r}
+library(plotly)
+data(canada.cities, package = "maps")
+viz <- ggplot(canada.cities, aes(long, lat)) +
+  borders(regions = "canada") +
+  coord_equal() +
+  geom_point(aes(text = name, size = pop), colour = "red", alpha = 1/2)
+ggplotly(viz, tooltip = c("text", "size"))
+```
+
+``` r
+library(plotly)
+data(canada.cities, package = "maps")
+viz <- ggplot(canada.cities, aes(long, lat)) +
+  borders(regions = "canada") +
+  coord_equal() +
+  geom_point(aes(text = name, size = pop), colour = "red", alpha = 1/2)
+ggplotly(viz, tooltip = c("text", "size"))
+```
+
+# You can create title slides with a single hash symbol (#)
+
+# Create and format divs with :::
+
+## Font and Alignment
+
+You can simply type regular text, but you can also wrap text in html divisions with ::: and then give that section all sorts of formatting
+
+For example:
+
+``` r
+::: {style="font-size: 1.5em; text-align: center"}
+This font will be larger and centered
+:::
+```
+
+::: {style="font-size: 1.5em; text-align: center"}
+This font will be larger and centered
+:::
+
+## Incremental Points
+
+::: incremental
+-   If you give a div the *{.incremental}* tag
+-   You can make bulleted list content appear
+-   Step
+-   By
+-   Step
+:::
+
+## Fragments
+
+Fragments are used to highlight or incrementally reveal individual elements on a slide.
+
+::: {.fragment .fade-in-then-out}
+-   You can make content appear and disappear with {.fragment .fade-in-then-out}
+:::
+
+::: {.fragment .fade-up}
+::: {.fragment .highlight-red}
+-   You can nest fragments to fade up and then highlight red
+:::
+:::
+
+::: fragment
+-   And reveal code blocks or other content
+
+``` r
+::: {.fragment .fade-up}
+::: {.fragment .highlight-red}
+- You can nest fragments to fade up and then highlight red
+:::
+:::
+```
+:::
+
+## Animation with r-stack
+
+Using r-stack and fragments will allow you to stack multiple elements on top of each other
+
+::: r-stack
+![](img/rmarkdown.svg){.fragment width="450" height="300"}
+
+![](img/quarto.svg){.fragment width="300" height="450"}
+
+![](img/revealjs_logo.svg){.fragment width="400" height="400"}
+:::
+
+## Footnotes and Speakernotes
+
+::: incremental
+-   If you tag a div with aside you will get footnotes.
+-   If you tag a div with notes you will get speakernotes.
+:::
+
+::: fragment
+``` r
+::: aside
+This will create a footnote
+
+You can press the S key (or use the Navigation Menu) to show the presentation speaker view
+:::
+
+::: notes
+Speaker notes go here
+:::
+```
+:::
+
+::: aside
+This will create a footnote
+
+You can press the S key (or use the Navigation Menu) to show the presentation speaker view
+:::
+
+::: notes
+Speaker notes go here.
+:::
+
+## Columns
+
+::: columns
+Adding text outside the columns will make it appear above
+
+::: {.column .fragment width="30%"}
+You can also add columns to split up the page
+:::
+
+::: {.column .fragment width="70%"}
+This is the code that made this page:
+
+``` r
+## Columns
+::: {.columns}
+Adding text outside the columns will make it appear above
+
+::: {.column .fragment width="40%"}
+You can also add columns to split up the page
+:::
+
+::: {.column .fragment width="60%"}
+This is the code that made this page:
+:::
+
+Adding text below the columns makes it appear below
+:::
+```
+:::
+
+Adding text below the columns makes it appear below
+:::
+
+## Background images {background-image="quarto.svg" background-size="100px" background-repeat="repeat-x"}
+
+::: fragment
+This slide's background image will be sized to 400px and set to repeat along the x-axis, as it is tagged with:
+:::
+
+::: fragment
+``` r
+## Background images {background-image="quarto.svg" background-size="100px"
+background-repeat="repeat-x"}
+```
+:::
+
+## Images
+
+You can place images in absolute positions on the slide with some image styles
+
+::: fragment
+``` r
+![](img/quarto.svg){.absolute top="200" left="0" width="350" height="300"}
+```
+:::
+
+::: fragment
+![](img/quarto.svg){.absolute top="300" left="0" width="350" height="300"}
+:::
+
+## Tabs
+
+::: panel-tabset
+### Tab A
+
+You can put different kinds of content in different tabs
+
+### Tab B
+
+So that you can easily move between related content
+:::
+
+## Slide colouring {background-color="aquamarine"}
+
+You can make a whole slide a different colour with
+
+``` r
+## Slide colouring {background-color="aquamarine"}
+```
+
+## Fancy Animated slides
+
+``` r
+
+## {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+## {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-stack}
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+```
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::: r-stack
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+
+# Themes and YAML options
+
+``` r
+---
+title: "UQRUG July - Quarto Presentations"
+subtitle: "Warning: This is going to be a very meta presentation"
+author: "By Nicholas Wiggins"
+format:
+  revealjs:
+    theme: default
+    logo: RUG_logo.jpg
+    footer: "UQRUG - Quarto Presentations"
+    smaller: false
+    scrollable: false
+---
+```
+
+<https://quarto.org/docs/reference/formats/presentations/revealjs.html>
+
+## More
+
+::: incremental
+-   Chalkboard
+-   Timed slides
+-   Extra navigation options
+-   Slide transitions
+-   Preview links
+-   Slide numbers
+-   Slide zoom
+-   Videos
+-   <https://quarto.org/docs/reference/formats/presentations/revealjs.html>
+:::
+
+# What about converting a powerpoint file??
+
+## Converting from pptx to md
+
+::: fragment
+I tried this using the [slidex](https://github.com/datalorax/slidex) package, which converts PowerPoint Slides to R Markdown, specifically for another slide package called [xaringan](https://github.com/yihui/xaringan).
+:::
+
+::: fragment
+It should be able to extract text while maintaining headings, bulleting levels, bolding and italicizing, pictures, and links.
+:::
+
+::: fragment
+However I found that it struggled to extract images...
+:::
+
+::: fragment
+So it's still suitable for text extraction, and you'd need to add the images manually.
+:::
+
+::: fragment
+``` r
+library(slidex)
+convert_pptx(path = "/path/to/file.pptx")
+```
+:::
+
+## Slidex Output
+
+``` r
+#  What is data.table and why use it? 
+
+It’s the high performance version of base R’s data.frame for manipulation
++ Very fast
+    + Memory efficient
+    + Lots of features similar to dplyr and other tidyverse functions
+    + Great support and documentation + no other dependencies
+Downsides?
++ Can be complex to learn
+    + Less intuitive than the tidyverse
+    + Less niche features compared to the tidyverse ( ie . The complete() function)
+    + Isn’t a complete ‘verse’ – ie . No plotting
+```
+
+# What is data.table and why use it?
+
+It's the high performance version of base R's data.frame for manipulation + Very fast + Memory efficient + Lots of features similar to dplyr and other tidyverse functions + Great support and documentation + no other dependencies Downsides? + Can be complex to learn + Less intuitive than the tidyverse + Less niche features compared to the tidyverse ( ie . The complete() function) + Isn't a complete 'verse' -- ie . No plotting
+
+## Converting from pptx to md with Python
+
+::: fragment
+I found a python package called [**pptx2md**](https://github.com/ssine/pptx2md) which does the same as slidex, but I found that it successfully extracted the images from the presentation.
+:::
+
+::: fragment
+``` python
+pip install pptx2md
+import pptx2md
+cd /path/to/folder/
+pptx2md powerpointfile.pptx
+```
+:::
+
+## pptx2md Python Output
+
+``` r
+![](img%5CDataTable%20UQRUG0.png)
+
+# What is data.table and why use it?
+
+-   It's the high performance version of base R's data.frame for manipulation
+    -   Very fast
+    -   Memory efficient
+    -   Lots of features similar to dplyr and other tidyverse functions
+    -   Great support and documentation + no other dependencies
+-   Downsides?
+    -   Can be complex to learn
+    -   Less intuitive than the tidyverse
+    -   Less niche features compared to the tidyverse (ie. The complete() function)
+    -   Isn't a complete 'verse' -- ie. No plotting
+```
+
+# What is data.table and why use it?
+
+. ![](img/DataTable%20UQRUG0.png)
+
+-   It's the high performance version of base R's data.frame for manipulation
+    -   Very fast
+    -   Memory efficient
+    -   Lots of features similar to dplyr and other tidyverse functions
+    -   Great support and documentation + no other dependencies
+-   Downsides?
+    -   Can be complex to learn
+    -   Less intuitive than the tidyverse
+    -   Less niche features compared to the tidyverse (ie. The complete() function)
+    -   Isn't a complete 'verse' -- ie. No plotting Last weeks slides to md
+
+## Final Thoughts
+
+::: fragment
+I found that creating slides in quarto is fairly straightforward, and you can do some neat things
+:::
+
+::: fragment
+However, trying to recreate last month's slides exactly was difficult.
+:::
+
+::: footer
+Last month's slides: <https://uqrug.netlify.app/posts/2023-06-28-june-data.table/>
+:::
+
+::: fragment
+I would recommend going with a simpler structure using basic columns.
+:::
+
+# Thank you
