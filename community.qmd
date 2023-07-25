@@ -5,6 +5,35 @@ metadata-files:
   - _page.yml
 ---
 
+## ResBaz2023Qld
+
+::: columns
+::: {.column width="17%"}
+<p float="left">
+
+[![](images/ResBazQLD_2023.png){fig-alt="ResBaz2023Qld Logo" width="100%"}](https://resbaz.github.io/resbaz2023qld/)
+
+</p>
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
+The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'. 
+
+Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend. 
+
+|     **When**: November 21-23 2023
+
+|     **Where**: UQ St Lucia in the Michie Building
+
+|     **More Details**: The [ResBaz2023Qld Website](https://resbaz.github.io/resbaz2023qld/)
+:::
+:::
+
+
 ## R-Ladies Brisbane
 
 ::: columns
