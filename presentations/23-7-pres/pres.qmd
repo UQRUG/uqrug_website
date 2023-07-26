@@ -15,19 +15,25 @@ format:
 
 Quarto enables you to weave together content and executable code into a finished presentation.
 
+You can export to PowerPoint format, PDF (using Beamer), or HTML (using Reveal JS)
+
 To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>
 
 ## Rendering
 
 When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown (such as a - creating bullets)
+-   Content authored with markdown (such as creating bullet points with -)
 -   Output from executable code
 
 ## Executed Code
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document.
-
+For example
+```{.r}
+1 + 1
+```
+Will output
 ```{r}
 1 + 1
 ```
@@ -42,7 +48,12 @@ This is the code that created the last slide[^1]:
 ## Code
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. 
+For example
 
+#```{.r}
+1 + 1
+#```
+Will output
 #```{r}
 1 + 1
 #```
@@ -156,7 +167,9 @@ Using r-stack and fragments will allow you to stack multiple elements on top of 
 ::: aside
 This will create a footnote
 
-You can press the S key (or use the Navigation Menu) to show the presentation speaker view
+You can press the S key to show the presentation speaker view
+
+You can find more options in the Navigation Menu
 :::
 
 ::: notes
@@ -340,9 +353,8 @@ format:
 -   Slide transitions
 -   Preview links
 -   Slide numbers
--   Slide zoom
+-   Slide zoom (hold alt + click)
 -   Videos
--   <https://quarto.org/docs/reference/formats/presentations/revealjs.html>
 :::
 
 # What about converting a powerpoint file??
@@ -452,12 +464,12 @@ I found that creating slides in quarto is fairly straightforward, and you can do
 However, trying to recreate last month's slides exactly was difficult.
 :::
 
-::: footer
-Last month's slides: <https://uqrug.netlify.app/posts/2023-06-28-june-data.table/>
-:::
-
 ::: fragment
 I would recommend going with a simpler structure using basic columns.
 :::
 
 # Thank you
+
+::: footer
+Last month's slides: <https://uqrug.netlify.app/posts/2023-06-28-june-data.table/>
+:::

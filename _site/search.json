@@ -571,28 +571,28 @@
     "href": "presentations/23-7-pres/pres.html#quarto",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Quarto",
-    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation.\nTo learn more about Quarto presentations see https://quarto.org/docs/presentations/"
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation.\nYou can export to PowerPoint format, PDF (using Beamer), or HTML (using Reveal JS)\nTo learn more about Quarto presentations see https://quarto.org/docs/presentations/"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#rendering",
     "href": "presentations/23-7-pres/pres.html#rendering",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Rendering",
-    "text": "Rendering\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown (such as a - creating bullets)\nOutput from executable code"
+    "text": "Rendering\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown (such as creating bullet points with -)\nOutput from executable code"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#executed-code",
     "href": "presentations/23-7-pres/pres.html#executed-code",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Executed Code",
-    "text": "Executed Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code in the Markdown document.\n\n\n[1] 2"
+    "text": "Executed Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. For example\n1 + 1\nWill output\n\n\n[1] 2"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#raw-code",
     "href": "presentations/23-7-pres/pres.html#raw-code",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Raw code",
-    "text": "Raw code\nThis is the code that created the last slide1:\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. \n\n#```{r}\n1 + 1\n#```\nYou add code by putting {r} after backticks.\nYou can show raw code by adding a period: {.r}\nI did comment out the backticks to allow the code to run however"
+    "text": "Raw code\nThis is the code that created the last slide1:\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. \nFor example\n\n#```{.r}\n1 + 1\n#```\nWill output\n#```{r}\n1 + 1\n#```\nYou add code by putting {r} after backticks.\nYou can show raw code by adding a period: {.r}\nI did comment out the backticks to allow the code to run however"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#interactive-r-outputs",
@@ -634,7 +634,7 @@
     "href": "presentations/23-7-pres/pres.html#footnotes-and-speakernotes",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Footnotes and Speakernotes",
-    "text": "Footnotes and Speakernotes\n\n\nIf you tag a div with aside you will get footnotes.\nIf you tag a div with notes you will get speakernotes.\n\n\n\n::: aside\nThis will create a footnote\n\nYou can press the S key (or use the Navigation Menu) to show the presentation speaker view\n:::\n\n::: notes\nSpeaker notes go here\n:::\n\n\n\nSpeaker notes go here.\n\n\nThis will create a footnote\nYou can press the S key (or use the Navigation Menu) to show the presentation speaker view"
+    "text": "Footnotes and Speakernotes\n\n\nIf you tag a div with aside you will get footnotes.\nIf you tag a div with notes you will get speakernotes.\n\n\n\n::: aside\nThis will create a footnote\n\nYou can press the S key to show the presentation speaker view\n\nYou can find more options in the Navigation Menu\n:::\n\n::: notes\nSpeaker notes go here\n:::\n\n\n\nSpeaker notes go here.\n\n\nThis will create a footnote\nYou can press the S key (or use the Navigation Menu) to show the presentation speaker view"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#columns",
@@ -683,7 +683,7 @@
     "href": "presentations/23-7-pres/pres.html#more",
     "title": "UQRUG July - Quarto Presentations",
     "section": "More",
-    "text": "More\n\n\nChalkboard\nTimed slides\nExtra navigation options\nSlide transitions\nPreview links\nSlide numbers\nSlide zoom\nVideos\nhttps://quarto.org/docs/reference/formats/presentations/revealjs.html"
+    "text": "More\n\n\nChalkboard\nTimed slides\nExtra navigation options\nSlide transitions\nPreview links\nSlide numbers\nSlide zoom (hold alt + click)\nVideos"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#converting-from-pptx-to-md",
@@ -718,7 +718,7 @@
     "href": "presentations/23-7-pres/pres.html#final-thoughts",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Final Thoughts",
-    "text": "Final Thoughts\n\nI found that creating slides in quarto is fairly straightforward, and you can do some neat things\n\n\nHowever, trying to recreate last month’s slides exactly was difficult.\n\n\nLast month’s slides: https://uqrug.netlify.app/posts/2023-06-28-june-data.table/\n\n\nI would recommend going with a simpler structure using basic columns."
+    "text": "Final Thoughts\n\nI found that creating slides in quarto is fairly straightforward, and you can do some neat things\n\n\nHowever, trying to recreate last month’s slides exactly was difficult.\n\n\nI would recommend going with a simpler structure using basic columns."
   },
   {
     "objectID": "community.html#resbaz2023qld",
