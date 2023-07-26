@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -186,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="r-overview-of-the-month" class="level3">
 <h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
 <p>Nick will be providing an overview on creating <strong>HTML based presentations in R with <a href="https://quarto.org/docs/presentations/">Quarto</a> and <a href="https://revealjs.com/">reveal.js</a></strong></p>
-<p>Find more details and the slides here: https://uqrug.netlify.app/posts/2023-07-26-july-q-pres/</p>
+<p>Find more details and the slides here: <a href="https://uqrug.netlify.app/posts/2023-07-26-july-q-pres/" class="uri">https://uqrug.netlify.app/posts/2023-07-26-july-q-pres/</a></p>
 </section>
 <section id="attendees" class="level3">
 <h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
@@ -297,26 +331,65 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
 <section id="q1---learning-more-about-knitr---trinh-huynh" class="level4">
 <h4 class="anchored" data-anchor-id="q1---learning-more-about-knitr---trinh-huynh">Q1 - Learning more about knitr - Trinh Huynh</h4>
-<p>I haven’t worked with R markdown and I would like to learn from beginning- Trinh Huynh <strong>Answers</strong> * Take a look at this episode of the R for Reproducible Science workshop https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html Thanks * The library offers introductory training modules, as well as advanced. You can look for the upcomming sessions in this website: https://web.library.uq.edu.au/library-services/training * After doing that training, you’re more than welcome to bring questions that you have to UQRUG</p>
+<p>I haven’t worked with R markdown and I would like to learn from beginning- Trinh Huynh</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Take a look at this episode of the R for Reproducible Science workshop:
+<ul>
+<li><a href="https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html" class="uri">https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html</a></li>
+</ul></li>
+<li>The library offers introductory training modules, as well as advanced. You can look for the upcomming sessions in this website:
+<ul>
+<li><a href="https://web.library.uq.edu.au/library-services/training" class="uri">https://web.library.uq.edu.au/library-services/training</a></li>
+</ul></li>
+<li>After doing that training, you’re more than welcome to bring questions that you have to UQRUG</li>
+</ul>
 <hr>
 </section>
 <section id="q2---knit-shinyplotly-objects-to-local-html---mikesh" class="level4">
 <h4 class="anchored" data-anchor-id="q2---knit-shinyplotly-objects-to-local-html---mikesh">Q2 - knit Shiny/plotly objects to local html - Mikesh</h4>
-<p>Solutions for saving Rmarkdown files with shiny objects locally (no server)? Want to allow someone without R installed on their computer, access the interactive html file. maybe todays session?… <strong>Answers</strong> * Nick - I haven’t tried combining shiny and quarto, as Shiny will always need that Shiny server running, so I try to stick to HTML related dependencies. * If you want to have a quarto website or presentation, you can easily publish them to a variety of free sites such as GitHub Pages, Netlify, or Quarto Pub: * https://quarto.org/docs/publishing/ * <span class="citation" data-cites="Mikesh">@Mikesh</span> When you are thinking about this data access question again, please reach out to me via rcc-support@uq.edu.au</p>
+<p>Solutions for saving Rmarkdown files with shiny objects locally (no server)? Want to allow someone without R installed on their computer, access the interactive html file. maybe todays session?…</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Nick - I haven’t tried combining shiny and quarto, as Shiny will always need that Shiny server running, so I try to stick to HTML related dependencies.</li>
+<li>If you want to have a quarto website or presentation, you can easily publish them to a variety of free sites such as GitHub Pages, Netlify, or Quarto Pub:
+<ul>
+<li><a href="https://quarto.org/docs/publishing/" class="uri">https://quarto.org/docs/publishing/</a></li>
+</ul></li>
+<li><span class="citation" data-cites="Mikesh">@Mikesh</span> When you are thinking about this data access question again, please reach out to me via rcc-support@uq.edu.au</li>
+</ul>
 <hr>
 </section>
 <section id="q3---how-to-get-cmdstanr-working---fran" class="level4">
 <h4 class="anchored" data-anchor-id="q3---how-to-get-cmdstanr-working---fran">Q3 - How to get cmdstanr working - Fran</h4>
 <p>When I run cmdstan R, I get a make error.</p>
-<pre><code>cmdstanr:::get_cmdstan_flags('STANCFLAGS')
-Error in `(function (command = NULL, args = character(), error_on_status = TRUE, …`:
-! System command 'make' failed
----
-Exit status: 2
-Stderr:
-make: *** /c/Users/uqfpowe1/OneDrive: Is a directory.  Stop.
----</code></pre>
-<p><strong>Answers</strong> * We spent a while working on this one. Eventually David, Valentina, Nick, and Fran managed to get it working. * The issue appears to be that cmdstanr is for some reason pointing at the OneDrive, rather than the local C: drive * We tried changing the standard working directory, but this did not work * We also pulled everything off of OneDrive that was associated with R and cmdstanr, but it still wasn’t working * David got us to open the makefile command file inside the cmdstanr installation folder and we found that it was hard coded to run from the $HOME directory. * This is apparently different to the working directory. We found that we could check what this was with the following code” * Sys.getenv(“HOME”) * We were able to change this with the following code: * Sys.setenv(HOME=“C:/Users/MyName/Documents”) * We then had the code working.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cmdstanr<span class="sc">:::</span><span class="fu">get_cmdstan_flags</span>(<span class="st">'STANCFLAGS'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="st">`</span><span class="at">(function (command = NULL, args = character(), error_on_status = TRUE, …</span><span class="st">`</span><span class="sc">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span> System command <span class="st">'make'</span> failed</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Exit status<span class="sc">:</span> <span class="dv">2</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Stderr<span class="sc">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>make<span class="sc">:</span> <span class="er">***</span> <span class="er">/</span>c<span class="sc">/</span>Users<span class="sc">/</span>uqfpowe1<span class="sc">/</span>OneDrive<span class="sc">:</span> Is a directory.  Stop.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Answers</strong></p>
+<ul>
+<li>We spent a while working on this one. Eventually David, Valentina, Nick, and Fran managed to get it working.</li>
+<li>The issue appears to be that cmdstanr is for some reason pointing at the OneDrive, rather than the local C: drive</li>
+<li>We tried changing the standard working directory, but this did not work</li>
+<li>We also pulled everything off of OneDrive that was associated with R and cmdstanr, but it still wasn’t working</li>
+<li>David got us to open the makefile command file inside the cmdstanr installation folder and we found that it was hard coded to run from the $HOME directory.</li>
+<li>This is apparently different to the working directory. We found that we could check what this was with the following code:
+<ul>
+<li><code>Sys.getenv("HOME")</code></li>
+</ul></li>
+<li>We were able to change this with the following code:
+<ul>
+<li><code>Sys.setenv(HOME="C:/Users/MyName/Documents")</code></li>
+</ul></li>
+<li>We then had the code working.</li>
+</ul>
 <hr>
 
 
