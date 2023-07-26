@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-07-26">
+<meta name="description" content="Overview: Using quarto and revealjs to create presentations with R markdown.   Questions: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms">
 
-<title>UQRUG</title>
+<title>UQRUG - UQRUG 40</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/uqrug_fav.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,62 +64,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest'] = new List('listing-latest', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="home.css">
-<meta property="og:title" content="UQRUG">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="UQRUG - UQRUG 40">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG">
-<meta name="twitter:description" content="The University of Queensland R Users Group">
+<meta name="twitter:title" content="UQRUG - UQRUG 40">
+<meta name="twitter:description" content="Overview: Using quarto and revealjs to create presentations with R markdown.  Questions: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms">
 <meta name="twitter:image" content="images/uqrug_twitter.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/uqrug.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">UQRUG</span>
     </a>
   </div>
@@ -129,19 +98,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events.html" rel="" target="">
+    <a class="nav-link" href="../../events.html" rel="" target="">
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html" rel="" target="">
+    <a class="nav-link" href="../../pastmeetings.html" rel="" target="">
  <span class="menu-text">Past Meetings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html" rel="" target="">
+    <a class="nav-link" href="../../community.html" rel="" target="">
  <span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
@@ -159,115 +128,203 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#uqrug-40" id="toc-uqrug-40" class="nav-link active" data-scroll-target="#uqrug-40">2023-07-26: UQRUG 40</a>
+  <ul>
+  <li><a href="#r-overview-of-the-month" id="toc-r-overview-of-the-month" class="nav-link" data-scroll-target="#r-overview-of-the-month">R Overview of the Month</a></li>
+  <li><a href="#attendees" id="toc-attendees" class="nav-link" data-scroll-target="#attendees">Attendees</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul>
+  <li><a href="#q1---learning-more-about-knitr---trinh-huynh" id="toc-q1---learning-more-about-knitr---trinh-huynh" class="nav-link" data-scroll-target="#q1---learning-more-about-knitr---trinh-huynh">Q1 - Learning more about knitr - Trinh Huynh</a></li>
+  <li><a href="#q2---knit-shinyplotly-objects-to-local-html---mikesh" id="toc-q2---knit-shinyplotly-objects-to-local-html---mikesh" class="nav-link" data-scroll-target="#q2---knit-shinyplotly-objects-to-local-html---mikesh">Q2 - knit Shiny/plotly objects to local html - Mikesh</a></li>
+  <li><a href="#q3---how-to-get-cmdstanr-working---fran" id="toc-q3---how-to-get-cmdstanr-working---fran" class="nav-link" data-scroll-target="#q3---how-to-get-cmdstanr-working---fran">Q3 - How to get cmdstanr working - Fran</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-    <img src="images/uqrug.png" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UQRUG</h1>
-<p class="subtitle lead">The University of Queensland R Users Group</p>
+<h1 class="title">UQRUG 40</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">meeting</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <strong>Overview</strong>: Using quarto and revealjs to create presentations with R markdown. <br> <strong>Questions</strong>: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 26, 2023</p>
+    </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-<div class="quarto-about-marquee">
-  <p class="subtitle lead">The University of Queensland R Users Group</p>
-</div>
-<script>
-    function copyEvent(id)
-    {
-        var str = document.getElementById(id);
-        window.getSelection().selectAllChildren(str);
-        document.execCommand("Copy")
-    }
-</script>
-<p>UQRUG is a <strong>gathering for R users of all skills</strong>, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.</p>
-<section id="when-do-we-meet" class="level3">
-<h3 data-anchor-id="when-do-we-meet">When do we meet?</h3>
-<p>We meet <strong>every last Wednesday of the month</strong> (12-2 pm, currently online and in person): sign up to the next event by searching for UQRUG on the <a href="https://web.library.uq.edu.au/library-services/training">Library training page</a></p>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="uqrug-40" class="level2">
+<h2 class="anchored" data-anchor-id="uqrug-40">2023-07-26: UQRUG 40</h2>
+<section id="r-overview-of-the-month" class="level3">
+<h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
+<p>Nick will be providing an overview on creating <strong>HTML based presentations in R with <a href="https://quarto.org/docs/presentations/">Quarto</a> and <a href="https://revealjs.com/">reveal.js</a></strong></p>
+<p>Find more details and the slides here: https://uqrug.netlify.app/posts/2023-07-26-july-q-pres/</p>
 </section>
-<section id="how-do-i-get-the-zoom-link" class="level3">
-<h3 data-anchor-id="how-do-i-get-the-zoom-link">How do I get the Zoom link?</h3>
-<p>If you have a UQ affiliated account, you can sign up to the event directly through StudentHub:</p>
-<ul>
-<li><a href="https://studenthub.uq.edu.au/students/events/detail/4727514">UQRUG - 30 August 2023</a></li>
-</ul>
-<p>Otherwise you can email the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
+<section id="attendees" class="level3">
+<h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
+<p>Add your name, where you’re from, and why you’re here:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Where are you from?</th>
+<th>What brings you here?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nicholas Wiggins</td>
+<td>Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Mikesh Patel</td>
+<td>QCMHR</td>
+<td>Learning R</td>
+</tr>
+<tr class="odd">
+<td>Raul Riesco</td>
+<td>ACE</td>
+<td>Learning/helping</td>
+</tr>
+<tr class="even">
+<td>Ryan</td>
+<td>SOE</td>
+<td>Learning</td>
+</tr>
+<tr class="odd">
+<td>Luke Gaiter</td>
+<td>Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Rene Erhardt</td>
+<td>PACE</td>
+<td>learning</td>
+</tr>
+<tr class="odd">
+<td>Trinh Huynh</td>
+<td>USC</td>
+<td>learning</td>
+</tr>
+<tr class="even">
+<td>Danelle Kenny</td>
+<td>CHSR</td>
+<td>checking in and trying new things</td>
+</tr>
+<tr class="odd">
+<td>Pia Wohland</td>
+<td>SENV</td>
+<td>Checking in</td>
+</tr>
+<tr class="even">
+<td>Jaimee Wheelhouse</td>
+<td></td>
+<td>Very new to R</td>
+</tr>
+<tr class="odd">
+<td>Graeme Mattison</td>
+<td>TPCH</td>
+<td>Learning R!</td>
+</tr>
+<tr class="even">
+<td>Fran Powell</td>
+<td>SVS</td>
+<td>Need some help</td>
+</tr>
+<tr class="odd">
+<td>Jocelyn Hume</td>
+<td>UQCCR</td>
+<td>Still learning</td>
+</tr>
+<tr class="even">
+<td>David Green</td>
+<td>UQ RCC</td>
+<td>learning/helping … R on HPC and Shiny</td>
+</tr>
+<tr class="odd">
+<td>Anne-Claire Bouton</td>
+<td>SOE</td>
+<td>Learning</td>
+</tr>
+<tr class="even">
+<td>Windy</td>
+<td>SENV</td>
+<td>Still learning</td>
+</tr>
+<tr class="odd">
+<td>Valentina Urrutia Guada</td>
+<td>Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Gerry Katai</td>
+<td></td>
+<td>new to R learning</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="next-workshop" class="level2">
-<h2 data-anchor-id="next-workshop">Next Workshop</h2>
-<div id="listing-latest" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1690120800000" data-listing-file-modified-sort="1690254777360" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2023-07-26-July-Q-Pres/index.html"> <img src="./posts/2023-07-26-July-Q-Pres/revealjs_logo.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html">
-<h3 class="no-anchor listing-title">
-July 26th UQRUG Drop-in + Quarto Reveal.js Presentations
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on <strong>creating HTML based presentations in R with Quarto and revea…</strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html">
-<div class="listing-date">
-Jul 24, 2023
-</div>
-<div class="listing-author">
-Nicholas Wiggins
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="q1---learning-more-about-knitr---trinh-huynh" class="level4">
+<h4 class="anchored" data-anchor-id="q1---learning-more-about-knitr---trinh-huynh">Q1 - Learning more about knitr - Trinh Huynh</h4>
+<p>I haven’t worked with R markdown and I would like to learn from beginning- Trinh Huynh <strong>Answers</strong> * Take a look at this episode of the R for Reproducible Science workshop https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html Thanks * The library offers introductory training modules, as well as advanced. You can look for the upcomming sessions in this website: https://web.library.uq.edu.au/library-services/training * After doing that training, you’re more than welcome to bring questions that you have to UQRUG</p>
+<hr>
+</section>
+<section id="q2---knit-shinyplotly-objects-to-local-html---mikesh" class="level4">
+<h4 class="anchored" data-anchor-id="q2---knit-shinyplotly-objects-to-local-html---mikesh">Q2 - knit Shiny/plotly objects to local html - Mikesh</h4>
+<p>Solutions for saving Rmarkdown files with shiny objects locally (no server)? Want to allow someone without R installed on their computer, access the interactive html file. maybe todays session?… <strong>Answers</strong> * Nick - I haven’t tried combining shiny and quarto, as Shiny will always need that Shiny server running, so I try to stick to HTML related dependencies. * If you want to have a quarto website or presentation, you can easily publish them to a variety of free sites such as GitHub Pages, Netlify, or Quarto Pub: * https://quarto.org/docs/publishing/ * <span class="citation" data-cites="Mikesh">@Mikesh</span> When you are thinking about this data access question again, please reach out to me via rcc-support@uq.edu.au</p>
+<hr>
+</section>
+<section id="q3---how-to-get-cmdstanr-working---fran" class="level4">
+<h4 class="anchored" data-anchor-id="q3---how-to-get-cmdstanr-working---fran">Q3 - How to get cmdstanr working - Fran</h4>
+<p>When I run cmdstan R, I get a make error.</p>
+<pre><code>cmdstanr:::get_cmdstan_flags('STANCFLAGS')
+Error in `(function (command = NULL, args = character(), error_on_status = TRUE, …`:
+! System command 'make' failed
+---
+Exit status: 2
+Stderr:
+make: *** /c/Users/uqfpowe1/OneDrive: Is a directory.  Stop.
+---</code></pre>
+<p><strong>Answers</strong> * We spent a while working on this one. Eventually David, Valentina, Nick, and Fran managed to get it working. * The issue appears to be that cmdstanr is for some reason pointing at the OneDrive, rather than the local C: drive * We tried changing the standard working directory, but this did not work * We also pulled everything off of OneDrive that was associated with R and cmdstanr, but it still wasn’t working * David got us to open the makefile command file inside the cmdstanr installation folder and we found that it was hard coded to run from the $HOME directory. * This is apparently different to the working directory. We found that we could check what this was with the following code” * Sys.getenv(“HOME”) * We were able to change this with the following code: * Sys.setenv(HOME=“C:/Users/MyName/Documents”) * We then had the code working.</p>
+<hr>
 
 
 </section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://web.library.uq.edu.au/library-services/training#keyword=Rstudio" class="about-link" rel="" target="">
-    <i class="bi bi-hexagon-fill"></i>
-     <span class="about-link-text">R Workshops</span>
-  </a>
-  <a href="https://twitter.com/UQ_RUG" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-text"></i>
-     <span class="about-link-text">Collaborative Document</span>
-  </a>
-  <a href="https://github.com/uqlibrary/technology-training" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au" class="about-link" rel="" target="">
-    <i class="bi bi-chat-right"></i>
-     <span class="about-link-text">UQ Chat</span>
-  </a>
-  <a href="https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/" class="about-link" rel="" target="">
-    <i class="bi bi-globe"></i>
-     <span class="about-link-text">Created with quarto</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -403,6 +460,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

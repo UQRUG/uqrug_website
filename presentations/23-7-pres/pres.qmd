@@ -4,7 +4,7 @@ subtitle: "Warning: This is going to be a very meta presentation"
 author: "By Nicholas Wiggins"
 format:
   revealjs:
-    theme: default
+    theme: dark
     logo: img/RUG_logo.jpg
     footer: "UQRUG - Quarto Presentations"
     smaller: false
@@ -221,7 +221,7 @@ Adding text below the columns makes it appear below
 Adding text below the columns makes it appear below
 :::
 
-## Background images {background-image="quarto.svg" background-size="100px" background-repeat="repeat-x"}
+## Background images {background-image="img/quarto.svg" background-size="100px" background-repeat="repeat-x"}
 
 ::: fragment
 This slide's background image will be sized to 400px and set to repeat along the x-axis, as it is tagged with:
@@ -229,7 +229,7 @@ This slide's background image will be sized to 400px and set to repeat along the
 
 ::: fragment
 ``` r
-## Background images {background-image="quarto.svg" background-size="100px"
+## Background images {background-image="img/quarto.svg" background-size="100px"
 background-repeat="repeat-x"}
 ```
 :::

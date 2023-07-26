@@ -1,0 +1,97 @@
+---
+title: UQRUG 40
+date: '2023-07-26'
+description: '**Overview**: Using quarto and revealjs to create presentations with R markdown. <br /> **Questions**: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-07-26: UQRUG 40
+
+### R Overview of the Month
+
+Nick  will be providing an overview on creating **HTML based presentations in R with [Quarto](https://quarto.org/docs/presentations/) and [reveal.js](https://revealjs.com/)**
+
+Find more details and the slides here:
+https://uqrug.netlify.app/posts/2023-07-26-july-q-pres/
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | Library | Here to help! |
+| Mikesh Patel | QCMHR | Learning R |
+| Raul Riesco | ACE | Learning/helping |
+| Ryan | SOE | Learning |
+| Luke Gaiter | Library | Here to help! |
+| Rene Erhardt | PACE |learning||
+| Trinh Huynh |USC|learning|
+| Danelle Kenny|CHSR|checking in and trying new things|
+| Pia Wohland| SENV|Checking in|
+| Jaimee Wheelhouse ||Very new to R|
+| Graeme Mattison | TPCH | Learning R!|
+| Fran Powell| SVS| Need some help |
+| Jocelyn Hume | UQCCR | Still learning|
+| David Green|UQ RCC|learning/helping ... R on HPC and Shiny|
+|Anne-Claire Bouton | SOE | Learning |
+| Windy | SENV | Still learning
+| Valentina Urrutia Guada | Library | Here to help!
+| Gerry Katai ||    new to R learning 
+
+
+### Questions
+
+#### Q1 - Learning more about knitr - Trinh Huynh
+I haven't worked with R markdown and I would like to learn from beginning- Trinh Huynh
+**Answers**
+* Take a look at this episode of the R for Reproducible Science workshop https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html
+ Thanks
+* The library offers introductory training modules, as well as advanced. You can look for the upcomming sessions in this website: https://web.library.uq.edu.au/library-services/training
+* After doing that training, you're more than welcome to bring questions that you have to UQRUG
+
+---
+
+#### Q2 - knit Shiny/plotly objects to local html - Mikesh
+Solutions for saving Rmarkdown files with shiny objects locally (no server)? Want to allow someone without R installed on their computer, access the interactive html file. maybe todays session?...
+**Answers**
+* Nick - I haven't tried combining shiny and quarto, as Shiny will always need that Shiny server running, so I try to stick to HTML related dependencies.
+* If you want to have a quarto website or presentation, you can easily publish them to a variety of free sites such as GitHub Pages, Netlify, or Quarto Pub:
+    * https://quarto.org/docs/publishing/
+*  @Mikesh When you are thinking about this data access question again, please reach out to me via rcc-support@uq.edu.au
+
+---
+
+#### Q3 - How to get cmdstanr working - Fran
+When I run cmdstan R, I get a make error.
+```
+cmdstanr:::get_cmdstan_flags('STANCFLAGS')
+Error in `(function (command = NULL, args = character(), error_on_status = TRUE, …`:
+! System command 'make' failed
+---
+Exit status: 2
+Stderr:
+make: *** /c/Users/uqfpowe1/OneDrive: Is a directory.  Stop.
+---
+```
+
+**Answers**
+*  We spent a while working on this one. Eventually David, Valentina, Nick, and Fran managed to get it working.
+*  The issue appears to be that cmdstanr is for some reason pointing at the OneDrive, rather than the local C: drive
+*  We tried changing the standard working directory, but this did not work
+*  We also pulled everything off of OneDrive that was associated with R and cmdstanr, but it still wasn't working
+*  David got us to open the makefile command file inside the cmdstanr installation folder and we found that it was hard coded to run from the $HOME directory.
+*  This is apparently different to the working directory. We found that we could check what this was with the following code"
+    *  Sys.getenv("HOME")
+* We were able to change this with the following code:
+    * Sys.setenv(HOME="C:/Users/MyName/Documents")
+* We then had the code working.
+---
