@@ -1,0 +1,36 @@
+---
+title: "August 30th UQRUG Drop-in + Basic Statistics"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-08-21'
+image: Rlogo.svg
+slug: aug2023
+categories:
+  - workshop
+tags: [R, Statistics, base, stats, drop-in, help]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 30th August, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4727514)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+<!-- Browse the full slides from the August RUG: -->
+
+<!-- <iframe width="780" height="500" src="/presentations/23-7-pres/pres.html" title="Revealjs Quarto Presentation"> -->
+
+<!-- </iframe> -->
+
+[The R logo is © 2016 The R Foundation.](https://www.r-project.org/logo/){style="color:grey; font-size:80%;"}

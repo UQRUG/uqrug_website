@@ -78,7 +78,7 @@ Want to allow someone without R installed on their computer, access the interact
 
 #### Q3 - How to get cmdstanr working - Fran
 When I run cmdstan R, I get a make error.
-```{r}
+```{.r}
 cmdstanr:::get_cmdstan_flags('STANCFLAGS')
 Error in `(function (command = NULL, args = character(), error_on_status = TRUE, …`:
 ! System command 'make' failed
