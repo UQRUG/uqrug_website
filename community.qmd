@@ -21,9 +21,9 @@ metadata-files:
 :::
 
 ::: {.column width="80%"}
-The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'. 
+The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'.
 
-Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend. 
+Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend.
 
 |     **When**: November 21-23 2023
 
@@ -33,6 +33,32 @@ Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters
 :::
 :::
 
+
+## UQ Python User Group
+
+::: columns
+::: {.column width="17%"}
+<p float="left">
+
+[![](images/python-logo-only.svg){fig-alt="Python Logo" width="100%"}](https://bit.ly/UQPUG)
+
+</p>
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
+A gathering for Python users of any proficiency, to help each other solve problems, share resources and tips, discover new features and hang out as a friendly community.
+
+|     **When**: First **Thursday** of the month from 10am to 11:30am
+
+|     **Where**: In-Person at UQ Central Library 12-N109
+
+|     **More Details**: The [UQ Python User Group Noteable Document](https://bit.ly/UQPUG)
+:::
+:::
 
 ## R-Ladies Brisbane
 
