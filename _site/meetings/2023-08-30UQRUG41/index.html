@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-08-30">
+<meta name="description" content="Overview: Basic Statistics in R.   Questions: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop">
 
-<title>UQRUG - Events</title>
+<title>UQRUG - UQRUG 41</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/uqrug_fav.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,61 +103,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-workshops .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-workshops'] = new List('listing-workshops', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="UQRUG - Events">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="UQRUG - UQRUG 41">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site_name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG - Events">
-<meta name="twitter:description" content="UQRUG is a gathering for R users of all skills, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.">
+<meta name="twitter:title" content="UQRUG - UQRUG 41">
+<meta name="twitter:description" content="Overview: Basic Statistics in R.  Questions: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop">
 <meta name="twitter:image" content="images/uqrug_twitter.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/uqrug.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">UQRUG</span>
     </a>
   </div>
@@ -133,19 +137,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./events.html" aria-current="page"> 
+    <a class="nav-link" href="../../events.html"> 
 <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html"> 
+    <a class="nav-link" href="../../pastmeetings.html"> 
 <span class="menu-text">Past Meetings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html"> 
+    <a class="nav-link" href="../../community.html"> 
 <span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
@@ -163,251 +167,252 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
-<!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Events</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header> <main class="content" id="quarto-document-content">
-<style>
-div.quarto-post .metadata{
-display: none;
-}
-</style>
-<p>Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. <br></p>
-<div id="listing-workshops" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#uqrug-41" id="toc-uqrug-41" class="nav-link active" data-scroll-target="#uqrug-41">2023-08-30: UQRUG 41</a>
+  <ul>
+  <li><a href="#r-overview-of-the-month" id="toc-r-overview-of-the-month" class="nav-link" data-scroll-target="#r-overview-of-the-month">R Overview of the Month</a></li>
+  <li><a href="#attendees" id="toc-attendees" class="nav-link" data-scroll-target="#attendees">Attendees</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul>
+  <li><a href="#q1---what-are-some-good-network-analysis-packages---pradeepanick" id="toc-q1---what-are-some-good-network-analysis-packages---pradeepanick" class="nav-link" data-scroll-target="#q1---what-are-some-good-network-analysis-packages---pradeepanick">Q1 - What are some good network analysis packages? - Pradeepa/Nick</a></li>
+  <li><a href="#q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan" id="toc-q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan" class="nav-link" data-scroll-target="#q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan">Q2 - What are some good R packages for bayesian analysis? (Prior distributions) - Yufan</a></li>
+  <li><a href="#q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" id="toc-q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" class="nav-link" data-scroll-target="#q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas">Q3 - How to transform a .cvs file into an .nc file - Lucas</a></li>
+  <li><a href="#q4---normality-of-residuals-or-data-points---kar" id="toc-q4---normality-of-residuals-or-data-points---kar" class="nav-link" data-scroll-target="#q4---normality-of-residuals-or-data-points---kar">Q4 - Normality of Residuals or Data points? - Kar</a></li>
+  <li><a href="#q5---how-do-you-calculate-intra-class-corelations---bernadette" id="toc-q5---how-do-you-calculate-intra-class-corelations---bernadette" class="nav-link" data-scroll-target="#q5---how-do-you-calculate-intra-class-corelations---bernadette">Q5 - How do you calculate intra class corelations? - Bernadette</a></li>
+  <li><a href="#q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" id="toc-q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" class="nav-link" data-scroll-target="#q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris">Q7 - Does anyone know of good R packages for reverse geocoding? - Chris</a></li>
+  <li><a href="#q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" id="toc-q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" class="nav-link" data-scroll-target="#q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola">Q8 - Does anyone know how to conduct LD analysis using genepop in R? - Ola</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1692540000000" data-listing-file-modified-sort="1693377833807" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
-<div class="thumbnail">
-<p><a href="./posts/2023-08-30-August-Stats/index.html"> <img src="./posts/2023-08-30-August-Stats/Rlogo.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-08-30-August-Stats/index.html">
-<h3 class="no-anchor listing-title">
-August 30th UQRUG Drop-in + Basic Statistics
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-08-30-August-Stats/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="workshop" data-listing-date-sort="1690120800000" data-listing-file-modified-sort="1693377833804" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="121">
-<div class="thumbnail">
-<p><a href="./posts/2023-07-26-July-Q-Pres/index.html"> <img src="./posts/2023-07-26-July-Q-Pres/revealjs_logo.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html">
-<h3 class="no-anchor listing-title">
-July 26th UQRUG Drop-in + Quarto Reveal.js Presentations
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on <strong>creating HTML based presentations in R with Quarto and re…</strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="workshop" data-listing-date-sort="1687356000000" data-listing-file-modified-sort="1693377833801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
-<div class="thumbnail">
-<p><a href="./posts/2023-06-28-June-data.table/index.html"> <img src="./posts/2023-06-28-June-data.table/datatable.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-06-28-June-data.table/index.html">
-<h3 class="no-anchor listing-title">
-June 28th UQRUG Drop-in + data.table data manipulation basics
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick Garner will be providing an overview of <strong>the basics of data manipulation with data.table</strong> an…<strong></strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-06-28-June-data.table/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="workshop" data-listing-date-sort="1684850400000" data-listing-file-modified-sort="1693377833788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
-<div class="thumbnail">
-<p><a href="./posts/2023-05-31-May-Sending-emails/index.html"> <img src="./posts/2023-05-31-May-Sending-emails/knitr.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-05-31-May-Sending-emails/index.html">
-<h3 class="no-anchor listing-title">
-May 31st UQRUG Drop-in + Sending Emails from R
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick will be going over <strong>how to send emails through R</strong> using the knitr and RDCOMClient packages.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-05-31-May-Sending-emails/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="workshop" data-listing-date-sort="1681826400000" data-listing-file-modified-sort="1693377833788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
-<div class="thumbnail">
-<p><a href="./posts/2023-04-26-April-AI/index.html"> <img src="./posts/2023-04-26-April-AI/ChatGPT_logo.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-04-26-April-AI/index.html">
-<h3 class="no-anchor listing-title">
-April 26th UQRUG Drop-in + Coding with Generative AI
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Luke will be going over <strong>using generative AI (mostly ChatGPT) to help solve coding hurdles</strong>…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-04-26-April-AI/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="workshop" data-listing-date-sort="1679320800000" data-listing-file-modified-sort="1693377833788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
-<div class="thumbnail">
-<p><a href="./posts/2023-03-29-March-quarto/index.html"> <img src="./posts/2023-03-29-March-quarto/quarto.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-03-29-March-quarto/index.html">
-<h3 class="no-anchor listing-title">
-March 29th UQRUG Drop-in + Websites with Quarto
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a <strong>customisable website or blog in R</strong> using the quar…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-03-29-March-quarto/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="workshop" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1694564579570" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
-<div class="thumbnail">
-<p><a href="./posts/2023-02-22-February-forms/index.html"> <img src="./posts/2023-02-22-February-forms/googlesheets4.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-02-22-February-forms/index.html">
-<h3 class="no-anchor listing-title">
-February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-This week Nick will be briefly going over how to create a <strong>customisable online form in R</strong> using the googlesheets4 and Shiny packages.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-02-22-February-forms/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="workshop" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1693377833780" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
-<div class="thumbnail">
-<p><a href="./posts/2023-01-25-January-flexdashboard/index.html"> <img src="./posts/2023-01-25-January-flexdashboard/flexdashboard.svg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-01-25-January-flexdashboard/index.html">
-<h3 class="no-anchor listing-title">
-January 25th UQRUG Drop-in + Dashboard with Flexdashboard
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-This week Nick will be briefly going over <strong>creating quick and easy interactive dashboards to display your data with R</strong> using the package flexdashboard (it’s surprisingly…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-01-25-January-flexdashboard/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="workshop" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1693377833779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
-<div class="thumbnail">
-<p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> <img src="./posts/2022-12-07-December-gganimate-plotly/gganimate.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2022-12-07-December-gganimate-plotly/index.html">
-<h3 class="no-anchor listing-title">
-December 7th UQRUG Drop-in + Animated and Interactive Plots
-</h3>
-<div class="listing-subtitle">
-</div>
-<div class="listing-description">
-This week Nick will be briefly going over creating <strong>animated and interactive plots in R</strong> using the packages gganimate and plotly.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">UQRUG 41</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">meeting</div>
+  </div>
+  </div>
 
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://web.library.uq.edu.au/library-services/training#keyword=Rstudio" class="about-link" rel="" target="">
-    <i class="bi bi-hexagon-fill"></i>
-     <span class="about-link-text">R Workshops</span>
-  </a>
-  <a href="https://twitter.com/UQ_RUG" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-text"></i>
-     <span class="about-link-text">Collaborative Document</span>
-  </a>
-  <a href="https://github.com/uqlibrary/technology-training" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au" class="about-link" rel="" target="">
-    <i class="bi bi-chat-right"></i>
-     <span class="about-link-text">UQ Chat</span>
-  </a>
-  <a href="https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/" class="about-link" rel="" target="">
-    <i class="bi bi-globe"></i>
-     <span class="about-link-text">Created with quarto</span>
-  </a>
-</div>
-</div>
+<div>
+  <div class="description">
+    <strong>Overview</strong>: Basic Statistics in R. <br> <strong>Questions</strong>: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop
   </div>
 </div>
- <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 30, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+<section id="uqrug-41" class="level2">
+<h2 class="anchored" data-anchor-id="uqrug-41">2023-08-30: UQRUG 41</h2>
+<section id="r-overview-of-the-month" class="level3">
+<h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
+<p>This month at UQRUG, Valentina will be going over running some basic statistical analyses using R.</p>
+<p>Find more details here: https://uqrug.netlify.app/posts/2023-08-30-august-stats/</p>
+</section>
+<section id="attendees" class="level3">
+<h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
+<p>Add your name, where you’re from, and why you’re here:</p>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 31%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Where are you from?</th>
+<th>What brings you here?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nicholas Wiggins</td>
+<td>Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Valentina Urrutia Guada</td>
+<td>Library</td>
+<td>Here to help :)</td>
+</tr>
+<tr class="odd">
+<td>Raul Riesco</td>
+<td>ACE</td>
+<td>Learning/helping</td>
+</tr>
+<tr class="even">
+<td>Kar Ng</td>
+<td>UQ</td>
+<td>paste0(rep(“learning”, 3), “!”)</td>
+</tr>
+<tr class="odd">
+<td>Cameron West</td>
+<td>Library</td>
+<td>Here to learn!</td>
+</tr>
+<tr class="even">
+<td>Kim Henville</td>
+<td>EAIT</td>
+<td>General lurk</td>
+</tr>
+<tr class="odd">
+<td>Marguerite King</td>
+<td>SHRS PhD student</td>
+<td>Here to learn!</td>
+</tr>
+<tr class="even">
+<td>Yufan Wang</td>
+<td>HABS PhD student</td>
+<td>here to learn how to use R for bayesian analysis</td>
+</tr>
+<tr class="odd">
+<td>Abigail O’Hara</td>
+<td>HASS PhD student</td>
+<td>General knowledge</td>
+</tr>
+<tr class="even">
+<td>Ee Liz Puah</td>
+<td>HABS</td>
+<td>Learning</td>
+</tr>
+<tr class="odd">
+<td>Maca</td>
+<td>ISSR</td>
+<td>Learn</td>
+</tr>
+<tr class="even">
+<td>Bernadette</td>
+<td>library</td>
+<td>AHHH</td>
+</tr>
+<tr class="odd">
+<td>Lucas</td>
+<td>Science fac</td>
+<td>Learn and solve a question</td>
+</tr>
+<tr class="even">
+<td>Jay</td>
+<td>computer science</td>
+<td>using RStudio for statistical analysis</td>
+</tr>
+<tr class="odd">
+<td>Jocelyn</td>
+<td>UQCCR</td>
+<td>Loving the support from this group!</td>
+</tr>
+<tr class="even">
+<td>Ryan</td>
+<td>SOE</td>
+<td>Learning</td>
+</tr>
+<tr class="odd">
+<td>Chris Mancini</td>
+<td>EAIT Civil Transport Engineering</td>
+<td>Also love the support from this group :-)</td>
+</tr>
+<tr class="even">
+<td>Luke Gaiter</td>
+<td>Library</td>
+<td>Trying to fix the in room computer &amp; Learning</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="q1---what-are-some-good-network-analysis-packages---pradeepanick" class="level4">
+<h4 class="anchored" data-anchor-id="q1---what-are-some-good-network-analysis-packages---pradeepanick">Q1 - What are some good network analysis packages? - Pradeepa/Nick</h4>
+<p>We’re after some good network analysis packages in R to create a dynamic network of the Australian food system. Already aware of Bootnet, igraph, visNetwork and threejs, but haven’t explored them a lot yet. Looking for more options and opinions on packages. <strong>Answers</strong> * Raul: I think the most used is igraph, I also experimented with networkD3, it has smoother outputs but it has less options. Anyway, all of them are quite difficult to use, for me it was a lot of trial and error to get the simplest of networks &gt;_&lt;. In general I’ll recomend igraph as it covers most of basic needs. *</p>
+<hr>
+</section>
+<section id="q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan" class="level4">
+<h4 class="anchored" data-anchor-id="q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan">Q2 - What are some good R packages for bayesian analysis? (Prior distributions) - Yufan</h4>
+<p>I would like to know if there are any online resources that teach you how to fomulate prior distributions using R.</p>
+<p><strong>Answers</strong> * https://search.r-project.org/CRAN/refmans/surveil/html/priors.html * rstanarm - https://mc-stan.org/rstanarm/reference/priors.html * https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html * https://cran.r-project.org/web/views/Bayesian.html —</p>
+</section>
+<section id="q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" class="level4">
+<h4 class="anchored" data-anchor-id="q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas">Q3 - How to transform a .cvs file into an .nc file - Lucas</h4>
+<p>I have a .cvs file with contains temperature values per month. Also it has attached lon and lat values. I need those values on QGIS, but i need them separate by month into a raster file.</p>
+<p><strong>Answers</strong> * Nick - I’ll follow up with you on this later. We may be able to explore using the <a href="https://r-spatial.github.io/stars/">stars</a> R package to achieve this</p>
+<hr>
+</section>
+<section id="q4---normality-of-residuals-or-data-points---kar" class="level4">
+<h4 class="anchored" data-anchor-id="q4---normality-of-residuals-or-data-points---kar">Q4 - Normality of Residuals or Data points? - Kar</h4>
+<p>To test for one of the assumption - data normality before deciding the suitable omnibus and post-doc test, which “normality” are we looking at? Residual normality or Data value normality</p>
+<p><strong>Answers</strong> * Raul: In general, Residual normality is used to test if your data adjust to a linear model. When a test (like ANOVA) has a normality assumption is ussualy refer to normality of data (value). But it will depend on the test. * Kar: Thank you very much Raul.</p>
+<hr>
+</section>
+<section id="q5---how-do-you-calculate-intra-class-corelations---bernadette" class="level4">
+<h4 class="anchored" data-anchor-id="q5---how-do-you-calculate-intra-class-corelations---bernadette">Q5 - How do you calculate intra class corelations? - Bernadette</h4>
+<p><strong>Answers</strong> Using the irr package which has a icc function. Then you simply feed that the dataframe and the parameters/model you’re using to calculate the corrlelations.</p>
+<table class="table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>#### Q6 - For multiple linear regression, how can we plot it and what’s the graph look like? - Jay</td>
+</tr>
+<tr class="even">
+<td><strong>Answers</strong> * Raul:Maybe this will help? https://rpubs.com/bensonsyd/385183 “however, in many multiple linear regression situations, the variables we are using cannot be simultaneously represented two-dimensionally so exploring the data visually is far more difficult”. All good. It looks like we can’t really graph multiple linear regression easily. Thanks a lot.</td>
+</tr>
+<tr class="odd">
+<td>Maybe explore these visualisations? https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1</td>
+</tr>
+<tr class="even">
+<td>* If there are interactions between multiple variables then you can’t visualise that easily. * You would have to visualise the plot at different levels of the interaction, as the slope and corrleation would be different at every level of the interaction * If you have 2 independent variables, you need three dimensions to visualise each variable, and their interaction. OR have a 2D plot at each level of the interaction - like slices through each of those * The only time this is fine is if there is no interaction between the variables, and you can collapse that extra dimension.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" class="level4">
+<h4 class="anchored" data-anchor-id="q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris">Q7 - Does anyone know of good R packages for reverse geocoding? - Chris</h4>
+<p>For example nearest street address to a GPS coordinate</p>
+<p><strong>Answers</strong> * https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html * https://brisbane-geocommunity.netlify.app/</p>
+</section>
+<section id="q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" class="level4">
+<h4 class="anchored" data-anchor-id="q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola">Q8 - Does anyone know how to conduct LD analysis using genepop in R? - Ola</h4>
+<p><strong>Answers</strong> * Raul: Not familiar with genepop package, but according to the manual, they have a LD (linkage desequilibrium) test. The function is</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">test_LD</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>inputFile,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">outputFile =</span> <span class="st">""</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">settingsFile =</span> <span class="st">""</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">dememorization =</span> <span class="dv">10000</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">batches =</span> <span class="dv">100</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">iterations =</span> <span class="dv">5000</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">verbose =</span> <span class="fu">interactive</span>()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -572,6 +577,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
