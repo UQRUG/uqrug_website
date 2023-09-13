@@ -1,5 +1,5 @@
 ---
-title: "February 22th UQRUG Drop-in + Forms with Shiny and Googlesheets4"
+title: "February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4"
 editor: visual
 author: 'Nicholas Wiggins'
 date: '2023-02-22'
