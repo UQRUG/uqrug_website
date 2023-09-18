@@ -183,6 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" id="toc-q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" class="nav-link" data-scroll-target="#q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas">Q3 - How to transform a .cvs file into an .nc file - Lucas</a></li>
   <li><a href="#q4---normality-of-residuals-or-data-points---kar" id="toc-q4---normality-of-residuals-or-data-points---kar" class="nav-link" data-scroll-target="#q4---normality-of-residuals-or-data-points---kar">Q4 - Normality of Residuals or Data points? - Kar</a></li>
   <li><a href="#q5---how-do-you-calculate-intra-class-corelations---bernadette" id="toc-q5---how-do-you-calculate-intra-class-corelations---bernadette" class="nav-link" data-scroll-target="#q5---how-do-you-calculate-intra-class-corelations---bernadette">Q5 - How do you calculate intra class corelations? - Bernadette</a></li>
+  <li><a href="#q6---for-multiple-linear-regression-how-can-we-plot-it-and-whats-the-graph-look-like---jay" id="toc-q6---for-multiple-linear-regression-how-can-we-plot-it-and-whats-the-graph-look-like---jay" class="nav-link" data-scroll-target="#q6---for-multiple-linear-regression-how-can-we-plot-it-and-whats-the-graph-look-like---jay">Q6 - For multiple linear regression, how can we plot it and what’s the graph look like? - Jay</a></li>
   <li><a href="#q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" id="toc-q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" class="nav-link" data-scroll-target="#q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris">Q7 - Does anyone know of good R packages for reverse geocoding? - Chris</a></li>
   <li><a href="#q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" id="toc-q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" class="nav-link" data-scroll-target="#q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola">Q8 - Does anyone know how to conduct LD analysis using genepop in R? - Ola</a></li>
   </ul></li>
@@ -230,16 +231,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="r-overview-of-the-month" class="level3">
 <h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
 <p>This month at UQRUG, Valentina will be going over running some basic statistical analyses using R.</p>
-<p>Find more details here: https://uqrug.netlify.app/posts/2023-08-30-august-stats/</p>
+<p>Find more details, and the code here: https://uqrug.netlify.app/posts/2023-08-30-august-stats/</p>
 </section>
 <section id="attendees" class="level3">
 <h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
 <p>Add your name, where you’re from, and why you’re here:</p>
 <table class="table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 31%">
-<col style="width: 45%">
+<col style="width: 25%">
+<col style="width: 30%">
+<col style="width: 44%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -346,57 +347,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
 <section id="q1---what-are-some-good-network-analysis-packages---pradeepanick" class="level4">
 <h4 class="anchored" data-anchor-id="q1---what-are-some-good-network-analysis-packages---pradeepanick">Q1 - What are some good network analysis packages? - Pradeepa/Nick</h4>
-<p>We’re after some good network analysis packages in R to create a dynamic network of the Australian food system. Already aware of Bootnet, igraph, visNetwork and threejs, but haven’t explored them a lot yet. Looking for more options and opinions on packages. <strong>Answers</strong> * Raul: I think the most used is igraph, I also experimented with networkD3, it has smoother outputs but it has less options. Anyway, all of them are quite difficult to use, for me it was a lot of trial and error to get the simplest of networks &gt;_&lt;. In general I’ll recomend igraph as it covers most of basic needs. *</p>
+<p>We’re after some good network analysis packages in R to create a dynamic network of the Australian food system. Already aware of Bootnet, igraph, visNetwork and threejs, but haven’t explored them a lot yet. Looking for more options and opinions on packages.</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Raul: I think the most used is igraph, I also experimented with networkD3, it has smoother outputs but it has less options. Anyway, all of them are quite difficult to use, for me it was a lot of trial and error to get the simplest of networks &gt;_&lt;. In general I’ll recomend igraph as it covers most of basic needs.</li>
+</ul>
 <hr>
 </section>
 <section id="q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan" class="level4">
 <h4 class="anchored" data-anchor-id="q2---what-are-some-good-r-packages-for-bayesian-analysis-prior-distributions---yufan">Q2 - What are some good R packages for bayesian analysis? (Prior distributions) - Yufan</h4>
 <p>I would like to know if there are any online resources that teach you how to fomulate prior distributions using R.</p>
-<p><strong>Answers</strong> * https://search.r-project.org/CRAN/refmans/surveil/html/priors.html * rstanarm - https://mc-stan.org/rstanarm/reference/priors.html * https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html * https://cran.r-project.org/web/views/Bayesian.html —</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li><a href="https://search.r-project.org/CRAN/refmans/surveil/html/priors.html">https://search.r-project.org/CRAN/refmans/surveil/html/priors.html</a></li>
+<li>rstanarm - <a href="https://mc-stan.org/rstanarm/reference/priors.html">https://mc-stan.org/rstanarm/reference/priors.html</a></li>
+<li><a href="https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html">https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html</a></li>
+<li><a href="https://cran.r-project.org/web/views/Bayesian.html">https://cran.r-project.org/web/views/Bayesian.html</a></li>
+</ul>
+<hr>
 </section>
 <section id="q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas" class="level4">
 <h4 class="anchored" data-anchor-id="q3---how-to-transform-a-.cvs-file-into-an-.nc-file---lucas">Q3 - How to transform a .cvs file into an .nc file - Lucas</h4>
 <p>I have a .cvs file with contains temperature values per month. Also it has attached lon and lat values. I need those values on QGIS, but i need them separate by month into a raster file.</p>
-<p><strong>Answers</strong> * Nick - I’ll follow up with you on this later. We may be able to explore using the <a href="https://r-spatial.github.io/stars/">stars</a> R package to achieve this</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Nick - I’ll follow up with you on this later. We may be able to explore using the <a href="https://r-spatial.github.io/stars/">stars</a> R package to achieve this</li>
+</ul>
 <hr>
 </section>
 <section id="q4---normality-of-residuals-or-data-points---kar" class="level4">
 <h4 class="anchored" data-anchor-id="q4---normality-of-residuals-or-data-points---kar">Q4 - Normality of Residuals or Data points? - Kar</h4>
 <p>To test for one of the assumption - data normality before deciding the suitable omnibus and post-doc test, which “normality” are we looking at? Residual normality or Data value normality</p>
-<p><strong>Answers</strong> * Raul: In general, Residual normality is used to test if your data adjust to a linear model. When a test (like ANOVA) has a normality assumption is ussualy refer to normality of data (value). But it will depend on the test. * Kar: Thank you very much Raul.</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Raul: In general, Residual normality is used to test if your data adjust to a linear model. When a test (like ANOVA) has a normality assumption is ussualy refer to normality of data (value). But it will depend on the test.</li>
+<li>Kar: Thank you very much Raul.</li>
+</ul>
 <hr>
 </section>
 <section id="q5---how-do-you-calculate-intra-class-corelations---bernadette" class="level4">
 <h4 class="anchored" data-anchor-id="q5---how-do-you-calculate-intra-class-corelations---bernadette">Q5 - How do you calculate intra class corelations? - Bernadette</h4>
-<p><strong>Answers</strong> Using the irr package which has a icc function. Then you simply feed that the dataframe and the parameters/model you’re using to calculate the corrlelations.</p>
-<table class="table">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>#### Q6 - For multiple linear regression, how can we plot it and what’s the graph look like? - Jay</td>
-</tr>
-<tr class="even">
-<td><strong>Answers</strong> * Raul:Maybe this will help? https://rpubs.com/bensonsyd/385183 “however, in many multiple linear regression situations, the variables we are using cannot be simultaneously represented two-dimensionally so exploring the data visually is far more difficult”. All good. It looks like we can’t really graph multiple linear regression easily. Thanks a lot.</td>
-</tr>
-<tr class="odd">
-<td>Maybe explore these visualisations? https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1</td>
-</tr>
-<tr class="even">
-<td>* If there are interactions between multiple variables then you can’t visualise that easily. * You would have to visualise the plot at different levels of the interaction, as the slope and corrleation would be different at every level of the interaction * If you have 2 independent variables, you need three dimensions to visualise each variable, and their interaction. OR have a 2D plot at each level of the interaction - like slices through each of those * The only time this is fine is if there is no interaction between the variables, and you can collapse that extra dimension.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Using the irr package which has a icc function. Then you simply feed that the dataframe and the parameters/model you’re using to calculate the corrlelations.</li>
+</ul>
+<hr>
+</section>
+<section id="q6---for-multiple-linear-regression-how-can-we-plot-it-and-whats-the-graph-look-like---jay" class="level4">
+<h4 class="anchored" data-anchor-id="q6---for-multiple-linear-regression-how-can-we-plot-it-and-whats-the-graph-look-like---jay">Q6 - For multiple linear regression, how can we plot it and what’s the graph look like? - Jay</h4>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Raul:Maybe this will help? <a href="https://rpubs.com/bensonsyd/385183">https://rpubs.com/bensonsyd/385183</a> “however, in many multiple linear regression situations, the variables we are using cannot be simultaneously represented two-dimensionally so exploring the data visually is far more difficult”. All good. It looks like we can’t really graph multiple linear regression easily. Thanks a lot.</li>
+</ul>
+<p>Maybe explore these visualisations? <a href="https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1">https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1</a></p>
+<ul>
+<li>If there are interactions between multiple variables then you can’t visualise that easily.</li>
+<li>You would have to visualise the plot at different levels of the interaction, as the slope and corrleation would be different at every level of the interaction</li>
+<li>If you have 2 independent variables, you need three dimensions to visualise each variable, and their interaction. OR have a 2D plot at each level of the interaction - like slices through each of those</li>
+<li>The only time this is fine is if there is no interaction between the variables, and you can collapse that extra dimension.</li>
+</ul>
+<hr>
 </section>
 <section id="q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris" class="level4">
 <h4 class="anchored" data-anchor-id="q7---does-anyone-know-of-good-r-packages-for-reverse-geocoding---chris">Q7 - Does anyone know of good R packages for reverse geocoding? - Chris</h4>
 <p>For example nearest street address to a GPS coordinate</p>
-<p><strong>Answers</strong> * https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html * https://brisbane-geocommunity.netlify.app/</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li><a href="https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html">https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html</a></li>
+<li><a href="https://brisbane-geocommunity.netlify.app/">https://brisbane-geocommunity.netlify.app/</a></li>
+</ul>
+<hr>
 </section>
 <section id="q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola" class="level4">
 <h4 class="anchored" data-anchor-id="q8---does-anyone-know-how-to-conduct-ld-analysis-using-genepop-in-r---ola">Q8 - Does anyone know how to conduct LD analysis using genepop in R? - Ola</h4>
-<p><strong>Answers</strong> * Raul: Not familiar with genepop package, but according to the manual, they have a LD (linkage desequilibrium) test. The function is</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Raul: Not familiar with genepop package, but according to the manual, they have a LD (linkage desequilibrium) test. The function is</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">test_LD</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>inputFile,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">outputFile =</span> <span class="st">""</span>,</span>
