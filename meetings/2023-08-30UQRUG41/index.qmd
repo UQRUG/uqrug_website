@@ -20,7 +20,7 @@ library(tidyverse)
 
 This month at UQRUG, Valentina will be going over running some basic statistical analyses using R.
 
-Find more details, and the code here: https://uqrug.netlify.app/posts/2023-08-30-august-stats/
+Find more details, and the code here: [https://uqrug.netlify.app/posts/2023-08-30-august-stats/](https://uqrug.netlify.app/posts/2023-08-30-august-stats/)
 
 ### Attendees
 
