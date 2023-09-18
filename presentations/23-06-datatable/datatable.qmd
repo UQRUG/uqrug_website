@@ -22,10 +22,11 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: footer
-<https://rdatatable.gitlab.io/data.table/> 
+<https://rdatatable.gitlab.io/data.table/>
 :::
 
-# {visibility="hidden"}
+#  {visibility="hidden"}
+
 ## What is data.table and why use it?
 
 ```{=html}
@@ -39,8 +40,6 @@ By: Nick Garner for [UQRUG](/)
 }
 </style>
 ```
-
-
 ::: r-fit-text
 -   It's the high performance version of base R's data.frame for manipulation
     -   Very fast
