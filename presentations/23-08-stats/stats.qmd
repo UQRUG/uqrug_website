@@ -1,0 +1,189 @@
+---
+format: 
+  revealjs:
+    theme: dark
+    controls: true
+---
+
+# Basic Statistics
+
+::: columns
+::: {.column width="60%"}
+</br>
+
+An overview of basic statistics in R
+
+By: Valentina Urrutia Guada for [UQRUG](/)
+:::
+
+::: {.column width="40%"}
+![](img/Rlogo.svg)
+:::
+:::
+
+
+## Basic Statistics
+
+This is simply a presentational form of the code shown during the August UQRUG.
+
+::: footer
+<a href="/presentations/23-08-stats/stats.html" target="_blank">Click for the external link to these slides</a>
+:::
+
+## Load the libraries and data
+```{.r}
+#Packages and libraries
+library(tidyverse)
+library(lattice)
+
+#Loading data
+data1<-mtcars
+data2<-read.csv("datasets/ttest.csv")
+data3<-read.csv("datasets/ANOVA.csv")
+data4<-read.csv("datasets/correl.csv")
+
+#Creating objects
+Y<-mtcars$mpg
+X<-mtcars$wt
+```
+```{r Load Libraries and Data, message=FALSE, warning=FALSE}
+#Packages and libraries
+library(tidyverse)
+library(lattice)
+
+#Loading data
+data1<-mtcars
+data2<-read.csv("datasets/ttest.csv")
+data3<-read.csv("datasets/ANOVA.csv")
+data4<-read.csv("datasets/correl.csv")
+
+#Creating objects
+Y<-mtcars$mpg
+X<-mtcars$wt
+```
+
+
+
+## Explore the data structure
+```{.r}
+#Basic exploration of data
+View(data1)
+str(data1)
+```
+```{r Explore the data}
+#Basic exploration of data
+View(data1)
+str(data1)
+```
+
+## Descriptive statistics
+
+The summary() function provides quick and easy descriptive statistics, and is useful initial step:
+```{.r}
+summary(data1)
+```
+```{r Descriptive Stats for all variables}
+summary(data1)
+```
+
+## Visualise the data
+With histogram() we can quickly view the descriptive stats plots per variable
+
+```{.r}
+histogram(Y) # the same as histogram(data$Y) or histogram(~Y,data)
+```
+```{r Visualise the data}
+histogram(Y) # the same as histogram(data$Y) or histogram(~Y,data)
+```
+
+## Visualise the data
+
+Box and whisker plots are another useful way to visualise our data spread quickly and easily with bwplot()
+```{.r}
+bwplot(Y)
+```
+```{r Box and Whisker Plot}
+bwplot(Y)
+```
+
+## Inferential statistics
+The classic two sample t-test can easily be run with the t.test() function
+
+```{.r}
+#two sample t-test
+t.test(time~daytime,data2)
+```
+```{r Inferential Statistics}
+#two sample t-test
+t.test(time~daytime,data2)
+```
+
+## ANOVA visualisation
+Before we run the ANOVA test, it can be a good idea to visualise our data with a boxplot, which ggplot2 also has
+```{.r}
+#ANOVA aov(Y ~ X, data)
+ggplot(data3)+
+  aes(mode, students, group = mode)+
+  geom_boxplot()
+```
+```{r Visualise ANOVA}
+#ANOVA aov(Y ~ X, data)
+ggplot(data3)+
+  aes(mode, students, group = mode)+
+  geom_boxplot()
+```
+
+
+## ANOVA 
+An ANOVA is a good test to determine if the means of multiple independent variables are equal
+```{.r}
+summary(aov(students~mode,data=data3))
+```
+```{r ANOVA Output}
+summary(aov(students~mode,data=data3))
+```
+
+## Correlation
+
+Before running a corrlelation test, it is good to visualise the relationship of the data with a simple scatterplot such as the lattice xyplot()
+```{.r}
+#Relationship
+#Scatterplot
+xyplot(FXRUSD~FXREUR,data4)
+```
+```{r Visualise Relational Data}
+#Relationship
+#Scatterplot
+xyplot(FXRUSD~FXREUR,data4)
+```
+
+## Correlation
+We can now test for correlation using a Pearson or Spearman test
+```{.r}
+#correlation (Pearson)
+cor(data4$FXRUSD,data4$FXREUR,method="pearson")
+```
+```{r Correlation P}
+#correlation (Pearson)
+cor(data4$FXRUSD,data4$FXREUR,method="pearson")
+```
+```{.r}
+#correlation (Spearman)
+cor(data4$FXRUSD,data4$FXREUR,method="spearman")
+```
+```{r Correlation S}
+#correlation (Spearman)
+cor(data4$FXRUSD,data4$FXREUR,method="spearman")
+```
+
+
+
+## Linear Regression
+```{.r}
+#linear regression
+lm(FXRUSD~FXREUR,data4)
+```
+```{r Linear Regression}
+#linear regression
+lm(FXRUSD~FXREUR,data4)
+```

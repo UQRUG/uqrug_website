@@ -29,78 +29,10 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-Browse the full code from the August RUG:
+Browse the full code in slide form from the August RUG:
 
-```{r Load Libraries and Data, message=FALSE, warning=FALSE}
-#Packages and libraries
-library(tidyverse)
-library(lattice)
+<iframe width="780" height="500" src="/presentations/23-08-stats/stats.html" title="data.table Quarto Presentation"></iframe>
 
-#Loading data
-data1<-mtcars
-data2<-read.csv("datasets/ttest.csv")
-data3<-read.csv("datasets/ANOVA.csv")
-data4<-read.csv("datasets/correl.csv")
-
-#Creating objects
-Y<-mtcars$mpg
-X<-mtcars$wt
-```
-
-```{r Explore the data}
-#Basic exploration of data
-View(data1)
-str(data1)
-```
-```{r Descriptive Stats for all variables}
-#Descriptive statistics for all variables
-summary(data1)
-```
-
-```{r Visualise the data}
-#Descriptive stats plots per variable
-histogram(Y)#same than histogram(data$Y) or histogram(~Y,data)
-```
-```{r Box and Whisker Plot}
-bwplot(Y)
-```
-
-```{r Inferential Statistics}
-#Inferential statistics
-
-#two sample t-test
-t.test(time~daytime,data2)
-```
-
-```{r Visualise ANOVA}
-#ANOVA aov(Y ~ X, data)
-ggplot(data3)+
-  aes(mode, students, group = mode)+
-  geom_boxplot()
-```
-
-```{r ANOVA Output}
-summary(aov(students~mode,data=data3))
-```
-
-```{r Visualise Relational Data}
-#Relationship
-#Scatterplot
-xyplot(FXRUSD~FXREUR,data4)
-```
-
-```{r Correlation}
-#correlation (Pearson)
-cor(data4$FXRUSD,data4$FXREUR,method="pearson")
-#correlation (Spearman)
-cor(data4$FXRUSD,data4$FXREUR,method="spearman")
-```
-
-```{r Linear Regression}
-#linear regression
-lm(FXRUSD~FXREUR,data4)
-```
-
-You can find the [full raw code and datasets here](https://github.com/Nijawi/uqrug/tree/main/posts/2023-08-30-August-Stats/datasets).
+You can find the [full raw code and datasets here](https://github.com/Nijawi/uqrug/tree/main/presentations/23-08-stats/datasets).
 
 [The R logo is © 2016 The R Foundation.](https://www.r-project.org/logo/){style="color:grey; font-size:80%;"}

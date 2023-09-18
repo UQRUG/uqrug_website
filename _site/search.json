@@ -570,8 +570,8 @@
     "objectID": "presentations/23-7-pres/pres.html#quarto",
     "href": "presentations/23-7-pres/pres.html#quarto",
     "title": "UQRUG July - Quarto Presentations",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished presentation.\nYou can export to PowerPoint format, PDF (using Beamer), or HTML (using Reveal JS)\nTo learn more about Quarto presentations see https://quarto.org/docs/presentations/"
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation.\nYou can export to PowerPoint format, PDF (using Beamer), or HTML (using Reveal JS)\nTo learn more about Quarto presentations see https://quarto.org/docs/presentations/"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#rendering",
@@ -585,21 +585,21 @@
     "href": "presentations/23-7-pres/pres.html#executed-code",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Executed Code",
-    "text": "Executed Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. For example\n1 + 1\nWill output\n\n1 + 1\n\n[1] 2"
+    "text": "Executed Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. For example\n1 + 1\nWill output\n\n\n[1] 2"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#raw-code",
     "href": "presentations/23-7-pres/pres.html#raw-code",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Raw code",
-    "text": "Raw code\nThis is the code that created the last slide1:\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. \nFor example\n\n#```{.r}\n1 + 1\n#```\nWill output\n#```{r}\n1 + 1\n#```\nYou add code by putting {r} after backticks.\nYou can show raw code by adding a period: {.r}"
+    "text": "Raw code\nThis is the code that created the last slide1:\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code in the Markdown document. \nFor example\n\n#```{.r}\n1 + 1\n#```\nWill output\n#```{r}\n1 + 1\n#```\nYou add code by putting {r} after backticks.\nYou can show raw code by adding a period: {.r}\nI did comment out the backticks to allow the code to run however"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#interactive-r-outputs",
     "href": "presentations/23-7-pres/pres.html#interactive-r-outputs",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Interactive R Outputs",
-    "text": "Interactive R Outputs\nThis is just a simple plotly outplut using ggplot() and ggplotly()\n\nlibrary(plotly)\n\nWarning: package 'plotly' was built under R version 4.2.3\n\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\ndata(canada.cities, package = \"maps\")\nviz &lt;- ggplot(canada.cities, aes(long, lat)) +\n  borders(regions = \"canada\") +\n  coord_equal() +\n  geom_point(aes(text = name, size = pop), colour = \"red\", alpha = 1/2)\n\nWarning in geom_point(aes(text = name, size = pop), colour = \"red\", alpha =\n1/2): Ignoring unknown aesthetics: text\n\nggplotly(viz, tooltip = c(\"text\", \"size\"))\n\n\n\n\n\nlibrary(plotly)\ndata(canada.cities, package = \"maps\")\nviz &lt;- ggplot(canada.cities, aes(long, lat)) +\n  borders(regions = \"canada\") +\n  coord_equal() +\n  geom_point(aes(text = name, size = pop), colour = \"red\", alpha = 1/2)\nggplotly(viz, tooltip = c(\"text\", \"size\"))"
+    "text": "Interactive R Outputs\nThis is just a simple plotly outplut using ggplot() and ggplotly()\n\n\n\n\n\n\nlibrary(plotly)\ndata(canada.cities, package = \"maps\")\nviz &lt;- ggplot(canada.cities, aes(long, lat)) +\n  borders(regions = \"canada\") +\n  coord_equal() +\n  geom_point(aes(text = name, size = pop), colour = \"red\", alpha = 1/2)\nggplotly(viz, tooltip = c(\"text\", \"size\"))"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#font-and-alignment",
@@ -634,7 +634,7 @@
     "href": "presentations/23-7-pres/pres.html#footnotes-and-speakernotes",
     "title": "UQRUG July - Quarto Presentations",
     "section": "Footnotes and Speakernotes",
-    "text": "Footnotes and Speakernotes\n\n\nIf you tag a div with aside you will get footnotes.\nIf you tag a div with notes you will get speakernotes.\n\n\n\n::: aside\nThis will create a footnote\n\nYou can press the S key to show the presentation speaker view\n\nYou can find more options in the Navigation Menu\n:::\n\n::: notes\nSpeaker notes go here\n:::\n\n\n\nThis will create a footnote\nYou can press the S key (or use the Navigation Menu) to show the presentation speaker view\n\nSpeaker notes go here."
+    "text": "Footnotes and Speakernotes\n\n\nIf you tag a div with aside you will get footnotes.\nIf you tag a div with notes you will get speakernotes.\n\n\n\n::: aside\nThis will create a footnote\n\nYou can press the S key to show the presentation speaker view\n\nYou can find more options in the Navigation Menu\n:::\n\n::: notes\nSpeaker notes go here\n:::\n\n\n\nSpeaker notes go here.\n\n\nThis will create a footnote\nYou can press the S key (or use the Navigation Menu) to show the presentation speaker view"
   },
   {
     "objectID": "presentations/23-7-pres/pres.html#columns",
@@ -746,7 +746,7 @@
     "href": "posts/2023-08-30-August-Stats/index.html",
     "title": "August 30th UQRUG Drop-in + Basic Statistics",
     "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.\n\n \n\nWhen Wednesday 30th August, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the full code from the August RUG:\n\n#Packages and libraries\nlibrary(tidyverse)\nlibrary(lattice)\n\n#Loading data\ndata1&lt;-mtcars\ndata2&lt;-read.csv(\"datasets/ttest.csv\")\ndata3&lt;-read.csv(\"datasets/ANOVA.csv\")\ndata4&lt;-read.csv(\"datasets/correl.csv\")\n\n#Creating objects\nY&lt;-mtcars$mpg\nX&lt;-mtcars$wt\n\n\n#Basic exploration of data\nView(data1)\nstr(data1)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n\n\n#Descriptive statistics for all variables\nsummary(data1)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000  \n\n\n\n#Descriptive stats plots per variable\nhistogram(Y)#same than histogram(data$Y) or histogram(~Y,data)\n\n\n\n\n\nbwplot(Y)\n\n\n\n\n\n#Inferential statistics\n\n#two sample t-test\nt.test(time~daytime,data2)\n\n\n    Welch Two Sample t-test\n\ndata:  time by daytime\nt = -6.8311, df = 77.776, p-value = 1.667e-09\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n -48.78467 -26.76533\nsample estimates:\nmean in group 1 mean in group 2 \n        967.900        1005.675 \n\n\n\n#ANOVA aov(Y ~ X, data)\nggplot(data3)+\n  aes(mode, students, group = mode)+\n  geom_boxplot()\n\n\n\n\n\nsummary(aov(students~mode,data=data3))\n\n            Df Sum Sq  Mean Sq F value Pr(&gt;F)  \nmode         1 0.0191 0.019093   2.953 0.0889 .\nResiduals   97 0.6272 0.006466                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n#Relationship\n#Scatterplot\nxyplot(FXRUSD~FXREUR,data4)\n\n\n\n\n\n#correlation (Pearson)\ncor(data4$FXRUSD,data4$FXREUR,method=\"pearson\")\n\n[1] 0.933557\n\n#correlation (Spearman)\ncor(data4$FXRUSD,data4$FXREUR,method=\"spearman\")\n\n[1] 0.872435\n\n\n\n#linear regression\nlm(FXRUSD~FXREUR,data4)\n\n\nCall:\nlm(formula = FXRUSD ~ FXREUR, data = data4)\n\nCoefficients:\n(Intercept)       FXREUR  \n     -0.190        1.662  \n\n\nYou can find the full raw code and datasets here.\nThe R logo is © 2016 The R Foundation."
+    "text": "Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.\n\n \n\nWhen Wednesday 30th August, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the full code in slide form from the August RUG:\n\n\nYou can find the full raw code and datasets here.\nThe R logo is © 2016 The R Foundation."
   },
   {
     "objectID": "community.html#uq-python-user-group",
@@ -782,5 +782,89 @@
     "title": "UQRUG July - Quarto Presentations",
     "section": "",
     "text": "Quarto enables you to weave together content and executable code into a finished presentation.\nYou can export to PowerPoint format, PDF (using Beamer), or HTML (using Reveal JS)\nTo learn more about Quarto presentations see https://quarto.org/docs/presentations/"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#basic-statistics-1",
+    "href": "presentations/23-08-stats/stats.html#basic-statistics-1",
+    "title": "UQRUG",
+    "section": "Basic Statistics",
+    "text": "Basic Statistics\nThis is simply a presentational form of the code shown during the August UQRUG.\n\nClick for the external link to these slides"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#explore-the-data-structure",
+    "href": "presentations/23-08-stats/stats.html#explore-the-data-structure",
+    "title": "UQRUG",
+    "section": "Explore the data structure",
+    "text": "Explore the data structure\n#Basic exploration of data\nView(data1)\nstr(data1)\n\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ..."
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#descriptive-statistics",
+    "href": "presentations/23-08-stats/stats.html#descriptive-statistics",
+    "title": "UQRUG",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\nThe summary() function provides quick and easy descriptive statistics, and is useful initial step:\nsummary(data1)\n\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#visualise-the-data",
+    "href": "presentations/23-08-stats/stats.html#visualise-the-data",
+    "title": "UQRUG",
+    "section": "Visualise the data",
+    "text": "Visualise the data\nWith histogram() we can quickly view the descriptive stats plots per variable\nhistogram(Y) # the same as histogram(data$Y) or histogram(~Y,data)"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#visualise-the-data-1",
+    "href": "presentations/23-08-stats/stats.html#visualise-the-data-1",
+    "title": "UQRUG",
+    "section": "Visualise the data",
+    "text": "Visualise the data\nBox and whisker plots are another useful way to visualise our data spread quickly and easily with bwplot()\nbwplot(Y)"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#inferential-statistics",
+    "href": "presentations/23-08-stats/stats.html#inferential-statistics",
+    "title": "UQRUG",
+    "section": "Inferential statistics",
+    "text": "Inferential statistics\nThe classic two sample t-test can easily be run with the t.test() function\n#two sample t-test\nt.test(time~daytime,data2)\n\n\n\n    Welch Two Sample t-test\n\ndata:  time by daytime\nt = -6.8311, df = 77.776, p-value = 1.667e-09\nalternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0\n95 percent confidence interval:\n -48.78467 -26.76533\nsample estimates:\nmean in group 1 mean in group 2 \n        967.900        1005.675"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#anova-visualisation",
+    "href": "presentations/23-08-stats/stats.html#anova-visualisation",
+    "title": "UQRUG",
+    "section": "ANOVA visualisation",
+    "text": "ANOVA visualisation\nBefore we run the ANOVA test, it can be a good idea to visualise our data with a boxplot, which ggplot2 also has\n#ANOVA aov(Y ~ X, data)\nggplot(data3)+\n  aes(mode, students, group = mode)+\n  geom_boxplot()"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#anova",
+    "href": "presentations/23-08-stats/stats.html#anova",
+    "title": "UQRUG",
+    "section": "ANOVA",
+    "text": "ANOVA\nAn ANOVA is a good test to determine if the means of multiple independent variables are equal\nsummary(aov(students~mode,data=data3))\n\n\n            Df Sum Sq  Mean Sq F value Pr(&gt;F)  \nmode         1 0.0191 0.019093   2.953 0.0889 .\nResiduals   97 0.6272 0.006466                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#correlation",
+    "href": "presentations/23-08-stats/stats.html#correlation",
+    "title": "UQRUG",
+    "section": "Correlation",
+    "text": "Correlation\nBefore running a corrlelation test, it is good to visualise the relationship of the data with a simple scatterplot such as the lattice xyplot()\n#Relationship\n#Scatterplot\nxyplot(FXRUSD~FXREUR,data4)"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#correlation-1",
+    "href": "presentations/23-08-stats/stats.html#correlation-1",
+    "title": "UQRUG",
+    "section": "Correlation",
+    "text": "Correlation\nWe can now test for correlation using a Pearson or Spearman test\n#correlation (Pearson)\ncor(data4$FXRUSD,data4$FXREUR,method=\"pearson\")\n\n\n[1] 0.933557\n\n\n#correlation (Spearman)\ncor(data4$FXRUSD,data4$FXREUR,method=\"spearman\")\n\n\n[1] 0.872435"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#linear-regression",
+    "href": "presentations/23-08-stats/stats.html#linear-regression",
+    "title": "UQRUG",
+    "section": "Linear Regression",
+    "text": "Linear Regression\n#linear regression\nlm(FXRUSD~FXREUR,data4)\n\n\n\nCall:\nlm(formula = FXRUSD ~ FXREUR, data = data4)\n\nCoefficients:\n(Intercept)       FXREUR  \n     -0.190        1.662"
+  },
+  {
+    "objectID": "presentations/23-08-stats/stats.html#load-the-libraries-and-data",
+    "href": "presentations/23-08-stats/stats.html#load-the-libraries-and-data",
+    "title": "UQRUG",
+    "section": "Load the libraries and data",
+    "text": "Load the libraries and data\n#Packages and libraries\nlibrary(tidyverse)\nlibrary(lattice)\n\n#Loading data\ndata1&lt;-mtcars\ndata2&lt;-read.csv(\"datasets/ttest.csv\")\ndata3&lt;-read.csv(\"datasets/ANOVA.csv\")\ndata4&lt;-read.csv(\"datasets/correl.csv\")\n\n#Creating objects\nY&lt;-mtcars$mpg\nX&lt;-mtcars$wt"
   }
 ]
