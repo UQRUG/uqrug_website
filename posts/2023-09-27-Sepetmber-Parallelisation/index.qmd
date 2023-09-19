@@ -1,0 +1,39 @@
+---
+title: "September 27th UQRUG Drop-in + Parallelisation"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-09-19'
+image: Rlogo.svg
+slug: sept2023
+categories:
+  - workshop
+tags: [R, parallel, foreach, parallelisation, base, drop-in, help]
+DisableComments: no
+---
+
+Before the help session, this month [Raúl Riesco Jarrín](https://scholar.google.com/citations?hl=en&user=jHBYsW0AAAAJ&view_op=list_works&sortby=pubdate) will be provide an overview on how you can make your code faster and more efficient with parallelisation using the [parallel](https://www.rdocumentation.org/packages/parallel/versions/3.6.2) and [foreach](https://www.rdocumentation.org/packages/foreach/versions/1.5.2) packages. 
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 27th September, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4796119)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+------------------------------------------------------------------------
+
+<!-- Browse the slides from the September RUG: -->
+
+<!-- <iframe width="780" height="500" src="/presentations/23-09-parallel/parallel.html" title="Parallelisation Quarto Presentation"> -->
+
+<!-- </iframe> -->
+
+
+[The R logo is © 2016 The R Foundation.](https://www.r-project.org/logo/){style="color:grey; font-size:80%;"}

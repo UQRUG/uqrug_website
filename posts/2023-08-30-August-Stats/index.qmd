@@ -31,7 +31,7 @@ For more information, reach out to the UQ Library training team for more help: <
 
 Browse the full code in slide form from the August RUG:
 
-<iframe width="780" height="500" src="/presentations/23-08-stats/stats.html" title="data.table Quarto Presentation"></iframe>
+<iframe width="780" height="500" src="/presentations/23-08-stats/stats.html" title="R Statistics Quarto Presentation"></iframe>
 
 You can find the [full raw code and datasets here](https://github.com/Nijawi/uqrug/tree/main/presentations/23-08-stats/datasets).
 
