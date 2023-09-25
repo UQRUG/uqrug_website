@@ -1,0 +1,321 @@
+---
+title: |
+ <div style="color: #51247A;">[Parallelization in R]{.underline}<br><span style="font-size: 0.6em;"> <em>[parallel](https://rdocumentation.org/packages/parallel/versions/3.6.2)</em> and <em>[foreach](https://www.rdocumentation.org/packages/foreach/versions/1.5.2)</em></span></div>
+author:
+  - name: Raúl Riesco
+    orcid: 0000-0001-8257-7601
+    email: r.riescojarrin@uq.edu.au // raul.riescoj@usal.es
+    affiliations:
+      - name: Australian Centre for Ecogenomics // University of Salamanca
+        
+date: 09/27/2023
+date-format: long
+format: 
+  revealjs:
+    incremental: true   
+    controls: true
+logo: img/UQlogo-Purple-rgb.png
+editor: visual
+execute:
+  echo: true
+---
+
+## Why to parallelize
+
+```{css, echo = FALSE}
+.justify {
+  text-align: justify !important
+}
+```
+```{css, echo = FALSE}
+/* Define a CSS class for the smaller table */
+.small-table {
+  font-size: 60%; /* Reduce font size to make text smaller */
+  padding: 4px; /* Reduce cell padding for a compact layout */
+  margin: 0; /* Remove any margin */
+}
+```
+
+::: {.incremental} 
+Have you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?
+
+-   R runs only on a single thread on the CPU by default
+
+-   Is it the most efficient way to run functions?
+
+    -   Independent operations
+
+    ```{r}
+
+    results <- rep(0,10)
+        
+    for(num in 1:10)
+      {
+        results[num]<-num^2
+      }
+
+    results
+    ```
+:::
+
+## Parallelization in R
+
+It is possible to parallelize processes in R using specialized packages.
+
+[**parallel**]{.underline}
+
+-   Most used package
+-   Part of r-core.
+
+```{r}
+library(parallel)
+```
+
+## Cores in our PC and management of clusters
+
+**Basic concepts**
+
+-   [Core]{.underline}: an individual processing unit within a CPU
+-   [Cluster]{.underline}: R background sessions that allows parallelization of processes.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{`r}  
+Load the package
+  library(parallel)
+
+number of cores
+  cores<- detectCores()
+  
+make cluster
+  clust <- makeCluster(cores)
+
+```
+:::
+
+::: {.column width="50%"}
+```{`r}  
+start created cluster
+  registerDoParallel(clust)
+  
+status of the clusters
+  showConnections()
+
+close the cluster
+  stopCluster(cl = clust) 
+  
+```
+:::
+
+::::
+
+
+## Methods of Paralleization
+
+::: justify
+There are two main ways in which code can be parallelized, via **sockets** or via **forking**
+
+-   [**Socket approach**]{.underline}: launches a new version of R on each core
+-   [**Forking approach**]{.underline}: copies the entire current version of R and moves it to a new core
+:::
+
+## Socket pros and cons
+
+::: justify
+-   Pros
+    -   [Works on every OS.]{style="color:darkgreen"}
+    -   [Each process on each node are 100% independent.]{style="color:darkgreen"}
+-   Cons
+    -   [Each process is unique so it will be slower]{style="color:darkred"}
+    -   [Variables and packages must be imported to the created cores.]{style="color:darkred"}
+    -   [More complicated to implement.]{style="color:darkred"}
+:::
+
+## Forking pros and cons[^6]
+
+::: justify
+-   Pros
+    -   [Faster.]{style="color:darkgreen"}
+    -   [Not necessary to import the variables and packages.]{style="color:darkgreen"}
+    -   [Relatively easier to implement.]{style="color:darkgreen"}
+-   Cons
+    -   [Does NOT work on Windows]{style="color:darkred"}
+    -   [Processes are not totally independent, and can cause weird behaviors when runned in RStudio .]{style="color:darkred"}
+
+:::
+
+[^6]:Code in this session wont be optimized for forking. Check [mclapply()](https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/parallel.html) for more info.
+
+## *parallel* and *apply*
+::: justify
+
+*parallel* is designed to work with functions, and it is analogous to the use of functions like *apply*, as well as its derivatives *lapply* and *sapply*
+
+::: small-table
+| *apply* | *parallel* | INPUT | OUTPUT |
+|---------|:-----|------:|------:|
+| apply      | parApply (parRapply, parCapply)[^1]|data.frame, matrix|vector, list, array|
+| sapply   | parSapply  |List, vector, data.frame|vector/matrix|
+| lapply  | parLapply   | List, vector, data.frame|list|
+: Equivalent functions to the apply family {.striped .hover}
+:::
+:::
+
+[^1]: parRapply, parCapply are *parallel* row and column apply functions for a matrix x; they may be slightly more efficient than parApply but do less post-processing of the result.
+
+## *foreach*
+*foreach* is a package designed for looping. It also allows to combine results in diferent formats. 
+
+
+```{r}
+library(foreach)
+foreach(i=1:2) %do% exp(i)
+```
+
+```{r}
+library(foreach)
+foreach(i=1:2, .combine='c') %do% exp(i)
+```
+
+```{r}
+library(foreach)
+foreach(a=1:1000, b=rep(10, 2), .combine='c') %do% {a+b}
+```
+
+## *foreach*[^2]
+By itself, *foreach* do not parallelize, but it can be combined with *parallel* and *doParallel* to allow paralellization
+```{'r}
+library(foreach)
+library(parallel)
+library(doParallel)
+
+clust <- makeCluster(2)
+registerDoParallel(clust)
+
+foreach(i=1:2, .combine='c') %dopar% exp(i)
+
+stopCluster(cl = clust)
+```
+```{r, echo=FALSE}
+library(foreach)
+foreach(i=1:2, .combine='c') %dopar% exp(i)
+```
+[^2]:[.combine=]{.underline}: [**’c’**]{.underline}:concatenate into a vector, [**’cbind’**]{.underline} and [**’rbind’**]{.underline}: combine vectors into a matrix. [**Operators (’+’, ’\*’)**]{.underline}: process numeric data
+
+
+## Example
+Determine which numbers on a sample are primes
+
+Function:
+```{'r}
+isprime <- function(num){ 
+    prime=TRUE 
+    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.
+    while(i<num){               #The while loop will continue running as long as the value of 'i' is less than the specified number
+      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop
+        prime = FALSE 
+        break 
+      }
+      i <- i+1 
+    }
+    return(prime) 
+  }
+```  
+data (10,000 numbers):
+```{'r}
+listnumbers <- sample(1:100000,10000)
+``` 
+
+## *for*[^3]
+```{`r}
+primes<- rep(T,10000)   
+
+for(i in 1:length(listnumbers)){
+  primes[i] <- isprime(listnumbers[i])
+}
+
+result<-data.frame(number=listnumbers, is_prime=primes)
+```  
+```{r, echo=FALSE}
+print("Time difference of 5.308078 secs" )
+```
+[^3]:In this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process. 
+
+## *foreach*[^4]
+```{`r}
+library(foreach)
+   
+primes_fe <-foreach(i = 1:length(listnumbers), .combine="c") %do% { 
+                    isprime(listnumbers[i]) 
+                    }
+
+result_fe<-data.frame(number=listnumbers, is_prime=primes_fe)
+```
+```{r, echo=FALSE}
+print("Time difference of 6.629166 secs" )
+```
+[^4]: This method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length.
+
+
+## *foreach* parallelized
+```{`r}
+library(parallel)
+library(foreach)
+library(doParallel)
+
+cores <- detectCores()                 
+clust <- parallel::makeCluster(cores)  
+registerDoParallel(clust)  
+ 
+primes_par_fe <- foreach(i = 1:length(listnumbers), .combine="c") %dopar% { 
+isprime(listnumbers[i]) 
+}
+
+result_par_fe<-data.frame(number=listnumbers, is_prime=primes_par_fe)
+
+parallel::stopCluster(cl = clust) 
+
+```
+```{r, echo=FALSE}
+print("Time difference of 2.964536 secs" )
+```
+
+## *sapply* [^5]
+```{`r}
+primes_sa <- sapply(listnumbers, isprime) 
+
+result_sa<-data.frame(number=listnumbers, is_prime=primes_sa)
+```
+```{r, echo=FALSE}
+print("Time difference of 5.478974 secs" )
+```
+[^5]: apply is more efficient than foreach because it does a memory preallocation step in the background
+
+## *parSapply*
+```{`r}
+library(parallel)
+
+cores <- detectCores()     
+clust <- parallel::makeCluster(cores)
+
+prime_par_sa <- parSapply(clust, listnumbers, isprime)             
+
+result_par_sa<-data.frame(number=listnumbers, is_prime=prime_par_sa)
+
+parallel::stopCluster(cl = clust) 
+```
+```{r, echo=FALSE}
+print("Time difference of 1.725008 secs" )
+```
+
+## Has the processing time improved?
+
+```{r, echo=FALSE}
+times<-as.vector(c(1.73, 5.48, 2.96, 6.63, 5.31))
+par(mar=c(2,8,2,1)+.1)
+barplot(times, main="timelapse", horiz=T,
+        names.arg=c("parSapply()","sapply()","foreach(dopar)","foreach(do)", "for()"), xlab="time (s)", cex.names = 1, las=1, col= "#51247A")
+```
+
+

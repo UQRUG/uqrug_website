@@ -872,6 +872,118 @@
     "href": "posts/2023-09-27-Sepetmber-Parallelisation/index.html",
     "title": "September 27th UQRUG Drop-in + Parallelisation",
     "section": "",
-    "text": "Before the help session, this month Raúl Riesco Jarrín will be provide an overview on how you can make your code faster and more efficient with parallelisation using the parallel and foreach packages.\n\n \n\nWhen Wednesday 27th September, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\n\n\n\nThe R logo is © 2016 The R Foundation."
+    "text": "Before the help session, this month Raúl Riesco Jarrín will be provide an overview on how you can make your code faster and more efficient with parallelisation using the parallel and foreach packages.\n\n \n\nWhen Wednesday 27th September, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the September RUG:\n\n\nThe R logo is © 2016 The R Foundation."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#why-to-parallelize",
+    "href": "presentations/23-09-parallel/parallel.html#why-to-parallelize",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Why to parallelize",
+    "text": "Why to parallelize\n\n\n\n\n\n\n\nHave you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?\n\nR runs only on a single thread on the CPU by default\nIs it the most efficient way to run functions?\n\nIndependent operations\n\n\nresults &lt;- rep(0,10)\n\nfor(num in 1:10)\n  {\n    results[num]&lt;-num^2\n  }\n\nresults\n\n [1]   1   4   9  16  25  36  49  64  81 100"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#parallelization-in-r",
+    "href": "presentations/23-09-parallel/parallel.html#parallelization-in-r",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Parallelization in R",
+    "text": "Parallelization in R\nIt is possible to parallelize processes in R using specialized packages.\nparallel\n\nMost used package\nPart of r-core.\n\n\nlibrary(parallel)"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#cores-in-our-pc-and-management-of-clusters",
+    "href": "presentations/23-09-parallel/parallel.html#cores-in-our-pc-and-management-of-clusters",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Cores in our PC and management of clusters",
+    "text": "Cores in our PC and management of clusters\nBasic concepts\n\nCore: an individual processing unit within a CPU\nCluster: R background sessions that allows parallelization of processes.\n\n\n\nLoad the package\n  library(parallel)\n\nnumber of cores\n  cores&lt;- detectCores()\n  \nmake cluster\n  clust &lt;- makeCluster(cores)\n\nstart created cluster\n  registerDoParallel(clust)\n  \nstatus of the clusters\n  showConnections()\n\nclose the cluster\n  stopCluster(cl = clust)"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#methods-of-paralleization",
+    "href": "presentations/23-09-parallel/parallel.html#methods-of-paralleization",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Methods of Paralleization",
+    "text": "Methods of Paralleization\n\nThere are two main ways in which code can be parallelized, via sockets or via forking\n\nSocket approach: launches a new version of R on each core\nForking approach: copies the entire current version of R and moves it to a new core"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#socket-pros-and-cons",
+    "href": "presentations/23-09-parallel/parallel.html#socket-pros-and-cons",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Socket pros and cons",
+    "text": "Socket pros and cons\n\n\nPros\n\nWorks on every OS.\nEach process on each node are 100% independent.\n\nCons\n\nEach process is unique so it will be slower\nVariables and packages must be imported to the created cores.\nMore complicated to implement."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#forking-pros-and-cons6",
+    "href": "presentations/23-09-parallel/parallel.html#forking-pros-and-cons6",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Forking pros and cons1",
+    "text": "Forking pros and cons1\n\n\nPros\n\nFaster.\nNot necessary to import the variables and packages.\nRelatively easier to implement.\n\nCons\n\nDoes NOT work on Windows\nProcesses are not totally independent, and can cause weird behaviors when runned in RStudio .\n\n\n\nCode in this session wont be optimized for forking. Check mclapply() for more info."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#parallel-and-apply",
+    "href": "presentations/23-09-parallel/parallel.html#parallel-and-apply",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "parallel and apply",
+    "text": "parallel and apply\n\nparallel is designed to work with functions, and it is analogous to the use of functions like apply, as well as its derivatives lapply and sapply\n\n\nEquivalent functions to the apply family\n\n\n\n\n\n\n\n\napply\nparallel\nINPUT\nOUTPUT\n\n\n\n\napply\nparApply (parRapply, parCapply)1\ndata.frame, matrix\nvector, list, array\n\n\nsapply\nparSapply\nList, vector, data.frame\nvector/matrix\n\n\nlapply\nparLapply\nList, vector, data.frame\nlist\n\n\n\n\n\nparRapply, parCapply are parallel row and column apply functions for a matrix x; they may be slightly more efficient than parApply but do less post-processing of the result."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#foreach",
+    "href": "presentations/23-09-parallel/parallel.html#foreach",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "foreach",
+    "text": "foreach\nforeach is a package designed for looping. It also allows to combine results in diferent formats.\n\nlibrary(foreach)\nforeach(i=1:2) %do% exp(i)\n\n[[1]]\n[1] 2.718282\n\n[[2]]\n[1] 7.389056\n\n\n\nlibrary(foreach)\nforeach(i=1:2, .combine='c') %do% exp(i)\n\n[1] 2.718282 7.389056\n\n\n\nlibrary(foreach)\nforeach(a=1:1000, b=rep(10, 2), .combine='c') %do% {a+b}\n\n[1] 11 12"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#foreach2",
+    "href": "presentations/23-09-parallel/parallel.html#foreach2",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "foreach1",
+    "text": "foreach1\nBy itself, foreach do not parallelize, but it can be combined with parallel and doParallel to allow paralellization\nlibrary(foreach)\nlibrary(parallel)\nlibrary(doParallel)\n\nclust &lt;- makeCluster(2)\nregisterDoParallel(clust)\n\nforeach(i=1:2, .combine='c') %dopar% exp(i)\n\nstopCluster(cl = clust)\n\n\n[1] 2.718282 7.389056\n\n\n.combine=: ’c’:concatenate into a vector, ’cbind’ and ’rbind’: combine vectors into a matrix. Operators (’+’, ’*’): process numeric data"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#example",
+    "href": "presentations/23-09-parallel/parallel.html#example",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Example",
+    "text": "Example\nDetermine which numbers on a sample are primes\nFunction:\nisprime &lt;- function(num){ \n    prime=TRUE \n    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.\n    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number\n      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop\n        prime = FALSE \n        break \n      }\n      i &lt;- i+1 \n    }\n    return(prime) \n  }\ndata (10,000 numbers):\nlistnumbers &lt;- sample(1:100000,10000)"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#for3",
+    "href": "presentations/23-09-parallel/parallel.html#for3",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "for1",
+    "text": "for1\nprimes&lt;- rep(T,10000)   \n\nfor(i in 1:length(listnumbers)){\n  primes[i] &lt;- isprime(listnumbers[i])\n}\n\nresult&lt;-data.frame(number=listnumbers, is_prime=primes)\n\n\n[1] \"Time difference of 5.308078 secs\"\n\n\nIn this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#foreach4",
+    "href": "presentations/23-09-parallel/parallel.html#foreach4",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "foreach1",
+    "text": "foreach1\nlibrary(foreach)\n   \nprimes_fe &lt;-foreach(i = 1:length(listnumbers), .combine=\"c\") %do% { \n                    isprime(listnumbers[i]) \n                    }\n\nresult_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)\n\n\n[1] \"Time difference of 6.629166 secs\"\n\n\nThis method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length."
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#foreach-parallelized",
+    "href": "presentations/23-09-parallel/parallel.html#foreach-parallelized",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "foreach parallelized",
+    "text": "foreach parallelized\nlibrary(parallel)\nlibrary(foreach)\nlibrary(doParallel)\n\ncores &lt;- detectCores()                 \nclust &lt;- parallel::makeCluster(cores)  \nregisterDoParallel(clust)  \n \nprimes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine=\"c\") %dopar% { \nisprime(listnumbers[i]) \n}\n\nresult_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)\n\nparallel::stopCluster(cl = clust) \n\n\n[1] \"Time difference of 2.964536 secs\""
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#sapply-5",
+    "href": "presentations/23-09-parallel/parallel.html#sapply-5",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "sapply 1",
+    "text": "sapply 1\nprimes_sa &lt;- sapply(listnumbers, isprime) \n\nresult_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)\n\n\n[1] \"Time difference of 5.478974 secs\"\n\n\napply is more efficient than foreach because it does a memory preallocation step in the background"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#parsapply",
+    "href": "presentations/23-09-parallel/parallel.html#parsapply",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "parSapply",
+    "text": "parSapply\nlibrary(parallel)\n\ncores &lt;- detectCores()     \nclust &lt;- parallel::makeCluster(cores)\n\nprime_par_sa &lt;- parSapply(clust, listnumbers, isprime)             \n\nresult_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)\n\nparallel::stopCluster(cl = clust) \n\n\n[1] \"Time difference of 1.725008 secs\""
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html#has-the-processing-time-improved",
+    "href": "presentations/23-09-parallel/parallel.html#has-the-processing-time-improved",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "Has the processing time improved?",
+    "text": "Has the processing time improved?"
   }
 ]
