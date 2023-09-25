@@ -985,5 +985,12 @@
     "title": "\nParallelization in R parallel and foreach\n",
     "section": "Has the processing time improved?",
     "text": "Has the processing time improved?"
+  },
+  {
+    "objectID": "posts/2023-09-27-September-Parallelisation/index.html",
+    "href": "posts/2023-09-27-September-Parallelisation/index.html",
+    "title": "September 27th UQRUG Drop-in + Parallelisation",
+    "section": "",
+    "text": "Before the help session, this month Raúl Riesco Jarrín will be provide an overview on how you can make your code faster and more efficient with parallelisation using the parallel and foreach packages.\n\n \n\nWhen Wednesday 27th September, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the September RUG:\n\n\nThe R logo is © 2016 The R Foundation."
   }
 ]

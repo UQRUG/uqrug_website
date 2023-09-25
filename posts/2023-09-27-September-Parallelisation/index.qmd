@@ -11,7 +11,7 @@ tags: [R, parallel, foreach, parallelisation, base, drop-in, help]
 DisableComments: no
 ---
 
-Before the help session, this month [Raúl Riesco Jarrín](https://scholar.google.com/citations?hl=en&user=jHBYsW0AAAAJ&view_op=list_works&sortby=pubdate) will be provide an overview on how you can make your code faster and more efficient with parallelisation using the [parallel](https://www.rdocumentation.org/packages/parallel/versions/3.6.2) and [foreach](https://www.rdocumentation.org/packages/foreach/versions/1.5.2) packages. 
+Before the help session, this month [Raúl Riesco Jarrín](https://scholar.google.com/citations?hl=en&user=jHBYsW0AAAAJ&view_op=list_works&sortby=pubdate) will be provide an overview on how you can make your code faster and more efficient with parallelisation using the [parallel](https://www.rdocumentation.org/packages/parallel/versions/3.6.2) and [foreach](https://www.rdocumentation.org/packages/foreach/versions/1.5.2) packages.
 
 <p float="left">
 
@@ -34,6 +34,5 @@ Browse the slides from the September RUG:
 <iframe width="780" height="500" src="/presentations/23-09-parallel/parallel.html" title="Parallelisation Quarto Presentation">
 
 </iframe>
-
 
 [The R logo is © 2016 The R Foundation.](https://www.r-project.org/logo/){style="color:grey; font-size:80%;"}
