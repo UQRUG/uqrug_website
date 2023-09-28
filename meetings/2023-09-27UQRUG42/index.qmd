@@ -1,0 +1,153 @@
+---
+title: UQRUG 42
+date: '2023-09-27'
+description: '**Overview**: Parallization in R. <br /> **Questions**: parallels, HPC, memory utilisation, detectCores, for loops'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-09-27: UQRUG 42
+
+### R Overview of the Month
+
+This month at UQRUG, [Raúl](https://scholar.google.com/citations?hl=en&user=jHBYsW0AAAAJ&view_op=list_works&sortby=pubdate) will be providing an overview of using, and the advantages of, Parallelization in R.
+
+Find more details here: [https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/](https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/)
+
+### Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name                    | Where are you from?          | What brings you here?                                 |
+|------------------------|------------------------|------------------------|
+| Nicholas Wiggins        | Library                      | Here to help!                                         |
+| Raul Riesco             | ACE                          | Here to learn and help :)                             |
+| David Green             | UQ Research Computing Centre | R on HPC help                                         |
+| Raimundo Sanchez        | Research Fellow SHRS         | R                                                     |
+| Giulio Centorame        | IMB                          | Parallel computation hurts my brain                   |
+| Jessica Hintzsche       | QAAFI                        | Here to figure out how to make my code more efficient |
+| Felicity Charles        | UQ Gatton                    | Here to learn                                         |
+| Grant Taylor            | UQ St Lucia                  | Learn more about R                                    |
+| Ryan                    | SOE                          | Learn R                                               |
+| Jocelyn                 | UQCCR                        | Still learning                                        |
+| Valentina Urrutia Guada | Library                      | Here to learn & help                                  |
+| Luke Gaiter             | Library                      | Learning                                              |
+
+### Questions
+
+#### Q1 - How do you avoid running out of memory with parallel jobs? - Giulio Centorame
+
+I constantly have issues with running out of memory with parallel operations. E.g. using the package [`furrr`](https://furrr.futureverse.org/)
+
+``` r         
+# Setup multisession
+library(furrr)
+library(magrittr)
+plan(multisession, workers = 2)
+
+# Vector of paths with huge tables I want to import
+paths <- c("big_table1.tsv", "big_table2.tsv", "big_table3.tsv")
+
+# Load everything
+# If the tables are too big, R runs out of memory
+paths %>%
+    future_map(read.table)
+```
+
+This can cause issue especially when using HPCs, since the jobs will often fail if the process tries to allocate more memory than requested. How do I limit the amount of memory each child process/all the processes can use?
+
+**Answers**
+
+-   David: The UQ HPCs can allocate up to 2TB of RAM. If you need more RAM, request it. If you are still running out of RAM, then it might be worth splitting the job into multiple separate jobs. e.g. if you're trying to process the three big tables, then run each big table in a separate job
+-   Name: Ryan I don't think you have control over the memory of each child process. You might want to use data.table from previous presentations here. It uses openmp for parallization and could be more efficient. I also believe the HPC has openmp all set, so in R, it should be plug and play already. ---
+
+---
+
+#### Q2 - Using detectCores() will detect all cores on a HPC is there a workaround? - David
+
+**Answers**
+
+-   Ryan: Maybe...
+
+``` r         
+cores = Sys.getenv("SLURM_CPU_PER_TASK")
+makecluster(cores)
+```
+
+This does a more refine version of the above, but requires an extra package, so not as good for HPC use
+
+``` r         
+cores <- length(parallelly::availableWorkers())
+```
+
+------------------------------------------------------------------------
+
+#### Q3 - for loops - Grant Taylor
+
+I have the same code for six participants. Made six lots of code, but of course this is very inefficient. Here is a small part...
+
+``` r         
+#######################   SUB 004   ############################################
+#library(tidyverse)
+
+load("0_data/parsedData_cogPsyRep_sub_004.RData")   #  contains a list called "data" which is converted into a dataframe for the Sub (see next line)
+
+df4=data.frame(data)
+
+nTrialsAll=length(df4$Cond1)
+nTrialsAll
+
+MRT=median(df4$Time1)
+MRT
+probCorr=mean(df4$Correct==TRUE)
+probCorr
+
+numDR4=sum(df4$DoubleResp==TRUE)
+numDR4
+probDR4=(sum(df4$DoubleResp==TRUE)/nrow(df4))
+probDR4
+
+
+ACCdf4=tapply(df4$Correct==TRUE, list(df4$Cond1, df4$Cond2),mean)
+ACCdf4
+
+
+RTdf4=tapply(df4$Time1, list(df4$Cond1, df4$Cond2),median)
+RTdf4
+```
+
+Sounds good. Anything that is more efficient.\
+Yes, this example is for sub 4 but I have S=c(1,2,3,4,6,9) \# the Sub numbers I tried something like this...
+
+``` r         
+for (s in S)
+{load(paste("0_data/parsedData_cogPsyRep_sub_00",s,".RData",sep=""))
+}  ## loads the data for a specific Sub
+```
+
+This particular one probably doesn't need it (paralellisation) Thanks! I'll give that a go :)
+
+**Answers**
+
+-   Raul:
+
+``` r         
+list_files <- list.files(path = "./0_data", pattern = "parsedData_cogPsyRep_sub")
+for (file in list_files){
+  a<-data.frame(file)
+  return(length(a$Cond1))
+  return(median(a$Time1))
+}
+```
+
+-   Nick: If you have any further issues or questions, don't hesitate to reach out to training\@library.uq.edu.au
+
+------------------------------------------------------------------------
