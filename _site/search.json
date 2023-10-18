@@ -135,7 +135,7 @@
   {
     "objectID": "pastmeetings.html",
     "href": "pastmeetings.html",
-    "title": "Past Meetings",
+    "title": "Past Meeting Notess",
     "section": "",
     "text": "Here you can find the full repository of notes from previous UQRUG Meetings. Click the Search Icon in the top right to search all posts.\n\n\n\n\n\n\n\n\nUQRUG 42\n\n\n\n\nOverview: Parallization in R.  Questions: parallels, HPC, memory utilisation, detectCores, for loops\n\n\n\n\n\n\nSeptember 27, 2023\n\n\n\n\n\n\n\n\nUQRUG 41\n\n\n\n\nOverview: Basic Statistics in R.  Questions: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop\n\n\n\n\n\n\nAugust 30, 2023\n\n\n\n\n\n\n\n\nUQRUG 40\n\n\n\n\nOverview: Using quarto and revealjs to create presentations with R markdown.  Questions: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms\n\n\n\n\n\n\nJuly 26, 2023\n\n\n\n\n\n\n\n\nUQRUG 39\n\n\n\n\nOverview: Using data.table for fast data manipulation.  Questions: data.table and for loops, csv vs xlsx, LMER, keeping code tidy and readable, standard R operators, using .RData files, storing descriptive stats in a matrix, mutating all cells in dataframe, HPC help, RMarkdown errors\n\n\n\n\n\n\nJune 28, 2023\n\n\n\n\n\n\n\n\nUQRUG 38\n\n\n\n\nOverview: Using R for Mailouts.  Questions: Reloading packages, Combining multiple tables/kables, using HedgeDoc, using overlead for theses, formatting data for population genetics analysis\n\n\n\n\n\n\nMay 31, 2023\n\n\n\n\n\n\n\n\nUQRUG 37\n\n\n\n\nOverview: AI assisted coding.  Questions: Regular Expressions, data.table complete() equivalent, filtering outliers, boxplots, RStudio new line bug\n\n\n\n\n\n\nApril 26, 2023\n\n\n\n\n\n\n\n\nUQRUG 36\n\n\n\n\nOverview: Websites with Quarto.  Questions: Bayesian Stats, glm(), R Markdown, Functional Programming, Code debugging\n\n\n\n\n\n\nMarch 29, 2023\n\n\n\n\n\n\n\n\nUQRUG 35\n\n\n\n\n\n\n\n\n\n\n\nFebruary 22, 2023\n\n\n\n\n\n\n\n\nUQRUG 34\n\n\n\n\n\n\n\n\n\n\n\nJanuary 25, 2023\n\n\n\n\n\n\n\n\nUQRUG 33\n\n\n\n\n\n\n\n\n\n\n\nDecember 7, 2022\n\n\n\n\n\n\n\n\nUQRUG 32\n\n\n\n\n\n\n\n\n\n\n\nOctober 26, 2022\n\n\n\n\n\n\n\n\nUQRUG 31\n\n\n\n\n\n\n\n\n\n\n\nSeptember 28, 2022\n\n\n\n\n\n\n\n\nUQRUG 30\n\n\n\n\n\n\n\n\n\n\n\nAugust 24, 2022\n\n\n\n\n\n\n\n\nUQRUG 29\n\n\n\n\n\n\n\n\n\n\n\nJuly 27, 2022\n\n\n\n\n\n\n\n\nUQRUG 28\n\n\n\n\n\n\n\n\n\n\n\nJune 29, 2022\n\n\n\n\n\n\n\n\nUQRUG 27\n\n\n\n\n\n\n\n\n\n\n\nJune 1, 2022\n\n\n\n\n\n\n\n\nUQRUG 26\n\n\n\n\n\n\n\n\n\n\n\nApril 27, 2022\n\n\n\n\n\n\n\n\nUQRUG 25\n\n\n\n\n\n\n\n\n\n\n\nMarch 30, 2022\n\n\n\n\n\n\n\n\nUQRUG 24\n\n\n\n\n\n\n\n\n\n\n\nFebruary 23, 2022\n\n\n\n\n\n\n\n\nUQRUG 22\n\n\n\n\n\n\n\n\n\n\n\nNovember 15, 2021\n\n\n\n\n\n\n\n\nUQRUG 21\n\n\n\n\n\n\n\n\n\n\n\nOctober 18, 2021\n\n\n\n\n\n\n\n\nUQRUG 20\n\n\n\n\n\n\n\n\n\n\n\nSeptember 21, 2021\n\n\n\n\n\n\n\n\nUQRUG 19\n\n\n\n\n\n\n\n\n\n\n\nAugust 16, 2021\n\n\n\n\n\n\n\n\nUQRUG 18\n\n\n\n\n\n\n\n\n\n\n\nJuly 19, 2021\n\n\n\n\n\n\n\n\nUQRUG 17\n\n\n\n\n\n\n\n\n\n\n\nJune 21, 2021\n\n\n\n\n\n\n\n\nUQRUG 16\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\n\n\n\n\n\n\nUQRUG 15\n\n\n\n\n\n\n\n\n\n\n\nApril 19, 2021\n\n\n\n\n\n\n\n\nUQRUG 14\n\n\n\n\n\n\n\n\n\n\n\nMarch 15, 2021\n\n\n\n\n\n\n\n\nUQRUG 13\n\n\n\n\n\n\n\n\n\n\n\nFebruary 15, 2021\n\n\n\n\n\n\n\n\nUQRUG 12\n\n\n\n\n\n\n\n\n\n\n\nJanuary 25, 2021\n\n\n\n\n\n\n\n\nUQRUG 11\n\n\n\n\n\n\n\n\n\n\n\nNovember 16, 2020\n\n\n\n\n\n\n\n\nUQRUG 10\n\n\n\n\n\n\n\n\n\n\n\nOctober 19, 2020\n\n\n\n\n\n\n\n\nUQRUG 9\n\n\n\n\n\n\n\n\n\n\n\nSeptember 21, 2020\n\n\n\n\n\n\n\n\nUQRUG 8\n\n\n\n\n\n\n\n\n\n\n\nAugust 17, 2020\n\n\n\n\n\n\n\n\nUQRUG 7\n\n\n\n\n\n\n\n\n\n\n\nJuly 27, 2020\n\n\n\n\n\n\n\n\nUQRUG 6\n\n\n\n\n\n\n\n\n\n\n\nJune 15, 2020\n\n\n\n\n\n\n\n\nUQRUG 5\n\n\n\n\n\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\nUQRUG 4\n\n\n\n\n\n\n\n\n\n\n\nApril 20, 2020\n\n\n\n\n\n\n\n\nUQRUG 3\n\n\n\n\n\n\n\n\n\n\n\nMarch 23, 2020\n\n\n\n\n\n\n\n\nUQRUG 2\n\n\n\n\n\n\n\n\n\n\n\nFebruary 24, 2020\n\n\n\n\n\n\n\n\nUQRUG 1\n\n\n\n\n\n\n\n\n\n\n\nJanuary 20, 2020\n\n\n\n\n\n\nNo matching items"
   },
@@ -878,8 +878,8 @@
     "objectID": "presentations/23-09-parallel/parallel.html#why-to-parallelize",
     "href": "presentations/23-09-parallel/parallel.html#why-to-parallelize",
     "title": "\nParallelization in R parallel and foreach\n",
-    "section": "Why to parallelize",
-    "text": "Why to parallelize\n\n\n\n\n\n\n\nHave you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?\n\nR runs only on a single thread on the CPU by default\nIs it the most efficient way to run functions?\n\nIndependent operations\n\n\nresults &lt;- rep(0,10)\n\nfor(num in 1:10)\n  {\n    results[num]&lt;-num^2\n  }\n\nresults\n\n [1]   1   4   9  16  25  36  49  64  81 100"
+    "section": "",
+    "text": "Have you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?\n\nR runs only on a single thread on the CPU by default\nIs it the most efficient way to run functions?\n\nIndependent operations\n\n\nresults &lt;- rep(0,10)\n\nfor(num in 1:10)\n  {\n    results[num]&lt;-num^2\n  }\n\nresults\n\n [1]   1   4   9  16  25  36  49  64  81 100"
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#parallelization-in-r",
@@ -893,7 +893,7 @@
     "href": "presentations/23-09-parallel/parallel.html#cores-in-our-pc-and-management-of-clusters",
     "title": "\nParallelization in R parallel and foreach\n",
     "section": "Cores in our PC and management of clusters",
-    "text": "Cores in our PC and management of clusters\nBasic concepts\n\nCore: an individual processing unit within a CPU\nCluster: R background sessions that allows parallelization of processes.\n\n\n\nLoad the package\n  library(parallel)\n\nnumber of cores\n  cores&lt;- detectCores()\n  \nmake cluster\n  clust &lt;- makeCluster(cores)\n\nstart created cluster\n  registerDoParallel(clust)\n  \nstatus of the clusters\n  showConnections()\n\nclose the cluster\n  stopCluster(cl = clust)"
+    "text": "Cores in our PC and management of clusters\nBasic concepts\n\nCore: an individual processing unit within a CPU\nCluster: R background sessions that allows parallelization of processes.\n\n\n\nLoad the package\n  library(parallel)\n\nnumber of cores\n  cores&lt;- detectCores()\n  \nmake cluster\n  clust &lt;- makeCluster(cores)\n\n\nstart created cluster\n  registerDoParallel(clust)\n  \nstatus of the clusters\n  showConnections()\n\nclose the cluster\n  stopCluster(cl = clust)"
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#methods-of-paralleization",
@@ -914,14 +914,14 @@
     "href": "presentations/23-09-parallel/parallel.html#forking-pros-and-cons6",
     "title": "\nParallelization in R parallel and foreach\n",
     "section": "Forking pros and cons1",
-    "text": "Forking pros and cons1\n\n\nPros\n\nFaster.\nNot necessary to import the variables and packages.\nRelatively easier to implement.\n\nCons\n\nDoes NOT work on Windows\nProcesses are not totally independent, and can cause weird behaviors when runned in RStudio .\n\n\n\nCode in this session wont be optimized for forking. Check mclapply() for more info."
+    "text": "Forking pros and cons1\n\n\nPros\n\nFaster.\nNot necessary to import the variables and packages.\nRelatively easier to implement.\n\nCons\n\nDoes NOT work on Windows\nProcesses are not totally independent, and can cause weird behaviors when runned in RStudio ."
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#parallel-and-apply",
     "href": "presentations/23-09-parallel/parallel.html#parallel-and-apply",
     "title": "\nParallelization in R parallel and foreach\n",
     "section": "parallel and apply",
-    "text": "parallel and apply\n\nparallel is designed to work with functions, and it is analogous to the use of functions like apply, as well as its derivatives lapply and sapply\n\n\nEquivalent functions to the apply family\n\n\n\n\n\n\n\n\napply\nparallel\nINPUT\nOUTPUT\n\n\n\n\napply\nparApply (parRapply, parCapply)1\ndata.frame, matrix\nvector, list, array\n\n\nsapply\nparSapply\nList, vector, data.frame\nvector/matrix\n\n\nlapply\nparLapply\nList, vector, data.frame\nlist\n\n\n\n\n\nparRapply, parCapply are parallel row and column apply functions for a matrix x; they may be slightly more efficient than parApply but do less post-processing of the result."
+    "text": "parallel and apply\n\nparallel is designed to work with functions, and it is analogous to the use of functions like apply, as well as its derivatives lapply and sapply\n\n\nEquivalent functions to the apply family\n\n\n\n\n\n\n\n\napply\nparallel\nINPUT\nOUTPUT\n\n\n\n\napply\nparApply (parRapply, parCapply)2\ndata.frame, matrix\nvector, list, array\n\n\nsapply\nparSapply\nList, vector, data.frame\nvector/matrix\n\n\nlapply\nparLapply\nList, vector, data.frame\nlist"
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#foreach",
@@ -934,8 +934,8 @@
     "objectID": "presentations/23-09-parallel/parallel.html#foreach2",
     "href": "presentations/23-09-parallel/parallel.html#foreach2",
     "title": "\nParallelization in R parallel and foreach\n",
-    "section": "foreach1",
-    "text": "foreach1\nBy itself, foreach do not parallelize, but it can be combined with parallel and doParallel to allow paralellization\nlibrary(foreach)\nlibrary(parallel)\nlibrary(doParallel)\n\nclust &lt;- makeCluster(2)\nregisterDoParallel(clust)\n\nforeach(i=1:2, .combine='c') %dopar% exp(i)\n\nstopCluster(cl = clust)\n\n\n[1] 2.718282 7.389056\n\n\n.combine=: ’c’:concatenate into a vector, ’cbind’ and ’rbind’: combine vectors into a matrix. Operators (’+’, ’*’): process numeric data"
+    "section": "foreach3",
+    "text": "foreach3\nBy itself, foreach do not parallelize, but it can be combined with parallel and doParallel to allow paralellization\nlibrary(foreach)\nlibrary(parallel)\nlibrary(doParallel)\n\nclust &lt;- makeCluster(2)\nregisterDoParallel(clust)\n\nforeach(i=1:2, .combine='c') %dopar% exp(i)\n\nstopCluster(cl = clust)\n\n\n[1] 2.718282 7.389056"
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#example",
@@ -948,29 +948,29 @@
     "objectID": "presentations/23-09-parallel/parallel.html#for3",
     "href": "presentations/23-09-parallel/parallel.html#for3",
     "title": "\nParallelization in R parallel and foreach\n",
-    "section": "for1",
-    "text": "for1\nprimes&lt;- rep(T,10000)   \n\nfor(i in 1:length(listnumbers)){\n  primes[i] &lt;- isprime(listnumbers[i])\n}\n\nresult&lt;-data.frame(number=listnumbers, is_prime=primes)\n\n\n[1] \"Time difference of 5.308078 secs\"\n\n\nIn this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process."
+    "section": "for4",
+    "text": "for4\nprimes&lt;- rep(T,10000)   \n\nfor(i in 1:length(listnumbers)){\n  primes[i] &lt;- isprime(listnumbers[i])\n}\n\nresult&lt;-data.frame(number=listnumbers, is_prime=primes)\n\n\n[1] \"Time difference of 5.308078 secs\""
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#foreach4",
     "href": "presentations/23-09-parallel/parallel.html#foreach4",
     "title": "\nParallelization in R parallel and foreach\n",
-    "section": "foreach1",
-    "text": "foreach1\nlibrary(foreach)\n   \nprimes_fe &lt;-foreach(i = 1:length(listnumbers), .combine=\"c\") %do% { \n                    isprime(listnumbers[i]) \n                    }\n\nresult_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)\n\n\n[1] \"Time difference of 6.629166 secs\"\n\n\nThis method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length."
+    "section": "foreach5",
+    "text": "foreach5\nlibrary(foreach)\n   \nprimes_fe &lt;-foreach(i = 1:length(listnumbers), .combine=\"c\") %do% { \n                    isprime(listnumbers[i]) \n                    }\n\nresult_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)\n\n\n[1] \"Time difference of 6.629166 secs\""
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#foreach-parallelized",
     "href": "presentations/23-09-parallel/parallel.html#foreach-parallelized",
     "title": "\nParallelization in R parallel and foreach\n",
     "section": "foreach parallelized",
-    "text": "foreach parallelized\nlibrary(parallel)\nlibrary(foreach)\nlibrary(doParallel)\n\ncores &lt;- detectCores()                 \nclust &lt;- parallel::makeCluster(cores)  \nregisterDoParallel(clust)  \n \nprimes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine=\"c\") %dopar% { \nisprime(listnumbers[i]) \n}\n\nresult_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)\n\nparallel::stopCluster(cl = clust) \n\n\n[1] \"Time difference of 2.964536 secs\""
+    "text": "foreach parallelized\nlibrary(parallel)\nlibrary(foreach)\nlibrary(doParallel)\n\ncores &lt;- detectCores()                 \nclust &lt;- parallel::makeCluster(cores)  \nregisterDoParallel(clust)  \n \nprimes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine=\"c\") %dopar% { \nisprime(listnumbers[i]) \n}\n\nresult_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)\n\nparallel::stopCluster(cl = clust) \n\n\n\n[1] \"Time difference of 2.964536 secs\""
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#sapply-5",
     "href": "presentations/23-09-parallel/parallel.html#sapply-5",
     "title": "\nParallelization in R parallel and foreach\n",
-    "section": "sapply 1",
-    "text": "sapply 1\nprimes_sa &lt;- sapply(listnumbers, isprime) \n\nresult_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)\n\n\n[1] \"Time difference of 5.478974 secs\"\n\n\napply is more efficient than foreach because it does a memory preallocation step in the background"
+    "section": "sapply 6",
+    "text": "sapply 6\nprimes_sa &lt;- sapply(listnumbers, isprime) \n\nresult_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)\n\n\n[1] \"Time difference of 5.478974 secs\""
   },
   {
     "objectID": "presentations/23-09-parallel/parallel.html#parsapply",
@@ -1006,5 +1006,12 @@
     "title": "UQRUG 42",
     "section": "",
     "text": "This month at UQRUG, Raúl will be providing an overview of using, and the advantages of, Parallelization in R.\nFind more details here: https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/\n\n\n\nAdd your name, where you’re from, and why you’re here:\n\n\n\n\n\n\n\n\nName\nWhere are you from?\nWhat brings you here?\n\n\n\n\nNicholas Wiggins\nLibrary\nHere to help!\n\n\nRaul Riesco\nACE\nHere to learn and help :)\n\n\nDavid Green\nUQ Research Computing Centre\nR on HPC help\n\n\nRaimundo Sanchez\nResearch Fellow SHRS\nR\n\n\nGiulio Centorame\nIMB\nParallel computation hurts my brain\n\n\nJessica Hintzsche\nQAAFI\nHere to figure out how to make my code more efficient\n\n\nFelicity Charles\nUQ Gatton\nHere to learn\n\n\nGrant Taylor\nUQ St Lucia\nLearn more about R\n\n\nRyan\nSOE\nLearn R\n\n\nJocelyn\nUQCCR\nStill learning\n\n\nValentina Urrutia Guada\nLibrary\nHere to learn & help\n\n\nLuke Gaiter\nLibrary\nLearning\n\n\n\n\n\n\n\n\nI constantly have issues with running out of memory with parallel operations. E.g. using the package furrr\n# Setup multisession\nlibrary(furrr)\nlibrary(magrittr)\nplan(multisession, workers = 2)\n\n# Vector of paths with huge tables I want to import\npaths &lt;- c(\"big_table1.tsv\", \"big_table2.tsv\", \"big_table3.tsv\")\n\n# Load everything\n# If the tables are too big, R runs out of memory\npaths %&gt;%\n    future_map(read.table)\nThis can cause issue especially when using HPCs, since the jobs will often fail if the process tries to allocate more memory than requested. How do I limit the amount of memory each child process/all the processes can use?\nAnswers\n\nDavid: The UQ HPCs can allocate up to 2TB of RAM. If you need more RAM, request it. If you are still running out of RAM, then it might be worth splitting the job into multiple separate jobs. e.g. if you’re trying to process the three big tables, then run each big table in a separate job\nName: Ryan I don’t think you have control over the memory of each child process. You might want to use data.table from previous presentations here. It uses openmp for parallization and could be more efficient. I also believe the HPC has openmp all set, so in R, it should be plug and play already. —\n\n\n\n\n\nAnswers\n\nRyan: Maybe…\n\ncores = Sys.getenv(\"SLURM_CPU_PER_TASK\")\nmakecluster(cores)\nThis does a more refine version of the above, but requires an extra package, so not as good for HPC use\ncores &lt;- length(parallelly::availableWorkers())\n\n\n\n\nI have the same code for six participants. Made six lots of code, but of course this is very inefficient. Here is a small part…\n#######################   SUB 004   ############################################\n#library(tidyverse)\n\nload(\"0_data/parsedData_cogPsyRep_sub_004.RData\")   #  contains a list called \"data\" which is converted into a dataframe for the Sub (see next line)\n\ndf4=data.frame(data)\n\nnTrialsAll=length(df4$Cond1)\nnTrialsAll\n\nMRT=median(df4$Time1)\nMRT\nprobCorr=mean(df4$Correct==TRUE)\nprobCorr\n\nnumDR4=sum(df4$DoubleResp==TRUE)\nnumDR4\nprobDR4=(sum(df4$DoubleResp==TRUE)/nrow(df4))\nprobDR4\n\n\nACCdf4=tapply(df4$Correct==TRUE, list(df4$Cond1, df4$Cond2),mean)\nACCdf4\n\n\nRTdf4=tapply(df4$Time1, list(df4$Cond1, df4$Cond2),median)\nRTdf4\nSounds good. Anything that is more efficient.\nYes, this example is for sub 4 but I have S=c(1,2,3,4,6,9) # the Sub numbers I tried something like this…\nfor (s in S)\n{load(paste(\"0_data/parsedData_cogPsyRep_sub_00\",s,\".RData\",sep=\"\"))\n}  ## loads the data for a specific Sub\nThis particular one probably doesn’t need it (paralellisation) Thanks! I’ll give that a go :)\nAnswers\n\nRaul:\n\nlist_files &lt;- list.files(path = \"./0_data\", pattern = \"parsedData_cogPsyRep_sub\")\nfor (file in list_files){\n  a&lt;-data.frame(file)\n  return(length(a$Cond1))\n  return(median(a$Time1))\n}\n\nNick: If you have any further issues or questions, don’t hesitate to reach out to training@library.uq.edu.au"
+  },
+  {
+    "objectID": "presentations/23-09-parallel/parallel.html",
+    "href": "presentations/23-09-parallel/parallel.html",
+    "title": "\nParallelization in R parallel and foreach\n",
+    "section": "",
+    "text": "Have you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?\n\nR runs only on a single thread on the CPU by default\nIs it the most efficient way to run functions?\n\nIndependent operations\n\n\nresults &lt;- rep(0,10)\n\nfor(num in 1:10)\n  {\n    results[num]&lt;-num^2\n  }\n\nresults\n\n [1]   1   4   9  16  25  36  49  64  81 100"
   }
 ]

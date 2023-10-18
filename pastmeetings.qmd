@@ -1,5 +1,5 @@
 ---
-title: "Past Meetings" 
+title: "Past Meeting Notess" 
 toc: true
 toc-depth: 4
 listing:
@@ -21,5 +21,4 @@ flex-basis: 15%;
 
 </style>
 ```
-Here you can find the full repository of notes from previous UQRUG Meetings.</br>
-Click the Search Icon in the top right to search all posts.</br>
+Here you can find the full repository of notes from previous UQRUG Meetings.</br> Click the Search Icon in the top right to search all posts.</br>
