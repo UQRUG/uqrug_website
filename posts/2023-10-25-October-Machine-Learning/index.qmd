@@ -11,7 +11,7 @@ tags: [R, tidymodels, machine learning, ML, supervised, drop-in, help]
 DisableComments: no
 ---
 
-Do you want to learn the basics of machine learning in R and why it's useful? Before thehelp session this month at UQRUG, [Raimundo Sanchez](https://github.com/raimun2) will be providing an overview of supervised machine learning using the [tidymodels](https://www.tidymodels.org/) framework in R.
+Do you want to learn the basics of machine learning in R and why it's useful? Before the help session this month at UQRUG, [Raimundo Sanchez](https://github.com/raimun2) will be providing an overview of supervised machine learning using the [tidymodels](https://www.tidymodels.org/) framework in R.
 
 <p float="left">
 
