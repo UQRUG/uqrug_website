@@ -1,0 +1,40 @@
+---
+title: "October 25th UQRUG Drop-in + Machine Learning"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2023-10-20'
+image: tidymodels.svg
+slug: sept2023
+categories:
+  - workshop
+tags: [R, tidymodels, machine learning, ML, supervised, drop-in, help]
+DisableComments: no
+---
+
+Do you want to learn the basics of machine learning in R and why it's useful? Before thehelp session this month at UQRUG, [Raimundo Sanchez](https://github.com/raimun2) will be providing an overview of supervised machine learning using the [tidymodels](https://www.tidymodels.org/) framework in R.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="tidymodels.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 25th October, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4796121)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+------------------------------------------------------------------------
+
+<!-- Browse the slides from the September RUG: -->
+
+<!-- <iframe width="780" height="500" src="/presentations/23-09-parallel/parallel.html" title="Parallelisation Quarto Presentation"> -->
+
+<!-- </iframe> -->
+
+<p style="color: grey; font-size: 80%;">
+The tidymodels logo was sourced from <a href="https://github.com/rstudio/hex-stickers/tree/main#printing" style="color:grey;">RStudio hex stickers</a> and is licensed <a href="https://github.com/rstudio/hex-stickers/blob/main/LICENSE.md" style="color:grey;">CC0</a>
+</p>
