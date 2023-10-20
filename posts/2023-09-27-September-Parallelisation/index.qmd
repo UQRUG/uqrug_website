@@ -15,7 +15,7 @@ Before the help session, this month [Raúl Riesco Jarrín](https://scholar.googl
 
 <p float="left">
 
-<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
+<img src="../images/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
 
 </p>
 
