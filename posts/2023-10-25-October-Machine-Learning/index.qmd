@@ -4,7 +4,7 @@ editor: visual
 author: 'Nicholas Wiggins'
 date: '2023-10-20'
 image: tidymodels.svg
-slug: sept2023
+slug: oct2023
 categories:
   - workshop
 tags: [R, tidymodels, machine learning, ML, supervised, drop-in, help]
@@ -36,5 +36,7 @@ For more information, reach out to the UQ Library training team for more help: <
 <!-- </iframe> -->
 
 <p style="color: grey; font-size: 80%;">
+
 The tidymodels logo was sourced from <a href="https://github.com/rstudio/hex-stickers/tree/main#printing" style="color:grey;">RStudio hex stickers</a> and is licensed <a href="https://github.com/rstudio/hex-stickers/blob/main/LICENSE.md" style="color:grey;">CC0</a>
+
 </p>
