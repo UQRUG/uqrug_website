@@ -29,11 +29,11 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-<!-- Browse the slides from the September RUG: -->
+Browse the slides from the September RUG:
 
-<!-- <iframe width="780" height="500" src="/presentations/23-09-parallel/parallel.html" title="Parallelisation Quarto Presentation"> -->
+<iframe width="780" height="500" src="https://raimun2.github.io/UQ_RUG/slides#/title-slide" title="Machine Learning Presentation">
 
-<!-- </iframe> -->
+</iframe>
 
 <p style="color: grey; font-size: 80%;">
 

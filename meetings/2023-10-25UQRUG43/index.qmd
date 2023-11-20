@@ -1,0 +1,42 @@
+---
+title: UQRUG 43
+date: '2023-10-25'
+description: '**Overview**: Supervised Machine Learning in R. <br /> **Questions**: None!'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-10-25: UQRUG 43
+
+### R Overview of the Month
+
+This month at UQRUG, Raimundo Sanchez will be providing an overview of supervised machine learning using the tidymodels framework in R.
+
+### Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name                   | Where are you from? | What brings you here?                             |
+|------------------------|---------------------|---------------------------------------------------|
+| Nicholas Wiggins       | Library             | Here to help!                                     |
+| Wilma Hart             | UQ St Lucia         | learn about machine learning in R                 |
+| Kar Ng                 | UQ                  | Machine Learning Learning                         |
+| Anne-Claire            | UQ                  | Implementing ML in R                              |
+| Jessica Hintzsche      | QAAFI               | Interested in the Machine learning field          |
+| Pradeepa Korale-Gedara | QAAFI               | Interested in Machine Learning                    |
+| Marguerite King        | UQ SHRS             | interested in machine learning                    |
+| Victoria Pozdniakova   | UQ                  | interested in machine learning                    |
+| Than Myint Swe         | AGFS                | Interested in machine learning and remote sensing |
+| Catherine Kim          | UQ/QUT              | Used tidymodels before                            |
+
+### Questions
+
+No questions this month!
