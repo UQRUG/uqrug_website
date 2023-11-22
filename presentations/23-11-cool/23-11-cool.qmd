@@ -1,0 +1,357 @@
+---
+title: "UQRUG Presents: Cool But Useless"
+format: revealjs
+editor: visual
+---
+
+```{r setup, include = F}
+# install.packages("remotes")
+# remotes::install_github("R-CoderDotCom/ggdogs@main")
+
+library(tidyverse)
+library(ggdogs)
+library(ggcats)
+library(ggbernie)
+
+
+```
+
+## Cool But Useless
+
+::: columns
+::: {.column .fragment width="60%"}
+This month we're going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.
+:::
+
+::: {.column .fragment width="40%"}
+```{r dogs, fig.width=20, fig.height=20}
+ggplot() +
+  geom_dog(data = data.frame(x = 1, y = 1), aes(x = x, y = y), dog = "thisisfine", size = 10) + 
+  geom_dog(data = data.frame(x = 2, y = 1), aes(x = x, y = y), dog = "pug", size = 10) +
+  geom_dog(data = data.frame(x = 1.5, y = 1), aes(x = x, y = y), dog = "doge", size = 10) +
+  theme_void()
+```
+:::
+:::
+
+## How can I find fun R packages?
+
+There are a few good articles online, and you stumble across the odd one, but today we're going to explore [Cool but Useless](https://github.com/coolbutuseless!
+
+![](img/cbu.png)
+
+## ggdogs
+
+::: fragment
+Ever wanted to replace the points in your ggplot with dogs?
+:::
+
+::: fragment
+```{r dog points}
+ggplot(mtcars) +
+geom_dog(aes(mpg, wt), dog = "doge", size = 5)
+```
+:::
+
+## ggcats
+
+::: fragment
+What about cats?
+:::
+
+::: fragment
+```{r cat points}
+ggplot(mtcars) +
+geom_cat(aes(mpg, wt), cat = "toast", size = 5)
+```
+:::
+
+## ggbernie
+
+::: fragment
+Or Bernie Sanders?
+:::
+
+::: fragment
+```{r bernie points}
+ggplot(mtcars) +
+geom_bernie(aes(mpg, wt), bernie = "sitting", size = 5)
+```
+:::
+
+## geom_label
+
+::: fragment
+You can play with adding labels to make things more interesting too.
+:::
+
+::: fragment
+```{r dog change, echo=FALSE}
+owid <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv", na.strings=c("","NA")) %>% 
+  select('iso_code', 'country', 'year', 'population', 'gdp', 'co2', 'methane', 'nitrous_oxide') %>% 
+  filter(iso_code != is.na(iso_code), year < 2019)
+
+owid %>% 
+  filter(! is.na(co2)) %>% 
+  group_by(year) %>% 
+  summarise(co2e = sum(co2, methane, nitrous_oxide, na.rm = TRUE)) %>% 
+  ggplot() +
+  geom_line(aes(x=year, 
+                y=co2e)) +
+  geom_label(data = data.frame(x = 1970, y = 35000, label = "This is fine"), aes(x = x, y = y, label = label)) +
+  geom_dog(data = data.frame(x = 2000, y = 33000), aes(x = x, y = y), dog = "thisisfine", size = 3) +
+  geom_dog(data = data.frame(x = 1830, y = 5000), aes(x = x, y = y), dog = "doge_strong", size = 5) +
+  geom_label(data = data.frame(x = 1830, y = 11000, label = "Industry Time."), aes(x = x, y = y, label = label)) +
+  geom_dog(data = data.frame(x = 2025, y = 45000), aes(x = x, y = y), dog = "doge", size = 2) +
+  geom_label(data = data.frame(x = 1990, y = 45000, label = "give up tiem"), aes(x = x, y = y, label = label)) 
+```
+:::
+
+## gganimate
+
+::: fragment
+::: panel-tabset
+### Animated Cats
+
+```{r cat animate, echo=FALSE}
+knitr::include_graphics(path = "img/cat_animation.gif")
+```
+
+### The Code
+
+``` r
+# Packages
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(gganimate)
+library(ggcats)
+
+# A function to generate a data frame with simulated data and cats
+data_cat <- function(from = 0, to = 80, by = 1, fun = rnorm, 
+                     cat = "", sd = 3, category = "") {
+  tibble(
+    x = seq(from, to, by),
+    y = fun(x) + rnorm(length(x), sd = sd),
+    category = rep(category, length(x)),
+    cat = rep(cat, length(x))
+  )
+}
+
+
+# Data for my focus
+concentration <- data_cat(
+  fun = function(x) 4 * sin(1.5 * x) + 4, 
+  cat = "lil_bub", 
+  sd = 1, category = "focus"
+)
+
+# Data for my duties
+set.seed(10)
+
+duties <- data_cat(
+  fun = function(x) 5 + 1.5 * exp(x / 20), 
+  cat = "pusheen_pc", 
+  sd = 2, category = "duties"
+)
+
+# Data for my anxiety
+anxiety <- data_cat(
+  fun = function(x) 10 + exp(x / 15) + 4 * sin(x), 
+  cat = "nyancat", 
+  sd = 1, category = "anxiety"
+)
+
+# Complete data
+full_data <- rbind(concentration, duties, anxiety)
+
+
+ggplot(full_data, aes(x, y)) +
+  geom_line(aes(color = category), size = 1) +
+  geom_cat(aes(cat = cat), size = 4) +
+  labs(
+    y = element_blank(),
+    x = "Time",
+    caption = "Graph by JPCH. Generated with `ggplot2`, `ggcats` and `gganimate`",
+  ) +
+  scale_color_manual(
+    values = c("#EE2C2C", "#FF8C00", "#68228B"),
+    labels = c("Anxiety", "My focus", "Duties")) +
+  theme_fivethirtyeight() +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 12, color = "black"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    legend.text = element_text(size = 14, face = "bold"),
+    legend.position = "top",
+    legend.title = element_blank()
+  ) +
+  transition_reveal(x)
+```
+:::
+:::
+
+## beepr
+
+This package will play a sound.
+
+``` r
+library(beepr)
+beep(1)
+beep(2)
+```
+
+I actually use this at the end of a long piece of code so I know when it's done. But I have a useless example on the next slide
+
+## 
+
+``` r
+repeat{
+  # statement to be executed multiple times
+  print(format(as.POSIXct(Sys.time()), format = '%I:%M %p'))
+  # checking the stop condition
+  if (format(as.POSIXct(Sys.time()), format = '%M') == "22")
+  {
+    for (i in 1: format(as.POSIXct(Sys.time()), format = '%I')) {
+      beep(1)
+      Sys.sleep(1)
+    }
+    # using break statement
+    # to terminate the loop
+    break
+  }
+  
+  
+  # incrementing the iteration variable
+  Sys.sleep(60-as.numeric(format(as.POSIXct(Sys.time()), format = '%OS')))
+  
+  
+}
+```
+
+## Carelesswhisper
+
+::: fragment
+No, not Wham! It's a a lightweight (onlt 70mb!) voice recording and transcription package. I'll have to leave the presentation to show you this in R.
+:::
+
+::: fragment
+``` r
+# install.package('remotes')
+remotes::install_github('coolbutuseless/carelesswhisper')
+
+library(carelesswhisper)
+
+# Initialise whisper with built-in model (tiny, multi-language)
+ctx <- whisper_init()
+
+# Record 5 seconds of audio and perform speech recognition
+snd <- record_audio(5)
+
+# Transcribe the recorded audio
+snd_text <- whisper(ctx, snd)
+snd_text
+
+# play it back
+audio::play(snd, rate = 16100)
+
+# export and import the audio file
+saveRDS(snd, file = "my_recording.rds")
+recording <- readRDS(file = "my_recording.rds")
+```
+::: 
+
+::: fragment
+"But that's not useless, Nick!"
+:::
+
+::: fragment
+Just you wait
+:::
+
+## Cowsay
+
+```{r cowsay}
+library(cowsay)
+
+say("Cowsay will create an ascii creature saying what you want it to", "random")
+```
+
+## Cowsay + Carelesswhisper
+
+``` r
+audio::play(snd, rate = 30100)
+say(snd_text, "random")
+```
+
+## rsoundfont
+
+Want to play musical instruments with R?
+
+``` r
+# install.package('remotes')
+remotes::install_github('coolbutuseless/rsoundfont')
+
+library(rsoundfont)
+
+# Source: https://www.philscomputerlab.com/general-midi-and-soundfonts.html
+filename <- "C:/Users/uqnwiggi/OneDrive - The University of Queensland/TechTraining/RUG/cool_but_useless/soundfonts/weedsgm4_update.sf2"
+
+sf <- read_sf2(filename)
+
+# sample a loop from an instrument
+samp <- create_sample(sf, "Mandolin Trem E5" , 1)
+print(inst)
+audio::play(samp)
+
+
+# play a bunch of sounds
+audio::play(create_sample(sf, "KBJ100 Banjo G3" , 2))  
+Sys.sleep(0.45)
+audio::play(create_sample(sf, "KBJ100 Banjo G3" , 1))
+Sys.sleep(0.3)
+audio::play(create_sample(sf, "KBJ100 Banjo F3" , 1))
+Sys.sleep(0.15)
+audio::play(create_sample(sf, "KBJ100 Banjo E3" , 1))
+Sys.sleep(0.3)
+audio::play(create_sample(sf, "KBJ100 Banjo G3" , 1))
+Sys.sleep(0.15)
+audio::play(create_sample(sf, "KBJ100 Banjo C4" , 1))
+Sys.sleep(0.3)
+audio::play(create_sample(sf, "KBJ100 Banjo D4" , 1))
+Sys.sleep(0.5)
+audio::play(create_sample(sf, "KBJ100 Banjo E4" , 1))
+Sys.sleep(.9)
+audio::play(create_sample(sf, "KBJ100 Banjo C4" , 1))
+```
+
+## Wordle
+
+Want to play Wordle in R?
+
+``` r
+# install.packages('remotes')
+remotes::install_github('coolbutuseless/wordle')
+
+library(wordle)
+
+play_wordle()
+```
+
+## UQRUG Cool but Useless Competition
+
+::: incremental
+-   We will have the December UQRUG on December 6th.
+-   At that RUG, I want to see the most creative Useless R Packages and Code compilations that you can find and create!
+-   Perhaps a hilarious use of an R package
+-   Maybe you can chain together an entertaining string of functions to rival my carelesswhisper cowsay
+:::
+
+## UQRUG Cool but Useless Competition
+
+::: incremental
+-   The winner will be chosen by those attending the next UQRUG
+-   They will not only receive the honourable title of "Coolest and Most Useless", but also the UQRUG Rug!
+-   All other entrants will receive a prize too!
+:::

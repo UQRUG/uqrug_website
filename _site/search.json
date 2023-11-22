@@ -956,7 +956,7 @@
     "href": "posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
     "title": "November 22nd UQRUG Drop-in + Cool but Useless + ResBazQld",
     "section": "",
-    "text": "In this special edition of UQRUG we will be at ResBazQld (at the special date and time of Wed 22nd Nov, 3-5pm). For our overview we will be looking at some Cool but Useless ways we can use R. From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete.\nCoding and acaedmia can get stuffy and work focused, so this month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n \n\nWhen Wednesday 22nd November, 3 - 5pm\nWhere St Lucia, Michie Building (9) Level 2, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "In this special edition of UQRUG we will be at ResBazQld (at the special date and time of Wed 22nd Nov, 3-5pm). For our overview we will be looking at some Cool but Useless ways we can use R. From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete.\nCoding and acaedmia can get stuffy and work focused, so this month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n \n\nWhen Wednesday 22nd November, 3 - 5pm\nWhere St Lucia, Michie Building (9) Level 2, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the November RUG:"
   },
   {
     "objectID": "meetings/2023-10-25UQRUG43/index.html",
@@ -971,5 +971,124 @@
     "title": "UQRUG 43",
     "section": "",
     "text": "This month at UQRUG, Raimundo Sanchez will be providing an overview of supervised machine learning using the tidymodels framework in R.\n\n\n\nAdd your name, where you’re from, and why you’re here:\n\n\n\n\n\n\n\n\nName\nWhere are you from?\nWhat brings you here?\n\n\n\n\nNicholas Wiggins\nLibrary\nHere to help!\n\n\nWilma Hart\nUQ St Lucia\nlearn about machine learning in R\n\n\nKar Ng\nUQ\nMachine Learning Learning\n\n\nAnne-Claire\nUQ\nImplementing ML in R\n\n\nJessica Hintzsche\nQAAFI\nInterested in the Machine learning field\n\n\nPradeepa Korale-Gedara\nQAAFI\nInterested in Machine Learning\n\n\nMarguerite King\nUQ SHRS\ninterested in machine learning\n\n\nVictoria Pozdniakova\nUQ\ninterested in machine learning\n\n\nThan Myint Swe\nAGFS\nInterested in machine learning and remote sensing\n\n\nCatherine Kim\nUQ/QUT\nUsed tidymodels before\n\n\n\n\n\n\nNo questions this month!"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html",
+    "href": "presentations/23-11-cool/23-11-cool.html",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "",
+    "text": "This month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n\nggplot() +\n  geom_dog(data = data.frame(x = 1, y = 1), aes(x = x, y = y), dog = \"thisisfine\", size = 10) + \n  geom_dog(data = data.frame(x = 2, y = 1), aes(x = x, y = y), dog = \"pug\", size = 10) +\n  geom_dog(data = data.frame(x = 1.5, y = 1), aes(x = x, y = y), dog = \"doge\", size = 10) +\n  theme_void()"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#cool-but-useless",
+    "href": "presentations/23-11-cool/23-11-cool.html#cool-but-useless",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "Cool But Useless",
+    "text": "Cool But Useless\n\n\nThis month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n\nggplot() +\n  geom_dog(data = data.frame(x = 1, y = 1), aes(x = x, y = y), dog = \"thisisfine\", size = 10) + \n  geom_dog(data = data.frame(x = 2, y = 1), aes(x = x, y = y), dog = \"pug\", size = 10) +\n  geom_dog(data = data.frame(x = 1.5, y = 1), aes(x = x, y = y), dog = \"doge\", size = 10) +\n  theme_void()"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#how-can-i-find-fun-r-packages",
+    "href": "presentations/23-11-cool/23-11-cool.html#how-can-i-find-fun-r-packages",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "How can I find fun R packages?",
+    "text": "How can I find fun R packages?\nThere are a few good articles online, and you stumble across the odd one, but today we’re going to explore Cool but Useless(https://github.com/coolbutuseless!"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#ggdogs",
+    "href": "presentations/23-11-cool/23-11-cool.html#ggdogs",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "ggdogs",
+    "text": "ggdogs\n\nEver wanted to replace the points in your ggplot with dogs?\n\n\n\nggplot(mtcars) +\ngeom_dog(aes(mpg, wt), dog = \"doge\", size = 5)"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#ggcats",
+    "href": "presentations/23-11-cool/23-11-cool.html#ggcats",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "ggcats",
+    "text": "ggcats\n\nWhat about cats?\n\n\n\nggplot(mtcars) +\ngeom_cat(aes(mpg, wt), cat = \"toast\", size = 5)"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#ggbernie",
+    "href": "presentations/23-11-cool/23-11-cool.html#ggbernie",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "ggbernie",
+    "text": "ggbernie\n\nOr Bernie Sanders?\n\n\n\nggplot(mtcars) +\ngeom_bernie(aes(mpg, wt), bernie = \"sitting\", size = 5)"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#geom_label",
+    "href": "presentations/23-11-cool/23-11-cool.html#geom_label",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "geom_label",
+    "text": "geom_label\n\nYou can play with adding labels to make things more interesting too."
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#gganimate",
+    "href": "presentations/23-11-cool/23-11-cool.html#gganimate",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "gganimate",
+    "text": "gganimate\n\n\nAnimated CatsThe Code\n\n\n\n\n\n\n\n\n\n# Packages\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggthemes)\nlibrary(gganimate)\nlibrary(ggcats)\n\n# A function to generate a data frame with simulated data and cats\ndata_cat &lt;- function(from = 0, to = 80, by = 1, fun = rnorm, \n                     cat = \"\", sd = 3, category = \"\") {\n  tibble(\n    x = seq(from, to, by),\n    y = fun(x) + rnorm(length(x), sd = sd),\n    category = rep(category, length(x)),\n    cat = rep(cat, length(x))\n  )\n}\n\n\n# Data for my focus\nconcentration &lt;- data_cat(\n  fun = function(x) 4 * sin(1.5 * x) + 4, \n  cat = \"lil_bub\", \n  sd = 1, category = \"focus\"\n)\n\n# Data for my duties\nset.seed(10)\n\nduties &lt;- data_cat(\n  fun = function(x) 5 + 1.5 * exp(x / 20), \n  cat = \"pusheen_pc\", \n  sd = 2, category = \"duties\"\n)\n\n# Data for my anxiety\nanxiety &lt;- data_cat(\n  fun = function(x) 10 + exp(x / 15) + 4 * sin(x), \n  cat = \"nyancat\", \n  sd = 1, category = \"anxiety\"\n)\n\n# Complete data\nfull_data &lt;- rbind(concentration, duties, anxiety)\n\n\nggplot(full_data, aes(x, y)) +\n  geom_line(aes(color = category), size = 1) +\n  geom_cat(aes(cat = cat), size = 4) +\n  labs(\n    y = element_blank(),\n    x = \"Time\",\n    caption = \"Graph by JPCH. Generated with `ggplot2`, `ggcats` and `gganimate`\",\n  ) +\n  scale_color_manual(\n    values = c(\"#EE2C2C\", \"#FF8C00\", \"#68228B\"),\n    labels = c(\"Anxiety\", \"My focus\", \"Duties\")) +\n  theme_fivethirtyeight() +\n  theme(\n    axis.text.y = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_text(size = 12, color = \"black\"),\n    axis.title.x = element_text(size = 14, face = \"bold\"),\n    legend.text = element_text(size = 14, face = \"bold\"),\n    legend.position = \"top\",\n    legend.title = element_blank()\n  ) +\n  transition_reveal(x)"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#beepr",
+    "href": "presentations/23-11-cool/23-11-cool.html#beepr",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "beepr",
+    "text": "beepr\nThis package will play a sound.\nlibrary(beepr)\nbeep(1)\nbeep(2)\nI actually use this at the end of a long piece of code so I know when it’s done. But I have a useless example on the next slide"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#section",
+    "href": "presentations/23-11-cool/23-11-cool.html#section",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "",
+    "text": "repeat{\n  # statement to be executed multiple times\n  print(format(as.POSIXct(Sys.time()), format = '%I:%M %p'))\n  # checking the stop condition\n  if (format(as.POSIXct(Sys.time()), format = '%M') == \"22\")\n  {\n    for (i in 1: format(as.POSIXct(Sys.time()), format = '%I')) {\n      beep(1)\n      Sys.sleep(1)\n    }\n    # using break statement\n    # to terminate the loop\n    break\n  }\n  \n  \n  # incrementing the iteration variable\n  Sys.sleep(60-as.numeric(format(as.POSIXct(Sys.time()), format = '%OS')))\n  \n  \n}"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#carelesswhisper",
+    "href": "presentations/23-11-cool/23-11-cool.html#carelesswhisper",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "Carelesswhisper",
+    "text": "Carelesswhisper\n\nNo, not Wham! It’s a a lightweight (onlt 70mb!) voice recording and transcription package. I’ll have to leave the presentation to show you this in R.\n\n\n# install.package('remotes')\nremotes::install_github('coolbutuseless/carelesswhisper')\n\nlibrary(carelesswhisper)\n\n# Initialise whisper with built-in model (tiny, multi-language)\nctx &lt;- whisper_init()\n\n# Record 5 seconds of audio and perform speech recognition\nsnd &lt;- record_audio(5)\n\n# Transcribe the recorded audio\nsnd_text &lt;- whisper(ctx, snd)\nsnd_text\n\n# play it back\naudio::play(snd, rate = 16100)\n\n# export and import the audio file\nsaveRDS(snd, file = \"my_recording.rds\")\nrecording &lt;- readRDS(file = \"my_recording.rds\")\n\n\n“But that’s not useless, Nick!”\n\n\nJust you wait"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#cowsay",
+    "href": "presentations/23-11-cool/23-11-cool.html#cowsay",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "Cowsay",
+    "text": "Cowsay\n\nlibrary(cowsay)\n\nWarning: package 'cowsay' was built under R version 4.3.2\n\nsay(\"Cowsay will create an ascii creature saying what you want it to\", \"random\")\n\n             ------ \n          Cowsay will create an ascii creature saying what you want it to \n             ------ \n                 \\   \n                  \\  \n                   \\\n                      . .     \n                      |\\|\\_   \n                      /  ^ \\  \n                     /  _-_/° \n   \\\\\\\\\\\\\\\\\\       /   / \\    \n  ////////////   /  \\ / ||    \n \\\\\\\\\\\\\\\\\\\\\\\\\\\\ /   /\\\\ \\\\    \n////////////////   /  \\\\ \\\\   \n \\\\\\\\\\\\\\\\\\\\\\\\\\/   /  / `` ``  \n     /////////   \\  /  \\      \n ML     \\\\\\\\\\\\___/_/___/"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#cowsay-carelesswhisper",
+    "href": "presentations/23-11-cool/23-11-cool.html#cowsay-carelesswhisper",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "Cowsay + Carelesswhisper",
+    "text": "Cowsay + Carelesswhisper\naudio::play(snd, rate = 30100)\nsay(snd_text, \"random\")"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#rsoundfont",
+    "href": "presentations/23-11-cool/23-11-cool.html#rsoundfont",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "rsoundfont",
+    "text": "rsoundfont\nWant to play musical instruments with R?\n# install.package('remotes')\nremotes::install_github('coolbutuseless/rsoundfont')\n\nlibrary(rsoundfont)\n\n# Source: https://www.philscomputerlab.com/general-midi-and-soundfonts.html\nfilename &lt;- \"C:/Users/uqnwiggi/OneDrive - The University of Queensland/TechTraining/RUG/cool_but_useless/soundfonts/weedsgm4_update.sf2\"\n\nsf &lt;- read_sf2(filename)\n\n# sample a loop from an instrument\nsamp &lt;- create_sample(sf, \"Mandolin Trem E5\" , 1)\nprint(inst)\naudio::play(samp)\n\n\n# play a bunch of sounds\naudio::play(create_sample(sf, \"KBJ100 Banjo G3\" , 2))  \nSys.sleep(0.45)\naudio::play(create_sample(sf, \"KBJ100 Banjo G3\" , 1))\nSys.sleep(0.3)\naudio::play(create_sample(sf, \"KBJ100 Banjo F3\" , 1))\nSys.sleep(0.15)\naudio::play(create_sample(sf, \"KBJ100 Banjo E3\" , 1))\nSys.sleep(0.3)\naudio::play(create_sample(sf, \"KBJ100 Banjo G3\" , 1))\nSys.sleep(0.15)\naudio::play(create_sample(sf, \"KBJ100 Banjo C4\" , 1))\nSys.sleep(0.3)\naudio::play(create_sample(sf, \"KBJ100 Banjo D4\" , 1))\nSys.sleep(0.5)\naudio::play(create_sample(sf, \"KBJ100 Banjo E4\" , 1))\nSys.sleep(.9)\naudio::play(create_sample(sf, \"KBJ100 Banjo C4\" , 1))"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#wordle",
+    "href": "presentations/23-11-cool/23-11-cool.html#wordle",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "Wordle",
+    "text": "Wordle\nWant to play Wordle in R?\n# install.packages('remotes')\nremotes::install_github('coolbutuseless/wordle')\n\nlibrary(wordle)\n\nplay_wordle()"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#uqrug-cool-but-useless-competition",
+    "href": "presentations/23-11-cool/23-11-cool.html#uqrug-cool-but-useless-competition",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "UQRUG Cool but Useless Competition",
+    "text": "UQRUG Cool but Useless Competition\n\n\nWe will have the December UQRUG on December 6th.\nAt that RUG, I want to see the most creative Useless R Packages and Code compilations that you can find and create!\nPerhaps a hilarious use of an R package\nMaybe you can chain together an entertaining string of functions to rival my carelesswhisper cowsay"
+  },
+  {
+    "objectID": "presentations/23-11-cool/23-11-cool.html#uqrug-cool-but-useless-competition-1",
+    "href": "presentations/23-11-cool/23-11-cool.html#uqrug-cool-but-useless-competition-1",
+    "title": "UQRUG Presents: Cool But Useless",
+    "section": "UQRUG Cool but Useless Competition",
+    "text": "UQRUG Cool but Useless Competition\n\n\nThe winner will be chosen by those attending the next UQRUG\nThey will not only receive the honourable title of “Coolest and Most Useless”, but also the UQRUG Rug!\nAll other entrants will receive a prize too!"
   }
 ]

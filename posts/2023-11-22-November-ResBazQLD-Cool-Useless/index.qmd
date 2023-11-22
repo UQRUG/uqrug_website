@@ -9,7 +9,7 @@ categories:
   - workshop
 tags: [R, Cool but Useless, sillyR, cowsay, fun, drop-in, help]
 DisableComments: no
----
+--- 
 
 In this special edition of UQRUG we will be at [ResBazQld](https://resbaz.github.io/resbaz2023qld/) (at the special date and time of **Wed 22nd Nov, 3-5pm**). For our overview we will be looking at some **Cool but Useless** ways we can use R. 
 From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete. 
@@ -22,7 +22,7 @@ Coding and acaedmia can get stuffy and work focused, so this month we're going t
 
 </p>
 
-**When** Wednesday 22nd November, 3 - 5pm
+**When** Wednesday 22nd November, 3 - 5pm 
 
 **Where** St Lucia, Michie Building (9) Level 2, and on Zoom
 
@@ -32,10 +32,10 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-<!-- Browse the slides from the September RUG: -->
+Browse the slides from the November RUG:
 
-<!-- <iframe width="780" height="500" src="/presentations/23-09-parallel/parallel.html" title="Parallelisation Quarto Presentation"> -->
+<iframe width="780" height="500" src="/presentations/23-11-cool/23-11-cool.html" title="Cool but Useless Quarto Presentation">
 
-<!-- </iframe> -->
+</iframe>
 
 
