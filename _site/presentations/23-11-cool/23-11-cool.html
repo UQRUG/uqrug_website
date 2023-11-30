@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.349">
+  <meta name="generator" content="quarto-1.4.243">
 
   <title>UQRUG - UQRUG Presents: Cool But Useless</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -425,7 +425,7 @@
 </section>
 <section id="how-can-i-find-fun-r-packages" class="slide level2">
 <h2>How can I find fun R packages?</h2>
-<p>There are a few good articles online, and you stumble across the odd one, but today we’re going to explore <a href="#/cool-but-useless">Cool but Useless</a>(https://github.com/coolbutuseless!</p>
+<p>There are a few good articles online, and you stumble across the odd one, but today we’re going to explore <a href="https://github.com/coolbutuseless">Cool but Useless</a>!</p>
 
 <img data-src="img/cbu.png" class="r-stretch"></section>
 <section id="ggdogs" class="slide level2">
@@ -435,8 +435,9 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">geom_dog</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">dog =</span> <span class="st">"doge"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># remotes::install_github("R-CoderDotCom/ggdogs@main")</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">geom_dog</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">dog =</span> <span class="st">"doge"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="23-11-cool_files/figure-html/dog points-1.png" width="672"></p>
 </div>
@@ -450,8 +451,9 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">geom_cat</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">cat =</span> <span class="st">"toast"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#remotes::install_github("R-CoderDotCom/ggcats@main")</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">geom_cat</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">cat =</span> <span class="st">"toast"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="23-11-cool_files/figure-html/cat points-1.png" width="672"></p>
 </div>
@@ -465,8 +467,9 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">geom_bernie</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">bernie =</span> <span class="st">"sitting"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># remotes::install_github("R-CoderDotCom/ggbernie@main")</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">geom_bernie</span>(<span class="fu">aes</span>(mpg, wt), <span class="at">bernie =</span> <span class="st">"sitting"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="23-11-cool_files/figure-html/bernie points-1.png" width="672"></p>
 </div>
@@ -576,9 +579,10 @@
 <section id="beepr" class="slide level2">
 <h2>beepr</h2>
 <p>This package will play a sound.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(beepr)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">beep</span>(<span class="dv">1</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># install.packages("beepr")</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(beepr)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">beep</span>(<span class="dv">1</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I actually use this at the end of a long piece of code so I know when it’s done. But I have a useless example on the next slide</p>
 </section>
 <section id="section" class="slide level2">
@@ -608,7 +612,13 @@
 <section id="carelesswhisper" class="slide level2">
 <h2>Carelesswhisper</h2>
 <div class="fragment">
-<p>No, not Wham! It’s a a lightweight (onlt 70mb!) voice recording and transcription package. I’ll have to leave the presentation to show you this in R.</p>
+<p>No, not Wham! It’s a a lightweight (only 70mb!) voice recording and transcription package. I’ll have to leave the presentation to show you this in R.</p>
+</div>
+<div class="fragment">
+<p>“But that’s not useless, Nick!”</p>
+</div>
+<div class="fragment">
+<p>Just you wait</p>
 </div>
 <div class="fragment">
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># install.package('remotes')</span></span>
@@ -633,39 +643,29 @@
 <span id="cb8-20"><a href="#cb8-20"></a><span class="fu">saveRDS</span>(snd, <span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span>
 <span id="cb8-21"><a href="#cb8-21"></a>recording <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment">
-<p>“But that’s not useless, Nick!”</p>
-</div>
-<div class="fragment">
-<p>Just you wait</p>
-</div>
 </section>
 <section id="cowsay" class="slide level2">
 <h2>Cowsay</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(cowsay)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># install.packages("cowsay")</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">library</span>(cowsay)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'cowsay' was built under R version 4.3.2</code></pre>
+<pre><code>Warning: package 'cowsay' was built under R version 4.2.3</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">say</span>(<span class="st">"Cowsay will create an ascii creature saying what you want it to"</span>, <span class="st">"random"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             ------ 
-          Cowsay will create an ascii creature saying what you want it to 
-             ------ 
-                 \   
-                  \  
-                   \
-                      . .     
-                      |\|\_   
-                      /  ^ \  
-                     /  _-_/° 
-   \\\\\\\\\       /   / \    
-  ////////////   /  \ / ||    
- \\\\\\\\\\\\\\ /   /\\ \\    
-////////////////   /  \\ \\   
- \\\\\\\\\\\\\/   /  / `` ``  
-     /////////   \  /  \      
- ML     \\\\\\___/_/___/      </code></pre>
+<pre><code>
+ ----- 
+Cowsay will create an ascii creature saying what you want it to 
+ ------ 
+    \   
+     \
+       _//| .-~~~-.
+     _/oo  }       }-@
+    ('')_  }       |
+     `--'| { }--{  }
+          //_/  /_/ [nosig]
+  </code></pre>
 </div>
 </div>
 </section>

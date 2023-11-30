@@ -62,7 +62,7 @@ What about cats?
 
 ::: fragment
 ```{r cat points}
-# remotes::install_github("R-CoderDotCom/ggcats@main")
+#remotes::install_github("R-CoderDotCom/ggcats@main")
 ggplot(mtcars) +
 geom_cat(aes(mpg, wt), cat = "toast", size = 5)
 ```
@@ -240,6 +240,7 @@ repeat{
 ::: fragment
 No, not Wham! It's a a lightweight (only 70mb!) voice recording and transcription package. I'll have to leave the presentation to show you this in R.
 :::
+
 ::: fragment
 "But that's not useless, Nick!"
 :::
@@ -272,9 +273,7 @@ audio::play(snd, rate = 16100)
 saveRDS(snd, file = "my_recording.rds")
 recording <- readRDS(file = "my_recording.rds")
 ```
-::: 
-
-
+:::
 
 ## Cowsay
 
