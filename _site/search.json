@@ -984,7 +984,7 @@
     "href": "presentations/23-11-cool/23-11-cool.html#cool-but-useless",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "Cool But Useless",
-    "text": "Cool But Useless\n\n\nThis month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n\nggplot() +\n  geom_dog(data = data.frame(x = 1, y = 1), aes(x = x, y = y), dog = \"thisisfine\", size = 10) + \n  geom_dog(data = data.frame(x = 2, y = 1), aes(x = x, y = y), dog = \"pug\", size = 10) +\n  geom_dog(data = data.frame(x = 1.5, y = 1), aes(x = x, y = y), dog = \"doge\", size = 10) +\n  theme_void()"
+    "text": "Cool But Useless\n\n\nThis month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting."
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#how-can-i-find-fun-r-packages",
@@ -998,21 +998,21 @@
     "href": "presentations/23-11-cool/23-11-cool.html#ggdogs",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "ggdogs",
-    "text": "ggdogs\n\nEver wanted to replace the points in your ggplot with dogs?\n\n\n\n# remotes::install_github(\"R-CoderDotCom/ggdogs@main\")\nggplot(mtcars) +\ngeom_dog(aes(mpg, wt), dog = \"doge\", size = 5)"
+    "text": "ggdogs\n\nEver wanted to replace the points in your ggplot with dogs?"
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#ggcats",
     "href": "presentations/23-11-cool/23-11-cool.html#ggcats",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "ggcats",
-    "text": "ggcats\n\nWhat about cats?\n\n\n\n#remotes::install_github(\"R-CoderDotCom/ggcats@main\")\nggplot(mtcars) +\ngeom_cat(aes(mpg, wt), cat = \"toast\", size = 5)"
+    "text": "ggcats\n\nWhat about cats?"
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#ggbernie",
     "href": "presentations/23-11-cool/23-11-cool.html#ggbernie",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "ggbernie",
-    "text": "ggbernie\n\nOr Bernie Sanders?\n\n\n\n# remotes::install_github(\"R-CoderDotCom/ggbernie@main\")\nggplot(mtcars) +\ngeom_bernie(aes(mpg, wt), bernie = \"sitting\", size = 5)"
+    "text": "ggbernie\n\nOr Bernie Sanders?"
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#geom_label",
@@ -1054,7 +1054,7 @@
     "href": "presentations/23-11-cool/23-11-cool.html#cowsay",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "Cowsay",
-    "text": "Cowsay\n\n# install.packages(\"cowsay\")\nlibrary(cowsay)\n\nWarning: package 'cowsay' was built under R version 4.2.3\n\nsay(\"Cowsay will create an ascii creature saying what you want it to\", \"random\")\n\n\n ----- \nCowsay will create an ascii creature saying what you want it to \n ------ \n    \\   \n     \\\n       _//| .-~~~-.\n     _/oo  }       }-@\n    ('')_  }       |\n     `--'| { }--{  }\n          //_/  /_/ [nosig]"
+    "text": "Cowsay\n\n\n             ------ \n          Cowsay will create an ascii creature saying what you want it to \n             ------ \n                 \\   \n                  \\  \n                   \\\n                      . .     \n                      |\\|\\_   \n                      /  @ \\  \n                     /  _-_/° \n   \\\\\\\\\\\\\\\\\\       /   / \\    \n  ////////////   /  \\ / ||    \n \\\\\\\\\\\\\\\\\\\\\\\\\\\\ /   /\\\\ \\\\    \n////////////////   /  \\\\ \\\\   \n \\\\\\\\\\\\\\\\\\\\\\\\\\/   /  / `` ``  \n     /////////   \\  /  \\      \n ML     \\\\\\\\\\\\___/_/___/"
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#cowsay-carelesswhisper",
