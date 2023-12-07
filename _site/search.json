@@ -977,14 +977,14 @@
     "href": "presentations/23-11-cool/23-11-cool.html",
     "title": "UQRUG Presents: Cool But Useless",
     "section": "",
-    "text": "This month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n\nggplot() +\n  geom_dog(data = data.frame(x = 1, y = 1), aes(x = x, y = y), dog = \"thisisfine\", size = 10) + \n  geom_dog(data = data.frame(x = 2, y = 1), aes(x = x, y = y), dog = \"pug\", size = 10) +\n  geom_dog(data = data.frame(x = 1.5, y = 1), aes(x = x, y = y), dog = \"doge\", size = 10) +\n  theme_void()"
+    "text": "This month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting."
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#cool-but-useless",
     "href": "presentations/23-11-cool/23-11-cool.html#cool-but-useless",
     "title": "UQRUG Presents: Cool But Useless",
-    "section": "Cool But Useless",
-    "text": "Cool But Useless\n\n\nThis month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting."
+    "section": "",
+    "text": "This month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting."
   },
   {
     "objectID": "presentations/23-11-cool/23-11-cool.html#how-can-i-find-fun-r-packages",

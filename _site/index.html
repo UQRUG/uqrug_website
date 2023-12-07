@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.243">
+<meta name="generator" content="quarto-1.4.349">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -134,27 +134,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events.html" rel="" target="">
- <span class="menu-text">Events</span></a>
+    <a class="nav-link" href="./events.html"> 
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html" rel="" target="">
- <span class="menu-text">Past Meeting Notess</span></a>
+    <a class="nav-link" href="./pastmeetings.html"> 
+<span class="menu-text">Past Meeting Notess</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html" rel="" target="">
- <span class="menu-text">Community Groups</span></a>
+    <a class="nav-link" href="./community.html"> 
+<span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/uqlibrary/technology-training" rel="" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
-    <a href="https://twitter.com/UQ_RUG" rel="" title="" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" rel="" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
+    <a href="https://github.com/uqlibrary/technology-training" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+    <a href="https://twitter.com/UQ_RUG" title="" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-anchor-id="how-do-i-get-the-zoom-link">How do I get the Zoom link?</h3>
 <p>If you have a UQ affiliated account, you can sign up to the event directly through StudentHub:</p>
 <ul>
-<li><a href="https://studenthub.uq.edu.au/students/events/detail/4796122">UQRUG - 22 November 2023</a></li>
+<li><a href="https://studenthub.uq.edu.au/students/events/detail/4843855">UQRUG - 13 December 2023</a></li>
 </ul>
 <p>Otherwise you can email the UQ Library training team for more help and to get Zoom access: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
 </section>
@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-anchor-id="next-workshop">Next Workshop</h2>
 <div id="listing-latest" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1701266400000" data-listing-file-modified-sort="1701321157172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1701266400000" data-listing-file-modified-sort="1701911940479" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
 <div class="thumbnail">
 <p><a href="./posts/2023-12-06-December-EoY-Competition/index.html"> <img src="./posts/2023-12-06-December-EoY-Competition/cool_but_useless.png" class="thumbnail-image"> </a></p>
 </div>
@@ -219,7 +219,7 @@ December 6th UQRUG Drop-in + End of Year Cool but Useless Competition
 <div class="listing-subtitle">
 </div>
 <div class="listing-description">
-In this special End of Year edition of UQRUG we will be holding a <strong>competition</strong> to see who can create the <strong>Coolest and Most Useless R code</strong> (on the special date of <strong>Wed 6th Dec…</strong>
+In this special End of Year edition of UQRUG we will be holding a <strong>competition</strong> to see who can create the <strong>Coolest and Most Useless R code</strong> (on the special date of <strong>Wed 13th Dec…</strong>
 </div>
 </a>
 </div>
@@ -668,6 +668,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
