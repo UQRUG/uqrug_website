@@ -1,0 +1,36 @@
+---
+title: "January 31st UQRUG Drop-in + Creating a CV / Resume with vitae"
+editor: visual
+author: 'Nicholas Wiggins'
+date: '2024-01-24'
+image: vitae.png
+slug: jan2024
+categories:
+  - workshop
+tags: [R, CV, resume, vitae, rmarkdown, markdown, knitr, tinytex, drop-in, help]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, this month Nick will be going over how to create a CV/Resume using the [vitae](https://pkg.mitchelloharawild.com/vitae/), [rmarkdown](https://rmarkdown.rstudio.com/), and [tinytex](https://yihui.org/tinytex/r/) packages.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="vitae.png" height="100" style="margin-right:-0.2em;"/> <img src="rmarkdown.svg" height="100" style="margin-right:-0.2em;"/> <img src="logo-tinytex.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 31st January, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/4890213)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+------------------------------------------------------------------------
+
+<!-- Browse the slides from the November RUG: -->
+
+<!-- <iframe width="780" height="500" src="/presentations/23-11-cool/23-11-cool.html" title="Cool but Useless Quarto Presentation"> -->
+
+<!-- </iframe> -->
