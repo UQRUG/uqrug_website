@@ -20,6 +20,8 @@ website:
         href: index.qmd
       - events.qmd 
       - pastmeetings.qmd
+      - text: Session Recordings
+        href: https://www.youtube.com/@UQRUG
       - community.qmd
     tools:
       - icon: github

@@ -20,14 +20,14 @@ library(tidyverse)
 
 This month at UQRUG, Valentina will be going over running some basic statistical analyses using R.
 
-Find more details, and the code here: [https://uqrug.netlify.app/posts/2023-08-30-august-stats/](https://uqrug.netlify.app/posts/2023-08-30-august-stats/)
+Find more details, and the code here: <https://uqrug.netlify.app/posts/2023-08-30-august-stats/>
 
 ### Attendees
 
 Add your name, where you're from, and why you're here:
 
 | Name                    | Where are you from?              | What brings you here?                            |
-|------------------|----------------------|--------------------------------|
+|-------------------|----------------------|--------------------------------|
 | Nicholas Wiggins        | Library                          | Here to help!                                    |
 | Valentina Urrutia Guada | Library                          | Here to help :)                                  |
 | Raul Riesco             | ACE                              | Learning/helping                                 |
@@ -51,11 +51,11 @@ Add your name, where you're from, and why you're here:
 
 #### Q1 - What are some good network analysis packages? - Pradeepa/Nick
 
-We're after some good network analysis packages in R to create a dynamic network of the Australian food system. Already aware of Bootnet, igraph, visNetwork and threejs, but haven't explored them a lot yet. Looking for more options and opinions on packages. 
+We're after some good network analysis packages in R to create a dynamic network of the Australian food system. Already aware of Bootnet, igraph, visNetwork and threejs, but haven't explored them a lot yet. Looking for more options and opinions on packages.
 
-**Answers** 
+**Answers**
 
-*   Raul: I think the most used is igraph, I also experimented with networkD3, it has smoother outputs but it has less options. Anyway, all of them are quite difficult to use, for me it was a lot of trial and error to get the simplest of networks \>\_\<. In general I'll recomend igraph as it covers most of basic needs.
+-   Raul: I think the most used is igraph, I also experimented with networkD3, it has smoother outputs but it has less options. Anyway, all of them are quite difficult to use, for me it was a lot of trial and error to get the simplest of networks \>\_\<. In general I'll recomend igraph as it covers most of basic needs.
 
 ------------------------------------------------------------------------
 
@@ -65,12 +65,12 @@ I would like to know if there are any online resources that teach you how to fom
 
 **Answers**
 
-*   [https://search.r-project.org/CRAN/refmans/surveil/html/priors.html](https://search.r-project.org/CRAN/refmans/surveil/html/priors.html) 
-*   rstanarm - [https://mc-stan.org/rstanarm/reference/priors.html](https://mc-stan.org/rstanarm/reference/priors.html) 
-*   [https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html ](https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html)
-*   [https://cran.r-project.org/web/views/Bayesian.html](https://cran.r-project.org/web/views/Bayesian.html) 
+-   <https://search.r-project.org/CRAN/refmans/surveil/html/priors.html>
+-   rstanarm - <https://mc-stan.org/rstanarm/reference/priors.html>
+-   <https://search.r-project.org/CRAN/refmans/BayesCombo/html/plot.PPH.html>
+-   <https://cran.r-project.org/web/views/Bayesian.html>
 
---------
+------------------------------------------------------------------------
 
 #### Q3 - How to transform a .cvs file into an .nc file - Lucas
 
@@ -78,7 +78,7 @@ I have a .cvs file with contains temperature values per month. Also it has attac
 
 **Answers**
 
-*   Nick - I'll follow up with you on this later. We may be able to explore using the [stars](https://r-spatial.github.io/stars/) R package to achieve this
+-   Nick - I'll follow up with you on this later. We may be able to explore using the [stars](https://r-spatial.github.io/stars/) R package to achieve this
 
 ------------------------------------------------------------------------
 
@@ -88,52 +88,50 @@ To test for one of the assumption - data normality before deciding the suitable 
 
 **Answers**
 
-*   Raul: In general, Residual normality is used to test if your data adjust to a linear model. When a test (like ANOVA) has a normality assumption is ussualy refer to normality of data (value). But it will depend on the test. 
-*   Kar: Thank you very much Raul.
+-   Raul: In general, Residual normality is used to test if your data adjust to a linear model. When a test (like ANOVA) has a normality assumption is ussualy refer to normality of data (value). But it will depend on the test.
+-   Kar: Thank you very much Raul.
 
 ------------------------------------------------------------------------
 
 #### Q5 - How do you calculate intra class corelations? - Bernadette
 
-**Answers** 
+**Answers**
 
-*   Using the irr package which has a icc function. Then you simply feed that the dataframe and the parameters/model you're using to calculate the corrlelations.
+-   Using the irr package which has a icc function. Then you simply feed that the dataframe and the parameters/model you're using to calculate the corrlelations.
 
 ------------------------------------------------------------------------
 
-
 #### Q6 - For multiple linear regression, how can we plot it and what's the graph look like? - Jay
 
-**Answers** 
+**Answers**
 
-* Raul:Maybe this will help? [https://rpubs.com/bensonsyd/385183](https://rpubs.com/bensonsyd/385183) "however, in many multiple linear regression situations, the variables we are using cannot be simultaneously represented two-dimensionally so exploring the data visually is far more difficult". All good. It looks like we can't really graph multiple linear regression easily. Thanks a lot.                
+-   Raul:Maybe this will help? <https://rpubs.com/bensonsyd/385183> "however, in many multiple linear regression situations, the variables we are using cannot be simultaneously represented two-dimensionally so exploring the data visually is far more difficult". All good. It looks like we can't really graph multiple linear regression easily. Thanks a lot.
 
-Maybe explore these visualisations?
-[https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1](https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1  )
+Maybe explore these visualisations? <https://statsandr.com/blog/multiple-linear-regression-made-simple/#visualizations-1>
 
-*   If there are interactions between multiple variables then you can't visualise that easily. 
-*   You would have to visualise the plot at different levels of the interaction, as the slope and corrleation would be different at every level of the interaction 
-*   If you have 2 independent variables, you need three dimensions to visualise each variable, and their interaction. OR have a 2D plot at each level of the interaction - like slices through each of those 
-*   The only time this is fine is if there is no interaction between the variables, and you can collapse that extra dimension.
+-   If there are interactions between multiple variables then you can't visualise that easily.
+-   You would have to visualise the plot at different levels of the interaction, as the slope and corrleation would be different at every level of the interaction
+-   If you have 2 independent variables, you need three dimensions to visualise each variable, and their interaction. OR have a 2D plot at each level of the interaction - like slices through each of those
+-   The only time this is fine is if there is no interaction between the variables, and you can collapse that extra dimension.
 
-----
+------------------------------------------------------------------------
 
 #### Q7 - Does anyone know of good R packages for reverse geocoding? - Chris
 
 For example nearest street address to a GPS coordinate
 
-**Answers** 
+**Answers**
 
-*   [https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html ](https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html)
-*   [https://brisbane-geocommunity.netlify.app/](https://brisbane-geocommunity.netlify.app/)
+-   <https://rdrr.io/cran/tmaptools/man/rev_geocode_OSM.html>
+-   <https://brisbane-geocommunity.netlify.app/>
 
-----
+------------------------------------------------------------------------
 
 #### Q8 - Does anyone know how to conduct LD analysis using genepop in R? - Ola
 
-**Answers** 
+**Answers**
 
-*   Raul: Not familiar with genepop package, but according to the manual, they have a LD (linkage desequilibrium) test. The function is
+-   Raul: Not familiar with genepop package, but according to the manual, they have a LD (linkage desequilibrium) test. The function is
 
 ``` r
 test_LD(
