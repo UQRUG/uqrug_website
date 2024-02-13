@@ -1,0 +1,14 @@
+{
+  "hash": "d63bac0200705827b993f82fc0aa3c96",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 15\ndate: '2021-04-19'\ncategories: meeting\n---\n\n\n\n\n### 2021-04-19: UQRUG 15\n\n#### Participants\n\n* **Stéphane Guillou** (Library): I'd like start working on a package to query the MusicBrainz API\n* **Catherine Kim** (Library/Biology): Write a function to automate coral reef image download from US NOAA database CoRIS.  Cleaning up code for sharing.\n* **Rene Erhardt** (Pharmacy): beginner, just listening...\n* **Andy Cui** (Engineering): First time attendance with aim of reshaping spectral data for visualisation purposes\n* **Rhiannon Jeans** (Neuroscience): First time attending the meeting but not new to R. Looking to help others or learn from others. \n* ...\n\n#### TidyTuesday datasets\n\nSee if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets\n\nShare code and pictures here!\n\n\n#### Shared resources\n\n* R Markdown news: https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/\n* reshape2 tutorial: https://www.datacamp.com/community/tutorials/long-wide-data-R\n* Tidyverse information: https://www.tidyverse.org/\n* ggplot2 visualisation wizardry: https://www.cedricscherer.com/slides/useR2021.pdf\n* pipe operator:\n    * first introduced by magrittr: https://github.com/tidyverse/magrittr\n    * but coming to R base: https://cran.r-project.org/doc/manuals/r-devel/NEWS.html\n* R Markdown gallery: https://rmarkdown.rstudio.com/gallery.html\n* Tables\n    * flextable: https://davidgohel.github.io/flextable/\n    * officer: https://davidgohel.github.io/officer/\n    * frequency (for tables similar to SPSS' `FREQUENCIES`): https://github.com/wilcoxa/frequency\n\nFor example, try this:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(frequency)\noptions(frequency_open_output = TRUE)\nmtcars %>% \n  select(carb, cyl) %>% \n  freq()\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

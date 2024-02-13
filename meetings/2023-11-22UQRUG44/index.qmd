@@ -1,0 +1,110 @@
+---
+title: UQRUG 44
+date: '2023-11-22'
+description: '**Overview**: Cool But Useless R Packages at ResBazQlD. <br /> **Questions**: Network stability, RMarkdown, images, plotly, Correlations'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-11-22: UQRUG 44
+
+### R Overview of the Month
+
+This month at UQRUG, for the special ResBazQld edition, Nick will be providing an overview of some **Cool but Useless** ways we can use R. 
+From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete.
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | Library | Here to help! |
+|Bel|QAEHS|To learn cool things.|
+| Cameron West | UQ Library & SMP | To learn!|
+|Jocelyn Hume|UQCCR|Still Learning|
+|Felicity Charles| UQ Gatton| To learn|
+|Souhayel Hedfi|UQ Herston|To learn fun stuff too!|
+|Thomas Boissiere-O'Neill|CHRC|Learn fun stuff|
+|Pradeepa Korale-Gedara|QAAFI|learn and help if I can
+|Brittany Elliott|Griffith Uni|To learn|
+|Valentina Urrutia Guada|UQ Library|Here to learn and help|
+|Noah Rose|UQ|Learn|
+|Adriano Fossati|QUT|Curiosity|
+|Tanya Dodgen|QUT|Curiosity|
+eden hurn|UniSQ|Work and Research
+Kate Osborne|UniSQ| Learn
+|Michaela | Griffith | Learn
+|Mikesh|UQ|love the RUG|
+Catherine Kim | QUT | UQRUG is the best!
+||||
+
+### Questions
+
+#### Q1 - How to measure the stability of a network - Pradeepa
+I am developing a time-series network in R. Network is developed based on the correlation coefficient. 
+R Package called ts2net
+
+**Answers**
+*  Cat: Might have a link to share that could help with this
+
+This is a time series workshop that UQ Library put together: https://qaehs-lib-rtimeseries2022.netlify.app/
+
+Pradeepa,if your question is about neural networks: https://cran.r-project.org/web/packages/stablelearner/stablelearner.pdf
+
+
+
+------------------------------------------------------------------------
+
+#### Q2 - Pros and cons of using R markdown versus word to write journal articles? - Noah
+Any extra details
+
+**Answers**
+Can use Zotero plugged into R to do in-text citations. Unsure if you can use EndNote or Mendeley for the same purposes.
+
+[R-Ladies Brisbane YouTube video](https://youtu.be/AsIzd1f-JUA?si=tSL-vIcFwTTjKZV6)
+
+Pro:
+* Have your code and text in the same document.
+* Markdown could be better for formulas with latex.
+* Can do citations in Rmd with Zotero - need a plugin (betterbibtex?) for Zotero to make unique IDs for each citation.
+* Can export the one document to .docx, .pdf, .html (for slides or as a website)
+
+Con:
+* May have to export to word anyway depending on what the journal accepts.
+* Non-programmers would struggle (if collaborating).
+* Can be fiddly.
+
+Semi-related, unofficial UQ thesis template for Rmarkdown:
+https://github.com/gsiemon/UQThesis
+Antique Article 2014: 
+https://archive.blogs.harvard.edu/pamphlet/2014/08/29/switching-to-markdown-for-scholarly-article-production/
+
+------------------------------------------------------------------------
+
+#### Q3 - Are there packages that allow you to put your own images in R? - edenn subset the data I Answers**
+*  Jocelyn: I just stumbled upon rsvg and ggsvg to add svg images into a ggplot. Also magick package.
+*  Nick: ggimage works just like ggdogs
+
+------------------------------------------------------------------------
+#### Q4 - How to reduce loading time for large plotly graph? - Jocelyn
+I have created some plotly graphs that have a lot of data points and takes a long time to load. Is there a function that I can use so that R is a repeated measurement? Or say to R the Period and Animals they are the experimental unit?
+
+**Answers**
+
+
+------------------------------------------------------------------------
+
+#### Q5 - Correlations in R? - Eden
+Any extra details
+
+**Aneed into plotly
+
+------------------------------------------------------------------------

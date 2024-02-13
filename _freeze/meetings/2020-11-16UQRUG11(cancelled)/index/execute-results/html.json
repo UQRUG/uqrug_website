@@ -1,0 +1,14 @@
+{
+  "hash": "f800f803a48d2b5adc6ac7ba11e2645e",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 11\ndate: '2020-11-16'\ncategories: meeting\n---\n\n\n\n\n### 2020-11-16: UQRUG 11 (cancelled)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

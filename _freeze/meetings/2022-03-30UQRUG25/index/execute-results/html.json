@@ -1,0 +1,14 @@
+{
+  "hash": "9c355dfa7eb52665157e9748a15bea0b",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 25\ndate: '2022-03-30'\ncategories: meeting\n---\n\n\n\n\n### 2022-03-30: UQRUG 25\n\n#### Attendees\n\n* **Steph** (Library): helping out!\n* **Vicki Martin**: Postdoc, SEES\n* **Nisa Abeysinghe**\n* **Richard Bell**: PhD, POLSIS\n* **Chris Mancini**: HDR - MPhil, School of Civil Engineering\n* ... and 6 more UQRUGers!\n\n\n#### Topics discussed and code\n\n##### Big raster files\n\nUse terra instead of raster, and use a temporary directory:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(terra)\nterraOptions(tempdir = \"path to somewhere with lots of space\")\nas.points() # instead of rasterToPoints()\n```\n:::\n\n\nThe [Research Computing Centre](https://rcc.uq.edu.au/) can also provide access to supercomputers\n\n\n##### [Patchwork](https://patchwork.data-imaginist.com/) for joining plots made with [ggforestplot](https://nightingalehealth.github.io/ggforestplot/articles/ggforestplot.html)\n\nTo merge two plots with the same y-axis. After creating Forest plot 1 (with y-axis labels), create Forest plot 2 with y-axis labels removed:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggforestplot)\nF2plot <- \n  forestplot(\n    df = F2,\n    name = term,\n    estimate = estimate,\n    se = std.error,\n    pvalue = p.value,\n    psignif = 0.05, \n    title = \"Plot 2\",\n    xlab = \"estimate\",\n    ylab = element_text(family = \"\", size = 10)\n  )+ \n  theme(axis.text.y = element_blank())\n```\n:::\n\n\nOr try replacing text in ylab (above) to ylab = \"\"\n\nThen merge the plots:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(patchwork)\nF1plot / F2plot\n```\n:::\n\n\n##### Slow `check_model()`\n\n`check_model()` in [performance](https://easystats.github.io/performance/) package: weird behaviour in R Markdown, takes too long to execute. Richard might come back later with the answer!\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

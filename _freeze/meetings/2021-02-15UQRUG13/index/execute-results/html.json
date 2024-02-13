@@ -1,0 +1,14 @@
+{
+  "hash": "390ce19df5ed0f1cf502f568e4de7af7",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 13\ndate: '2021-02-15'\ncategories: meeting\n---\n\n\n\n\n### 2021-02-15: UQRUG 13\n\n#### Participants\n\n* **Stéphane Guillou** (Library): just happy to help and share resources! Looking for a quick way to do adress lookups.\n*  **Paula Andrea Martinez** (co-organiser/ helper) Happy to share new ways of doing things. looking to plot answers from mentimeter.\n* David\n* Einat\n* Alphabet\n* Patrick\n\n\n#### Shared resources\n\n* Tidytext interactive course: https://juliasilge.com/blog/learn-tidytext-learnr/\n* Pattern-based analysis with motif: https://nowosad.github.io/motif/\n* ROpenSci Newsletter: https://news.ropensci.org/\n* R Markdown:\n    * Slides: https://slides.djnavarro.net/starting-rmarkdown\n    * Training at UQ: search for \"Reproducible Reports\"\n    * QCIF training: https://www.qcif.edu.au/training/training-courses/\n    * Carpentries chapter on R Markdown: https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html\n* New Shiny version with easier theming: https://blog.rstudio.com/2021/02/01/shiny-1-6-0/\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

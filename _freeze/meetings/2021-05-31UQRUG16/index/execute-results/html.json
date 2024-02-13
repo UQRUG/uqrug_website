@@ -1,0 +1,14 @@
+{
+  "hash": "6197abce18935810b54b12088df82d30",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 16\ndate: '2021-05-31'\ncategories: meeting\n---\n\n\n\n\n### 2021-05-31: UQRUG 16\n\n#### Participants\n\n* **Catherine Kim** (Library/Biology): using the R package boral for multivariate data ...\n* **Stéphane Guillou** (Library): playing with APIs, trying the MusicBrainz one at the moment to build a Shiny app...?\n* **David Green** (UQ RCC) helping HPC users to get R code running on the HPC ...\n*  ** Roman Scheurer (UQ QCMHR): Interested in using RStudio for large population-level and time series data, applying geographic information systems to identify patterns of health utilisation\n*  ... and a few more!\n\n\n\n#### TidyTuesday datasets\n\nSee if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets\n\nShare code and pictures here!\n\n\n#### Shared resources\n\n* R-Ladies Brisbane has a YouTube channel! First video is a presentation by Julie Vercelloni: https://www.youtube.com/watch?v=L_8e2xuyttI\n* R 4.1 and RStudio: https://community.rstudio.com/t/psa-r-4-1-0-release-requires-rstudio-preview/105209\n    * What's new in R 4.1: https://cran.r-project.org/doc/manuals/r-release/NEWS.html\n    * If you need the preview version to fix the graphics issues: https://www.rstudio.com/products/rstudio/download/preview/\n* useR 2021 conference: https://user2021.r-project.org/participation/registration/\n* Share code on GitHub: https://github.com/\n* Import LAS dataset with lidR package: https://jean-romain.github.io/lidRbook/\n* `after_stat()` function in ggplot2: https://www.tidyverse.org/blog/2020/03/ggplot2-3-3-0/#more-control-over-aesthetic-evaluation\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

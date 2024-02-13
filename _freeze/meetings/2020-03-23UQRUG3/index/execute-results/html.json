@@ -1,0 +1,14 @@
+{
+  "hash": "a4e540b4ad2a509a05d235cb6cf9ad28",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 3\ndate: '2020-03-23'\ncategories: meeting\n---\n\n\n\n\n### 2020-03-23: UQRUG 3\n\n_Canceled because of UQ recommendations related to COVID-19._\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

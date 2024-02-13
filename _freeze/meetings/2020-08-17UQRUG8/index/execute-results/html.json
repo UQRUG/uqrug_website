@@ -1,0 +1,14 @@
+{
+  "hash": "bf7bf8e717354ccc3c9984f5fa351bbc",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 8\ndate: '2020-08-17'\ncategories: meeting\n---\n\n\n\n\n### 2020-08-17: UQRUG 8\n\n#### Attendees and problems\n\nPlease add your name and the problem you'd like some help with!\n\n* **Stéphane** (Library): no specific problem, here to help! :)\n* **Dhananjeyan**: New to R, Trying to learn more\n* **Phoebe**: Hi everybody, I started learning R last week (self-directed). I have problems using the right code for missing data and doing linear regression with categorical data. I am happy to learn other things as well!\n* **Fathin** (SAFS): Problem yet to come, haha. I am going to add moving average on my boxplot. Don't know how can I do that.\n* **Patrick** ($SAFS$): I got a problem of GLM(). Plotting mutiple model over a time period. \n* **Elspeth** Hi, I just started learning R last week as well. Just here to learn generally, no specific problem :)\n* **Paula** CAI. I want to show you between and near for filters, using tidyverse\n* **Evan** (QBI) Been using R for stats for about 3 years, will be doing some bioinformatics for PhD, and joining in to meet other people also using R (no specific problem - yet)\n* **Jemima** Want to understand some warning messages in my CLMM analyses\n\n\n#### Shared resources\n\n* Jemima's CLMM and stats questions:\n    * Patrick: \"My biometrician recommended AIC the lower the better\"\n    * Evan: \"this guide to fitting clmm that mght be helpful as well\": https://cran.r-project.org/web/packages/ordinal/vignettes/clmm2_tutorial.pdf \n    * Paula: https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=The%20AIC%20function%20is%202K,it%20is%20being%20compared%20to \n    * Fathin recommends this QCIF course: _Exploring and Predicting using Linear Regression in R_ -- https://www.qcif.edu.au/trainingcourses/exploring-and-predicting-using-linear-regression/ \n    * Stéphane: the first warning you saw is related to recent R changes (in R 4.0) and it will be fixed in a future version of ordinal: https://github.com/runehaubo/ordinal/issues/34\n* Patrick's plotting of multiple models over time:\n    * Paula: http://www.sthda.com/english/articles/32-r-graphics-essentials/128-plot-time-series-data-using-ggplot/ \n* Cheatsheets: https://rstudio.com/resources/cheatsheets/\n* Join R-Ladies!\n    * Brisbane: https://www.meetup.com/rladies-brisbane/\n        * on Twitter: https://twitter.com/RLadiesBrisbane/\n    * Global: https://rladies.org/\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

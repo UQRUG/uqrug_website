@@ -1,0 +1,14 @@
+{
+  "hash": "531773776cc7eab41a757a68506e4dcf",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 26\ndate: '2022-04-27'\ncategories: meeting\n---\n\n\n\n\n### 2022-04-27: UQRUG 26\n\n#### Attendees\n\n* Stéphane\n* Veronika\n* Chris\n* Thuong\n* Lily\n* David\n\n\n#### Topics discussed and code\n\n* Machine learning with caret and glmnet\n* High-performance computing: https://rcc.uq.edu.au/high-performance-computing\n* Spatial data: sf, sfnetworks... Austroad dashboard\n* Interactive viusalisations: plotly, highcharter, networkD3, leaflet, tmap, crosstalk, Shiny...\n* API / direct link for accessing government data that gets updated weekly (see below)\n\n\n##### Tide data\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Whyte island, station measuring tide level\n\npath <- \"http://opendata.tmr.qld.gov.au/Whyte_Island.txt\"\n# read with base function, ignore first lines, keep two columns\ntide_data <- read.table(path, skip = 5)[,1:2]\n# name the column\nnames(tide_data) <- c(\"date_time\", \"LAT\")\n\n# same with readr\nlibrary(readr)\nlibrary(dplyr)\ntide_data <- read_table(path, skip = 5,\n                        col_names = FALSE) %>% \n  select(1:2) %>% \n  rename(date_time = 1, LAT = 2)\n\n# split the date time\nlibrary(lubridate)\ntide_data <- tide_data %>% \n  mutate(date_time = dmy_hm(date_time))\n# filter and visualise\nlibrary(ggplot2)\ntide_data %>% \n  filter(LAT > 0.01) %>% \n  ggplot(aes(x = date_time, y = LAT)) +\n  geom_line()\n\n# save only the first time:\n# write.csv(tide_data, \"all_tide_data.csv\", row.names = FALSE)\n\n# append new data\nall_tide_data <- read_csv(\"all_tide_data.csv\")\nall_tide_data <- bind_rows(all_tide_data, tide_data) %>% \n  unique() # check for duplicates\n# overwrite file\nwrite.csv(all_tide_data, \"all_tide_data.csv\", row.names = FALSE)\n```\n:::\n\n\nAutomate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

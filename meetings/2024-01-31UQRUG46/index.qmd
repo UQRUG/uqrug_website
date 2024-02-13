@@ -1,0 +1,122 @@
+---
+title: UQRUG 46
+date: '2024-01-31'
+description: '**Overview**: Creating CVs in R with vitae and RMarkdown. <br /> **Questions**: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings. '
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2024-01-31: UQRUG 46
+
+### R Overview of the Month
+
+This month at UQRUG, Nick will be going over how to create a csv data-driven CV/Resume using the [vitae](https://pkg.mitchelloharawild.com/vitae/), [rmarkdown](https://rmarkdown.rstudio.com/), and [tinytex](https://yihui.org/tinytex/r/) packages.
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | UQ Library | Here to help! |
+|Jocelyn Hume|UQCCR|Enjoying using R|
+|Pia Wohland|SENV|Learning more about R|
+|Rio Button|SENV|Wanting to get comfy with R|
+||||
+|Jessica Hintzsche|QAAFI|You can't get rid of me|
+|Christina Maxwell|School of Psychology|Here to learn|
+|Kiara Minto|Poche|Learn more R skills - social media scraping and webpage design especially|
+|Cameron West|UQ Library / SMP| Here to learn and help!|
+|Zoe MacLean | HASS research assistant |Just haven't been by in a while! |
+|Pradeepa Korale-Gedara|Postdoctoral Research Fellow|to learn and help| 
+|Danelle Kenny|CHSR|Still learning R|
+|Jovenal Gama Pinto|Brisbane|Learn R |
+|David Green|UQ RCC|Here to learn and help- win win|
+|Christopher Sexton | Poche|Build on R skills and learn new packages. |
+Chantelle Derez|SEES|Increasing R skills
+||||
+Monika Walia |PhD student at ISSR, UQ | keen to learn more about R :)
+Ana Batallas | PhD student, QBI | want to learn coding
+|Sy Mao|PhD student, QAAFI|need help with creating figures with R|
+|Ayu Paramecwari|PhD Student, PFSC (Psychology)|Need to start learning R as my PhD team will use R for quantitative stats :)|
+### Questions
+
+
+#### Q1 - Pia - ggplotly bumpchart
+Just in case someone has come accross this problem and found a solution.
+I created a bump chart which looks fine, but if I uses ggplotly the left align text becomes central. Anybody know how is there a way to left align the text again within ggploty?
+
+
+**Answers**
+*  There might be a way using plotly layouts, but we will have to do some digging for this.
+    *  https://plotly.com/r/reference/layout/
+*  Alternatively, you may be better off creating the chart in plotly from the start... though this requires learning plotly.
+
+---
+
+#### Q2 - Jocelyn - There are certain packages that I use all the time, is there a way to load these packages by default in R Studio?
+Any extra details
+
+**Answers**
+
+* David - Create a text file that has a list of all the packages you want to run at the start of each script you use.
+* ``source(file_containing_library()_commands)``
+* Cameron - I like David's answer because it's not as hard-coded, but you can do it by adjusting your Rprofile.site file.
+    1. Navigate to your R home directory (where R, not RStudio, is stored). You can find this by running `R.home()`
+    2. Inside this directory, navigate to `/R-4.x.x/etc/RProfile.site`, open this file (you can use RStudio)
+    3. Insert the lines `library(package)` for each package you want to import as per normal.
+
+    Alternatively, you can use `R_DEFAULT_PACKAGES = 'package1, package2, package3, ...'` inside this Rprofile.site file to specify all the default packages you want, but it will override the normal defaults, meaning they *won't* be imported unless you specify them too.
+    
+    Personally, I think David's solution is better.
+
+----
+
+
+#### Q3 - DavidG - Comment about how pandoc does its thing
+
+This diagram and paragraph explains what happens while knitr is rendering
+https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown.html#how-things-get-compiled
+
+**Answers**
+
+----
+
+
+#### Q4 - Renna - I need to analyse data statistically across different factors/categories in the specific columns. I am still new to using R, so I can proceed that one by one. How can I do it by using for loop? Sorry for the trivial question :D
+Any extra details
+
+**Answers**
+
+Set up a loop with parameters similar to what is below
+```r
+for (i in c("t1", "t2", "t3")) {
+
+}
+```
+You would need to assign the output of this to a dataframe 
+
+----
+
+#### Q5 - Sy - Question: How to get rid of gridlines of uneven thickness in a heatmap? 
+ggplot2 heatmap has large gridlines on the left and thin ones on the right.
+
+
+
+**Answers**
+
+There seems to be something weird happening when the image is exported.
+Something to explore later.
+
+----
+#### Q6 - Danelle - Question: I'm combining dataframes using tidy and the tibble is populating normally, but writing to excel loses the column headings. I've tried header=TRUE and that didn't help. Any idea how to retain column headings from tibble to excel?
+Any extra details
+
+**Answers**

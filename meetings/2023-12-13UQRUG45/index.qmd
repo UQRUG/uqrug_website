@@ -1,0 +1,68 @@
+---
+title: UQRUG 45
+date: '2023-12-13'
+description: '**Overview**: End of Year Cool But Useless Competition. <br /> **Questions**: lmer model'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2023-12-13: UQRUG 45
+
+### R Overview of the Month
+
+This month at UQRUG, for the End of Year we will  be having the **Cool But Useless** competition, where community members will share their creative code that shows off some fun things you can do with R.
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | Library | Here to help! |
+| Lauren Fuge | undergrad biomed & statistics! | here to beat cameron |
+| Cameron West | Library / Physics | Here to win |
+|Tamara|HDR STUDENT|QAAFI-CAS|Here to ask a tricky question
+| David Miles | Library | Learning |
+|Christina Maxwell|Psychology|Interested to learn|
+|Anne-Claire Bouton | Econ/data science | To improve my R skills |
+|Souhayel Hedfi| CHSR Herston - health econ. | To see the useless yet cool participations|
+|Rio Button|School of the Environment|to learn / get a secound opinion/ watch
+
+
+### Votes for Coolest and Most Useless RUG
+
+| Nick | Cameron | Lauren| David |
+|--------|-------|--------|--------|
+||XIIxi##|iIXIIx|I|
+
+
+### Questions
+
+
+#### Q1 - How to tell R in my model that I have repeated measurements: a bit of background
+I have this model - my supervisor uses sas and and sas you can tell the model the experimental unit
+
+summary(lmer(log_Grazing_Percentage ~ Period + Count_RSSI_GE_Minus50 + Period:Count_RSSI_GE_Minus50 +
+       (1 + Count_RSSI_GE_Minus50 | Animal_id:Period),
+     data = fp))
+Fixed effects:
+                               Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                    1.274369   0.057739  36.627445  22.071   <2e-16 ***
+Period                        -0.012289   0.035668  33.633624  -0.345   0.7326    
+Count_RSSI_GE_Minus50          0.006682   0.003264 473.393660   2.047   0.0412 *  
+Period:Count_RSSI_GE_Minus50  -0.003470   0.001700 459.550503  -2.041   0.0418 * 
+
+The problem I am having is that I want the df to be 26, not these others because they are all repeated measurements for the same 14 animals in 2 different periods. 
+Is there a function that I can use so that R is a repeated measurement? Or say to R the Period and Animals they are the experimental unit?
+
+**Answers**
+*  Name:  Answer
+
+---

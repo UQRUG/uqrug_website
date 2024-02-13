@@ -1,0 +1,14 @@
+{
+  "hash": "1680fecf466ddf5450b965d3e86ba42d",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 31\ndate: '2022-09-28'\ncategories: meeting\n---\n\n\n\n\n### 2022-09-28: UQRUG 31\n\n#### Attendees\n\n* **Luke**: Library | here to help\n* **Valentina**: Library | Listen, learn and help\n* **Tianjian**: Economics | Listen and learn\n* **Nick**: Library | here to help\n\n\n#### Topics discussed and code\n\nCovered some of the basics around creating, and the differences between, arrays and dataframes.\n\nWorked on reviving the R-based mailing list for RUG.\n    \n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

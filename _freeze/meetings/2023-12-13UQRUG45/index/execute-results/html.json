@@ -1,0 +1,14 @@
+{
+  "hash": "cd8ef7ca4e478e2cdbe7a62d1aeef356",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 45\ndate: '2023-12-13'\ndescription: '**Overview**: End of Year Cool But Useless Competition. <br /> **Questions**: lmer model'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n## 2023-12-13: UQRUG 45\n\n### R Overview of the Month\n\nThis month at UQRUG, for the End of Year we will  be having the **Cool But Useless** competition, where community members will share their creative code that shows off some fun things you can do with R.\n\n### Attendees\nAdd your name, where you're from, and why you're here:\n\n| Name | Where are you from? | What brings you here? |\n|--------|--------|--------|\n| Nicholas Wiggins | Library | Here to help! |\n| Lauren Fuge | undergrad biomed & statistics! | here to beat cameron |\n| Cameron West | Library / Physics | Here to win |\n|Tamara|HDR STUDENT|QAAFI-CAS|Here to ask a tricky question\n| David Miles | Library | Learning |\n|Christina Maxwell|Psychology|Interested to learn|\n|Anne-Claire Bouton | Econ/data science | To improve my R skills |\n|Souhayel Hedfi| CHSR Herston - health econ. | To see the useless yet cool participations|\n|Rio Button|School of the Environment|to learn / get a secound opinion/ watch\n\n\n### Votes for Coolest and Most Useless RUG\n\n| Nick | Cameron | Lauren| David |\n|--------|-------|--------|--------|\n||XIIxi##|iIXIIx|I|\n\n\n### Questions\n\n\n#### Q1 - How to tell R in my model that I have repeated measurements: a bit of background\nI have this model - my supervisor uses sas and and sas you can tell the model the experimental unit\n\nsummary(lmer(log_Grazing_Percentage ~ Period + Count_RSSI_GE_Minus50 + Period:Count_RSSI_GE_Minus50 +\n       (1 + Count_RSSI_GE_Minus50 | Animal_id:Period),\n     data = fp))\nFixed effects:\n                               Estimate Std. Error         df t value Pr(>|t|)    \n(Intercept)                    1.274369   0.057739  36.627445  22.071   <2e-16 ***\nPeriod                        -0.012289   0.035668  33.633624  -0.345   0.7326    \nCount_RSSI_GE_Minus50          0.006682   0.003264 473.393660   2.047   0.0412 *  \nPeriod:Count_RSSI_GE_Minus50  -0.003470   0.001700 459.550503  -2.041   0.0418 * \n\nThe problem I am having is that I want the df to be 26, not these others because they are all repeated measurements for the same 14 animals in 2 different periods. \nIs there a function that I can use so that R is a repeated measurement? Or say to R the Period and Animals they are the experimental unit?\n\n**Answers**\n*  Name:  Answer\n\n\n---",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

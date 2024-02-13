@@ -1,0 +1,14 @@
+{
+  "hash": "af69656aefa2e36471b93abefaa959f3",
+  "result": {
+    "markdown": "---\ntitle: UQRUG 22\ndate: '2021-11-15'\ncategories: meeting\n---\n\n\n\n\n### 2021-11-15: UQRUG 22\n\n#### Attendees\n\n* **Catherine**: Biology/Library, publish data for a paper \n* **Grechel**: PhD candidate/ PACE temporal trend analysis\n* **Siu**: Bachelor of Biomedical Science\n* **Einat**: PhD candidate / Civil Engineering School \n\n\n#### Code snippets\n\nExample of for loop vs map() function from purrr package.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# for loop to calculate the median of every column in mtcars\noutput <- vector(\"double\", ncol(mtcars))\nfor (i in seq_along(mtcars)) {\n   output[[i]] <- median(mtcars[[i]])\n}\noutput # see the output\n\n# same as above using a map() function\nmap_dbl(mtcars, median)\n```\n:::\n\n\n#### Shared resources\n\n* See Stéphane's [tidyverse lesson](https://gitlab.com/stragu/DSH/-/blob/master/R/tidyverse_next_steps/tidyverse_next_steps.md) for more on purrr\n* [ResBazQLD 2021](https://resbaz.github.io/resbaz2021/brisbane/) running 24-26th of Nov at UQ. Regsitration is $25.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
