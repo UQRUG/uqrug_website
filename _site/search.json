@@ -431,7 +431,7 @@
     "href": "community.html",
     "title": "Community Groups",
     "section": "",
-    "text": "The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in ‘next generation digital research tools and skills’.\nResearchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend.\n    When: November 21-23 2023\n    Where: UQ St Lucia in the Michie Building\n    More Details: The ResBaz2023Qld Website"
+    "text": "A gathering for Python users of any proficiency, to help each other solve problems, share resources and tips, discover new features and hang out as a friendly community.\n    When: First Thursday of the month from 10am to 11:30am\n    Where: In-Person at UQ Central Library 12-N109\n    More Details: The UQ Python User Group"
   },
   {
     "objectID": "community.html#resbaz2023qld",
@@ -444,8 +444,8 @@
     "objectID": "community.html#uq-python-user-group",
     "href": "community.html#uq-python-user-group",
     "title": "Community Groups",
-    "section": "UQ Python User Group",
-    "text": "UQ Python User Group\n\n\n\n\n\n\n\n\n\n\n\n\nA gathering for Python users of any proficiency, to help each other solve problems, share resources and tips, discover new features and hang out as a friendly community.\n    When: First Thursday of the month from 10am to 11:30am\n    Where: In-Person at UQ Central Library 12-N109\n    More Details: The UQ Python User Group Noteable Document"
+    "section": "",
+    "text": "A gathering for Python users of any proficiency, to help each other solve problems, share resources and tips, discover new features and hang out as a friendly community.\n    When: First Thursday of the month from 10am to 11:30am\n    Where: In-Person at UQ Central Library 12-N109\n    More Details: The UQ Python User Group"
   },
   {
     "objectID": "community.html#r-ladies-brisbane",
@@ -1167,5 +1167,12 @@
     "title": "UQRUG 45",
     "section": "",
     "text": "This month at UQRUG, for the End of Year we will be having the Cool But Useless competition, where community members will share their creative code that shows off some fun things you can do with R.\n\n\n\nAdd your name, where you’re from, and why you’re here:\n\n\n\n\n\n\n\n\nName\nWhere are you from?\nWhat brings you here?\n\n\n\n\nNicholas Wiggins\nLibrary\nHere to help!\n\n\nLauren Fuge\nundergrad biomed & statistics!\nhere to beat cameron\n\n\nCameron West\nLibrary / Physics\nHere to win\n\n\nTamara\nHDR STUDENT\nQAAFI-CAS\n\n\nDavid Miles\nLibrary\nLearning\n\n\nChristina Maxwell\nPsychology\nInterested to learn\n\n\nAnne-Claire Bouton\nEcon/data science\nTo improve my R skills\n\n\nSouhayel Hedfi\nCHSR Herston - health econ.\nTo see the useless yet cool participations\n\n\nRio Button\nSchool of the Environment\nto learn / get a secound opinion/ watch\n\n\n\n\n\n\n\n\n\nNick\nCameron\nLauren\nDavid\n\n\n\n\n\nXIIxi##\niIXIIx\nI\n\n\n\n\n\n\n\n\nI have this model - my supervisor uses sas and and sas you can tell the model the experimental unit\nsummary(lmer(log_Grazing_Percentage ~ Period + Count_RSSI_GE_Minus50 + Period:Count_RSSI_GE_Minus50 + (1 + Count_RSSI_GE_Minus50 | Animal_id:Period), data = fp)) Fixed effects: Estimate Std. Error df t value Pr(&gt;|t|)\n(Intercept) 1.274369 0.057739 36.627445 22.071 &lt;2e-16 ** Period -0.012289 0.035668 33.633624 -0.345 0.7326\nCount_RSSI_GE_Minus50 0.006682 0.003264 473.393660 2.047 0.0412 \nPeriod:Count_RSSI_GE_Minus50 -0.003470 0.001700 459.550503 -2.041 0.0418 *\nThe problem I am having is that I want the df to be 26, not these others because they are all repeated measurements for the same 14 animals in 2 different periods. Is there a function that I can use so that R is a repeated measurement? Or say to R the Period and Animals they are the experimental unit?\nAnswers * Name: Answer"
+  },
+  {
+    "objectID": "community.html#geospatial-share-community",
+    "href": "community.html#geospatial-share-community",
+    "title": "Community Groups",
+    "section": "GeoSpatial Share Community",
+    "text": "GeoSpatial Share Community\n\n\n\n\n\n\n\n\n\n\n\n\nA monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.\n    When: Around the last Thursday of the month in the afternoon.\n    Where: Online. For meeting details please email geocommunity @ gmail dot com\n    More Details: The GeoSpatial Share Community website"
   }
 ]

@@ -5,34 +5,34 @@ metadata-files:
   - _page.yml
 ---
 
-## ResBaz2023Qld
+<!-- ## ResBaz2023Qld -->
 
-::: columns
-::: {.column width="17%"}
-<p float="left">
+<!-- ::: columns -->
+<!-- ::: {.column width="17%"} -->
+<!-- <p float="left"> -->
 
-[![](images/ResBazQLD_2023.png){fig-alt="ResBaz2023Qld Logo" width="100%"}](https://resbaz.github.io/resbaz2023qld/)
+<!-- [![](images/ResBazQLD_2023.png){fig-alt="ResBaz2023Qld Logo" width="100%"}](https://resbaz.github.io/resbaz2023qld/) -->
 
-</p>
-:::
+<!-- </p> -->
+<!-- ::: -->
 
-::: {.column width="3%"}
+<!-- ::: {.column width="3%"} -->
 <!-- empty column to create gap -->
-:::
+<!-- ::: -->
 
-::: {.column width="80%"}
-The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'.
+<!-- ::: {.column width="80%"} -->
+<!-- The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'. -->
 
-Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend.
+<!-- Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend. -->
 
-|     **When**: November 21-23 2023
+<!-- |     **When**: November 21-23 2023 -->
 
-|     **Where**: UQ St Lucia in the Michie Building
+<!-- |     **Where**: UQ St Lucia in the Michie Building -->
 
-|     **More Details**: The [ResBaz2023Qld Website](https://resbaz.github.io/resbaz2023qld/)
-:::
-:::
+<!-- |     **More Details**: The [ResBaz2023Qld Website](https://resbaz.github.io/resbaz2023qld/) -->
+<!-- ::: -->
 
+<!-- ::: -->
 
 ## UQ Python User Group
 
@@ -40,7 +40,7 @@ Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters
 ::: {.column width="17%"}
 <p float="left">
 
-[![](images/python-logo-only.svg){fig-alt="Python Logo" width="100%"}](https://bit.ly/UQPUG)
+[![](images/python-logo-only.svg){fig-alt="Python Logo" width="100%"}](https://bit.ly/uqpug)
 
 </p>
 :::
@@ -56,7 +56,7 @@ A gathering for Python users of any proficiency, to help each other solve proble
 
 |     **Where**: In-Person at UQ Central Library 12-N109
 
-|     **More Details**: The [UQ Python User Group Noteable Document](https://bit.ly/UQPUG)
+|     **More Details**: The [UQ Python User Group](https://bit.ly/uqpug)
 :::
 :::
 
@@ -112,13 +112,13 @@ For UQ researchers to get support with research-related technical issues.
 :::
 :::
 
-## The GeoSpatial Community
+## GeoSpatial Share Community
 
 ::: columns
 ::: {.column width="17%"}
 <p float="left">
 
-[![](images/turkeypin.svg){fig-alt="GeoSpatial Community Logo" width="100%"}](https://brisbane-geocommunity.netlify.app/)
+[![](images/turkeypin.svg){fig-alt="GeoSpatial Share Community Logo" width="100%"}](https://brisbane-geocommunity.netlify.app/)
 
 </p>
 :::
@@ -134,7 +134,7 @@ A monthly geospatial skill sharing tutorial sessions where a member of the commu
 
 |     **Where**: Online. For meeting details please email geocommunity \@ gmail dot com
 
-|     **More Details**: The [GeoSpatial Community website](https://brisbane-geocommunity.netlify.app/)
+|     **More Details**: The [GeoSpatial Share Community website](https://brisbane-geocommunity.netlify.app/)
 :::
 :::
 
