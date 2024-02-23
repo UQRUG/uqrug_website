@@ -8,19 +8,25 @@ metadata-files:
 <!-- ## ResBaz2023Qld -->
 
 <!-- ::: columns -->
+
 <!-- ::: {.column width="17%"} -->
+
 <!-- <p float="left"> -->
 
 <!-- [![](images/ResBazQLD_2023.png){fig-alt="ResBaz2023Qld Logo" width="100%"}](https://resbaz.github.io/resbaz2023qld/) -->
 
 <!-- </p> -->
+
 <!-- ::: -->
 
 <!-- ::: {.column width="3%"} -->
+
 <!-- empty column to create gap -->
+
 <!-- ::: -->
 
 <!-- ::: {.column width="80%"} -->
+
 <!-- The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'. -->
 
 <!-- Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend. -->
@@ -30,6 +36,7 @@ metadata-files:
 <!-- |     **Where**: UQ St Lucia in the Michie Building -->
 
 <!-- |     **More Details**: The [ResBaz2023Qld Website](https://resbaz.github.io/resbaz2023qld/) -->
+
 <!-- ::: -->
 
 <!-- ::: -->
@@ -112,13 +119,13 @@ For UQ researchers to get support with research-related technical issues.
 :::
 :::
 
-## GeoSpatial Share Community
+## GeoSpatial Share
 
 ::: columns
 ::: {.column width="17%"}
 <p float="left">
 
-[![](images/turkeypin.svg){fig-alt="GeoSpatial Share Community Logo" width="100%"}](https://brisbane-geocommunity.netlify.app/)
+[![](images/turkeypin.svg){fig-alt="GeoSpatial Share Logo" width="100%"}](https://brisbane-geocommunity.netlify.app/)
 
 </p>
 :::
@@ -134,11 +141,11 @@ A monthly geospatial skill sharing tutorial sessions where a member of the commu
 
 |     **Where**: Online. For meeting details please email geocommunity \@ gmail dot com
 
-|     **More Details**: The [GeoSpatial Share Community website](https://brisbane-geocommunity.netlify.app/)
+|     **More Details**: The [GeoSpatial Share website](https://brisbane-geocommunity.netlify.app/)
 :::
 :::
 
-## QUT/UQ Office Hours
+## Australian Digital Observatory
 
 ::: columns
 ::: {.column width="17%"}
@@ -156,9 +163,9 @@ A monthly geospatial skill sharing tutorial sessions where a member of the commu
 ::: {.column width="80%"}
 For Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.
 
-|     **When**: Fortnightly on Tuesdays, 2pm--3pm **AEDT** (1pm AEST).
+|     **When**: Consultations by Appointment
 
-|     **Where**: Online. For Zoom meeting details please [register to attend here](https://qut.zoom.us/meeting/register/tZEvcOqrrjkvHNH2ZqG5yed7Gh15Rp19Vatm).
+|     **Where**: Online.
 
 |     **More Details**: The [Australian Digital Observatory website](https://www.digitalobservatory.net.au/office-hours/).
 :::
