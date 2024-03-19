@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-01-31">
+<meta name="description" content="Overview: Creating CVs in R with vitae and RMarkdown.   Questions: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.">
 
-<title>UQRUG - Community Groups</title>
+<title>UQRUG - UQRUG 46</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/uqrug_fav.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,12 +100,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="UQRUG - Community Groups">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="UQRUG - UQRUG 46">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG - Community Groups">
+<meta name="twitter:title" content="UQRUG - UQRUG 46">
+<meta name="twitter:description" content="Overview: Creating CVs in R with vitae and RMarkdown.  Questions: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.">
 <meta name="twitter:image" content="images/uqrug_twitter.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -80,10 +118,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/uqrug.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">UQRUG</span>
     </a>
   </div>
@@ -94,19 +132,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events.html" rel="" target="">
+    <a class="nav-link" href="../../events.html" rel="" target="">
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html" rel="" target="">
+    <a class="nav-link" href="../../pastmeetings.html" rel="" target="">
  <span class="menu-text">Past Meeting Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./community.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../community.html" rel="" target="">
  <span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
@@ -128,184 +166,201 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#uq-python-user-group" id="toc-uq-python-user-group" class="nav-link active" data-scroll-target="#uq-python-user-group">UQ Python User Group</a></li>
-  <li><a href="#r-ladies-brisbane" id="toc-r-ladies-brisbane" class="nav-link" data-scroll-target="#r-ladies-brisbane">R-Ladies Brisbane</a></li>
-  <li><a href="#hacky-hour-uq" id="toc-hacky-hour-uq" class="nav-link" data-scroll-target="#hacky-hour-uq">Hacky Hour UQ</a></li>
-  <li><a href="#geospatial-share" id="toc-geospatial-share" class="nav-link" data-scroll-target="#geospatial-share">GeoSpatial Share</a></li>
-  <li><a href="#australian-digital-observatory" id="toc-australian-digital-observatory" class="nav-link" data-scroll-target="#australian-digital-observatory">Australian Digital Observatory</a></li>
+  <li><a href="#uqrug-47" id="toc-uqrug-47" class="nav-link active" data-scroll-target="#uqrug-47">2024-02-28: UQRUG 47</a>
+  <ul>
+  <li><a href="#r-overview-of-the-month" id="toc-r-overview-of-the-month" class="nav-link" data-scroll-target="#r-overview-of-the-month">R Overview of the Month</a></li>
+  <li><a href="#attendees" id="toc-attendees" class="nav-link" data-scroll-target="#attendees">Attendees</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul>
+  <li><a href="#q1---andy---problems-with-loading-packages" id="toc-q1---andy---problems-with-loading-packages" class="nav-link" data-scroll-target="#q1---andy---problems-with-loading-packages">Q1 - Andy - Problems with loading packages</a></li>
+  <li><a href="#q2---pradeepa---time-series-data" id="toc-q2---pradeepa---time-series-data" class="nav-link" data-scroll-target="#q2---pradeepa---time-series-data">Q2 - Pradeepa - Time series data</a></li>
+  <li><a href="#q6---how-to-read-data-in-to-r" id="toc-q6---how-to-read-data-in-to-r" class="nav-link" data-scroll-target="#q6---how-to-read-data-in-to-r">Q6 - How to read data in to R</a></li>
+  <li><a href="#q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" id="toc-q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" class="nav-link" data-scroll-target="#q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you">Q4 - Erda- would like to ask if I can get help using ggpicrust package. thank you</a></li>
+  <li><a href="#q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code" id="toc-q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code" class="nav-link" data-scroll-target="#q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code">Q5 - AC - I am trying to scrape the athletes with their country and DOB from a page. How do I know which elements to get? (As in what to put in my code)</a></li>
+  <li><a href="#q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" id="toc-q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" class="nav-link" data-scroll-target="#q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes">Q6 - Elegant way to paste windows paths in R by reversing the slashes</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Community Groups</h1>
+<h1 class="title">UQRUG 46</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">meeting</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <strong>Overview</strong>: Creating CVs in R with vitae and RMarkdown. <br> <strong>Questions</strong>: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 31, 2024</p>
+    </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-
-<!-- ## ResBaz2023Qld -->
-<!-- ::: columns -->
-<!-- ::: {.column width="17%"} -->
-<!-- <p float="left"> -->
-<!-- [![](images/ResBazQLD_2023.png){fig-alt="ResBaz2023Qld Logo" width="100%"}](https://resbaz.github.io/resbaz2023qld/) -->
-<!-- </p> -->
-<!-- ::: -->
-<!-- ::: {.column width="3%"} -->
-<!-- empty column to create gap -->
-<!-- ::: -->
-<!-- ::: {.column width="80%"} -->
-<!-- The 2023 Queensland Research Bazaar will be a three-day intensive conference held at UQ where researchers will come together to attend workshops and network to up-skill in 'next generation digital research tools and skills'. -->
-<!-- Researchers at ALL levels from ALL disciplines. PhD candidates, research Masters students and early career researchers are especially encouraged to attend. -->
-<!-- |     **When**: November 21-23 2023 -->
-<!-- |     **Where**: UQ St Lucia in the Michie Building -->
-<!-- |     **More Details**: The [ResBaz2023Qld Website](https://resbaz.github.io/resbaz2023qld/) -->
-<!-- ::: -->
-<!-- ::: -->
-<section id="uq-python-user-group" class="level2">
-<h2 data-anchor-id="uq-python-user-group">UQ Python User Group</h2>
-<div class="columns">
-<div class="column" style="width:17%;">
-<p float="left">
-</p><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://bit.ly/uqpug"><img src="images/python-logo-only.svg" class="img-fluid figure-img" style="width:100.0%" alt="Python Logo"></a></p>
-</figure>
-</div>
-<p></p>
-</div><div class="column" style="width:3%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:80%;">
-<p>A gathering for Python users of any proficiency, to help each other solve problems, share resources and tips, discover new features and hang out as a friendly community.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>When</strong>: First <strong>Thursday</strong> of the month from 10am to 11:30am</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Where</strong>: In-Person at UQ Central Library 12-N109</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>More Details</strong>: The <a href="https://bit.ly/uqpug">UQ Python User Group</a></p>
-</div>
-</div>
-</section>
-<section id="r-ladies-brisbane" class="level2">
-<h2 data-anchor-id="r-ladies-brisbane">R-Ladies Brisbane</h2>
-<div class="columns">
-<div class="column" style="width:17%;">
-<p float="left">
-</p><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/rladies/meetup-presentations_brisbane"><img src="images/rladies.jpg" class="img-fluid figure-img" style="width:100.0%" alt="RLadies Logo"></a></p>
-</figure>
-</div>
-<p></p>
-</div><div class="column" style="width:3%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:80%;">
-<p>R-Ladies Brisbane welcomes members of all R proficiency levels. The community is designed to develop our members’ R skills &amp; knowledge through social, collaborative learning &amp; sharing. Supporting minority identity access to STEM skills &amp; careers, the Free Software Movement, and contributing to the global R community!</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>When</strong>: Find their events on <a href="https://www.meetup.com/rladies-brisbane/">MeetUP</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Where</strong>: Online and in Person.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>More Details</strong>: The <a href="https://github.com/rladies/meetup-presentations_brisbane">R Ladies Brisbane GitHub</a></p>
-</div>
-</div>
-</section>
-<section id="hacky-hour-uq" class="level2">
-<h2 data-anchor-id="hacky-hour-uq">Hacky Hour UQ</h2>
-<div class="columns">
-<div class="column" style="width:17%;">
-<p float="left">
-</p><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://rcc.uq.edu.au/meetups#hacky-hour"><img src="images/uqhackyhour.png" class="img-fluid figure-img" style="width:100.0%" alt="UQ Hack Hour"></a></p>
-</figure>
-</div>
-<p></p>
-</div><div class="column" style="width:3%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:80%;">
-<p>For UQ researchers to get support with research-related technical issues.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>When</strong>: Weekly on Tuesdays, 3pm–4pm (AEST)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Where</strong>: Online. For Zoom meeting details please email rcc-support@uq.edu.au</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>More Details</strong>: The <a href="https://rcc.uq.edu.au/meetups#hacky-hour">RCC Hacky Hour UQ website</a></p>
-</div>
-</div>
-</section>
-<section id="geospatial-share" class="level2">
-<h2 data-anchor-id="geospatial-share">GeoSpatial Share</h2>
-<div class="columns">
-<div class="column" style="width:17%;">
-<p float="left">
-</p><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://brisbane-geocommunity.netlify.app/"><img src="images/turkeypin.svg" class="img-fluid figure-img" style="width:100.0%" alt="GeoSpatial Share Logo"></a></p>
-</figure>
-</div>
-<p></p>
-</div><div class="column" style="width:3%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:80%;">
-<p>A monthly geospatial skill sharing tutorial sessions where a member of the community shares their skills, experiences and tricks in a friendly and inclusive environment.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>When</strong>: Around the last Thursday of the month in the afternoon.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Where</strong>: Online. For meeting details please email geocommunity @ gmail dot com</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>More Details</strong>: The <a href="https://brisbane-geocommunity.netlify.app/">GeoSpatial Share website</a></p>
-</div>
-</div>
-</section>
-<section id="australian-digital-observatory" class="level2">
-<h2 data-anchor-id="australian-digital-observatory">Australian Digital Observatory</h2>
-<div class="columns">
-<div class="column" style="width:17%;">
-<p float="left">
-</p><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.digitalobservatory.net.au/office-hours/"><img src="images/ado.png" class="img-fluid figure-img" style="width:100.0%" alt="Australia Digital Observatory Logo"></a></p>
-</figure>
-</div>
-<p></p>
-</div><div class="column" style="width:3%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:80%;">
-<p>For Australian researchers working with linguistics, text analytics, digital and computational methods, social media and web archives to bring their technical questions, research problems and rough ideas and get advice and feedback.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>When</strong>: Consultations by Appointment</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Where</strong>: Online.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>More Details</strong>: The <a href="https://www.digitalobservatory.net.au/office-hours/">Australian Digital Observatory website</a>.</p>
-</div>
-</div>
-
-
-</section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://web.library.uq.edu.au/library-services/training#keyword=Rstudio" class="about-link" rel="" target="">
-    <i class="bi bi-hexagon-fill"></i>
-     <span class="about-link-text">R Workshops</span>
-  </a>
-  <a href="https://twitter.com/UQ_RUG" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-text"></i>
-     <span class="about-link-text">Collaborative Document</span>
-  </a>
-  <a href="https://github.com/uqlibrary/technology-training" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au" class="about-link" rel="" target="">
-    <i class="bi bi-chat-right"></i>
-     <span class="about-link-text">UQ Chat</span>
-  </a>
-  <a href="https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/" class="about-link" rel="" target="">
-    <i class="bi bi-globe"></i>
-     <span class="about-link-text">Created with quarto</span>
-  </a>
-</div>
-</div>
+  
+    
   </div>
-</div>
- <!-- /main -->
+  
+
+</header>
+
+<section id="uqrug-47" class="level2">
+<h2 class="anchored" data-anchor-id="uqrug-47">2024-02-28: UQRUG 47</h2>
+<section id="r-overview-of-the-month" class="level3">
+<h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
+<p>This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the rvest package.</p>
+</section>
+<section id="attendees" class="level3">
+<h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
+<p>Add your name, where you’re from, and why you’re here:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Where are you from?</th>
+<th>What brings you here?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nicholas Wiggins</td>
+<td>UQ Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Pradeepa Korale-Gedara</td>
+<td>QAAFI</td>
+<td>Here to learn</td>
+</tr>
+<tr class="odd">
+<td>jeffery</td>
+<td>agri sci</td>
+<td>learn something about R to deal with my research project</td>
+</tr>
+<tr class="even">
+<td>Andy Cui</td>
+<td>ITEE/EECS/ISB</td>
+<td>Here to plot data</td>
+</tr>
+<tr class="odd">
+<td>Jove</td>
+<td>UQ Herston</td>
+<td>Here to learn</td>
+</tr>
+<tr class="even">
+<td>Wei Weng</td>
+<td>Computer science</td>
+<td>Here to learn</td>
+</tr>
+<tr class="odd">
+<td>Ryan</td>
+<td>Economics</td>
+<td>Here to learn</td>
+</tr>
+<tr class="even">
+<td>Jessica Hintzsche</td>
+<td></td>
+<td>i</td>
+</tr>
+<tr class="odd">
+<td>Erda Rame Hau</td>
+<td>UQ Vet School</td>
+<td>Here to learn ggpicrust</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="q1---andy---problems-with-loading-packages" class="level4">
+<h4 class="anchored" data-anchor-id="q1---andy---problems-with-loading-packages">Q1 - Andy - Problems with loading packages</h4>
+<p>Previously, I never needed to install packages everytime I start RStudio. Now, it seems that I get these errors whenever I run a line of code such as:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">library</span>(tidyverse) <span class="sc">:</span> there is no package called ‘tidyverse’</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Error<span class="sc">:</span> package or namespace load failed <span class="cf">for</span> ‘dplyr’ <span class="cf">in</span> <span class="fu">loadNamespace</span>(j <span class="ot">&lt;-</span> i[[1L]], <span class="fu">c</span>(lib.loc, <span class="fu">.libPaths</span>()), <span class="at">versionCheck =</span> vI[[j]])<span class="sc">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> namespace ‘lifecycle’ <span class="dv">1</span>.<span class="fl">0.0</span> is already loaded, but <span class="sc">&gt;=</span> <span class="dv">1</span>.<span class="fl">0.1</span> is required</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here’s an error that will appear when I try to install tidyverse: Execution halted ERROR: lazy loading failed for package ‘ggplot2’ removing ‘C:/Users/s4434877/Documents/R/win-library/4.0/ggplot2’</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Looks like it’s related to the Library location found via .libPaths()</li>
+<li>Recommended installing a newer version of R, as the current version</li>
+</ul>
+<hr>
+</section>
+<section id="q2---pradeepa---time-series-data" class="level4">
+<h4 class="anchored" data-anchor-id="q2---pradeepa---time-series-data">Q2 - Pradeepa - Time series data</h4>
+<p>I am trying to build a network using time series data. I use tsnet_vg funcion.One of the issues I encounted is the software consider date variable also as a node. Example <img src="https://s3.hedgedoc.org/demo/uploads/42bd0611-3d26-4e5e-87a4-214b12fce6cf.png" class="img-fluid"></p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Run the plot again.</li>
+<li>Then try changing some of the theming variables/arguments to make the text change</li>
+<li>You can export the matrix you’ve created using write.csv()</li>
+</ul>
+<hr>
+</section>
+<section id="q6---how-to-read-data-in-to-r" class="level4">
+<h4 class="anchored" data-anchor-id="q6---how-to-read-data-in-to-r">Q6 - How to read data in to R</h4>
+<p>How can I read a csv into R for example?</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>you can use the base read.csv() function, or the tidyverse read_csv()</li>
+<li>The UQ Library Training team regularly runs training sessions that cover this: https://web.library.uq.edu.au/library-services/training</li>
+</ul>
+<hr>
+</section>
+<section id="q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" class="level4">
+<h4 class="anchored" data-anchor-id="q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you">Q4 - Erda- would like to ask if I can get help using ggpicrust package. thank you</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">ggpicrust2</span>(<span class="at">data =</span> abundance_data, <span class="at">metadata =</span> metadata_Nepal_kath,  <span class="sc">:</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Notice<span class="sc">:</span> There are no statistically significant biomarkers <span class="cf">in</span> the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance <span class="fu">threshold</span> (p<span class="sc">&lt;=</span><span class="fl">0.05</span>). You may refer to the tutorial<span class="st">'s FAQ for further help and suggestions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Look through the FAQ and Issues on the github, and if those don’t help, raise an issue yourself. https://github.com/cafferychen777/ggpicrust2</li>
+</ul>
+<hr>
+</section>
+<section id="q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code" class="level4">
+<h4 class="anchored" data-anchor-id="q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code">Q5 - AC - I am trying to scrape the athletes with their country and DOB from a page. How do I know which elements to get? (As in what to put in my code)</h4>
+<p>https://www.worldaquatics.com/swimming/athletes?gender=&amp;discipline=SW&amp;nationality=&amp;name=.</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>Use the inspect tool to find the class associated with the table you want to extract. Then use the html_table() function to make it look nice.</li>
+</ul>
+<hr>
+</section>
+<section id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" class="level4">
+<h4 class="anchored" data-anchor-id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes">Q6 - Elegant way to paste windows paths in R by reversing the slashes</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>snippet pp</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">" https://www.worldaquatics.com/swimming/athletes?gender=&amp;discipline=SW&amp;nationality=&amp;name=."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Copied from Josh Gilfillan at <a href="https://stackoverflow.com/a/39989341">stackoverflow</a></p>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -441,6 +496,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

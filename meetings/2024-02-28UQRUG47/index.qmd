@@ -1,0 +1,119 @@
+---
+title: UQRUG 46
+date: '2024-01-31'
+description: '**Overview**: Creating CVs in R with vitae and RMarkdown. <br /> **Questions**: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings. '
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+## 2024-02-28: UQRUG 47
+
+### R Overview of the Month
+
+This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the rvest package.
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | UQ Library | Here to help! |
+|Pradeepa Korale-Gedara|QAAFI|Here to learn|
+|jeffery|agri sci |learn something about R to deal with my research project|
+|Andy Cui|ITEE/EECS/ISB|Here to plot data|
+|Jove|UQ Herston|Here to learn|
+|Wei Weng|Computer science|Here to learn|
+|Ryan|Economics|Here to learn|
+|Jessica Hintzsche||i|
+|Erda Rame Hau|UQ Vet School| Here to learn ggpicrust|
+
+
+### Questions
+
+
+#### Q1 - Andy - Problems with loading packages
+Previously, I never needed to install packages everytime I start RStudio. Now, it seems that I get these errors whenever I run a line of code such as:
+``` r
+> library(tidyverse)
+Error in library(tidyverse) : there is no package called ‘tidyverse’
+> library(dplyr)
+Error: package or namespace load failed for ‘dplyr’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ namespace ‘lifecycle’ 1.0.0 is already loaded, but >= 1.0.1 is required
+```
+ Here's an error that will appear when I try to install tidyverse: 
+ Execution halted
+ERROR: lazy loading failed for package 'ggplot2'
+ removing 'C:/Users/s4434877/Documents/R/win-library/4.0/ggplot2'
+
+
+**Answers**
+
+* Looks like it's related to the Library location found via .libPaths()
+*   Recommended installing a newer version of R, as the current version
+
+---
+
+#### Q2 - Pradeepa - Time series data
+I am trying to build a network using time series data. I use tsnet_vg funcion.One of the issues I encounted is the software consider date variable also as a node. Example ![](https://s3.hedgedoc.org/demo/uploads/42bd0611-3d26-4e5e-87a4-214b12fce6cf.png)
+
+
+**Answers**
+
+*  Run the plot again.
+*  Then try changing some of the theming variables/arguments to make the text change
+*  You can export the matrix you've created using write.csv()
+
+---
+
+#### Q6 - How to read data in to R
+How can I read a csv into R for example?
+
+
+**Answers**
+
+*  you can use the base read.csv() function, or the tidyverse read_csv()
+* The UQ Library Training team regularly runs training sessions that cover this: https://web.library.uq.edu.au/library-services/training
+
+
+---
+
+#### Q4 - Erda- would like to ask if I can get help using ggpicrust package. thank you
+
+``` r
+Error in ggpicrust2(data = abundance_data, metadata = metadata_Nepal_kath,  : 
+Notice: There are no statistically significant biomarkers in the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance threshold (p<=0.05). You may refer to the tutorial's FAQ for further help and suggestions
+```
+
+**Answers**
+
+* Look through the FAQ and Issues on the github, and if those don't help, raise an issue yourself. https://github.com/cafferychen777/ggpicrust2
+
+---
+
+#### Q5 - AC - I am trying to scrape the athletes with their country and DOB from a page. How do I know which elements to get? (As in what to put in my code)
+ https://www.worldaquatics.com/swimming/athletes?gender=&discipline=SW&nationality=&name=.
+
+**Answers**
+
+*  Use the inspect tool to find the class associated with the table you want to extract. Then use the html_table() function to make it look nice.
+
+---
+
+#### Q6 - Elegant way to paste windows paths in R by reversing the slashes
+
+``` r
+snippet pp
+    "`r gsub('"', "", gsub("\\\\", "/", readClipboard()))`"
+```
+
+Copied from Josh Gilfillan at [stackoverflow](https://stackoverflow.com/a/39989341)
+
+
+---
