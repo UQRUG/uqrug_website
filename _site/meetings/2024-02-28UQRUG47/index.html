@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-31">
-<meta name="description" content="Overview: Creating CVs in R with vitae and RMarkdown.   Questions: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.">
+<meta name="dcterms.date" content="2024-02-28">
+<meta name="description" content="Overview: Webscraping with rvest.   Questions: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths.">
 
-<title>UQRUG - UQRUG 46</title>
+<title>UQRUG - UQRUG 47</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,14 +101,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="UQRUG - UQRUG 46">
+<meta property="og:title" content="UQRUG - UQRUG 47">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG - UQRUG 46">
-<meta name="twitter:description" content="Overview: Creating CVs in R with vitae and RMarkdown.  Questions: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.">
-<meta name="twitter:image" content="images/uqrug_twitter.png">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -150,7 +146,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/uqlibrary/technology-training" rel="" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
-    <a href="https://twitter.com/UQ_RUG" rel="" title="" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" rel="" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
     <a href="https://www.youtube.com/@UQRUG" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -176,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#q1---andy---problems-with-loading-packages" id="toc-q1---andy---problems-with-loading-packages" class="nav-link" data-scroll-target="#q1---andy---problems-with-loading-packages">Q1 - Andy - Problems with loading packages</a></li>
   <li><a href="#q2---pradeepa---time-series-data" id="toc-q2---pradeepa---time-series-data" class="nav-link" data-scroll-target="#q2---pradeepa---time-series-data">Q2 - Pradeepa - Time series data</a></li>
-  <li><a href="#q6---how-to-read-data-in-to-r" id="toc-q6---how-to-read-data-in-to-r" class="nav-link" data-scroll-target="#q6---how-to-read-data-in-to-r">Q6 - How to read data in to R</a></li>
+  <li><a href="#q3---how-to-read-data-in-to-r" id="toc-q3---how-to-read-data-in-to-r" class="nav-link" data-scroll-target="#q3---how-to-read-data-in-to-r">Q3 - How to read data in to R</a></li>
   <li><a href="#q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" id="toc-q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" class="nav-link" data-scroll-target="#q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you">Q4 - Erda- would like to ask if I can get help using ggpicrust package. thank you</a></li>
   <li><a href="#q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code" id="toc-q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code" class="nav-link" data-scroll-target="#q5---ac---i-am-trying-to-scrape-the-athletes-with-their-country-and-dob-from-a-page.-how-do-i-know-which-elements-to-get-as-in-what-to-put-in-my-code">Q5 - AC - I am trying to scrape the athletes with their country and DOB from a page. How do I know which elements to get? (As in what to put in my code)</a></li>
   <li><a href="#q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" id="toc-q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" class="nav-link" data-scroll-target="#q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes">Q6 - Elegant way to paste windows paths in R by reversing the slashes</a></li>
@@ -190,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UQRUG 46</h1>
+<h1 class="title">UQRUG 47</h1>
   <div class="quarto-categories">
     <div class="quarto-category">meeting</div>
   </div>
@@ -198,7 +193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <strong>Overview</strong>: Creating CVs in R with vitae and RMarkdown. <br> <strong>Questions</strong>: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.
+    <strong>Overview</strong>: Webscraping with rvest. <br> <strong>Questions</strong>: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths.
   </div>
 </div>
 
@@ -209,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 31, 2024</p>
+      <p class="date">February 28, 2024</p>
     </div>
   </div>
   
@@ -223,7 +218,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="uqrug-47">2024-02-28: UQRUG 47</h2>
 <section id="r-overview-of-the-month" class="level3">
 <h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
-<p>This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the rvest package.</p>
+<p>This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest package.</p>
+<p>You can <a href="rvest_overview.R" download="">download the R script here</a>.</p>
 </section>
 <section id="attendees" class="level3">
 <h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
@@ -319,8 +315,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-<section id="q6---how-to-read-data-in-to-r" class="level4">
-<h4 class="anchored" data-anchor-id="q6---how-to-read-data-in-to-r">Q6 - How to read data in to R</h4>
+<section id="q3---how-to-read-data-in-to-r" class="level4">
+<h4 class="anchored" data-anchor-id="q3---how-to-read-data-in-to-r">Q3 - How to read data in to R</h4>
 <p>How can I read a csv into R for example?</p>
 <p><strong>Answers</strong></p>
 <ul>
@@ -351,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" class="level4">
 <h4 class="anchored" data-anchor-id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes">Q6 - Elegant way to paste windows paths in R by reversing the slashes</h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>snippet pp</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">" https://www.worldaquatics.com/swimming/athletes?gender=&amp;discipline=SW&amp;nationality=&amp;name=."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"download the R script here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Copied from Josh Gilfillan at <a href="https://stackoverflow.com/a/39989341">stackoverflow</a></p>
 <hr>
 

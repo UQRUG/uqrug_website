@@ -1,7 +1,7 @@
 ---
-title: UQRUG 46
-date: '2024-01-31'
-description: '**Overview**: Creating CVs in R with vitae and RMarkdown. <br /> **Questions**: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings. '
+title: UQRUG 47
+date: '2024-02-28'
+description: '**Overview**: Webscraping with rvest. <br /> **Questions**: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths. '
 categories: meeting
 toc: true
 toc-depth: 5
@@ -17,7 +17,9 @@ library(tidyverse)
 
 ### R Overview of the Month
 
-This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the rvest package.
+This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest package.
+
+You can <a href="rvest_overview.R" download>download the R script here</a>.
 
 ### Attendees
 Add your name, where you're from, and why you're here:
@@ -72,7 +74,7 @@ I am trying to build a network using time series data. I use tsnet_vg funcion.On
 
 ---
 
-#### Q6 - How to read data in to R
+#### Q3 - How to read data in to R
 How can I read a csv into R for example?
 
 
