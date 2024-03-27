@@ -13,6 +13,8 @@ DisableComments: no
 
 Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the [visdat](https://docs.ropensci.org/visdat/) package.
 
+You can <a href="/presentations/24-03-visdat/visdat_overview.R" download>download the Rmd file here</a>.
+
 <p float="left">
 
 <img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="visdat-logo.png" height="100" style="margin-right:-0.2em;"/>
@@ -29,8 +31,8 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-<!-- Browse the slides from the November RUG: -->
+Browse the content from the March RUG:
 
-<!-- <iframe width="780" height="500" src="/presentations/23-11-cool/23-11-cool.html" title="Cool but Useless Quarto Presentation"> -->
+<iframe width="780" height="500" src="/presentations/24-03-visdat/visdat_overview.html" title="visdat Presentation">
 
-<!-- </iframe> -->
+</iframe>

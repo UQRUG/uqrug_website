@@ -1215,6 +1215,83 @@
     "href": "posts/2024-03-27-March-visdat/index.html",
     "title": "March 27th UQRUG Drop-in + Identify Data Problems using visdat",
     "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package.\nYou can download the Rmd file here.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG:"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html",
+    "href": "presentations/24-03-visdat/visdat_overview.html",
+    "title": "visdat Overview",
+    "section": "",
+    "text": "visdat is a package which allows you to get a quick visual glance at the variable classes of a dataframe to identify problems or unexpected features.\nAre you just trying to get a vibe for the data?\nAre there unexpected NAs, strangely large values, or strings out of place?\nvisdat can help check these things before you start trying to clean and wrangle your messy data"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#visdat",
+    "href": "presentations/24-03-visdat/visdat_overview.html#visdat",
+    "title": "visdat Overview",
+    "section": "",
+    "text": "visdat is a package which allows you to get a quick visual glance at the variable classes of a dataframe to identify problems or unexpected features.\nAre you just trying to get a vibe for the data?\nAre there unexpected NAs, strangely large values, or strings out of place?\nvisdat can help check these things before you start trying to clean and wrangle your messy data"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#an-example",
+    "href": "presentations/24-03-visdat/visdat_overview.html#an-example",
+    "title": "visdat Overview",
+    "section": "An example",
+    "text": "An example\nLet’s look at the airquality dataset\n\nairquality &lt;- airquality\n\nhead(airquality)\n\n  Ozone Solar.R Wind Temp Month Day\n1    41     190  7.4   67     5   1\n2    36     118  8.0   72     5   2\n3    12     149 12.6   74     5   3\n4    18     313 11.5   62     5   4\n5    NA      NA 14.3   56     5   5\n6    28      NA 14.9   66     5   6"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_dat",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_dat",
+    "title": "visdat Overview",
+    "section": "vis_dat()",
+    "text": "vis_dat()\nWe can use vis_dat() to get an overview of the classes of data and any NAs present\n\nvis_dat(airquality)\n\n\n\n\nWe can also facet\n\nvis_dat(airquality, facet = Month)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_miss",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_miss",
+    "title": "visdat Overview",
+    "section": "vis_miss()",
+    "text": "vis_miss()\nvis_miss() is similar to vis_dat() but it will show you the percentage of missing data\n\nvis_miss(airquality)\n\n\n\n\nThere isn’t a strong use for vis_miss() over vis_dat() but it will give you the percentage of NAs in your dataset, which is useful if there are very few NAs\n\ntest_miss_df &lt;- data.frame(x1 = 1:10000,\n                           x2 = rep(\"A\", 10000),\n                           x3 = c(rep(1L, 9999), NA))\n\nvis_dat(test_miss_df)\n\n\n\nvis_miss(test_miss_df)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_compare",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_compare",
+    "title": "visdat Overview",
+    "section": "vis_compare()",
+    "text": "vis_compare()\nvis_compare() will allow you to compare two dataframes (of the same length!) to highlight their differences and similarities\n\nset.seed(2019-04-03-1105)\nchickwts_diff &lt;- chickwts\nchickwts_diff[sample(1:nrow(chickwts), 30),sample(1:ncol(chickwts), 2)] &lt;- NA\n\nvis_compare(chickwts_diff, chickwts)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_expect---very-useful",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_expect---very-useful",
+    "title": "visdat Overview",
+    "section": "vis_expect() - very useful",
+    "text": "vis_expect() - very useful\nI think vis_expect() is a very useful function, as it can allow you to set thresholds for checking data using binary operators. What percentage of values are over 25? Are there strange outliers?\n\nvis_expect(airquality, ~.x &gt;= 25)\n\n\n\n\nPerhaps there are strings that shouldn’t be strings. You could simply clean this with a bad_strings vector, but we can also have a look at where those issues lie more broadly, and potentially find patterns. If you clean your data without knowing the cause, you could end up hiding problems, rather than resolving them.\n\ncommon_nas &lt;- c(\n  \"NA\",\n  \"N A\",\n  \"N/A\",\n  \"na\",\n  \"n a\",\n  \"n/a\"\n)\n\ndat_ms &lt;- tibble::tribble(~x,  ~y,    ~z,\n                          \"1\",   \"A\",   -100,\n                          \"3\",   \"N/A\", -99,\n                          \"NA\",  NA,    -98,\n                          \"N A\", \"E\",   -101,\n                          \"na\", \"F\",   -1)\n\nvis_expect(dat_ms, ~.x %in% common_nas)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_cor",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_cor",
+    "title": "visdat Overview",
+    "section": "vis_cor()",
+    "text": "vis_cor()\nThis will show you correlations in your data - not super exciting\n\nvis_cor(airquality)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_value",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_value",
+    "title": "visdat Overview",
+    "section": "vis_value()",
+    "text": "vis_value()\nvis_value() provides a nice overview of the relative differences in the columns of your data, allowing you to potentially find outliers at a glance\n\nvis_value(airquality)\n\n\n\n\nIf you’re using a dataset that has non-numeric data, you will get an error\n\ngapminder &lt;- read.csv(\"https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv\")\n\nvis_value(gapminder)\n\nError in `test_if_all_numeric()`:\n! Data input can only contain numeric values\nPlease subset the data to the numeric values you would like.\n`dplyr::select(&lt;data&gt;, where(is.numeric))`\nCan be helpful here!\n\n\nWe can use dplyr to select just the numeric columns from our dataset\n\ngapminder %&gt;% \n  select(where(is.numeric)) %&gt;% \n  vis_value()"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_binary",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_binary",
+    "title": "visdat Overview",
+    "section": "vis_binary()",
+    "text": "vis_binary()\nI’m not sure how often this would come up either, but it allows you to quickly visualise the spread of binary data.\n\nvis_binary(dat_bin)"
+  },
+  {
+    "objectID": "presentations/24-03-visdat/visdat_overview.html#vis_guess---very-useful",
+    "href": "presentations/24-03-visdat/visdat_overview.html#vis_guess---very-useful",
+    "title": "visdat Overview",
+    "section": "vis_guess() - very useful",
+    "text": "vis_guess() - very useful\nvis_guess() is a standout for me. It will take a stab at guessing what class of data is in each cell. Do you have numbers in strings, or intergers in numeric classes?\n\nmessy_vector &lt;- c(TRUE,\n                  T,\n                  \"TRUE\",\n                  \"T\",\n                  \"01/01/01\",\n                  \"01/01/2001\",\n                  NA,\n                  NaN,\n                  \"NA\",\n                  \"Na\",\n                  \"na\",\n                  \"10\",\n                  10,\n                  \"10.1\",\n                  10.1,\n                  \"abc\",\n                  \"$%TG\")\n\nset.seed(2019-04-03-1106)\nmessy_df &lt;- data.frame(var1 = messy_vector,\n                       var2 = sample(messy_vector),\n                       var3 = sample(messy_vector))\n\n\nvis_guess(messy_df)\n\n\n\nvis_dat(messy_df)\n\n\n\n\nLet’s look at gapminder too\n\nvis_guess(gapminder)\n\n\n\n\nAnd that’s visdat! Hopefully you find it useful, or interesting, or at least encourages you to have methods to properly check your data before cleaning and analysis."
   }
 ]
