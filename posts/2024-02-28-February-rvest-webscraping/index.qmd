@@ -11,7 +11,7 @@ tags: [R, rvest, webscraping, web, crawling, scraping, rcrawler, drop-in, help]
 DisableComments: no
 ---
 
-Before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the [rvest](https://rvest.tidyverse.org/articles/rvest.html) package.
+We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the [rvest](https://rvest.tidyverse.org/articles/rvest.html) packag, and then will we jump to our questions.
 
 <p float="left">
 
@@ -34,4 +34,3 @@ For more information, reach out to the UQ Library training team for more help: <
 <!-- <iframe width="780" height="500" src="/presentations/23-11-cool/23-11-cool.html" title="Cool but Useless Quarto Presentation"> -->
 
 <!-- </iframe> -->
-

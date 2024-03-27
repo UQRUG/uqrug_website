@@ -11,7 +11,7 @@ tags: [R, CV, resume, vitae, rmarkdown, markdown, knitr, tinytex, drop-in, help]
 DisableComments: no
 ---
 
-Before we jump into our help session for everyone to ask questions, this month Nick will be going over how to create a CV/Resume using the [vitae](https://pkg.mitchelloharawild.com/vitae/), [rmarkdown](https://rmarkdown.rstudio.com/), and [tinytex](https://yihui.org/tinytex/r/) packages.
+This month Nick will be going over how to create a CV/Resume using the [vitae](https://pkg.mitchelloharawild.com/vitae/), [rmarkdown](https://rmarkdown.rstudio.com/), and [tinytex](https://yihui.org/tinytex/r/) packages, and then getting into our regular questions.
 
 <p float="left">
 

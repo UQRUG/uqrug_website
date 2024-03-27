@@ -1180,7 +1180,7 @@
     "href": "posts/2024-02-28-February-rvest-webscraping/index.html",
     "title": "February 28th UQRUG Drop-in + Webscraping with rvest",
     "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will be looking at some basics of scraping data from Google results and Wikipedia (or any other webpage) using the rvest package.\n\n \n\nWhen Wednesday 28th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest packag, and then will we jump to our questions.\n\n \n\nWhen Wednesday 28th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
     "objectID": "community.html#geospatial-share",
@@ -1215,7 +1215,7 @@
     "href": "posts/2024-03-27-March-visdat/index.html",
     "title": "March 27th UQRUG Drop-in + Identify Data Problems using visdat",
     "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package.\nYou can download the R file here and then convert it to Rmd after downloading.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
+    "text": "This month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package. Then we will go into our community questions.\nYou can download the R file here and then convert it to Rmd after downloading.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
   },
   {
     "objectID": "presentations/24-03-visdat/visdat_overview.html",
