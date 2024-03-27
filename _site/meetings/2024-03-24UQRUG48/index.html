@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nicholas Wiggins">
-<meta name="dcterms.date" content="2024-03-26">
+<meta name="dcterms.date" content="2024-03-27">
+<meta name="description" content="Overview: Identify Data Problems using visdat.   Questions: GLMM Help, two y-axis plot, ggplot, splitting data into hours">
 
-<title>UQRUG - March 27th UQRUG Drop-in + Identify Data Problems using visdat</title>
+<title>UQRUG - UQRUG 48</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="UQRUG - March 27th UQRUG Drop-in + Identify Data Problems using visdat">
+<meta property="og:title" content="UQRUG - UQRUG 48">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site-name" content="UQRUG">
@@ -125,34 +125,49 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#uqrug-48" id="toc-uqrug-48" class="nav-link active" data-scroll-target="#uqrug-48">2024-03-27: UQRUG 48</a>
+  <ul>
+  <li><a href="#r-overview-of-the-month" id="toc-r-overview-of-the-month" class="nav-link" data-scroll-target="#r-overview-of-the-month">R Overview of the Month</a></li>
+  <li><a href="#attendees" id="toc-attendees" class="nav-link" data-scroll-target="#attendees">Attendees</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul>
+  <li><a href="#q1---julia-wood---help-with-glmm" id="toc-q1---julia-wood---help-with-glmm" class="nav-link" data-scroll-target="#q1---julia-wood---help-with-glmm">Q1 - Julia Wood - Help with GLMM</a></li>
+  <li><a href="#q2---nick---more-resources-for-data-checking" id="toc-q2---nick---more-resources-for-data-checking" class="nav-link" data-scroll-target="#q2---nick---more-resources-for-data-checking">Q2 - Nick - More resources for data checking</a></li>
+  <li><a href="#q3---jayne---plotting-two-lots-of-data-on-one-graph-and-splitting-by-time" id="toc-q3---jayne---plotting-two-lots-of-data-on-one-graph-and-splitting-by-time" class="nav-link" data-scroll-target="#q3---jayne---plotting-two-lots-of-data-on-one-graph-and-splitting-by-time">Q3 - Jayne - Plotting two lots of data on one graph and splitting by time</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">March 27th UQRUG Drop-in + Identify Data Problems using visdat</h1>
+<h1 class="title">UQRUG 48</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">workshop</div>
+    <div class="quarto-category">meeting</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    <strong>Overview</strong>: Identify Data Problems using visdat. <br> <strong>Questions</strong>: GLMM Help, two y-axis plot, ggplot, splitting data into hours
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Nicholas Wiggins </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 26, 2024</p>
+      <p class="date">March 27, 2024</p>
     </div>
   </div>
   
@@ -162,21 +177,126 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the <a href="https://docs.ropensci.org/visdat/">visdat</a> package.</p>
+<section id="uqrug-48" class="level2">
+<h2 class="anchored" data-anchor-id="uqrug-48">2024-03-27: UQRUG 48</h2>
+<section id="r-overview-of-the-month" class="level3">
+<h3 class="anchored" data-anchor-id="r-overview-of-the-month">R Overview of the Month</h3>
+<p>This month at UQRUG, before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the <a href="https://docs.ropensci.org/visdat/">visdat</a> package.</p>
 <p>You can <a href="../../presentations/24-03-visdat/visdat_overview.R" download="">download the R file here</a> and then convert it to Rmd after downloading.</p>
-<p float="left">
-</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="visdat-logo.png" height="100" style="margin-right:-0.2em;"></p>
-<p></p>
-<p><strong>When</strong> Wednesday 27th March, 12 - 2pm</p>
-<p><strong>Where</strong> St Lucia, Duhig North Central Library (12), Training room <strong>12-N109</strong>, and on Zoom</p>
-<p>Sign up to the next event on the <a href="https://studenthub.uq.edu.au/students/events/detail/5076221">Library training page</a></p>
-<p>For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
+</section>
+<section id="attendees" class="level3">
+<h3 class="anchored" data-anchor-id="attendees">Attendees</h3>
+<p>Add your name, where you’re from, and why you’re here:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Where are you from?</th>
+<th>What brings you here?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nicholas Wiggins</td>
+<td>UQ Library</td>
+<td>Here to help!</td>
+</tr>
+<tr class="even">
+<td>Bel</td>
+<td>QAEHS</td>
+<td>Here to learn</td>
+</tr>
+<tr class="odd">
+<td>Zoe MacLean</td>
+<td>HASS Research Assistant</td>
+<td>Hang out while coding</td>
+</tr>
+<tr class="even">
+<td>Luke Gaiter</td>
+<td>Library</td>
+<td>Here to learn/help/hangout</td>
+</tr>
+<tr class="odd">
+<td>Christopher Sexton</td>
+<td>Poche</td>
+<td>Learn and improve R coding</td>
+</tr>
+<tr class="even">
+<td>Pia Wohland</td>
+<td>SENV/HABS</td>
+<td>Learn and help if Ican</td>
+</tr>
+<tr class="odd">
+<td>Kar Ng</td>
+<td>Senior Analyst Bank of Queensland</td>
+<td>Hangout</td>
+</tr>
+<tr class="even">
+<td>Grant Taylor</td>
+<td>HAB</td>
+<td>Learn and Improve in R</td>
+</tr>
+<tr class="odd">
+<td>David Green</td>
+<td>UQ RCC</td>
+<td>To help and to learn :-)</td>
+</tr>
+<tr class="even">
+<td>David Chau</td>
+<td>QAAFI</td>
+<td>see how to use visdat</td>
+</tr>
+<tr class="odd">
+<td>Julia Wood</td>
+<td>HABS PhD Candidate</td>
+<td>Learn and help if I can :)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="q1---julia-wood---help-with-glmm" class="level4">
+<h4 class="anchored" data-anchor-id="q1---julia-wood---help-with-glmm">Q1 - Julia Wood - Help with GLMM</h4>
+<p>Need to run some different statistical methods, and need resources on”</p>
+<ul>
+<li>Generalised Linear Mixed Effects Models</li>
+<li>Underdispersion in a binomial generalised mixed effect model</li>
+</ul>
+<p><strong>Answers</strong></p>
+<ul>
+<li><a href="https://m-clark.github.io/mixed-models-with-R/introduction.html">Mixed Models with R</a></li>
+<li><a href="https://ladal.edu.au/regression.html#2_Mixed-Effects_Regression">LADAL Mixed-effects regression</a></li>
+</ul>
 <hr>
-<p>Browse the content from the March RUG (<a href="../../presentations/24-03-visdat/visdat_overview.html" target="_blank">in new window</a>):</p>
-<iframe width="780" height="500" src="../../presentations/24-03-visdat/visdat_overview.html" title="visdat Presentation">
-</iframe>
+</section>
+<section id="q2---nick---more-resources-for-data-checking" class="level4">
+<h4 class="anchored" data-anchor-id="q2---nick---more-resources-for-data-checking">Q2 - Nick - More resources for data checking</h4>
+<p>Nanair provides a deeper dive into the kinds of missing data that visdat can provide</p>
+<p><strong>Answers</strong></p>
+<ul>
+<li>https://github.com/njtierney/naniar</li>
+</ul>
+<hr>
+</section>
+<section id="q3---jayne---plotting-two-lots-of-data-on-one-graph-and-splitting-by-time" class="level4">
+<h4 class="anchored" data-anchor-id="q3---jayne---plotting-two-lots-of-data-on-one-graph-and-splitting-by-time">Q3 - Jayne - Plotting two lots of data on one graph and splitting by time</h4>
+<ul>
+<li>regarding plotting of two lots of data on the one graph</li>
+<li>plus splitting the graphs into smaller time lots</li>
+</ul>
+<p><strong>Answers</strong></p>
+<p>Plotting two y axes * reminds me of some data I had analyse … correlating events with denser sets of points</p>
+<ul>
+<li>This site has details for plotting a ggplot2 graph with two y axes: https://r-graph-gallery.com/line-chart-dual-Y-axis-ggplot2.html</li>
+</ul>
+<p>Splitting data by time * Create a new variable that gives a value to each “block” of time and create the facet wrap on that * Perhaps using the Lubridate function hour() to extract the hour into a new column</p>
+<hr>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -13,7 +13,7 @@ DisableComments: no
 
 Before we jump into our help session for everyone to ask questions, this month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the [visdat](https://docs.ropensci.org/visdat/) package.
 
-You can <a href="/presentations/24-03-visdat/visdat_overview.R" download>download the Rmd file here</a>.
+You can <a href="/presentations/24-03-visdat/visdat_overview.R" download>download the R file here</a> and then convert it to Rmd after downloading.
 
 <p float="left">
 

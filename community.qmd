@@ -93,6 +93,30 @@ R-Ladies Brisbane welcomes members of all R proficiency levels. The community is
 :::
 :::
 
+## Language and Data Analysis Laboratory (LADAL)
+
+::: columns
+::: {.column width="17%"}
+<p float="left">
+
+[![](images/LadalPurple.png){fig-alt="LADAL" width="100%"}](https://ladal.edu.au/)
+
+</p>
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
+LADAL is a free, open-source, collaborative support infrastructure for digital and computational humanities established 2019 by the School of Languages and Cultures at the University of Queensland.
+
+|     **Where**: Online [tutorials on the LADAL Websites](https://ladal.edu.au/tutorials.html)
+
+|     **More Details**: Contact [LADAL directly](https://ladal.edu.au/contact.html)
+:::
+:::
+
 ## Hacky Hour UQ
 
 ::: columns
