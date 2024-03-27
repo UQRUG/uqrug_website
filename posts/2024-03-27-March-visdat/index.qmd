@@ -31,7 +31,7 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-Browse the content from the March RUG:
+Browse the content from the March RUG (<a href="/presentations/24-03-visdat/visdat_overview.html" target="_blank">in new window</a>):
 
 <iframe width="780" height="500" src="/presentations/24-03-visdat/visdat_overview.html" title="visdat Presentation">
 
