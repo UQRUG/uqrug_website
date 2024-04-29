@@ -1,0 +1,50 @@
+---
+title: UQRUG 49
+date: '2024-04-24'
+description: '**Overview**: Using R and Rstudio on the HPC <br /> **Questions**: NA'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+## 2024-04-24: UQRUG 49
+
+### R Overview of the Month
+
+At UQRUG this month, we have a special guest, [David Green](https://rcc.uq.edu.au/rcc-team) from the RCC providing an overview on how to run your R scripts on a [High Performance Computer](https://rcc.uq.edu.au/high-performance-computing) (HPC), so that you can run your complex analyses faster! This will include using their new graphical user interface that allows you to run RStudio too! 
+
+https://github.com/UQ-RCC/hpc-docs
+https://rcc.uq.edu.au/bunya
+https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/
+https://youtu.be/ewdxiLvYMxg?si=OppPUW534iGcVblk
+rcc-support@uq.edu.au
+
+
+### Attendees
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|--------|--------|--------|
+| Nicholas Wiggins | UQ Library | Here to help! |
+|Julia Wood |UQ HABS|Here to learn and meet R users|
+|Pia Wohland|HABS/SENV|To listen in and learn|
+|Zoe MacLean|UQ POLSIS |Here for the RCC presentation|
+|David Green|UQ Research Computing Centre|Questions and Answers|
+|David Miles|UQ Library|Here to assist Nick as necessary|
+|Ryan Leung|SOE|Here to learn
+|Kusumitha S|AGFS|Here to see what this group is about
+|Kar Ng|DA Bank of Queensland| Learning
+|Felicity Charles| SENV Gatton| Here to learn|
+|Theophilus Mensah|QAAFI|To learn
+|Jocelyn Hume|UQCCR|Still learning R|
+|Zhigen Lin|UQ|Learning R|
+
+
+### Questions
+No questions this month.
