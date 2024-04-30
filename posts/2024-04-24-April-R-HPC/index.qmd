@@ -10,20 +10,20 @@ categories:
 tags: [R, RStudio, HPC, High Performance Computer, Bunya, RCC,  drop-in, help]
 DisableComments: no
 ---
-*Well worth it!  Moving from a laptop to Bunya HPC*
+
+*Well worth it! Moving from a laptop to Bunya HPC*
 
 At UQRUG this month, we have a special guest, [David Green](https://rcc.uq.edu.au/rcc-team) from the RCC providing an overview on how to run your R scripts on a [High Performance Computer](https://rcc.uq.edu.au/high-performance-computing) (HPC).
 
 In this session, we will trace the steps taken by the many UQ researchers using R who have wanted, or needed, stronger (or more numerous) computers on which to run their codes.
 
-There are tremendous benefits to porting your R computations to the high-performance computing (HPC) environment. But there are also some obstacles to overcome, especially with the ease of use and a few gotchas. Some recent innovations on the Bunya HPC system are addressing some of those obstacles, including the new graphical user interface that allows you to run RStudio too! 
+There are tremendous benefits to porting your R computations to the high-performance computing (HPC) environment. But there are also some obstacles to overcome, especially with the ease of use and a few gotchas. Some recent innovations on the Bunya HPC system are addressing some of those obstacles, including the new graphical user interface that allows you to run RStudio too!
 
 <p float="left">
 
 <!-- appropriate R overview related images -->
-<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> 
-<img src="RStudio.svg" height="100" style="margin-right:-0.2em;"/>
-<img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="RStudio.svg" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
 
 </p>
 
@@ -37,8 +37,8 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-<!-- Browse the content from the March RUG (<a href="/presentations/24-03-visdat/visdat_overview.html" target="_blank">in new window</a>): -->
+Browse the content from the April RUG (<a href="/presentations/24-04-hpc/Laptop2HPC.html" target="_blank">in new window</a>):
 
-<!-- <iframe width="780" height="500" src="/presentations/24-03-visdat/visdat_overview.html" title="visdat Presentation"> -->
+<iframe width="780" height="500" src="/presentations/24-04-hpc/Laptop2HPC.html" title="HPC Overview">
 
-<!-- </iframe> -->
+</iframe>
