@@ -37,9 +37,7 @@ We meet **every last Wednesday of the month** 12-2 pm, online and in person: sig
 
 ### How do I get the Zoom link?
 
-If you have a UQ affiliated account, you can sign up to the event directly through StudentHub:
-
--   [UQRUG - 27th March 2024](https://studenthub.uq.edu.au/students/events/detail/5076221)
+If you have a UQ affiliated account, you can sign up to the event directly through the StudentHub link found in the **Next Workshop** below.
 
 Otherwise you can email the UQ Library training team for more help and to get Zoom access: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
 

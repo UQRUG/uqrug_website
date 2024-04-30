@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/2024-04-24-April-R-HPC/index.html",
+      "/posts/2024-05-29-May-R-Spatial/index.html",
       "/posts/2024-03-27-March-visdat/index.html",
       "/posts/2024-02-28-February-rvest-webscraping/index.html",
       "/posts/2024-01-31-January-knitr-CV/index.html",
@@ -78,6 +79,7 @@
     "listing": "/events.html",
     "items": [
       "/posts/2024-04-24-April-R-HPC/index.html",
+      "/posts/2024-05-29-May-R-Spatial/index.html",
       "/posts/2024-03-27-March-visdat/index.html",
       "/posts/2024-02-28-February-rvest-webscraping/index.html",
       "/posts/2024-01-31-January-knitr-CV/index.html",
