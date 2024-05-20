@@ -1,0 +1,37 @@
+---
+title: UQRUG 50
+date: '2024-05-29'
+description: '**Overview**: Using Data to Viz to help visualise data <br /> **Questions**: NA'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2024-05-29: UQRUG 50
+
+### R Overview of the Month
+
+At UQRUG this month, we have an overview of the <a href="https://www.data-to-viz.com/">Data to Viz website</a> by Luke Gaiter.
+
+He will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.
+
+
+### Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name              | Where are you from?          | What brings you here?                |
+|-------------------|------------------------------|--------------------------------------|
+| Luke Gaiter       | UQ Library                   | Here to help!                        |
+
+
+### Questions
+
+
