@@ -1,0 +1,42 @@
+---
+title: "May 29th UQRUG Drop-in + Using Data to Viz for R visualisation"
+editor: visual
+author: 'Luke Gaiter'
+date: '2024-05-29'
+image: RStudio.svg
+slug: may2024
+categories:
+  - workshop
+tags: [R, RStudio, data, visualisation, data to viz,  drop-in, help]
+DisableComments: no
+---
+
+*Using Data to Viz to help you visualise your data*
+
+At UQRUG this month, we have an overview of the <a href="https://www.data-to-viz.com/">Data to Viz website</a> by Luke Gaiter.
+
+He will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.
+
+<p float="left">
+
+<!-- appropriate R overview related images -->
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="RStudio.svg" height="100" style="margin-right:-0.2em;"/> <img src="Rlogo.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 24th April, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5129053)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
+
+------------------------------------------------------------------------
+
+Browse the content from the April RUG (<a href="/presentations/24-04-hpc/Laptop2HPC.html" target="_blank">in new window</a>):
+
+<iframe width="780" height="500" src="/presentations/24-04-hpc/Laptop2HPC.html" title="HPC Overview">
+
+</iframe>
