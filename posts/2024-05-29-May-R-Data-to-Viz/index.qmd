@@ -25,7 +25,7 @@ He will show how this website can be used to explore different visualisation opt
 
 </p>
 
-**When** Wednesday 24th April, 12 - 2pm
+**When** Wednesday 29th May, 12 - 2pm
 
 **Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
 
@@ -35,8 +35,8 @@ For more information, reach out to the UQ Library training team for more help: <
 
 ------------------------------------------------------------------------
 
-Browse the content from the April RUG (<a href="/presentations/24-04-hpc/Laptop2HPC.html" target="_blank">in new window</a>):
+Browse the content from the May RUG (<a href="/presentations/29-05-DatatoViz/DatatoViz.html" target="_blank">in new window</a>):
 
-<iframe width="780" height="500" src="/presentations/24-04-hpc/Laptop2HPC.html" title="HPC Overview">
+<iframe width="780" height="500" src="/presentations/29-05-DatatoViz/DatatoViz.html" title="Data to Viz">
 
 </iframe>
