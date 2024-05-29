@@ -1370,5 +1370,12 @@
     "title": "From Laptop to HPC",
     "section": "In summary",
     "text": "In summary\nThe possibilities that arise from combining R with HPC are well worth the learning curve!\n\n."
+  },
+  {
+    "objectID": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
+    "href": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
+    "title": "May 29th UQRUG Drop-in + Using Data to Viz for R visualisation",
+    "section": "",
+    "text": "Using Data to Viz to help you visualise your data\nAt UQRUG this month, we have an overview of the Data to Viz website by Luke Gaiter.\nHe will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.\n\n\n  \n\nWhen Wednesday 24th April, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the April RUG (in new window):"
   }
 ]
