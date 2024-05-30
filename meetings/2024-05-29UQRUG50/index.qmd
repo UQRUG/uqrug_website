@@ -25,18 +25,21 @@ At UQRUG this month, we have an overview of the <a href="https://www.data-to-viz
 He will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.
 
 ### Attendees
+
 Add your name, where you're from, and why you're here:
 
-| Name | Where are you from? | What brings you here? |
-|--------|--------|--------|
-| Luke Gaiter | Library | Here to present and help|
-|Valentina Urrutia Guada|Library|Here to help if I can XD|
-| Skye Anderson | UQ School of Environment | Learn
-|David Green|UQ Research Computing Centre|Q&A|
-|Daly Geagea | UQ Faculty of Medicine| Learn|
-|Jocelyn Hume|UQCCR|Still learning|
-|David Miles|Library|Learning & Here to help|
-|Brandon Fraser|QAAFI|Learn
-|Cameron West | UQ Library / SMP | Help and learn|
+| Name                    | Where are you from?          | What brings you here?    |
+|----------------------|---------------------------|-----------------------|
+| Luke Gaiter             | Library                      | Here to present and help |
+| Valentina Urrutia Guada | Library                      | Here to help if I can XD |
+| Skye Anderson           | UQ School of Environment     | Learn                    |
+| David Green             | UQ Research Computing Centre | Q&A                      |
+| Daly Geagea             | UQ Faculty of Medicine       | Learn                    |
+| Jocelyn Hume            | UQCCR                        | Still learning           |
+| David Miles             | Library                      | Learning & Here to help  |
+| Brandon Fraser          | QAAFI                        | Learn                    |
+| Cameron West            | UQ Library / SMP             | Help and learn           |
 
-### No questions
+### Questions
+
+No questions

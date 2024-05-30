@@ -1,0 +1,15 @@
+{
+  "hash": "f6a07686bbe58e9a91fe5cd68c097bc3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 50\ndate: '2024-05-29'\ndescription: '**Overview**: Using Data to Viz to help visualise data <br /> **Questions**: NA'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n## 2024-05-29: UQRUG 50\n\n### R Overview of the Month\n\n#### Using Data to Viz to help you visualise your data\n\nAt UQRUG this month, we have an overview of the <a href=\"https://www.data-to-viz.com/\">Data to Viz website</a> by Luke Gaiter.\n\nHe will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.\n\n### Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name                    | Where are you from?          | What brings you here?    |\n|----------------------|---------------------------|-----------------------|\n| Luke Gaiter             | Library                      | Here to present and help |\n| Valentina Urrutia Guada | Library                      | Here to help if I can XD |\n| Skye Anderson           | UQ School of Environment     | Learn                    |\n| David Green             | UQ Research Computing Centre | Q&A                      |\n| Daly Geagea             | UQ Faculty of Medicine       | Learn                    |\n| Jocelyn Hume            | UQCCR                        | Still learning           |\n| David Miles             | Library                      | Learning & Here to help  |\n| Brandon Fraser          | QAAFI                        | Learn                    |\n| Cameron West            | UQ Library / SMP             | Help and learn           |\n\n### Questions\n\nNo questions\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
