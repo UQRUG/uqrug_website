@@ -1,0 +1,36 @@
+---
+title: UQRUG 52
+date: '2024-07-31'
+description: '**Overview**: Using taskscheduleR to automate scripts <br />'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+## 2024-05-29: UQRUG 50
+
+### R Overview of the Month
+
+#### Using taskscheduleR to automate your R scripts
+
+At UQRUG this month, we have an overview of the <a href="taskscheduleR package - RDocumentation">taskscheduleR</a> package by Luke Gaiter.
+
+He will show showcase the usage of the [taskscheduleR](https://www.rdocumentation.org/packages/taskscheduleR/versions/1.8) package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering data from a source that updates frequently.
+
+### Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name        | Where are you from? | What brings you here?    |
+|-------------|---------------------|--------------------------|
+| Luke Gaiter | Library             | Here to present and help |
+|             |                     |                          |
+
+### Questions
