@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-07-31-July-taskscheduleR/index.html",
       "/posts/2024-05-29-May-R-Data-to-Viz/index.html",
       "/posts/2024-04-24-April-R-HPC/index.html",
       "/posts/2024-03-27-March-visdat/index.html",
@@ -25,6 +26,8 @@
   {
     "listing": "/pastmeetings.html",
     "items": [
+      "/meetings/2024-07-31UQRUG52/index.html",
+      "/meetings/2024-06-26UQRUG51(cancelled)/index.html",
       "/meetings/2024-05-29UQRUG50/index.html",
       "/meetings/2024-04-24UQRUG49/index.html",
       "/meetings/2024-03-24UQRUG48/index.html",
@@ -79,6 +82,7 @@
   {
     "listing": "/events.html",
     "items": [
+      "/posts/2024-07-31-July-taskscheduleR/index.html",
       "/posts/2024-05-29-May-R-Data-to-Viz/index.html",
       "/posts/2024-04-24-April-R-HPC/index.html",
       "/posts/2024-03-27-March-visdat/index.html",
