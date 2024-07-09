@@ -3,7 +3,7 @@ title: "July 31st UQRUG Drop-in + Automate scripts with R"
 editor: visual
 author: 'Luke Gaiter'
 date: '2024-07-31'
-image: RStudio.svg
+image: taskscheduleR-logo.png
 slug: jul2024
 categories:
   - workshop
