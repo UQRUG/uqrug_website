@@ -1,0 +1,14 @@
+---
+title: UQRUG 51
+date: '2024-06-26'
+categories: meeting
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+library(tidyverse)
+
+```
+
+### 2024-06-26: UQRUG 51 (cancelled)

@@ -1,0 +1,23 @@
+{
+  "listing": "/events.html",
+  "items": [
+    "/posts/2024-05-29-May-R-Data-to-Viz/index.html",
+    "/posts/2024-04-24-April-R-HPC/index.html",
+    "/posts/2024-03-27-March-visdat/index.html",
+    "/posts/2024-02-28-February-rvest-webscraping/index.html",
+    "/posts/2024-01-31-January-knitr-CV/index.html",
+    "/posts/2023-12-13-December-EoY-Competition/index.html",
+    "/posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
+    "/posts/2023-10-25-October-Machine-Learning/index.html",
+    "/posts/2023-09-27-September-Parallelisation/index.html",
+    "/posts/2023-08-30-August-Stats/index.html",
+    "/posts/2023-07-26-July-Q-Pres/index.html",
+    "/posts/2023-06-28-June-data.table/index.html",
+    "/posts/2023-05-31-May-Sending-emails/index.html",
+    "/posts/2023-04-26-April-AI/index.html",
+    "/posts/2023-03-29-March-quarto/index.html",
+    "/posts/2023-02-22-February-forms/index.html",
+    "/posts/2023-01-25-January-flexdashboard/index.html",
+    "/posts/2022-12-07-December-gganimate-plotly/index.html"
+  ]
+}
