@@ -23,7 +23,7 @@ website:
       - community.qmd
     tools:
       - icon: github
-        href: https://github.com/uqlibrary/technology-training
+        href: https://github.com/UQRUG/uqrug_website
         aria-label: github
       # - icon: twitter
       #   href: https://twitter.com/UQ_RUG
