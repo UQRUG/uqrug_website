@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UQRUG - Past Meeting Notes</title>
+<title>Past Meeting Notes – UQRUG</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,8 +64,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -93,23 +101,50 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="UQRUG - Past Meeting Notes">
+<meta property="og:title" content="Past Meeting Notes – UQRUG">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
-<meta property="og:site-name" content="UQRUG">
+<meta property="og:site_name" content="UQRUG">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/uqrug.png" alt="" class="navbar-logo">
     </a>
@@ -118,35 +153,35 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events.html" rel="" target="">
- <span class="menu-text">Events</span></a>
+    <a class="nav-link" href="./events.html"> 
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./pastmeetings.html" rel="" target="" aria-current="page">
- <span class="menu-text">Past Meeting Notes</span></a>
+    <a class="nav-link active" href="./pastmeetings.html" aria-current="page"> 
+<span class="menu-text">Past Meeting Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html" rel="" target="">
- <span class="menu-text">Community Groups</span></a>
+    <a class="nav-link" href="./community.html"> 
+<span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/uqlibrary/technology-training" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
     <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
     <a href="https://www.youtube.com/@UQRUG" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -177,1071 +212,1058 @@ flex-basis: 15%;
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="meeting" data-listing-date-sort="1722348000000" data-listing-file-modified-sort="1720488611508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="meeting" data-listing-date-sort="1722348000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
 <div class="body">
-<a href="./meetings/2024-07-31UQRUG52/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 52
+<a href="./meetings/2024-07-31UQRUG52/index.html" class="no-external">UQRUG 52</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-07-31UQRUG52/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using taskscheduleR to automate scripts <br></p>
+<a href="./meetings/2024-07-31UQRUG52/index.html" class="no-external"><strong>Overview</strong>: Using taskscheduleR to automate scripts <br></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-07-31UQRUG52/index.html">
+<a href="./meetings/2024-07-31UQRUG52/index.html" class="no-external">
 <div class="listing-date">
 July 31, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="meeting" data-listing-date-sort="1719324000000" data-listing-file-modified-sort="1720487658774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="meeting" data-listing-date-sort="1719324000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
 <div class="body">
-<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 51
+<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html" class="no-external">UQRUG 51</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html" class="no-external">
 
-</div>
+
+
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html">
+<a href="./meetings/2024-06-26UQRUG51(cancelled)/index.html" class="no-external">
 <div class="listing-date">
 June 26, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="meeting" data-listing-date-sort="1716904800000" data-listing-file-modified-sort="1720487065791" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="2" data-categories="meeting" data-listing-date-sort="1716904800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556">
 <div class="body">
-<a href="./meetings/2024-05-29UQRUG50/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 50
+<a href="./meetings/2024-05-29UQRUG50/index.html" class="no-external">UQRUG 50</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-05-29UQRUG50/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using Data to Viz to help visualise data <br> <strong>Questions</strong>: NA</p>
+<a href="./meetings/2024-05-29UQRUG50/index.html" class="no-external"><strong>Overview</strong>: Using Data to Viz to help visualise data <br> <strong>Questions</strong>: NA</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-05-29UQRUG50/index.html">
+<a href="./meetings/2024-05-29UQRUG50/index.html" class="no-external">
 <div class="listing-date">
 May 29, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="meeting" data-listing-date-sort="1713880800000" data-listing-file-modified-sort="1720487065790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="3" data-categories="meeting" data-listing-date-sort="1713880800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="847">
 <div class="body">
-<a href="./meetings/2024-04-24UQRUG49/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 49
+<a href="./meetings/2024-04-24UQRUG49/index.html" class="no-external">UQRUG 49</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-04-24UQRUG49/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using R and Rstudio on the HPC <br> <strong>Questions</strong>: NA</p>
+<a href="./meetings/2024-04-24UQRUG49/index.html" class="no-external"><strong>Overview</strong>: Using R and Rstudio on the HPC <br> <strong>Questions</strong>: NA</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-04-24UQRUG49/index.html">
+<a href="./meetings/2024-04-24UQRUG49/index.html" class="no-external">
 <div class="listing-date">
 April 24, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="meeting" data-listing-date-sort="1711461600000" data-listing-file-modified-sort="1720487065790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="meeting" data-listing-date-sort="1711461600000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
 <div class="body">
-<a href="./meetings/2024-03-24UQRUG48/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 48
+<a href="./meetings/2024-03-24UQRUG48/index.html" class="no-external">UQRUG 48</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-03-24UQRUG48/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Identify Data Problems using visdat. <br> <strong>Questions</strong>: GLMM Help, two y-axis plot, ggplot, splitting data into hours</p>
+<a href="./meetings/2024-03-24UQRUG48/index.html" class="no-external"><strong>Overview</strong>: Identify Data Problems using visdat. <br> <strong>Questions</strong>: GLMM Help, two y-axis plot, ggplot, splitting data into hours</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-03-24UQRUG48/index.html">
+<a href="./meetings/2024-03-24UQRUG48/index.html" class="no-external">
 <div class="listing-date">
 March 27, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="meeting" data-listing-date-sort="1709042400000" data-listing-file-modified-sort="1720487065788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="5" data-categories="meeting" data-listing-date-sort="1709042400000" data-listing-file-modified-sort="1724120744625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
 <div class="body">
-<a href="./meetings/2024-02-28UQRUG47/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 47
+<a href="./meetings/2024-02-28UQRUG47/index.html" class="no-external">UQRUG 47</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-02-28UQRUG47/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Webscraping with rvest. <br> <strong>Questions</strong>: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths.</p>
+<a href="./meetings/2024-02-28UQRUG47/index.html" class="no-external"><strong>Overview</strong>: Webscraping with rvest. <br> <strong>Questions</strong>: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-02-28UQRUG47/index.html">
+<a href="./meetings/2024-02-28UQRUG47/index.html" class="no-external">
 <div class="listing-date">
 February 28, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="meeting" data-listing-date-sort="1706623200000" data-listing-file-modified-sort="1720487065788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="6" data-categories="meeting" data-listing-date-sort="1706623200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="710">
 <div class="body">
-<a href="./meetings/2024-01-31UQRUG46/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 46
+<a href="./meetings/2024-01-31UQRUG46/index.html" class="no-external">UQRUG 46</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2024-01-31UQRUG46/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Creating CVs in R with vitae and RMarkdown. <br> <strong>Questions</strong>: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings.</p>
+<a href="./meetings/2024-01-31UQRUG46/index.html" class="no-external"><strong>Overview</strong>: Creating CVs in R with vitae and RMarkdown. <br> <strong>Questions</strong>: ggplotly bumpchart, loading packages, statistics, heatmap help, tibble column headings. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2024-01-31UQRUG46/index.html">
+<a href="./meetings/2024-01-31UQRUG46/index.html" class="no-external">
 <div class="listing-date">
 January 31, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="meeting" data-listing-date-sort="1702389600000" data-listing-file-modified-sort="1720487065787" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="7" data-categories="meeting" data-listing-date-sort="1702389600000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="474">
 <div class="body">
-<a href="./meetings/2023-12-13UQRUG45/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 45
+<a href="./meetings/2023-12-13UQRUG45/index.html" class="no-external">UQRUG 45</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-12-13UQRUG45/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: End of Year Cool But Useless Competition. <br> <strong>Questions</strong>: lmer model</p>
+<a href="./meetings/2023-12-13UQRUG45/index.html" class="no-external"><strong>Overview</strong>: End of Year Cool But Useless Competition. <br> <strong>Questions</strong>: lmer model</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-12-13UQRUG45/index.html">
+<a href="./meetings/2023-12-13UQRUG45/index.html" class="no-external">
 <div class="listing-date">
 December 13, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="meeting" data-listing-date-sort="1700575200000" data-listing-file-modified-sort="1720487065786" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="8" data-categories="meeting" data-listing-date-sort="1700575200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="482">
 <div class="body">
-<a href="./meetings/2023-11-22UQRUG44/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 44
+<a href="./meetings/2023-11-22UQRUG44/index.html" class="no-external">UQRUG 44</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-11-22UQRUG44/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Cool But Useless R Packages at ResBazQlD. <br> <strong>Questions</strong>: Network stability, RMarkdown, images, plotly, Correlations</p>
+<a href="./meetings/2023-11-22UQRUG44/index.html" class="no-external"><strong>Overview</strong>: Cool But Useless R Packages at ResBazQlD. <br> <strong>Questions</strong>: Network stability, RMarkdown, images, plotly, Correlations</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-11-22UQRUG44/index.html">
+<a href="./meetings/2023-11-22UQRUG44/index.html" class="no-external">
 <div class="listing-date">
 November 22, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="meeting" data-listing-date-sort="1698156000000" data-listing-file-modified-sort="1720487065785" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="9" data-categories="meeting" data-listing-date-sort="1698156000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
 <div class="body">
-<a href="./meetings/2023-10-25UQRUG43/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 43
+<a href="./meetings/2023-10-25UQRUG43/index.html" class="no-external">UQRUG 43</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-10-25UQRUG43/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Supervised Machine Learning in R. <br> <strong>Questions</strong>: None!</p>
+<a href="./meetings/2023-10-25UQRUG43/index.html" class="no-external"><strong>Overview</strong>: Supervised Machine Learning in R. <br> <strong>Questions</strong>: None!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-10-25UQRUG43/index.html">
+<a href="./meetings/2023-10-25UQRUG43/index.html" class="no-external">
 <div class="listing-date">
 October 25, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="meeting" data-listing-date-sort="1695736800000" data-listing-file-modified-sort="1720487065785" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="10" data-categories="meeting" data-listing-date-sort="1695736800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1505">
 <div class="body">
-<a href="./meetings/2023-09-27UQRUG42/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 42
+<a href="./meetings/2023-09-27UQRUG42/index.html" class="no-external">UQRUG 42</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-09-27UQRUG42/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Parallization in R. <br> <strong>Questions</strong>: parallels, HPC, memory utilisation, detectCores, for loops</p>
+<a href="./meetings/2023-09-27UQRUG42/index.html" class="no-external"><strong>Overview</strong>: Parallization in R. <br> <strong>Questions</strong>: parallels, HPC, memory utilisation, detectCores, for loops</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-09-27UQRUG42/index.html">
+<a href="./meetings/2023-09-27UQRUG42/index.html" class="no-external">
 <div class="listing-date">
 September 27, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="meeting" data-listing-date-sort="1693317600000" data-listing-file-modified-sort="1720487065784" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="11" data-categories="meeting" data-listing-date-sort="1693317600000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2055">
 <div class="body">
-<a href="./meetings/2023-08-30UQRUG41/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 41
+<a href="./meetings/2023-08-30UQRUG41/index.html" class="no-external">UQRUG 41</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-08-30UQRUG41/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Basic Statistics in R. <br> <strong>Questions</strong>: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop</p>
+<a href="./meetings/2023-08-30UQRUG41/index.html" class="no-external"><strong>Overview</strong>: Basic Statistics in R. <br> <strong>Questions</strong>: stats, network analysis, NetCDF, spatial, normality of residuals, intra class correlations, plotting multiple linear regression, reverse geocoding, LD Analysis with genepop</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-08-30UQRUG41/index.html">
+<a href="./meetings/2023-08-30UQRUG41/index.html" class="no-external">
 <div class="listing-date">
 August 30, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="meeting" data-listing-date-sort="1690293600000" data-listing-file-modified-sort="1720487065783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="12" data-categories="meeting" data-listing-date-sort="1690293600000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="601">
 <div class="body">
-<a href="./meetings/2023-07-26UQRUG40/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 40
+<a href="./meetings/2023-07-26UQRUG40/index.html" class="no-external">UQRUG 40</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-07-26UQRUG40/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using quarto and revealjs to create presentations with R markdown. <br> <strong>Questions</strong>: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms</p>
+<a href="./meetings/2023-07-26UQRUG40/index.html" class="no-external"><strong>Overview</strong>: Using quarto and revealjs to create presentations with R markdown. <br> <strong>Questions</strong>: learning about knitr, combining shiny with quarto, fixing OneDrive breaking R, cmdstanr, brms</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-07-26UQRUG40/index.html">
+<a href="./meetings/2023-07-26UQRUG40/index.html" class="no-external">
 <div class="listing-date">
 July 26, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="meeting" data-listing-date-sort="1687874400000" data-listing-file-modified-sort="1720487065782" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="13" data-categories="meeting" data-listing-date-sort="1687874400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2061">
 <div class="body">
-<a href="./meetings/2023-06-28UQRUG39/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 39
+<a href="./meetings/2023-06-28UQRUG39/index.html" class="no-external">UQRUG 39</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-06-28UQRUG39/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using data.table for fast data manipulation. <br> <strong>Questions</strong>: data.table and for loops, csv vs xlsx, LMER, keeping code tidy and readable, standard R operators, using .RData files, storing descriptive stats in a matrix, mutating all cells in dataframe, HPC help, RMarkdown errors</p>
+<a href="./meetings/2023-06-28UQRUG39/index.html" class="no-external"><strong>Overview</strong>: Using data.table for fast data manipulation. <br> <strong>Questions</strong>: data.table and for loops, csv vs xlsx, LMER, keeping code tidy and readable, standard R operators, using .RData files, storing descriptive stats in a matrix, mutating all cells in dataframe, HPC help, RMarkdown errors</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-06-28UQRUG39/index.html">
+<a href="./meetings/2023-06-28UQRUG39/index.html" class="no-external">
 <div class="listing-date">
 June 28, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="meeting" data-listing-date-sort="1685455200000" data-listing-file-modified-sort="1720487065781" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="14" data-categories="meeting" data-listing-date-sort="1685455200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1731">
 <div class="body">
-<a href="./meetings/2023-05-31UQRUG38/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 38
+<a href="./meetings/2023-05-31UQRUG38/index.html" class="no-external">UQRUG 38</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-05-31UQRUG38/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Using R for Mailouts. <br> <strong>Questions</strong>: Reloading packages, Combining multiple tables/kables, using HedgeDoc, using overlead for theses, formatting data for population genetics analysis</p>
+<a href="./meetings/2023-05-31UQRUG38/index.html" class="no-external"><strong>Overview</strong>: Using R for Mailouts. <br> <strong>Questions</strong>: Reloading packages, Combining multiple tables/kables, using HedgeDoc, using overlead for theses, formatting data for population genetics analysis</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-05-31UQRUG38/index.html">
+<a href="./meetings/2023-05-31UQRUG38/index.html" class="no-external">
 <div class="listing-date">
 May 31, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="meeting" data-listing-date-sort="1682431200000" data-listing-file-modified-sort="1720487065778" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14">
+<div class="quarto-post image-right" data-index="15" data-categories="meeting" data-listing-date-sort="1682431200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2753">
 <div class="body">
-<a href="./meetings/2023-04-26UQRUG37/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 37
+<a href="./meetings/2023-04-26UQRUG37/index.html" class="no-external">UQRUG 37</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-04-26UQRUG37/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: AI assisted coding. <br> <strong>Questions</strong>: Regular Expressions, data.table complete() equivalent, filtering outliers, boxplots, RStudio new line bug</p>
+<a href="./meetings/2023-04-26UQRUG37/index.html" class="no-external"><strong>Overview</strong>: AI assisted coding. <br> <strong>Questions</strong>: Regular Expressions, data.table complete() equivalent, filtering outliers, boxplots, RStudio new line bug</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-04-26UQRUG37/index.html">
+<a href="./meetings/2023-04-26UQRUG37/index.html" class="no-external">
 <div class="listing-date">
 April 26, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="meeting" data-listing-date-sort="1680012000000" data-listing-file-modified-sort="1720487065776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="16" data-categories="meeting" data-listing-date-sort="1680012000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="468">
 <div class="body">
-<a href="./meetings/2023-03-29UQRUG36/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 36
+<a href="./meetings/2023-03-29UQRUG36/index.html" class="no-external">UQRUG 36</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-03-29UQRUG36/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p><strong>Overview</strong>: Websites with Quarto. <br> <strong>Questions</strong>: Bayesian Stats, glm(), R Markdown, Functional Programming, Code debugging</p>
+<a href="./meetings/2023-03-29UQRUG36/index.html" class="no-external"><strong>Overview</strong>: Websites with Quarto. <br> <strong>Questions</strong>: Bayesian Stats, glm(), R Markdown, Functional Programming, Code debugging</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-03-29UQRUG36/index.html">
+<a href="./meetings/2023-03-29UQRUG36/index.html" class="no-external">
 <div class="listing-date">
 March 29, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="meeting" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1720487065774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="17" data-categories="meeting" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
 <div class="body">
-<a href="./meetings/2023-02-22UQRUG35/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 35
+<a href="./meetings/2023-02-22UQRUG35/index.html" class="no-external">UQRUG 35</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-02-22UQRUG35/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Is it ethical? But is it possible?
+<a href="./meetings/2023-02-22UQRUG35/index.html" class="no-external">Is it ethical? But is it possible?</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-02-22UQRUG35/index.html">
+<a href="./meetings/2023-02-22UQRUG35/index.html" class="no-external">
 <div class="listing-date">
 February 22, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="meeting" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1720487065772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="18" data-categories="meeting" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="249">
 <div class="body">
-<a href="./meetings/2023-01-25UQRUG34/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 34
+<a href="./meetings/2023-01-25UQRUG34/index.html" class="no-external">UQRUG 34</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2023-01-25UQRUG34/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Please…
+<a href="./meetings/2023-01-25UQRUG34/index.html" class="no-external">Please add your name to our attendee list. Edit this document by clicking the pencil :pencil2: in the top right corner, and then add: your name | your area of UQ | and why…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2023-01-25UQRUG34/index.html">
+<a href="./meetings/2023-01-25UQRUG34/index.html" class="no-external">
 <div class="listing-date">
 January 25, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="meeting" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1720487065771" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="meeting" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="492">
 <div class="body">
-<a href="./meetings/2022-12-07UQRUG33/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 33
+<a href="./meetings/2022-12-07UQRUG33/index.html" class="no-external">UQRUG 33</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-12-07UQRUG33/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<strong>Presentation on gganimate and plotly animations</strong> Nick Wiggins did a presentation on animations in gganimate and plotly. He…
+<a href="./meetings/2022-12-07UQRUG33/index.html" class="no-external"><strong>Presentation on gganimate and plotly animations</strong> Nick Wiggins did a presentation on animations in gganimate and plotly. He showed some examples of how these can be used to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-12-07UQRUG33/index.html">
+<a href="./meetings/2022-12-07UQRUG33/index.html" class="no-external">
 <div class="listing-date">
 December 7, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="meeting" data-listing-date-sort="1666706400000" data-listing-file-modified-sort="1720487065770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="20" data-categories="meeting" data-listing-date-sort="1666706400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
 <div class="body">
-<a href="./meetings/2022-10-26UQRUG32/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 32
+<a href="./meetings/2022-10-26UQRUG32/index.html" class="no-external">UQRUG 32</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-10-26UQRUG32/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Nick…
+<a href="./meetings/2022-10-26UQRUG32/index.html" class="no-external">Nick Wiggins did a presentation on the quanteda package to give an overview and introduction to the package and how he has recently used it to assist a researcher.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-10-26UQRUG32/index.html">
+<a href="./meetings/2022-10-26UQRUG32/index.html" class="no-external">
 <div class="listing-date">
 October 26, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="meeting" data-listing-date-sort="1664287200000" data-listing-file-modified-sort="1720487065770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="21" data-categories="meeting" data-listing-date-sort="1664287200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="85">
 <div class="body">
-<a href="./meetings/2022-09-28UQRUG31/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 31
+<a href="./meetings/2022-09-28UQRUG31/index.html" class="no-external">UQRUG 31</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-09-28UQRUG31/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Covered some of the basics around creating, and the differences between, arrays and dataframes.
+<a href="./meetings/2022-09-28UQRUG31/index.html" class="no-external">Covered some of the basics around creating, and the differences between, arrays and dataframes.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-09-28UQRUG31/index.html">
+<a href="./meetings/2022-09-28UQRUG31/index.html" class="no-external">
 <div class="listing-date">
 September 28, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="meeting" data-listing-date-sort="1661263200000" data-listing-file-modified-sort="1720487065769" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="22" data-categories="meeting" data-listing-date-sort="1661263200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
 <div class="body">
-<a href="./meetings/2022-08-24UQRUG30/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 30
+<a href="./meetings/2022-08-24UQRUG30/index.html" class="no-external">UQRUG 30</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-08-24UQRUG30/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-How to read…
+<a href="./meetings/2022-08-24UQRUG30/index.html" class="no-external">How to read multiple csv files in as separate variables efficiently for a Shiny app. Looked at creating a list of files, and then using the read_csv function in rdrr package…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-08-24UQRUG30/index.html">
+<a href="./meetings/2022-08-24UQRUG30/index.html" class="no-external">
 <div class="listing-date">
 August 24, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="meeting" data-listing-date-sort="1658844000000" data-listing-file-modified-sort="1720487065768" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="23" data-categories="meeting" data-listing-date-sort="1658844000000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
 <div class="body">
-<a href="./meetings/2022-07-27UQRUG29/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 29
+<a href="./meetings/2022-07-27UQRUG29/index.html" class="no-external">UQRUG 29</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-07-27UQRUG29/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Creating a…
+<a href="./meetings/2022-07-27UQRUG29/index.html" class="no-external">Creating a normal distribution line for a histogram. Using ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-07-27UQRUG29/index.html">
+<a href="./meetings/2022-07-27UQRUG29/index.html" class="no-external">
 <div class="listing-date">
 July 27, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="meeting" data-listing-date-sort="1656424800000" data-listing-file-modified-sort="1720487065767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="24" data-categories="meeting" data-listing-date-sort="1656424800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="506">
 <div class="body">
-<a href="./meetings/2022-06-29UQRUG28/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 28
+<a href="./meetings/2022-06-29UQRUG28/index.html" class="no-external">UQRUG 28</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-06-29UQRUG28/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-The trick here is to:
+<a href="./meetings/2022-06-29UQRUG28/index.html" class="no-external">The trick here is to:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-06-29UQRUG28/index.html">
+<a href="./meetings/2022-06-29UQRUG28/index.html" class="no-external">
 <div class="listing-date">
 June 29, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="meeting" data-listing-date-sort="1654005600000" data-listing-file-modified-sort="1720487065766" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="25" data-categories="meeting" data-listing-date-sort="1654005600000" data-listing-file-modified-sort="1724126580012" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="319">
 <div class="body">
-<a href="./meetings/2022-06-01UQRUG27/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 27
+<a href="./meetings/2022-06-01UQRUG27/index.html" class="no-external">UQRUG 27</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-06-01UQRUG27/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./meetings/2022-06-01UQRUG27/index.html" class="no-external"><strong>Questions</strong>: ggplot2, species distribution modelling, anomalies in chronology, R Markdown, factoextra</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-06-01UQRUG27/index.html">
+<a href="./meetings/2022-06-01UQRUG27/index.html" class="no-external">
 <div class="listing-date">
 June 1, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="meeting" data-listing-date-sort="1650981600000" data-listing-file-modified-sort="1720487065765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="26" data-categories="meeting" data-listing-date-sort="1650981600000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
 <div class="body">
-<a href="./meetings/2022-04-27UQRUG26/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 26
+<a href="./meetings/2022-04-27UQRUG26/index.html" class="no-external">UQRUG 26</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-04-27UQRUG26/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Automate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html
+<a href="./meetings/2022-04-27UQRUG26/index.html" class="no-external">Automate running the script (on Windows): https://cran.r-project.org/web/packages/taskscheduleR/index.html</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-04-27UQRUG26/index.html">
+<a href="./meetings/2022-04-27UQRUG26/index.html" class="no-external">
 <div class="listing-date">
 April 27, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="meeting" data-listing-date-sort="1648562400000" data-listing-file-modified-sort="1720487065765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="27" data-categories="meeting" data-listing-date-sort="1648562400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
 <div class="body">
-<a href="./meetings/2022-03-30UQRUG25/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 25
+<a href="./meetings/2022-03-30UQRUG25/index.html" class="no-external">UQRUG 25</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-03-30UQRUG25/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Use terra instead of raster, and use a temporary directory:
+<a href="./meetings/2022-03-30UQRUG25/index.html" class="no-external">Use terra instead of raster, and use a temporary directory:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-03-30UQRUG25/index.html">
+<a href="./meetings/2022-03-30UQRUG25/index.html" class="no-external">
 <div class="listing-date">
 March 30, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="meeting" data-listing-date-sort="1645538400000" data-listing-file-modified-sort="1720487065764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="28" data-categories="meeting" data-listing-date-sort="1645538400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="975">
 <div class="body">
-<a href="./meetings/2022-02-23UQRUG24/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 24
+<a href="./meetings/2022-02-23UQRUG24/index.html" class="no-external">UQRUG 24</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2022-02-23UQRUG24/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Convert a table to a <code>gt</code> object and then save it to RTF (which can be opened by Word).
+<a href="./meetings/2022-02-23UQRUG24/index.html" class="no-external">Convert a table to a <code>gt</code> object and then save it to RTF (which can be opened by Word).</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2022-02-23UQRUG24/index.html">
+<a href="./meetings/2022-02-23UQRUG24/index.html" class="no-external">
 <div class="listing-date">
 February 23, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="meeting" data-listing-date-sort="1636898400000" data-listing-file-modified-sort="1720487065763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="29" data-categories="meeting" data-listing-date-sort="1636898400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="126">
 <div class="body">
-<a href="./meetings/2021-11-15UQRUG22/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 22
+<a href="./meetings/2021-11-15UQRUG22/index.html" class="no-external">UQRUG 22</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-11-15UQRUG22/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Example of for loop vs map() function from purrr package.
+<a href="./meetings/2021-11-15UQRUG22/index.html" class="no-external">Example of for loop vs map() function from purrr package.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-11-15UQRUG22/index.html">
+<a href="./meetings/2021-11-15UQRUG22/index.html" class="no-external">
 <div class="listing-date">
 November 15, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="meeting" data-listing-date-sort="1634479200000" data-listing-file-modified-sort="1720487065763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="30" data-categories="meeting" data-listing-date-sort="1634479200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <div class="body">
-<a href="./meetings/2021-10-18UQRUG21/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 21
+<a href="./meetings/2021-10-18UQRUG21/index.html" class="no-external">UQRUG 21</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-10-18UQRUG21/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2021-10-18UQRUG21/index.html" class="no-external">
 
-</div>
+<section id="attendees" class="level4">
+
+<ul>
+<li>Stéphane</li>
+<li>Aklilu</li>
+<li>Uttara</li>
+</ul>
+
+
+</section>
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./meetings/2021-10-18UQRUG21/index.html">
+<a href="./meetings/2021-10-18UQRUG21/index.html" class="no-external">
 <div class="listing-date">
 October 18, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="meeting" data-listing-date-sort="1632146400000" data-listing-file-modified-sort="1720487065762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="31" data-categories="meeting" data-listing-date-sort="1632146400000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="288">
 <div class="body">
-<a href="./meetings/2021-09-21UQRUG20/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 20
+<a href="./meetings/2021-09-21UQRUG20/index.html" class="no-external">UQRUG 20</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-09-21UQRUG20/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2021-09-21UQRUG20/index.html" class="no-external">
 
+<section id="participants-14" class="level4">
+
+<ul>
+<li><strong>Stéphane</strong> (Library): thinking a lot about an “OpenStreetMap Recipes” package…</li>
+<li><strong>Catherine</strong>: Library/Postdoc Biology, code/data into a repository for a paper</li>
+<li><strong>Shaoyang</strong>: QAAFI…</li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li><li><strong></strong></li></ul></section><section id="shared-resources" class="level4"><ul><li></li><li><em></em></li><li></li><li><ul><li></li></ul></li><li></li><li><ul><li></li><li></li></ul></li><li></li><li></li><li></li><li></li></ul></section></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-09-21UQRUG20/index.html">
+<a href="./meetings/2021-09-21UQRUG20/index.html" class="no-external">
 <div class="listing-date">
 September 21, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="meeting" data-listing-date-sort="1629036000000" data-listing-file-modified-sort="1720487065761" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="32" data-categories="meeting" data-listing-date-sort="1629036000000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="637">
 <div class="body">
-<a href="./meetings/2021-08-16UQRUG19/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 19
+<a href="./meetings/2021-08-16UQRUG19/index.html" class="no-external">UQRUG 19</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-08-16UQRUG19/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Links we talked about today:
+<a href="./meetings/2021-08-16UQRUG19/index.html" class="no-external">Links we talked about today:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-08-16UQRUG19/index.html">
+<a href="./meetings/2021-08-16UQRUG19/index.html" class="no-external">
 <div class="listing-date">
 August 16, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="meeting" data-listing-date-sort="1626616800000" data-listing-file-modified-sort="1720487065760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="33" data-categories="meeting" data-listing-date-sort="1626616800000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
 <div class="body">
-<a href="./meetings/2021-07-19UQRUG18/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 18
+<a href="./meetings/2021-07-19UQRUG18/index.html" class="no-external">UQRUG 18</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-07-19UQRUG18/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Technical difficulties! No notes.
+<a href="./meetings/2021-07-19UQRUG18/index.html" class="no-external">Technical difficulties! No notes.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-07-19UQRUG18/index.html">
+<a href="./meetings/2021-07-19UQRUG18/index.html" class="no-external">
 <div class="listing-date">
 July 19, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="meeting" data-listing-date-sort="1624197600000" data-listing-file-modified-sort="1720487065760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="34" data-categories="meeting" data-listing-date-sort="1624197600000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="379">
 <div class="body">
-<a href="./meetings/2021-06-21UQRUG17/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 17
+<a href="./meetings/2021-06-21UQRUG17/index.html" class="no-external">UQRUG 17</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-06-21UQRUG17/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-“[In <code>dplyr::filter</code>], note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with <code>[</code>.”
+<a href="./meetings/2021-06-21UQRUG17/index.html" class="no-external">“[In <code>dplyr::filter</code>], note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with <code>[</code>.”</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-06-21UQRUG17/index.html">
+<a href="./meetings/2021-06-21UQRUG17/index.html" class="no-external">
 <div class="listing-date">
 June 21, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="meeting" data-listing-date-sort="1622383200000" data-listing-file-modified-sort="1720487065758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="35" data-categories="meeting" data-listing-date-sort="1622383200000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <div class="body">
-<a href="./meetings/2021-05-31UQRUG16/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 16
+<a href="./meetings/2021-05-31UQRUG16/index.html" class="no-external">UQRUG 16</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-05-31UQRUG16/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+<a href="./meetings/2021-05-31UQRUG16/index.html" class="no-external">See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-05-31UQRUG16/index.html">
+<a href="./meetings/2021-05-31UQRUG16/index.html" class="no-external">
 <div class="listing-date">
 May 31, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="36" data-categories="meeting" data-listing-date-sort="1618754400000" data-listing-file-modified-sort="1720487065758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="36" data-categories="meeting" data-listing-date-sort="1618754400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="209">
 <div class="body">
-<a href="./meetings/2021-04-19UQRUG15/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 15
+<a href="./meetings/2021-04-19UQRUG15/index.html" class="no-external">UQRUG 15</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-04-19UQRUG15/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets
+<a href="./meetings/2021-04-19UQRUG15/index.html" class="no-external">See if you find an interesting dataset to play with: https://github.com/rfordatascience/tidytuesday#datasets</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-04-19UQRUG15/index.html">
+<a href="./meetings/2021-04-19UQRUG15/index.html" class="no-external">
 <div class="listing-date">
 April 19, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="37" data-categories="meeting" data-listing-date-sort="1615730400000" data-listing-file-modified-sort="1720487065756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="37" data-categories="meeting" data-listing-date-sort="1615730400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <div class="body">
-<a href="./meetings/2021-03-15UQRUG14/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 14
+<a href="./meetings/2021-03-15UQRUG14/index.html" class="no-external">UQRUG 14</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-03-15UQRUG14/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Bechdel Test dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md
+<a href="./meetings/2021-03-15UQRUG14/index.html" class="no-external">Bechdel Test dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-03-15UQRUG14/index.html">
+<a href="./meetings/2021-03-15UQRUG14/index.html" class="no-external">
 <div class="listing-date">
 March 15, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="38" data-categories="meeting" data-listing-date-sort="1613311200000" data-listing-file-modified-sort="1720487065756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="38" data-categories="meeting" data-listing-date-sort="1613311200000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="131">
 <div class="body">
-<a href="./meetings/2021-02-15UQRUG13/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 13
+<a href="./meetings/2021-02-15UQRUG13/index.html" class="no-external">UQRUG 13</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-02-15UQRUG13/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2021-02-15UQRUG13/index.html" class="no-external">
 
+<section id="participants" class="level4">
+
+<ul>
+<li><strong>Stéphane Guillou</strong> (Library): just happy to help and share resources! Looking for a quick way to do adress lookups.</li>
+<li><strong>Paula Andrea Martinez</strong> (co-organiser/ helper) Happy to…</li><li></li><li></li><li></li><li></li></ul></section><section id="shared-resources" class="level4"><ul><li></li><li></li><li></li><li><ul><li></li><li></li><li></li><li></li></ul></li><li></li></ul></section></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-02-15UQRUG13/index.html">
+<a href="./meetings/2021-02-15UQRUG13/index.html" class="no-external">
 <div class="listing-date">
 February 15, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="39" data-categories="meeting" data-listing-date-sort="1611496800000" data-listing-file-modified-sort="1720487065755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="39" data-categories="meeting" data-listing-date-sort="1611496800000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="504">
 <div class="body">
-<a href="./meetings/2021-01-25UQRUG12/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 12
+<a href="./meetings/2021-01-25UQRUG12/index.html" class="no-external">UQRUG 12</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2021-01-25UQRUG12/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<strong>This is our first anniversary! UQRUG has one year!!</strong>
+<a href="./meetings/2021-01-25UQRUG12/index.html" class="no-external"><strong>This is our first anniversary! UQRUG has one year!!</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2021-01-25UQRUG12/index.html">
+<a href="./meetings/2021-01-25UQRUG12/index.html" class="no-external">
 <div class="listing-date">
 January 25, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="40" data-categories="meeting" data-listing-date-sort="1605448800000" data-listing-file-modified-sort="1720487065754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="40" data-categories="meeting" data-listing-date-sort="1605448800000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
 <div class="body">
-<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 11
+<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html" class="no-external">UQRUG 11</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html" class="no-external">
 
-</div>
+
+
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html">
+<a href="./meetings/2020-11-16UQRUG11(cancelled)/index.html" class="no-external">
 <div class="listing-date">
 November 16, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="41" data-categories="meeting" data-listing-date-sort="1603029600000" data-listing-file-modified-sort="1720487065753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="41" data-categories="meeting" data-listing-date-sort="1603029600000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="409">
 <div class="body">
-<a href="./meetings/2020-10-19UQRUG10/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 10
+<a href="./meetings/2020-10-19UQRUG10/index.html" class="no-external">UQRUG 10</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-10-19UQRUG10/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Please add your name and the problem you’d like some help with!
+<a href="./meetings/2020-10-19UQRUG10/index.html" class="no-external">Please add your name and the problem you’d like some help with!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-10-19UQRUG10/index.html">
+<a href="./meetings/2020-10-19UQRUG10/index.html" class="no-external">
 <div class="listing-date">
 October 19, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="42" data-categories="meeting" data-listing-date-sort="1600610400000" data-listing-file-modified-sort="1720487065753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="42" data-categories="meeting" data-listing-date-sort="1600610400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
 <div class="body">
-<a href="./meetings/2020-09-21UQRUG9/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 9
+<a href="./meetings/2020-09-21UQRUG9/index.html" class="no-external">UQRUG 9</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-09-21UQRUG9/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Please add your name and the problem you’d like some help with!
+<a href="./meetings/2020-09-21UQRUG9/index.html" class="no-external">Please add your name and the problem you’d like some help with!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-09-21UQRUG9/index.html">
+<a href="./meetings/2020-09-21UQRUG9/index.html" class="no-external">
 <div class="listing-date">
 September 21, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="43" data-categories="meeting" data-listing-date-sort="1597586400000" data-listing-file-modified-sort="1720487065752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="43" data-categories="meeting" data-listing-date-sort="1597586400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="352">
 <div class="body">
-<a href="./meetings/2020-08-17UQRUG8/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 8
+<a href="./meetings/2020-08-17UQRUG8/index.html" class="no-external">UQRUG 8</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-08-17UQRUG8/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Please add your name and the problem you’d like some help with!
+<a href="./meetings/2020-08-17UQRUG8/index.html" class="no-external">Please add your name and the problem you’d like some help with!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-08-17UQRUG8/index.html">
+<a href="./meetings/2020-08-17UQRUG8/index.html" class="no-external">
 <div class="listing-date">
 August 17, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="44" data-categories="meeting" data-listing-date-sort="1595772000000" data-listing-file-modified-sort="1720487065751" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="44" data-categories="meeting" data-listing-date-sort="1595772000000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="319">
 <div class="body">
-<a href="./meetings/2020-07-27UQRUG7/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 7
+<a href="./meetings/2020-07-27UQRUG7/index.html" class="no-external">UQRUG 7</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-07-27UQRUG7/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
+<a href="./meetings/2020-07-27UQRUG7/index.html" class="no-external">On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-07-27UQRUG7/index.html">
+<a href="./meetings/2020-07-27UQRUG7/index.html" class="no-external">
 <div class="listing-date">
 July 27, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="45" data-categories="meeting" data-listing-date-sort="1592143200000" data-listing-file-modified-sort="1720487065750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="45" data-categories="meeting" data-listing-date-sort="1592143200000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="408">
 <div class="body">
-<a href="./meetings/2020-06-15UQRUG6/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 6
+<a href="./meetings/2020-06-15UQRUG6/index.html" class="no-external">UQRUG 6</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-06-15UQRUG6/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Anything you’d like to talk about? A problem? Resources? Feel free to add it here!
+<a href="./meetings/2020-06-15UQRUG6/index.html" class="no-external">Anything you’d like to talk about? A problem? Resources? Feel free to add it here!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-06-15UQRUG6/index.html">
+<a href="./meetings/2020-06-15UQRUG6/index.html" class="no-external">
 <div class="listing-date">
 June 15, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="46" data-categories="meeting" data-listing-date-sort="1589724000000" data-listing-file-modified-sort="1720487065750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="46" data-categories="meeting" data-listing-date-sort="1589724000000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
 <div class="body">
-<a href="./meetings/2020-05-18UQRUG5/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 5
+<a href="./meetings/2020-05-18UQRUG5/index.html" class="no-external">UQRUG 5</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-05-18UQRUG5/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-We are meeting online again!
+<a href="./meetings/2020-05-18UQRUG5/index.html" class="no-external">We are meeting online again!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-05-18UQRUG5/index.html">
+<a href="./meetings/2020-05-18UQRUG5/index.html" class="no-external">
 <div class="listing-date">
 May 18, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="47" data-categories="meeting" data-listing-date-sort="1587304800000" data-listing-file-modified-sort="1720487065749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="47" data-categories="meeting" data-listing-date-sort="1587304800000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="668">
 <div class="body">
-<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 4
+<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html" class="no-external">UQRUG 4</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Because of physical isolation, we will be meeting online for now.
+<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html" class="no-external">Because of physical isolation, we will be meeting online for now.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html">
+<a href="./meetings/2020-04-20UQRUG4-movingonline!/index.html" class="no-external">
 <div class="listing-date">
 April 20, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="48" data-categories="meeting" data-listing-date-sort="1584885600000" data-listing-file-modified-sort="1720487065748" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="48" data-categories="meeting" data-listing-date-sort="1584885600000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
 <div class="body">
-<a href="./meetings/2020-03-23UQRUG3/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 3
+<a href="./meetings/2020-03-23UQRUG3/index.html" class="no-external">UQRUG 3</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-03-23UQRUG3/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<em>Canceled because of UQ recommendations related to COVID-19.</em>
+<a href="./meetings/2020-03-23UQRUG3/index.html" class="no-external"><em>Canceled because of UQ recommendations related to COVID-19.</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-03-23UQRUG3/index.html">
+<a href="./meetings/2020-03-23UQRUG3/index.html" class="no-external">
 <div class="listing-date">
 March 23, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="49" data-categories="meeting" data-listing-date-sort="1582466400000" data-listing-file-modified-sort="1720487065748" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="49" data-categories="meeting" data-listing-date-sort="1582466400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
 <div class="body">
-<a href="./meetings/2020-02-24UQRUG2/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 2
+<a href="./meetings/2020-02-24UQRUG2/index.html" class="no-external">UQRUG 2</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-02-24UQRUG2/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
+<a href="./meetings/2020-02-24UQRUG2/index.html" class="no-external">
 
+<ul>
+<li>Learning R? jump here: https://rstudio.github.io/learnr/</li>
+<li>Tidyverse tricks? https://suzan.rbind.io/</li>
+<li>Greg Siemon, (unofficial) Rmarkdown UQ Thesis Template…</li><li></li><li></li></ul></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-02-24UQRUG2/index.html">
+<a href="./meetings/2020-02-24UQRUG2/index.html" class="no-external">
 <div class="listing-date">
 February 24, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="50" data-categories="meeting" data-listing-date-sort="1579442400000" data-listing-file-modified-sort="1720487065747" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="50" data-categories="meeting" data-listing-date-sort="1579442400000" data-listing-file-modified-sort="1724049867477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="88">
 <div class="body">
-<a href="./meetings/2020-01-20UQRUG1/index.html">
 <h3 class="no-anchor listing-title">
-UQRUG 1
+<a href="./meetings/2020-01-20UQRUG1/index.html" class="no-external">UQRUG 1</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./meetings/2020-01-20UQRUG1/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Topics discussed:
+<a href="./meetings/2020-01-20UQRUG1/index.html" class="no-external">Topics discussed:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./meetings/2020-01-20UQRUG1/index.html">
+<a href="./meetings/2020-01-20UQRUG1/index.html" class="no-external">
 <div class="listing-date">
 January 20, 2020
 </div>
@@ -1329,6 +1351,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1395,13 +1444,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1429,18 +1480,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1472,11 +1512,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1486,8 +1565,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1499,7 +1587,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1543,6 +1754,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1568,6 +1780,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1628,6 +1866,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

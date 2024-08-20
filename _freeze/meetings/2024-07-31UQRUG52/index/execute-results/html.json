@@ -1,8 +1,11 @@
 {
-  "hash": "094a90bac6c637625c48dfd60f1896a5",
+  "hash": "c84025bddf33556ca39abeae8968da84",
   "result": {
-    "markdown": "---\ntitle: UQRUG 52\ndate: '2024-07-31'\ndescription: '**Overview**: Using taskscheduleR to automate scripts <br />'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n## 2024-05-29: UQRUG 50\n\n### R Overview of the Month\n\n#### Using taskscheduleR to automate your R scripts\n\nAt UQRUG this month, we have an overview of the <a href=\"taskscheduleR package - RDocumentation\">taskscheduleR</a> package by Luke Gaiter.\n\nHe will show showcase the usage of the [taskscheduleR](https://www.rdocumentation.org/packages/taskscheduleR/versions/1.8) package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering data from a source that updates frequently.\n\n### Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name        | Where are you from? | What brings you here?    |\n|-------------|---------------------|--------------------------|\n| Luke Gaiter | Library             | Here to present and help |\n|             |                     |                          |\n\n### Questions\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 52\ndate: '2024-07-31'\ndescription: '**Overview**: Using taskscheduleR to automate scripts <br />'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n\n## 2024-05-29: UQRUG 50\n\n### R Overview of the Month\n\n#### Using taskscheduleR to automate your R scripts\n\nAt UQRUG this month, we have an overview of the <a href=\"taskscheduleR package - RDocumentation\">taskscheduleR</a> package by Luke Gaiter.\n\nHe will show showcase the usage of the [taskscheduleR](https://www.rdocumentation.org/packages/taskscheduleR/versions/1.8) package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering data from a source that updates frequently.\n\n### Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name        | Where are you from? | What brings you here?    |\n|-------------|---------------------|--------------------------|\n| Luke Gaiter | Library             | Here to present and help |\n|             |                     |                          |\n\n### Questions\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

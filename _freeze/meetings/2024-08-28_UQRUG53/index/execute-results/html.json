@@ -1,0 +1,17 @@
+{
+  "hash": "058195e1022adf6902e5e2e44f24ad1d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 53\ndraft: true\neditor: visual\ndate: '2024-08-28'\ndescription: '**Overview**: 2 years of R news overview + drop in session<br /> **Questions**: ...'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n\n## Topic: 2 years of RStats news\n\nOn 2024-08-28, Stéphane highlighted what attracted his attention from the two last years of RStats news.\n\n## Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name             | Where are you from? | What brings you here?    |\n|------------------|---------------------|--------------------------|\n| Stéphane Guillou | Library             | Here to present and help |\n|                  |                     |                          |\n\n## Questions\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

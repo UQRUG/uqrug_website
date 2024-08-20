@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="DatatoViz_files/libs/clipboard/clipboard.min.js"></script>
-<script src="DatatoViz_files/libs/quarto-html/tabby.min.js"></script>
-<script src="DatatoViz_files/libs/quarto-html/popper.min.js"></script>
-<script src="DatatoViz_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="DatatoViz_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="DatatoViz_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="DatatoViz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="DatatoViz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+<link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Luke Gaiter">
   <meta name="dcterms.date" content="2024-05-29">
-  <title>UQ R User Group - Data to Viz presentation for May meetup</title>
+  <title>UQRUG – UQ R User Group - Data to Viz presentation for May meetup</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="DatatoViz_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="DatatoViz_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -43,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +72,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +86,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -96,11 +97,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="DatatoViz_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="DatatoViz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="DatatoViz_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="DatatoViz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="DatatoViz_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -386,6 +387,10 @@
       margin-right: 0; 
     }
   </style>
+<meta property="og:title" content="UQ R User Group - Data to Viz presentation for May meetup – UQRUG">
+<meta property="og:description" content="The University of Queensland R Users Group">
+<meta property="og:image" content="images/uqrug_og.png">
+<meta property="og:site_name" content="UQRUG">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -428,30 +433,30 @@ Luke Gaiter
 <section id="code" class="title-slide slide level2 center">
 <h2>Code:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href=""></a></span>
-<span id="cb1-4"><a href=""></a><span class="fu">ggplot</span>(starwars,<span class="fu">aes</span>(<span class="at">x=</span>species))<span class="sc">+</span></span>
-<span id="cb1-5"><a href=""></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
-<span id="cb1-6"><a href=""></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="fu">ggplot</span>(starwars,<span class="fu">aes</span>(<span class="at">x=</span>species))<span class="sc">+</span></span>
+<span id="cb1-5"><a></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb1-6"><a></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="DatatoViz_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section class="slide level3 center">
 
 <p><strong>How do I re-order these</strong> - <br> <a href="https://r-graph-gallery.com/267-reorder-a-variable-in-ggplot2.html"> Use method 1 from reorder instructions</a> &amp; remove NAs</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># set up custom df to make this easier</span></span>
-<span id="cb2-2"><a href=""></a>swcount <span class="ot">=</span> starwars <span class="sc">%&gt;%</span> </span>
-<span id="cb2-3"><a href=""></a>  <span class="fu">count</span>(species) </span>
-<span id="cb2-4"><a href=""></a></span>
-<span id="cb2-5"><a href=""></a>swcount <span class="sc">%&gt;%</span></span>
-<span id="cb2-6"><a href=""></a><span class="co"># filter out any NAs to be safe</span></span>
-<span id="cb2-7"><a href=""></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(species)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-8"><a href=""></a><span class="co"># use forcats to reorder</span></span>
-<span id="cb2-9"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">species =</span> <span class="fu">fct_reorder</span>(species, n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-10"><a href=""></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>n, <span class="at">y=</span>species)) <span class="sc">+</span></span>
-<span id="cb2-11"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb2-12"><a href=""></a>  <span class="fu">xlab</span>(<span class="st">"count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># set up custom df to make this easier</span></span>
+<span id="cb2-2"><a></a>swcount <span class="ot">=</span> starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a></a>  <span class="fu">count</span>(species) </span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a>swcount <span class="sc">%&gt;%</span></span>
+<span id="cb2-6"><a></a><span class="co"># filter out any NAs to be safe</span></span>
+<span id="cb2-7"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(species)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-8"><a></a><span class="co"># use forcats to reorder</span></span>
+<span id="cb2-9"><a></a>  <span class="fu">mutate</span>(<span class="at">species =</span> <span class="fu">fct_reorder</span>(species, n)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-10"><a></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>n, <span class="at">y=</span>species)) <span class="sc">+</span></span>
+<span id="cb2-11"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a></a>  <span class="fu">xlab</span>(<span class="st">"count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level3 center">
 
@@ -482,14 +487,14 @@ Luke Gaiter
 <section id="code-1" class="title-slide slide level2 center">
 <h2>Code:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-3"><a href=""></a></span>
-<span id="cb3-4"><a href=""></a>starwars <span class="sc">%&gt;%</span></span>
-<span id="cb3-5"><a href=""></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(birth_year), <span class="sc">!</span><span class="fu">is.na</span>(homeworld)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> homeworld, <span class="at">y =</span> birth_year)) <span class="sc">+</span></span>
-<span id="cb3-7"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
-<span id="cb3-8"><a href=""></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>starwars <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(birth_year), <span class="sc">!</span><span class="fu">is.na</span>(homeworld)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> homeworld, <span class="at">y =</span> birth_year)) <span class="sc">+</span></span>
+<span id="cb3-7"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-8"><a></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="DatatoViz_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
@@ -524,12 +529,12 @@ Luke Gaiter
 <section id="code-and-explanation" class="title-slide slide level2 center">
 <h2>Code and Explanation:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb4-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-3"><a href=""></a></span>
-<span id="cb4-4"><a href=""></a>starwars <span class="sc">%&gt;%</span> </span>
-<span id="cb4-5"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>height))<span class="sc">+</span></span>
-<span id="cb4-6"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"blue"</span>,<span class="at">alpha=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>height))<span class="sc">+</span></span>
+<span id="cb4-6"><a></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"blue"</span>,<span class="at">alpha=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -540,14 +545,14 @@ Luke Gaiter
 </div>
 <p><br> Adding theme discussed on page</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb5-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-3"><a href=""></a><span class="fu">library</span>(hrbrthemes)</span>
-<span id="cb5-4"><a href=""></a></span>
-<span id="cb5-5"><a href=""></a>starwars <span class="sc">%&gt;%</span> </span>
-<span id="cb5-6"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>height))<span class="sc">+</span></span>
-<span id="cb5-7"><a href=""></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"blue"</span>,<span class="at">alpha=</span><span class="fl">0.7</span>)<span class="sc">+</span></span>
-<span id="cb5-8"><a href=""></a>  <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-3"><a></a><span class="fu">library</span>(hrbrthemes)</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>height))<span class="sc">+</span></span>
+<span id="cb5-7"><a></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"blue"</span>,<span class="at">alpha=</span><span class="fl">0.7</span>)<span class="sc">+</span></span>
+<span id="cb5-8"><a></a>  <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -578,6 +583,7 @@ Luke Gaiter
 <li><strong>Visual Appeal</strong>: Density plots are visually appealing and can handle overplotting better than histograms, particularly with large datasets.</li>
 <li><strong>Highlighting Density Peaks</strong>: The peaks in the density plot indicate where the concentration of data points is highest, allowing us to identify the most common birth years easily.</li>
 </ul>
+
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -589,19 +595,19 @@ Luke Gaiter
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="DatatoViz_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="DatatoViz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="DatatoViz_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="DatatoViz_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -865,18 +871,7 @@ Luke Gaiter
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -908,7 +903,29 @@ Luke Gaiter
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -916,7 +933,7 @@ Luke Gaiter
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

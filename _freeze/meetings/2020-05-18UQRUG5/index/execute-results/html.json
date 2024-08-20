@@ -1,8 +1,11 @@
 {
-  "hash": "aae11eabe96f4182f1b9e0b542e7e234",
+  "hash": "a5a8ddd03d2d2fa11a193089bf3afd7e",
   "result": {
-    "markdown": "---\ntitle: UQRUG 5\ndate: '2020-05-18'\ncategories: meeting\n---\n\n\n\n\n### 2020-05-18: UQRUG 5\n\nWe are meeting online again!\n\nToday, we talk about whatever issues you might have, as well as **reprex** and **R 4.0**.\n\n\n#### Attendees\n\nFeel free to share your contact, specialty and questions here.\n\n* **Steph** (UQ Library), technology trainer, likes R and maps and Open Science.\n    * Email (work): s.guillou@uq.edu.au ; Social (personal): [mastodon](https://mastodon.indie.host/@stragu/)\n* **Paula** \n* I am wondering if some could help me to do **asymptotic regression model**. Thank you!\n* **Ruth** - I have seen online a package called \"revtools\" for screening abstracts and titles of journals, would someone help me with the code (for future reference/projects)\n* ... and **11 more R users**!\n\n\n\n#### reprex\n\nThe **reprex** website introduces what the reprex package is useful for, i.e. creating **reproducible examples**: https://reprex.tidyverse.org/\n\nShare your reprex example here!\n\nSteph's:\n\n``` r\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 5\ndate: '2020-05-18'\ncategories: meeting\n---\n\n\n\n\n\n### 2020-05-18: UQRUG 5\n\nWe are meeting online again!\n\nToday, we talk about whatever issues you might have, as well as **reprex** and **R 4.0**.\n\n\n#### Attendees\n\nFeel free to share your contact, specialty and questions here.\n\n* **Steph** (UQ Library), technology trainer, likes R and maps and Open Science.\n    * Email (work): s.guillou@uq.edu.au ; Social (personal): [mastodon](https://mastodon.indie.host/@stragu/)\n* **Paula** \n* I am wondering if some could help me to do **asymptotic regression model**. Thank you!\n* **Ruth** - I have seen online a package called \"revtools\" for screening abstracts and titles of journals, would someone help me with the code (for future reference/projects)\n* ... and **11 more R users**!\n\n\n\n#### reprex\n\nThe **reprex** website introduces what the reprex package is useful for, i.e. creating **reproducible examples**: https://reprex.tidyverse.org/\n\nShare your reprex example here!\n\nSteph's:\n\n``` r\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

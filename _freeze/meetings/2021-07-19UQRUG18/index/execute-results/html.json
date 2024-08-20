@@ -1,8 +1,11 @@
 {
-  "hash": "29800ff38a980e6c1b67c18a968c0baa",
+  "hash": "3b77ab35f4c575bfcbd9be4935571cbf",
   "result": {
-    "markdown": "---\ntitle: UQRUG 18\ndate: '2021-07-19'\ncategories: meeting\n---\n\n\n\n\n### 2021-07-19: UQRUG 18\n\nTechnical difficulties! No notes.\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 18\ndate: '2021-07-19'\ncategories: meeting\n---\n\n\n\n\n\n### 2021-07-19: UQRUG 18\n\nTechnical difficulties! No notes.\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

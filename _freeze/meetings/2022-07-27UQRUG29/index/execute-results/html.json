@@ -1,8 +1,11 @@
 {
-  "hash": "cf8eabb46e3bcc79020de505f6842d6c",
+  "hash": "5df51b035333148654b364b401447ec7",
   "result": {
-    "markdown": "---\ntitle: UQRUG 29\ndate: '2022-07-27'\ncategories: meeting\n---\n\n\n\n\n### 2022-07-27: UQRUG 29\n\n#### Attendees\n\n* **Luke**: Library | here to help and say hello\n* **Rene**: Pharmacy | Listen and learn\n* **David**: Honours in Science | Histogram ggplot2 issue\n* **Wilson**: Student Affairs | Listen and learn\n* **Lily**: Honours in Economics | Learning R for course\n\n\n\n#### Topics discussed and code\n\nCreating a normal distribution line for a histogram.\nUsing ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled differently on the y axis. \n\nNeeded to scale the stat_function() by the binwidth times observations using a defined function.\n\n```\nbw = .5\n\nggplot(SS, aes(DIA)) +\n  geom_histogram( binwidth =  bw)+ \n  stat_function(fun =function(x)\ndnorm(x,mean = mean(SS$DIA),sd = sd(SS$DIA))*bw*64) +\n  theme(panel.background = element_rect(fill = \"white\", colour = \"grey50\"),\n  panel.grid.major.y  = element_line(colour = \"grey\"),\n  axis.text = element_text(size=12,family = (\"TT Times New Roman\"), \n  colour =  'black')) +\n  xlab(\"Inhibitory zone diameter (mm)\")+ylab(\"number of isolates\")\n```\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 29\ndate: '2022-07-27'\ncategories: meeting\n---\n\n\n\n\n\n### 2022-07-27: UQRUG 29\n\n#### Attendees\n\n* **Luke**: Library | here to help and say hello\n* **Rene**: Pharmacy | Listen and learn\n* **David**: Honours in Science | Histogram ggplot2 issue\n* **Wilson**: Student Affairs | Listen and learn\n* **Lily**: Honours in Economics | Learning R for course\n\n\n\n#### Topics discussed and code\n\nCreating a normal distribution line for a histogram.\nUsing ggplot geom_histogram() and the stat_function() creates the plot, but the line and histogram are scaled differently on the y axis. \n\nNeeded to scale the stat_function() by the binwidth times observations using a defined function.\n\n```\nbw = .5\n\nggplot(SS, aes(DIA)) +\n  geom_histogram( binwidth =  bw)+ \n  stat_function(fun =function(x)\ndnorm(x,mean = mean(SS$DIA),sd = sd(SS$DIA))*bw*64) +\n  theme(panel.background = element_rect(fill = \"white\", colour = \"grey50\"),\n  panel.grid.major.y  = element_line(colour = \"grey\"),\n  axis.text = element_text(size=12,family = (\"TT Times New Roman\"), \n  colour =  'black')) +\n  xlab(\"Inhibitory zone diameter (mm)\")+ylab(\"number of isolates\")\n```\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

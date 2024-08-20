@@ -1,8 +1,11 @@
 {
-  "hash": "4cf32fee63b3cc9f91a2d5d9641039ab",
+  "hash": "e69ece25e36dc41f596bf0ac98d41b01",
   "result": {
-    "markdown": "---\ntitle: UQRUG 30\ndate: '2022-08-24'\ncategories: meeting\n---\n\n\n\n\n### 2022-08-24: UQRUG 30\n\n#### Attendees\n\n* **Luke**: Library | here to help\n* **Chris Mancini**: Civil Engineering | Read multiple CSVs and Shiny question\n* **Tayla Lawrie**: NA | Listen and learn\n* **Wilson**: Student Affairs | Listen and learn\n* **Valentina**: Library | Listen, learn and help\n* **Nick**: Library | here to help\n\n\n\n#### Topics discussed and code\n\nHow to read multiple csv files in as separate variables efficiently for a Shiny app.\nLooked at creating a list of files, and then using the read_csv function in rdrr package to read them in.\n\nTried a lapply(files,read_csv) but this just creates a list of the files.\nFound a package known as easycsv which has a function called loadcsv_multi()\n\n```\nloadcsv_multi(directory)\n```\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 30\ndate: '2022-08-24'\ncategories: meeting\n---\n\n\n\n\n\n### 2022-08-24: UQRUG 30\n\n#### Attendees\n\n* **Luke**: Library | here to help\n* **Chris Mancini**: Civil Engineering | Read multiple CSVs and Shiny question\n* **Tayla Lawrie**: NA | Listen and learn\n* **Wilson**: Student Affairs | Listen and learn\n* **Valentina**: Library | Listen, learn and help\n* **Nick**: Library | here to help\n\n\n\n#### Topics discussed and code\n\nHow to read multiple csv files in as separate variables efficiently for a Shiny app.\nLooked at creating a list of files, and then using the read_csv function in rdrr package to read them in.\n\nTried a lapply(files,read_csv) but this just creates a list of the files.\nFound a package known as easycsv which has a function called loadcsv_multi()\n\n```\nloadcsv_multi(directory)\n```\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

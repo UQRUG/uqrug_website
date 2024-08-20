@@ -1,8 +1,11 @@
 {
-  "hash": "67823fa4a1f4237d35dfd084c196cbd0",
+  "hash": "12df77ecf0a7d8e60e6b9d5fa04b1bc3",
   "result": {
-    "markdown": "---\ntitle: UQRUG 9\ndate: '2020-09-21'\ncategories: meeting\n---\n\n\n\n\n### 2020-09-21: UQRUG 9\n\n#### Attendees and problems\n\nPlease add your name and the problem you'd like some help with!\n\n* **Stéphane** (Library): here to help! But challenged by using an API and turning the XML output into a dataframe...\n* **Dwan** (CHRC): Enjoying my first day, and learning what the group is about\n* Grace\n* Amelia\n* Mitch\n\n\n#### Today's challenge\n\nTry playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-15/readme.md\n\nShare your findings and cool visualisations with the group!\n\n\n#### Shared resources\n\nResources shared during the meetup can be listed here\n\n* Base R gems: https://ihaddadenfodil.com/post/r-base-gems/#\n* ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/\n* Mitch is using the lidR package:\n    * Documentation: https://www.rdocumentation.org/packages/lidR/versions/3.0.3\n    * Book: https://jean-romain.github.io/lidRbook/index.html\n* the ggfortify package proved useful for PCA visualisation: https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_pca.html\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 9\ndate: '2020-09-21'\ncategories: meeting\n---\n\n\n\n\n\n### 2020-09-21: UQRUG 9\n\n#### Attendees and problems\n\nPlease add your name and the problem you'd like some help with!\n\n* **Stéphane** (Library): here to help! But challenged by using an API and turning the XML output into a dataframe...\n* **Dwan** (CHRC): Enjoying my first day, and learning what the group is about\n* Grace\n* Amelia\n* Mitch\n\n\n#### Today's challenge\n\nTry playing with the latest TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-15/readme.md\n\nShare your findings and cool visualisations with the group!\n\n\n#### Shared resources\n\nResources shared during the meetup can be listed here\n\n* Base R gems: https://ihaddadenfodil.com/post/r-base-gems/#\n* ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/\n* Mitch is using the lidR package:\n    * Documentation: https://www.rdocumentation.org/packages/lidR/versions/3.0.3\n    * Book: https://jean-romain.github.io/lidRbook/index.html\n* the ggfortify package proved useful for PCA visualisation: https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_pca.html\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

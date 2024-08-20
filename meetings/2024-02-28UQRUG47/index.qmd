@@ -110,7 +110,8 @@ Notice: There are no statistically significant biomarkers in the dataset. This i
 
 #### Q6 - Elegant way to paste windows paths in R by reversing the slashes
 
-``` r
+```{r}
+#| eval: false 
 snippet pp
     "`r gsub('"', "", gsub("\\\\", "/", readClipboard()))`"
 ```

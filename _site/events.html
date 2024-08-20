@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UQRUG - Events</title>
+<title>Events – UQRUG</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,8 +64,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -92,23 +100,50 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="UQRUG - Events">
+<meta property="og:title" content="Events – UQRUG">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
-<meta property="og:site-name" content="UQRUG">
+<meta property="og:site_name" content="UQRUG">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/uqrug.png" alt="" class="navbar-logo">
     </a>
@@ -117,35 +152,35 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./events.html" rel="" target="" aria-current="page">
- <span class="menu-text">Events</span></a>
+    <a class="nav-link active" href="./events.html" aria-current="page"> 
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pastmeetings.html" rel="" target="">
- <span class="menu-text">Past Meeting Notes</span></a>
+    <a class="nav-link" href="./pastmeetings.html"> 
+<span class="menu-text">Past Meeting Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html" rel="" target="">
- <span class="menu-text">Community Groups</span></a>
+    <a class="nav-link" href="./community.html"> 
+<span class="menu-text">Community Groups</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/uqlibrary/technology-training" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
     <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
     <a href="https://www.youtube.com/@UQRUG" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -180,384 +215,444 @@ display: none;
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1722348000000" data-listing-file-modified-sort="1720488442725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="workshop" data-listing-date-sort="1723903200000" data-listing-file-modified-sort="1724115792273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
 <div class="thumbnail">
-<p><a href="./posts/2024-07-31-July-taskscheduleR/index.html"> <img src="./posts/2024-07-31-July-taskscheduleR/taskscheduleR-logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external"></a></p><a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-08-28-August-2-years-of-R/Rlogo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-07-31-July-taskscheduleR/index.html">
 <h3 class="no-anchor listing-title">
-July 31st UQRUG Drop-in + Automate scripts with R
+<a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external">August 28th – UQRUG Drop-in + 2 years of RStats news</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This month Luke will showcase the usage of the taskscheduleR package for automating the running of your scripts on a schedule. This is useful is…
+<a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external">This month, Stéphane will highlight what attracted his attention from the two last years of RStats news.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-07-31-July-taskscheduleR/index.html"> </a>
+<p><a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external"></a></p><a href="./posts/2024-08-28-August-2-years-of-R/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="workshop" data-listing-date-sort="1716904800000" data-listing-file-modified-sort="1720487065851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="workshop" data-listing-date-sort="1722348000000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
 <div class="thumbnail">
-<p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html"> <img src="./posts/2024-05-29-May-R-Data-to-Viz/RStudio.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external"></a></p><a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-07-31-July-taskscheduleR/taskscheduleR-logo.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html">
 <h3 class="no-anchor listing-title">
-May 29th UQRUG Drop-in + Using Data to Viz for R visualisation
+<a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external">July 31st UQRUG Drop-in + Automate scripts with R</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<em>Using Data to Viz to help you visualise your data</em>
+<a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external">This month Luke will showcase the usage of the taskscheduleR package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html"> </a>
+<p><a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external"></a></p><a href="./posts/2024-07-31-July-taskscheduleR/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="workshop" data-listing-date-sort="1713880800000" data-listing-file-modified-sort="1720487065850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="2" data-categories="workshop" data-listing-date-sort="1716904800000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
 <div class="thumbnail">
-<p><a href="./posts/2024-04-24-April-R-HPC/index.html"> <img src="./posts/2024-04-24-April-R-HPC/RStudio.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external"></a></p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-05-29-May-R-Data-to-Viz/RStudio.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-04-24-April-R-HPC/index.html">
 <h3 class="no-anchor listing-title">
-April 24th UQRUG Drop-in + Using R and RStudio on the HPC
+<a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external">May 29th UQRUG Drop-in + Using Data to Viz for R visualisation</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<em>Well worth it! Moving from a laptop to Bunya HPC</em>
+<a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external"><em>Using Data to Viz to help you visualise your data</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-04-24-April-R-HPC/index.html"> </a>
+<p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external"></a></p><a href="./posts/2024-05-29-May-R-Data-to-Viz/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="workshop" data-listing-date-sort="1711375200000" data-listing-file-modified-sort="1720487065846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="workshop" data-listing-date-sort="1713880800000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
 <div class="thumbnail">
-<p><a href="./posts/2024-03-27-March-visdat/index.html"> <img src="./posts/2024-03-27-March-visdat/visdat-logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external"></a></p><a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-04-24-April-R-HPC/RStudio.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-03-27-March-visdat/index.html">
 <h3 class="no-anchor listing-title">
-March 27th UQRUG Drop-in + Identify Data Problems using visdat
+<a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external">April 24th UQRUG Drop-in + Using R and RStudio on the HPC</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package.…
+<a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external"><em>Well worth it! Moving from a laptop to Bunya HPC</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-03-27-March-visdat/index.html"> </a>
+<p><a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external"></a></p><a href="./posts/2024-04-24-April-R-HPC/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="workshop" data-listing-date-sort="1708610400000" data-listing-file-modified-sort="1720487065841" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="workshop" data-listing-date-sort="1711375200000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
 <div class="thumbnail">
-<p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html"> <img src="./posts/2024-02-28-February-rvest-webscraping/rvest.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-03-27-March-visdat/index.html" class="no-external"></a></p><a href="./posts/2024-03-27-March-visdat/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-03-27-March-visdat/visdat-logo.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-03-27-March-visdat/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-02-28-February-rvest-webscraping/index.html">
 <h3 class="no-anchor listing-title">
-February 28th UQRUG Drop-in + Webscraping with rvest
+<a href="./posts/2024-03-27-March-visdat/index.html" class="no-external">March 27th UQRUG Drop-in + Identify Data Problems using visdat</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-03-27-March-visdat/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest packa…
+<a href="./posts/2024-03-27-March-visdat/index.html" class="no-external">This month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package. Then we will go into our…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-02-28-February-rvest-webscraping/index.html"> </a>
+<p><a href="./posts/2024-03-27-March-visdat/index.html" class="no-external"></a></p><a href="./posts/2024-03-27-March-visdat/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="workshop" data-listing-date-sort="1706018400000" data-listing-file-modified-sort="1720487065837" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-categories="workshop" data-listing-date-sort="1708610400000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
 <div class="thumbnail">
-<p><a href="./posts/2024-01-31-January-knitr-CV/index.html"> <img src="./posts/2024-01-31-January-knitr-CV/vitae.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external"></a></p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-02-28-February-rvest-webscraping/rvest.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-01-31-January-knitr-CV/index.html">
 <h3 class="no-anchor listing-title">
-January 31st UQRUG Drop-in + Creating a CV / Resume with vitae
+<a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external">February 28th UQRUG Drop-in + Webscraping with rvest</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This month Nick will be going over how to create a CV/Resume using the vitae, rmarkdown, and tinytex packages, and then getting into our regular questions.
+<a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external">We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest packag, and then will we jump to our…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-01-31-January-knitr-CV/index.html"> </a>
+<p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external"></a></p><a href="./posts/2024-02-28-February-rvest-webscraping/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="workshop" data-listing-date-sort="1701266400000" data-listing-file-modified-sort="1720487065834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="6" data-categories="workshop" data-listing-date-sort="1706018400000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
 <div class="thumbnail">
-<p><a href="./posts/2023-12-13-December-EoY-Competition/index.html"> <img src="./posts/2023-12-13-December-EoY-Competition/cool_but_useless.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external"></a></p><a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2024-01-31-January-knitr-CV/vitae.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-12-13-December-EoY-Competition/index.html">
 <h3 class="no-anchor listing-title">
-December 13th UQRUG Drop-in + End of Year Cool but Useless Competition
+<a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external">January 31st UQRUG Drop-in + Creating a CV / Resume with vitae</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-In this special End of Year edition of UQRUG we will be holding a <strong>competition</strong> to see who can create the <strong>Coolest and Most Useless R code</strong> (on the special date of <strong>Wed…</strong>
+<a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external">This month Nick will be going over how to create a CV/Resume using the vitae, rmarkdown, and tinytex packages, and then getting into our regular questions.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-12-13-December-EoY-Competition/index.html"> </a>
+<p><a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external"></a></p><a href="./posts/2024-01-31-January-knitr-CV/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="workshop" data-listing-date-sort="1698847200000" data-listing-file-modified-sort="1720487065828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-categories="workshop" data-listing-date-sort="1701266400000" data-listing-file-modified-sort="1724049867493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="208">
 <div class="thumbnail">
-<p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html"> <img src="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/ResBazQLD_2023.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external"></a></p><a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-12-13-December-EoY-Competition/cool_but_useless.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html">
 <h3 class="no-anchor listing-title">
-November 22nd UQRUG Drop-in + Cool but Useless + ResBazQld
+<a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external">December 13th UQRUG Drop-in + End of Year Cool but Useless Competition</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-In this special edition of UQRUG we will be at ResBazQld (at the special date and time of <strong>Wed 22nd Nov, 3-5pm</strong>). For our overview we will be looking at some <strong>Cool but Useless</strong> ways we can use R. From creating emoji art, to using memes in ggplot2, to playing sounds when our code is…
+<a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external">In this special End of Year edition of UQRUG we will be holding a <strong>competition</strong> to see who can create the <strong>Coolest and Most Useless R code</strong> (on the special date of <strong>Wed 13th Dec…</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html"> </a>
+<p><a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external"></a></p><a href="./posts/2023-12-13-December-EoY-Competition/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="workshop" data-listing-date-sort="1697724000000" data-listing-file-modified-sort="1720487065822" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-categories="workshop" data-listing-date-sort="1698847200000" data-listing-file-modified-sort="1724049867489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <div class="thumbnail">
-<p><a href="./posts/2023-10-25-October-Machine-Learning/index.html"> <img src="./posts/2023-10-25-October-Machine-Learning/tidymodels.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external"></a></p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/ResBazQLD_2023.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-10-25-October-Machine-Learning/index.html">
 <h3 class="no-anchor listing-title">
-October 25th UQRUG Drop-in + Machine Learning
+<a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external">November 22nd UQRUG Drop-in + Cool but Useless + ResBazQld</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Do you want to learn the basics of machine learning in R and why it’s useful? Before the help session this month at UQRUG, Raimundo Sanchez will be providing an overview of…
+<a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external">In this special edition of UQRUG we will be at ResBazQld (at the special date and time of <strong>Wed 22nd Nov, 3-5pm</strong>). For our overview we will be looking at some <strong>Cool but Useless</strong> w…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-10-25-October-Machine-Learning/index.html"> </a>
+<p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external"></a></p><a href="./posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="workshop" data-listing-date-sort="1695045600000" data-listing-file-modified-sort="1720487065821" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="workshop" data-listing-date-sort="1697724000000" data-listing-file-modified-sort="1724049867489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <div class="thumbnail">
-<p><a href="./posts/2023-09-27-September-Parallelisation/index.html"> <img src="./posts/2023-09-27-September-Parallelisation/Rlogo.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external"></a></p><a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-10-25-October-Machine-Learning/tidymodels.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-09-27-September-Parallelisation/index.html">
 <h3 class="no-anchor listing-title">
-September 27th UQRUG Drop-in + Parallelisation
+<a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external">October 25th UQRUG Drop-in + Machine Learning</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before the help session, this month Raúl Riesco Jarrín will be provide an overview on how you can make your code faster and more efficient with parallelisation using the pa…
+<a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external">Do you want to learn the basics of machine learning in R and why it’s useful? Before the help session this month at UQRUG, Raimundo Sanchez will be providing an overview of…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-09-27-September-Parallelisation/index.html"> </a>
+<p><a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external"></a></p><a href="./posts/2023-10-25-October-Machine-Learning/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="workshop" data-listing-date-sort="1692540000000" data-listing-file-modified-sort="1720487065820" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="workshop" data-listing-date-sort="1695045600000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
 <div class="thumbnail">
-<p><a href="./posts/2023-08-30-August-Stats/index.html"> <img src="./posts/2023-08-30-August-Stats/Rlogo.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external"></a></p><a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-09-27-September-Parallelisation/Rlogo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-08-30-August-Stats/index.html">
 <h3 class="no-anchor listing-title">
-August 30th UQRUG Drop-in + Basic Statistics
+<a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external">September 27th UQRUG Drop-in + Parallelisation</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.
+<a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external">Before the help session, this month Raúl Riesco Jarrín will be provide an overview on how you can make your code faster and more efficient with parallelisation using the para…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-08-30-August-Stats/index.html"> </a>
+<p><a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external"></a></p><a href="./posts/2023-09-27-September-Parallelisation/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="workshop" data-listing-date-sort="1690120800000" data-listing-file-modified-sort="1720487065816" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="workshop" data-listing-date-sort="1692540000000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
 <div class="thumbnail">
-<p><a href="./posts/2023-07-26-July-Q-Pres/index.html"> <img src="./posts/2023-07-26-July-Q-Pres/revealjs_logo.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-08-30-August-Stats/index.html" class="no-external"></a></p><a href="./posts/2023-08-30-August-Stats/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-08-30-August-Stats/Rlogo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-08-30-August-Stats/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html">
 <h3 class="no-anchor listing-title">
-July 26th UQRUG Drop-in + Quarto Reveal.js Presentations
+<a href="./posts/2023-08-30-August-Stats/index.html" class="no-external">August 30th UQRUG Drop-in + Basic Statistics</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-08-30-August-Stats/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on <strong>creating HTML based presentations in R with Quarto and revea…</strong>
+<a href="./posts/2023-08-30-August-Stats/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-07-26-July-Q-Pres/index.html"> </a>
+<p><a href="./posts/2023-08-30-August-Stats/index.html" class="no-external"></a></p><a href="./posts/2023-08-30-August-Stats/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="workshop" data-listing-date-sort="1687356000000" data-listing-file-modified-sort="1720487065814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="workshop" data-listing-date-sort="1690120800000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="121">
 <div class="thumbnail">
-<p><a href="./posts/2023-06-28-June-data.table/index.html"> <img src="./posts/2023-06-28-June-data.table/datatable.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external"></a></p><a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-07-26-July-Q-Pres/revealjs_logo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-06-28-June-data.table/index.html">
 <h3 class="no-anchor listing-title">
-June 28th UQRUG Drop-in + data.table data manipulation basics
+<a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external">July 26th UQRUG Drop-in + Quarto Reveal.js Presentations</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick Garner will be providing an overview of <strong>the basics of data manipulation with data.table</strong> and its advantages compared to…<strong></strong>
+<a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on <strong>creating HTML based presentations in R with Quarto and re…</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-06-28-June-data.table/index.html"> </a>
+<p><a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external"></a></p><a href="./posts/2023-07-26-July-Q-Pres/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="workshop" data-listing-date-sort="1684850400000" data-listing-file-modified-sort="1720487065809" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="workshop" data-listing-date-sort="1687356000000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
 <div class="thumbnail">
-<p><a href="./posts/2023-05-31-May-Sending-emails/index.html"> <img src="./posts/2023-05-31-May-Sending-emails/knitr.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-06-28-June-data.table/index.html" class="no-external"></a></p><a href="./posts/2023-06-28-June-data.table/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-06-28-June-data.table/datatable.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-06-28-June-data.table/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-05-31-May-Sending-emails/index.html">
 <h3 class="no-anchor listing-title">
-May 31st UQRUG Drop-in + Sending Emails from R
+<a href="./posts/2023-06-28-June-data.table/index.html" class="no-external">June 28th UQRUG Drop-in + data.table data manipulation basics</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-06-28-June-data.table/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Nick will be going over <strong>how to send emails through R</strong> using the knitr and RDCOMClient packages.
+<a href="./posts/2023-06-28-June-data.table/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this month Nick Garner will be providing an overview of <strong>the basics of data manipulation with data.table</strong> an…<strong></strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-05-31-May-Sending-emails/index.html"> </a>
+<p><a href="./posts/2023-06-28-June-data.table/index.html" class="no-external"></a></p><a href="./posts/2023-06-28-June-data.table/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="workshop" data-listing-date-sort="1681826400000" data-listing-file-modified-sort="1720487065806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="workshop" data-listing-date-sort="1684850400000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
 <div class="thumbnail">
-<p><a href="./posts/2023-04-26-April-AI/index.html"> <img src="./posts/2023-04-26-April-AI/ChatGPT_logo.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external"></a></p><a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-05-31-May-Sending-emails/knitr.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-04-26-April-AI/index.html">
 <h3 class="no-anchor listing-title">
-April 26th UQRUG Drop-in + Coding with Generative AI
+<a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external">May 31st UQRUG Drop-in + Sending Emails from R</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this month Luke will be going over <strong>using generative AI (mostly ChatGPT) to help solve coding hurdles</strong>, including tips, examples, and a whole project made…
+<a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this month Nick will be going over <strong>how to send emails through R</strong> using the knitr and RDCOMClient packages.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-04-26-April-AI/index.html"> </a>
+<p><a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external"></a></p><a href="./posts/2023-05-31-May-Sending-emails/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="workshop" data-listing-date-sort="1679320800000" data-listing-file-modified-sort="1720487065803" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="15" data-categories="workshop" data-listing-date-sort="1681826400000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <div class="thumbnail">
-<p><a href="./posts/2023-03-29-March-quarto/index.html"> <img src="./posts/2023-03-29-March-quarto/quarto.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-04-26-April-AI/index.html" class="no-external"></a></p><a href="./posts/2023-04-26-April-AI/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-04-26-April-AI/ChatGPT_logo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-04-26-April-AI/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-03-29-March-quarto/index.html">
 <h3 class="no-anchor listing-title">
-March 29th UQRUG Drop-in + Websites with Quarto
+<a href="./posts/2023-04-26-April-AI/index.html" class="no-external">April 26th UQRUG Drop-in + Coding with Generative AI</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-04-26-April-AI/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a <strong>customisable website or blog in R</strong> using the …
+<a href="./posts/2023-04-26-April-AI/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this month Luke will be going over <strong>using generative AI (mostly ChatGPT) to help solve coding hurdles</strong>…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-03-29-March-quarto/index.html"> </a>
+<p><a href="./posts/2023-04-26-April-AI/index.html" class="no-external"></a></p><a href="./posts/2023-04-26-April-AI/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="workshop" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1720487065801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="16" data-categories="workshop" data-listing-date-sort="1679320800000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
 <div class="thumbnail">
-<p><a href="./posts/2023-02-22-February-forms/index.html"> <img src="./posts/2023-02-22-February-forms/googlesheets4.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-03-29-March-quarto/index.html" class="no-external"></a></p><a href="./posts/2023-03-29-March-quarto/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-03-29-March-quarto/quarto.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-03-29-March-quarto/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-02-22-February-forms/index.html">
 <h3 class="no-anchor listing-title">
-February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4
+<a href="./posts/2023-03-29-March-quarto/index.html" class="no-external">March 29th UQRUG Drop-in + Websites with Quarto</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-03-29-March-quarto/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This week Nick will be briefly going over how to create a <strong>customisable online form in R</strong> using the googlesheets4 and Shiny packages.
+<a href="./posts/2023-03-29-March-quarto/index.html" class="no-external">Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a <strong>customisable website or blog in R</strong> using the quar…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-02-22-February-forms/index.html"> </a>
+<p><a href="./posts/2023-03-29-March-quarto/index.html" class="no-external"></a></p><a href="./posts/2023-03-29-March-quarto/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="workshop" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1720487065798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="workshop" data-listing-date-sort="1676988000000" data-listing-file-modified-sort="1724049867485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
 <div class="thumbnail">
-<p><a href="./posts/2023-01-25-January-flexdashboard/index.html"> <img src="./posts/2023-01-25-January-flexdashboard/flexdashboard.svg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-02-22-February-forms/index.html" class="no-external"></a></p><a href="./posts/2023-02-22-February-forms/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-02-22-February-forms/googlesheets4.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-02-22-February-forms/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-01-25-January-flexdashboard/index.html">
 <h3 class="no-anchor listing-title">
-January 25th UQRUG Drop-in + Dashboard with Flexdashboard
+<a href="./posts/2023-02-22-February-forms/index.html" class="no-external">February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-02-22-February-forms/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This week Nick will be briefly going over <strong>creating quick and easy interactive dashboards to display your data with R</strong> using the package flexdashboard (it’s surprisingly straightforward, and uses…
+<a href="./posts/2023-02-22-February-forms/index.html" class="no-external">This week Nick will be briefly going over how to create a <strong>customisable online form in R</strong> using the googlesheets4 and Shiny packages.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-01-25-January-flexdashboard/index.html"> </a>
+<p><a href="./posts/2023-02-22-February-forms/index.html" class="no-external"></a></p><a href="./posts/2023-02-22-February-forms/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="workshop" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1720487065793" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="workshop" data-listing-date-sort="1674568800000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <div class="thumbnail">
-<p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> <img src="./posts/2022-12-07-December-gganimate-plotly/gganimate.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external"></a></p><a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2023-01-25-January-flexdashboard/flexdashboard.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-12-07-December-gganimate-plotly/index.html">
 <h3 class="no-anchor listing-title">
-December 7th UQRUG Drop-in + Animated and Interactive Plots
+<a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external">January 25th UQRUG Drop-in + Dashboard with Flexdashboard</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-This week Nick will be briefly going over creating <strong>animated and interactive plots in R</strong> using the packages gganimate and plotly.
+<a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external">This week Nick will be briefly going over <strong>creating quick and easy interactive dashboards to display your data with R</strong> using the package flexdashboard (it’s surprisingly…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-12-07-December-gganimate-plotly/index.html"> </a>
+<p><a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external"></a></p><a href="./posts/2023-01-25-January-flexdashboard/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-categories="workshop" data-listing-date-sort="1670335200000" data-listing-file-modified-sort="1724049867481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+<div class="thumbnail">
+<p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external"></a></p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/2022-12-07-December-gganimate-plotly/gganimate.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external">December 7th UQRUG Drop-in + Animated and Interactive Plots</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external">This week Nick will be briefly going over creating <strong>animated and interactive plots in R</strong> using the packages gganimate and plotly.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external"></a></p><a href="./posts/2022-12-07-December-gganimate-plotly/index.html" class="no-external">
+</a>
 </div>
 </div>
 </div>
@@ -641,6 +736,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -707,13 +829,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -741,18 +865,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -784,11 +897,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -798,8 +950,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -811,7 +972,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -855,6 +1139,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -880,6 +1165,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -940,6 +1251,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

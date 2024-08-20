@@ -9,9 +9,9 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.5.56">
 
-  <title>UQRUG - UQRUG Presents: Cool But Useless</title>
+  <title>UQRUG – UQRUG Presents: Cool But Useless</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -384,13 +385,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="UQRUG - UQRUG Presents: Cool But Useless">
+<meta property="og:title" content="UQRUG Presents: Cool But Useless – UQRUG">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
-<meta property="og:site-name" content="UQRUG">
-<meta name="twitter:title" content="UQRUG - UQRUG Presents: Cool But Useless">
-<meta name="twitter:image" content="images/uqrug_twitter.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="UQRUG">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -411,11 +409,14 @@
 </div><div class="column fragment" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="23-11-cool_files/figure-revealjs/dogs-1.png" width="1920"></p>
+</figure>
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </section>
 <section id="how-can-i-find-fun-r-packages" class="slide level2">
 <h2>How can I find fun R packages?</h2>
@@ -430,7 +431,11 @@
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="23-11-cool_files/figure-revealjs/dog points-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -443,7 +448,11 @@
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="23-11-cool_files/figure-revealjs/cat points-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -456,7 +465,11 @@
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="23-11-cool_files/figure-revealjs/bernie points-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -469,7 +482,11 @@
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="23-11-cool_files/figure-revealjs/dog change-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -483,79 +500,83 @@
 <div id="tabset-1-1">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="img/cat_animation.gif"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
 <div id="tabset-1-2">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Packages</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(gganimate)</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(ggcats)</span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># A function to generate a data frame with simulated data and cats</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>data_cat <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">1</span>, <span class="at">fun =</span> rnorm, </span>
-<span id="cb1-10"><a href="#cb1-10"></a>                     <span class="at">cat =</span> <span class="st">""</span>, <span class="at">sd =</span> <span class="dv">3</span>, <span class="at">category =</span> <span class="st">""</span>) {</span>
-<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">tibble</span>(</span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">x =</span> <span class="fu">seq</span>(from, to, by),</span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="at">y =</span> <span class="fu">fun</span>(x) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="at">sd =</span> sd),</span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="at">category =</span> <span class="fu">rep</span>(category, <span class="fu">length</span>(x)),</span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">cat =</span> <span class="fu">rep</span>(cat, <span class="fu">length</span>(x))</span>
-<span id="cb1-16"><a href="#cb1-16"></a>  )</span>
-<span id="cb1-17"><a href="#cb1-17"></a>}</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># Data for my focus</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a>concentration <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
-<span id="cb1-22"><a href="#cb1-22"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">4</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="fl">1.5</span> <span class="sc">*</span> x) <span class="sc">+</span> <span class="dv">4</span>, </span>
-<span id="cb1-23"><a href="#cb1-23"></a>  <span class="at">cat =</span> <span class="st">"lil_bub"</span>, </span>
-<span id="cb1-24"><a href="#cb1-24"></a>  <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">category =</span> <span class="st">"focus"</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a>)</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co"># Data for my duties</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="fu">set.seed</span>(<span class="dv">10</span>)</span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a>duties <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
-<span id="cb1-31"><a href="#cb1-31"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">5</span> <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">exp</span>(x <span class="sc">/</span> <span class="dv">20</span>), </span>
-<span id="cb1-32"><a href="#cb1-32"></a>  <span class="at">cat =</span> <span class="st">"pusheen_pc"</span>, </span>
-<span id="cb1-33"><a href="#cb1-33"></a>  <span class="at">sd =</span> <span class="dv">2</span>, <span class="at">category =</span> <span class="st">"duties"</span></span>
-<span id="cb1-34"><a href="#cb1-34"></a>)</span>
-<span id="cb1-35"><a href="#cb1-35"></a></span>
-<span id="cb1-36"><a href="#cb1-36"></a><span class="co"># Data for my anxiety</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a>anxiety <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
-<span id="cb1-38"><a href="#cb1-38"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">10</span> <span class="sc">+</span> <span class="fu">exp</span>(x <span class="sc">/</span> <span class="dv">15</span>) <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> <span class="fu">sin</span>(x), </span>
-<span id="cb1-39"><a href="#cb1-39"></a>  <span class="at">cat =</span> <span class="st">"nyancat"</span>, </span>
-<span id="cb1-40"><a href="#cb1-40"></a>  <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">category =</span> <span class="st">"anxiety"</span></span>
-<span id="cb1-41"><a href="#cb1-41"></a>)</span>
-<span id="cb1-42"><a href="#cb1-42"></a></span>
-<span id="cb1-43"><a href="#cb1-43"></a><span class="co"># Complete data</span></span>
-<span id="cb1-44"><a href="#cb1-44"></a>full_data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(concentration, duties, anxiety)</span>
-<span id="cb1-45"><a href="#cb1-45"></a></span>
-<span id="cb1-46"><a href="#cb1-46"></a></span>
-<span id="cb1-47"><a href="#cb1-47"></a><span class="fu">ggplot</span>(full_data, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb1-48"><a href="#cb1-48"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> category), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb1-49"><a href="#cb1-49"></a>  <span class="fu">geom_cat</span>(<span class="fu">aes</span>(<span class="at">cat =</span> cat), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb1-50"><a href="#cb1-50"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-51"><a href="#cb1-51"></a>    <span class="at">y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-52"><a href="#cb1-52"></a>    <span class="at">x =</span> <span class="st">"Time"</span>,</span>
-<span id="cb1-53"><a href="#cb1-53"></a>    <span class="at">caption =</span> <span class="st">"Graph by JPCH. Generated with `ggplot2`, `ggcats` and `gganimate`"</span>,</span>
-<span id="cb1-54"><a href="#cb1-54"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-55"><a href="#cb1-55"></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb1-56"><a href="#cb1-56"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#EE2C2C"</span>, <span class="st">"#FF8C00"</span>, <span class="st">"#68228B"</span>),</span>
-<span id="cb1-57"><a href="#cb1-57"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Anxiety"</span>, <span class="st">"My focus"</span>, <span class="st">"Duties"</span>)) <span class="sc">+</span></span>
-<span id="cb1-58"><a href="#cb1-58"></a>  <span class="fu">theme_fivethirtyeight</span>() <span class="sc">+</span></span>
-<span id="cb1-59"><a href="#cb1-59"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-60"><a href="#cb1-60"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-61"><a href="#cb1-61"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-62"><a href="#cb1-62"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb1-63"><a href="#cb1-63"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb1-64"><a href="#cb1-64"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb1-65"><a href="#cb1-65"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
-<span id="cb1-66"><a href="#cb1-66"></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb1-67"><a href="#cb1-67"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-68"><a href="#cb1-68"></a>  <span class="fu">transition_reveal</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Packages</span></span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-5"><a></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb1-6"><a></a><span class="fu">library</span>(ggcats)</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="co"># A function to generate a data frame with simulated data and cats</span></span>
+<span id="cb1-9"><a></a>data_cat <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">1</span>, <span class="at">fun =</span> rnorm, </span>
+<span id="cb1-10"><a></a>                     <span class="at">cat =</span> <span class="st">""</span>, <span class="at">sd =</span> <span class="dv">3</span>, <span class="at">category =</span> <span class="st">""</span>) {</span>
+<span id="cb1-11"><a></a>  <span class="fu">tibble</span>(</span>
+<span id="cb1-12"><a></a>    <span class="at">x =</span> <span class="fu">seq</span>(from, to, by),</span>
+<span id="cb1-13"><a></a>    <span class="at">y =</span> <span class="fu">fun</span>(x) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(x), <span class="at">sd =</span> sd),</span>
+<span id="cb1-14"><a></a>    <span class="at">category =</span> <span class="fu">rep</span>(category, <span class="fu">length</span>(x)),</span>
+<span id="cb1-15"><a></a>    <span class="at">cat =</span> <span class="fu">rep</span>(cat, <span class="fu">length</span>(x))</span>
+<span id="cb1-16"><a></a>  )</span>
+<span id="cb1-17"><a></a>}</span>
+<span id="cb1-18"><a></a></span>
+<span id="cb1-19"><a></a></span>
+<span id="cb1-20"><a></a><span class="co"># Data for my focus</span></span>
+<span id="cb1-21"><a></a>concentration <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
+<span id="cb1-22"><a></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">4</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="fl">1.5</span> <span class="sc">*</span> x) <span class="sc">+</span> <span class="dv">4</span>, </span>
+<span id="cb1-23"><a></a>  <span class="at">cat =</span> <span class="st">"lil_bub"</span>, </span>
+<span id="cb1-24"><a></a>  <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">category =</span> <span class="st">"focus"</span></span>
+<span id="cb1-25"><a></a>)</span>
+<span id="cb1-26"><a></a></span>
+<span id="cb1-27"><a></a><span class="co"># Data for my duties</span></span>
+<span id="cb1-28"><a></a><span class="fu">set.seed</span>(<span class="dv">10</span>)</span>
+<span id="cb1-29"><a></a></span>
+<span id="cb1-30"><a></a>duties <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
+<span id="cb1-31"><a></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">5</span> <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">exp</span>(x <span class="sc">/</span> <span class="dv">20</span>), </span>
+<span id="cb1-32"><a></a>  <span class="at">cat =</span> <span class="st">"pusheen_pc"</span>, </span>
+<span id="cb1-33"><a></a>  <span class="at">sd =</span> <span class="dv">2</span>, <span class="at">category =</span> <span class="st">"duties"</span></span>
+<span id="cb1-34"><a></a>)</span>
+<span id="cb1-35"><a></a></span>
+<span id="cb1-36"><a></a><span class="co"># Data for my anxiety</span></span>
+<span id="cb1-37"><a></a>anxiety <span class="ot">&lt;-</span> <span class="fu">data_cat</span>(</span>
+<span id="cb1-38"><a></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">10</span> <span class="sc">+</span> <span class="fu">exp</span>(x <span class="sc">/</span> <span class="dv">15</span>) <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> <span class="fu">sin</span>(x), </span>
+<span id="cb1-39"><a></a>  <span class="at">cat =</span> <span class="st">"nyancat"</span>, </span>
+<span id="cb1-40"><a></a>  <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">category =</span> <span class="st">"anxiety"</span></span>
+<span id="cb1-41"><a></a>)</span>
+<span id="cb1-42"><a></a></span>
+<span id="cb1-43"><a></a><span class="co"># Complete data</span></span>
+<span id="cb1-44"><a></a>full_data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(concentration, duties, anxiety)</span>
+<span id="cb1-45"><a></a></span>
+<span id="cb1-46"><a></a></span>
+<span id="cb1-47"><a></a><span class="fu">ggplot</span>(full_data, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb1-48"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> category), <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-49"><a></a>  <span class="fu">geom_cat</span>(<span class="fu">aes</span>(<span class="at">cat =</span> cat), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-50"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-51"><a></a>    <span class="at">y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-52"><a></a>    <span class="at">x =</span> <span class="st">"Time"</span>,</span>
+<span id="cb1-53"><a></a>    <span class="at">caption =</span> <span class="st">"Graph by JPCH. Generated with `ggplot2`, `ggcats` and `gganimate`"</span>,</span>
+<span id="cb1-54"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb1-55"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb1-56"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#EE2C2C"</span>, <span class="st">"#FF8C00"</span>, <span class="st">"#68228B"</span>),</span>
+<span id="cb1-57"><a></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Anxiety"</span>, <span class="st">"My focus"</span>, <span class="st">"Duties"</span>)) <span class="sc">+</span></span>
+<span id="cb1-58"><a></a>  <span class="fu">theme_fivethirtyeight</span>() <span class="sc">+</span></span>
+<span id="cb1-59"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-60"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-61"><a></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-62"><a></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb1-63"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-64"><a></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-65"><a></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb1-66"><a></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-67"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb1-68"><a></a>  <span class="fu">transition_reveal</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -564,35 +585,35 @@
 <section id="beepr" class="slide level2">
 <h2>beepr</h2>
 <p>This package will play a sound.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("beepr")</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(beepr)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">beep</span>(<span class="dv">1</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("beepr")</span></span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(beepr)</span>
+<span id="cb2-3"><a></a><span class="fu">beep</span>(<span class="dv">1</span>)</span>
+<span id="cb2-4"><a></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I actually use this at the end of a long piece of code so I know when it’s done. But I have a useless example on the next slide</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">repeat</span>{</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="co"># statement to be executed multiple times</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">print</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%I:%M %p'</span>))</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="co"># checking the stop condition</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="cf">if</span> (<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%M'</span>) <span class="sc">==</span> <span class="st">"22"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6"></a>  {</span>
-<span id="cb3-7"><a href="#cb3-7"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span> <span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%I'</span>)) {</span>
-<span id="cb3-8"><a href="#cb3-8"></a>      <span class="fu">beep</span>(<span class="dv">1</span>)</span>
-<span id="cb3-9"><a href="#cb3-9"></a>      <span class="fu">Sys.sleep</span>(<span class="dv">1</span>)</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    }</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    <span class="co"># using break statement</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>    <span class="co"># to terminate the loop</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>    <span class="cf">break</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  }</span>
-<span id="cb3-15"><a href="#cb3-15"></a>  </span>
-<span id="cb3-16"><a href="#cb3-16"></a>  </span>
-<span id="cb3-17"><a href="#cb3-17"></a>  <span class="co"># incrementing the iteration variable</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">60</span><span class="sc">-</span><span class="fu">as.numeric</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%OS'</span>)))</span>
-<span id="cb3-19"><a href="#cb3-19"></a>  </span>
-<span id="cb3-20"><a href="#cb3-20"></a>  </span>
-<span id="cb3-21"><a href="#cb3-21"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="cf">repeat</span>{</span>
+<span id="cb3-2"><a></a>  <span class="co"># statement to be executed multiple times</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">print</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%I:%M %p'</span>))</span>
+<span id="cb3-4"><a></a>  <span class="co"># checking the stop condition</span></span>
+<span id="cb3-5"><a></a>  <span class="cf">if</span> (<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%M'</span>) <span class="sc">==</span> <span class="st">"22"</span>)</span>
+<span id="cb3-6"><a></a>  {</span>
+<span id="cb3-7"><a></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span> <span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%I'</span>)) {</span>
+<span id="cb3-8"><a></a>      <span class="fu">beep</span>(<span class="dv">1</span>)</span>
+<span id="cb3-9"><a></a>      <span class="fu">Sys.sleep</span>(<span class="dv">1</span>)</span>
+<span id="cb3-10"><a></a>    }</span>
+<span id="cb3-11"><a></a>    <span class="co"># using break statement</span></span>
+<span id="cb3-12"><a></a>    <span class="co"># to terminate the loop</span></span>
+<span id="cb3-13"><a></a>    <span class="cf">break</span></span>
+<span id="cb3-14"><a></a>  }</span>
+<span id="cb3-15"><a></a>  </span>
+<span id="cb3-16"><a></a>  </span>
+<span id="cb3-17"><a></a>  <span class="co"># incrementing the iteration variable</span></span>
+<span id="cb3-18"><a></a>  <span class="fu">Sys.sleep</span>(<span class="dv">60</span><span class="sc">-</span><span class="fu">as.numeric</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%OS'</span>)))</span>
+<span id="cb3-19"><a></a>  </span>
+<span id="cb3-20"><a></a>  </span>
+<span id="cb3-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="carelesswhisper" class="slide level2">
 <h2>Carelesswhisper</h2>
@@ -606,105 +627,106 @@
 <p>Just you wait</p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># install.package('remotes')</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/carelesswhisper'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="fu">library</span>(carelesswhisper)</span>
-<span id="cb4-5"><a href="#cb4-5"></a></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># Initialise whisper with built-in model (tiny, multi-language)</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>ctx <span class="ot">&lt;-</span> <span class="fu">whisper_init</span>()</span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co"># Record 5 seconds of audio and perform speech recognition</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>snd <span class="ot">&lt;-</span> <span class="fu">record_audio</span>(<span class="dv">5</span>)</span>
-<span id="cb4-11"><a href="#cb4-11"></a></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co"># Transcribe the recorded audio</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a>snd_text <span class="ot">&lt;-</span> <span class="fu">whisper</span>(ctx, snd)</span>
-<span id="cb4-14"><a href="#cb4-14"></a>snd_text</span>
-<span id="cb4-15"><a href="#cb4-15"></a></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co"># play it back</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">16100</span>)</span>
-<span id="cb4-18"><a href="#cb4-18"></a></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co"># export and import the audio file</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="fu">saveRDS</span>(snd, <span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span>
-<span id="cb4-21"><a href="#cb4-21"></a>recording <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># install.package('remotes')</span></span>
+<span id="cb4-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/carelesswhisper'</span>)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">library</span>(carelesswhisper)</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="co"># Initialise whisper with built-in model (tiny, multi-language)</span></span>
+<span id="cb4-7"><a></a>ctx <span class="ot">&lt;-</span> <span class="fu">whisper_init</span>()</span>
+<span id="cb4-8"><a></a></span>
+<span id="cb4-9"><a></a><span class="co"># Record 5 seconds of audio and perform speech recognition</span></span>
+<span id="cb4-10"><a></a>snd <span class="ot">&lt;-</span> <span class="fu">record_audio</span>(<span class="dv">5</span>)</span>
+<span id="cb4-11"><a></a></span>
+<span id="cb4-12"><a></a><span class="co"># Transcribe the recorded audio</span></span>
+<span id="cb4-13"><a></a>snd_text <span class="ot">&lt;-</span> <span class="fu">whisper</span>(ctx, snd)</span>
+<span id="cb4-14"><a></a>snd_text</span>
+<span id="cb4-15"><a></a></span>
+<span id="cb4-16"><a></a><span class="co"># play it back</span></span>
+<span id="cb4-17"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">16100</span>)</span>
+<span id="cb4-18"><a></a></span>
+<span id="cb4-19"><a></a><span class="co"># export and import the audio file</span></span>
+<span id="cb4-20"><a></a><span class="fu">saveRDS</span>(snd, <span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span>
+<span id="cb4-21"><a></a>recording <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="cowsay" class="slide level2">
 <h2>Cowsay</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>             ------ 
-          Cowsay will create an ascii creature saying what you want it to 
-             ------ 
-                 \   
-                  \  
-                   \
-                      . .     
-                      |\|\_   
-                      /  @ \  
-                     /  _-_/° 
-   \\\\\\\\\       /   / \    
-  ////////////   /  \ / ||    
- \\\\\\\\\\\\\\ /   /\\ \\    
-////////////////   /  \\ \\   
- \\\\\\\\\\\\\/   /  / `` ``  
-     /////////   \  /  \      
- ML     \\\\\\___/_/___/      </code></pre>
+<pre><code>
+ ----- 
+Cowsay will create an ascii creature saying what you want it to 
+ ------ 
+    \   
+     \
+         _
+       _/ }
+      `&gt;' \
+      `|   \
+       |   /'-.     .-.
+        \'     ';`--' .'
+         \'.    `'-./
+          '.`-..-;`
+            `;-..'
+            _| _|
+            /` /` [nosig]
+  </code></pre>
 </div>
 </div>
 </section>
 <section id="cowsay-carelesswhisper" class="slide level2">
 <h2>Cowsay + Carelesswhisper</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">30100</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">say</span>(snd_text, <span class="st">"random"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">30100</span>)</span>
+<span id="cb6-2"><a></a><span class="fu">say</span>(snd_text, <span class="st">"random"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="rsoundfont" class="slide level2">
 <h2>rsoundfont</h2>
 <p>Want to play musical instruments with R?</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># install.package('remotes')</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/rsoundfont'</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">library</span>(rsoundfont)</span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="co"># Source: https://www.philscomputerlab.com/general-midi-and-soundfonts.html</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a>filename <span class="ot">&lt;-</span> <span class="st">"C:/Users/uqnwiggi/OneDrive - The University of Queensland/TechTraining/RUG/cool_but_useless/soundfonts/weedsgm4_update.sf2"</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>sf <span class="ot">&lt;-</span> <span class="fu">read_sf2</span>(filename)</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co"># sample a loop from an instrument</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>samp <span class="ot">&lt;-</span> <span class="fu">create_sample</span>(sf, <span class="st">"Mandolin Trem E5"</span> , <span class="dv">1</span>)</span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="fu">print</span>(inst)</span>
-<span id="cb7-14"><a href="#cb7-14"></a>audio<span class="sc">::</span><span class="fu">play</span>(samp)</span>
-<span id="cb7-15"><a href="#cb7-15"></a></span>
-<span id="cb7-16"><a href="#cb7-16"></a></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="co"># play a bunch of sounds</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">2</span>))  </span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.45</span>)</span>
-<span id="cb7-20"><a href="#cb7-20"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-21"><a href="#cb7-21"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
-<span id="cb7-22"><a href="#cb7-22"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo F3"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-23"><a href="#cb7-23"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.15</span>)</span>
-<span id="cb7-24"><a href="#cb7-24"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo E3"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-25"><a href="#cb7-25"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
-<span id="cb7-26"><a href="#cb7-26"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-27"><a href="#cb7-27"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.15</span>)</span>
-<span id="cb7-28"><a href="#cb7-28"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-29"><a href="#cb7-29"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
-<span id="cb7-30"><a href="#cb7-30"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo D4"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-31"><a href="#cb7-31"></a><span class="fu">Sys.sleep</span>(<span class="fl">0.5</span>)</span>
-<span id="cb7-32"><a href="#cb7-32"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo E4"</span> , <span class="dv">1</span>))</span>
-<span id="cb7-33"><a href="#cb7-33"></a><span class="fu">Sys.sleep</span>(.<span class="dv">9</span>)</span>
-<span id="cb7-34"><a href="#cb7-34"></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># install.package('remotes')</span></span>
+<span id="cb7-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/rsoundfont'</span>)</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="fu">library</span>(rsoundfont)</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="co"># Source: https://www.philscomputerlab.com/general-midi-and-soundfonts.html</span></span>
+<span id="cb7-7"><a></a>filename <span class="ot">&lt;-</span> <span class="st">"C:/Users/uqnwiggi/OneDrive - The University of Queensland/TechTraining/RUG/cool_but_useless/soundfonts/weedsgm4_update.sf2"</span></span>
+<span id="cb7-8"><a></a></span>
+<span id="cb7-9"><a></a>sf <span class="ot">&lt;-</span> <span class="fu">read_sf2</span>(filename)</span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a><span class="co"># sample a loop from an instrument</span></span>
+<span id="cb7-12"><a></a>samp <span class="ot">&lt;-</span> <span class="fu">create_sample</span>(sf, <span class="st">"Mandolin Trem E5"</span> , <span class="dv">1</span>)</span>
+<span id="cb7-13"><a></a><span class="fu">print</span>(inst)</span>
+<span id="cb7-14"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(samp)</span>
+<span id="cb7-15"><a></a></span>
+<span id="cb7-16"><a></a></span>
+<span id="cb7-17"><a></a><span class="co"># play a bunch of sounds</span></span>
+<span id="cb7-18"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">2</span>))  </span>
+<span id="cb7-19"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.45</span>)</span>
+<span id="cb7-20"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-21"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
+<span id="cb7-22"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo F3"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-23"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.15</span>)</span>
+<span id="cb7-24"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo E3"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-25"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
+<span id="cb7-26"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo G3"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-27"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.15</span>)</span>
+<span id="cb7-28"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-29"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
+<span id="cb7-30"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo D4"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-31"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.5</span>)</span>
+<span id="cb7-32"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo E4"</span> , <span class="dv">1</span>))</span>
+<span id="cb7-33"><a></a><span class="fu">Sys.sleep</span>(.<span class="dv">9</span>)</span>
+<span id="cb7-34"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="wordle" class="slide level2">
 <h2>Wordle</h2>
 <p>Want to play Wordle in R?</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># install.packages('remotes')</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/wordle'</span>)</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">library</span>(wordle)</span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">play_wordle</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># install.packages('remotes')</span></span>
+<span id="cb8-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/wordle'</span>)</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a><span class="fu">library</span>(wordle)</span>
+<span id="cb8-5"><a></a></span>
+<span id="cb8-6"><a></a><span class="fu">play_wordle</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="uqrug-cool-but-useless-competition" class="slide level2">
 <h2>UQRUG Cool but Useless Competition</h2>
@@ -727,8 +749,10 @@
 </ul>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -757,7 +781,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1012,18 +1035,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1055,11 +1067,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1069,8 +1120,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1084,7 +1144,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

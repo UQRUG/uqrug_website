@@ -1,6 +1,7 @@
 ---
 title: UQRUG 27
 date: '2022-06-01'
+description: '**Questions**: ggplot2, species distribution modelling, anomalies in chronology, R Markdown, factoextra'
 categories: meeting
 ---
 
@@ -43,7 +44,7 @@ starwars %>%
 
 * Preparation for species distribution modelling. Convert dataframe to sf object with `st_as_sf()`, and will probably need to go from vector data to raster data with `terra::rasterize()`
     * The [CRAN Task View on spatial data](https://CRAN.R-project.org/view=Spatial) lists a lot of useful packages
-* Importing spatial points for dolphin occurences, using sf. Constructing a convex hull from them and visualising on an interactive map:
+* Importing spatial points for dolphin occurrences, using sf. Constructing a convex hull from them and visualising on an interactive map:
 
 
 ```{r}

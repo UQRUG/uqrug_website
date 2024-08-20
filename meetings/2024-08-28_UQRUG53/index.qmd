@@ -1,0 +1,30 @@
+---
+title: UQRUG 53
+draft: true
+editor: visual
+date: '2024-08-28'
+description: '**Overview**: 2 years of R news overview + drop in session<br /> **Questions**: ...'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: 2 years of RStats news
+
+On 2024-08-28, Stéphane highlighted what attracted his attention from the two last years of RStats news.
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name             | Where are you from? | What brings you here?    |
+|------------------|---------------------|--------------------------|
+| Stéphane Guillou | Library             | Here to present and help |
+|                  |                     |                          |
+
+## Questions

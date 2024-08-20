@@ -1,8 +1,11 @@
 {
-  "hash": "1462fa40e536ed84742a745c1b149a95",
+  "hash": "e68be7e470a43a5288d43f47e14edcad",
   "result": {
-    "markdown": "---\ntitle: UQRUG 21\ndate: '2021-10-18'\ncategories: meeting\n---\n\n\n\n\n### 2021-10-18: UQRUG 21\n\n#### Attendees\n\n* Stéphane\n* Aklilu\n* Uttara\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 21\ndate: '2021-10-18'\ncategories: meeting\n---\n\n\n\n\n\n### 2021-10-18: UQRUG 21\n\n#### Attendees\n\n* Stéphane\n* Aklilu\n* Uttara\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

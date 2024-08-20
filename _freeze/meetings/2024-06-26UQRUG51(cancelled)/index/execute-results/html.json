@@ -1,8 +1,11 @@
 {
-  "hash": "16a171913ede946838e8d39ce7203a78",
+  "hash": "94941a56fde744aef5c77bdc887f7010",
   "result": {
-    "markdown": "---\ntitle: UQRUG 51\ndate: '2024-06-26'\ncategories: meeting\n---\n\n\n\n\n### 2024-06-26: UQRUG 51 (cancelled)\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 51\ndate: '2024-06-26'\ncategories: meeting\n---\n\n\n\n\n\n### 2024-06-26: UQRUG 51 (cancelled)\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

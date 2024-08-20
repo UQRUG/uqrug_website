@@ -1,8 +1,11 @@
 {
-  "hash": "aa9abaa8994664597a112772ae92871e",
+  "hash": "4ac43674ef18d68701db81ee38611895",
   "result": {
-    "markdown": "---\ntitle: UQRUG 2\ndate: '2020-02-24'\ncategories: meeting\n---\n\n\n\n\n### 2020-02-24: UQRUG 2\n\n- Learning R? jump here: https://rstudio.github.io/learnr/\n- Tidyverse tricks? https://suzan.rbind.io/\n- Greg Siemon, (unofficial) Rmarkdown UQ Thesis Template: https://github.com/gsiemon/UQThesis\n- Reka is here: https://rekadata.site/ Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. Member of the Software Sustainability Institute and an Honorary Lecturer at University College London.\n- Welcome everyone!\n\n\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 2\ndate: '2020-02-24'\ncategories: meeting\n---\n\n\n\n\n\n### 2020-02-24: UQRUG 2\n\n- Learning R? jump here: https://rstudio.github.io/learnr/\n- Tidyverse tricks? https://suzan.rbind.io/\n- Greg Siemon, (unofficial) Rmarkdown UQ Thesis Template: https://github.com/gsiemon/UQThesis\n- Reka is here: https://rekadata.site/ Lecturer in Quantitative Methods at the Department of Criminology at University of Manchester. Member of the Software Sustainability Institute and an Honorary Lecturer at University College London.\n- Welcome everyone!\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
