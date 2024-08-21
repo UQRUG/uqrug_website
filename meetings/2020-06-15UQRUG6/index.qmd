@@ -1,6 +1,7 @@
 ---
 title: UQRUG 6
 date: '2020-06-15'
+description: NA
 categories: meeting
 ---
 
@@ -20,10 +21,8 @@ Anything you'd like to talk about? A problem? Resources? Feel free to add it her
 * **Ruth Brady** (HMNS): PhD researcher working with accelerometers to measure physical activity patterns of adults. The package I am most interested in, is GGIR and creating a code that runs. I have basic R and GGIR knowledge but constantly run into problems I am unsure how to correct them. 
 * **Chantelle Derez** (Biological Sciences): PhD researcher loving and hating making maps. I have an error relating to JAVA that would be great to get some help on. 
 * **Adriana Vega** (SAFS) PhD studying tropical tree water use. Currently trying to use dendrometer (tree stem radius variations) data to separate "growth" from "water deficit". Hoping to get some advice on how to run a line through time series to separate these two components.
-* **Clarisse Louvard**(SBS):PhD candidate studying parasites. First time at UQRUG. Currently searching for a way to do Principal Component Analyses with imputed datasets obtained with R package MICE.
+* **Clarisse Louvard**(SBS): PhD candidate studying parasites. First time at UQRUG. Currently searching for a way to do Principal Component Analyses with imputed datasets obtained with R package MICE.
 * **Paula Andrea Martinez** I work for the National Imaging Facility, happy to help people with data organisation, data cleaning and munging. I'm also quite interested in web scrapping and APIs. I've worked with Bioconductor packages for some years too.
 *  **Fathin Azizan** PhD student studying rubber phenological metrics using remote sensing data. Currently using R for extracting and analysing raster data.
 * **Greg Siemon** PhD Candidate working on optimisation of energy use within a steelworks. I have done most of my PhD work in R and I am going to be writing my Thesis using RMarkdown (See unofficial RMarkdown Thesis template below). At the moment I'm trying to parse some messy XML formatted output from some optimisation software. If anyone is familiar with the XML2 package I'd be interested to have a chat.
-* **Patrick Di** (*SAFS*) Undergraduate Honours student who is studying R for genetics and GIS. Data management and plotting nice figures. :1234: 
-
-
+* **Patrick Di** (*SAFS*) Undergraduate Honours student who is studying R for genetics and GIS. Data management and plotting nice figures.

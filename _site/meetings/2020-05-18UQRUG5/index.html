@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2020-05-18">
+<meta name="description" content="Overview: reprex, R 4.0 news  Questions: asymptotic regression model, revtools, uavRst, Shiny">
 
 <title>UQRUG 5 – UQRUG</title>
 <style>
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -118,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/uqlibrary/technology-training" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/UQRUG/uqrug_website" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
     <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
     <a href="https://www.youtube.com/@UQRUG" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -147,9 +182,18 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">UQRUG 5</h1>
   <div class="quarto-categories">
     <div class="quarto-category">meeting</div>
+    <div class="quarto-category">modelling</div>
+    <div class="quarto-category">revtools</div>
+    <div class="quarto-category">uavrst</div>
+    <div class="quarto-category">shiny</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    <strong>Overview</strong>: reprex, R 4.0 news<br> <strong>Questions</strong>: asymptotic regression model, revtools, uavRst, Shiny
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -193,7 +237,117 @@ ul.task-list li input[type="checkbox"] {
 <p>The <strong>reprex</strong> website introduces what the reprex package is useful for, i.e.&nbsp;creating <strong>reproducible examples</strong>: https://reprex.tidyverse.org/</p>
 <p>Share your reprex example here!</p>
 <p>Steph’s:</p>
-<p>``` r</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 4.0 does not import strings as factors by default anymore!</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create a fake dataframe:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"man"</span>, <span class="st">"woman"</span>, <span class="st">"enby"</span>, <span class="st">"other"</span>, <span class="st">"PNS"</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                              <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># check class</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df<span class="sc">$</span>gender)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "character"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># summary() might be a bit less informative</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       ID               gender               age       </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Length:10          Length:10          Min.   : 5.00  </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Class :character   Class :character   1st Qu.:18.00  </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mode  :character   Mode  :character   Median :65.50  </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                        Mean   :56.00  </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                        3rd Qu.:91.75  </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                        Max.   :96.00</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2020-05-18 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v0.3.0)</sup></p>
+</section>
+<section id="topics-discussed" class="level4">
+<h4 class="anchored" data-anchor-id="topics-discussed">Topics discussed</h4>
+<ul>
+<li>New in <strong>R 4.0</strong>:
+<ul>
+<li>Improved default colour palette: https://developer.r-project.org/Blog/public/2019/11/21/a-new-palette-for-r/index.html</li>
+<li>New StringsAsFactors default value set to <code>FALSE</code>: https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/index.html</li>
+<li>Matrices inherit the “array” class</li>
+</ul></li>
+<li><strong>reprex</strong> package for reproducible examples:
+<ul>
+<li>Official docs: https://reprex.tidyverse.org/</li>
+</ul></li>
+<li><strong>Shiny</strong> tutorials:
+<ul>
+<li>Tutorial: https://shiny.rstudio.com/tutorial/</li>
+</ul></li>
+<li>Ruth was interested in <strong>revtools</strong>, which provides “tools for evidence synthesis”:
+<ul>
+<li>Website: https://revtools.net</li>
+<li>Function documentation: https://cran.r-project.org/web/packages/revtools/revtools.pdf</li>
+</ul></li>
+<li>Resources for <strong>learning R</strong>:
+<ul>
+<li>exercism: https://exercism.io</li>
+<li>Upcoming 1.3 version of RStudio integrates <a href="https://rstudio.github.io/learnr/">learnr</a> with a new “Tutorial” pane: https://rstudio.com/products/rstudio/download/preview-release-notes/</li>
+</ul></li>
+<li>Patrick was interested in <strong>uavRst</strong>: <em>Unmanned Aerial Vehicle Remote Sensing Toolbox</em> (not on CRAN):
+<ul>
+<li>Website: https://gisma.github.io/uavRst/</li>
+<li>It requires quite a few libraries!</li>
+</ul></li>
+</ul>
+<p>Example code used during the meetup:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 4.0 updates</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># does not import strings as factors by default anymore!</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># create a fake dataframe:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"man"</span>, <span class="st">"woman"</span>, <span class="st">"enby"</span>, <span class="st">"fluid"</span>, <span class="st">"other"</span>, <span class="st">"PNS"</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">15</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">15</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">score =</span> <span class="fu">sample</span>(<span class="dv">10</span><span class="sc">:</span><span class="dv">300</span>, <span class="dv">15</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># check class</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df<span class="sc">$</span>gender)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">as.factor</span>(df<span class="sc">$</span>gender))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># summary() might be a bit less informative</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># default palette</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>age, df<span class="sc">$</span>score, <span class="at">col =</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>gender))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># see the values</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>()</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># class inheritance</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">diag</span>(<span class="dv">1</span>))</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># warning when joining datasets with different factor levels</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># create two datasets:</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span>  <span class="fu">c</span>(<span class="st">"blah"</span>, <span class="st">"bloh"</span>),</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>                  <span class="at">height =</span> <span class="fu">c</span>(<span class="dv">123</span>, <span class="dv">234</span>),</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>                  <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span>  <span class="fu">c</span>(<span class="st">"blah"</span>, <span class="st">"blih"</span>),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                  <span class="at">weight =</span> <span class="fu">c</span>(<span class="dv">456</span>, <span class="dv">678</span>),</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                  <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># dplyr warns when joining by a key that does not share</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># the exact same levels between the two tables</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>joined <span class="ot">&lt;-</span> <span class="fu">left_join</span>(df1, df2)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co"># see that it converted to characters for safety</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(joined)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># see that original levels differ</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>df1<span class="sc">$</span>name</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>df2<span class="sc">$</span>name</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="co"># revtools</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(revtools)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co"># show all available data objects</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>?revtools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

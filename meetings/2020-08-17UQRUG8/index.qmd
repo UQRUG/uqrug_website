@@ -1,14 +1,13 @@
 ---
 title: UQRUG 8
 date: '2020-08-17'
-categories: meeting
+description: '**Questions**: CLMM, GLM, boxplot, between and near filters in Tidyverse'
+categories: [meeting, boxplot, clmm, glm, tidyverse]
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2020-08-17: UQRUG 8
@@ -21,7 +20,7 @@ Please add your name and the problem you'd like some help with!
 * **Dhananjeyan**: New to R, Trying to learn more
 * **Phoebe**: Hi everybody, I started learning R last week (self-directed). I have problems using the right code for missing data and doing linear regression with categorical data. I am happy to learn other things as well!
 * **Fathin** (SAFS): Problem yet to come, haha. I am going to add moving average on my boxplot. Don't know how can I do that.
-* **Patrick** ($SAFS$): I got a problem of GLM(). Plotting mutiple model over a time period. 
+* **Patrick** ($SAFS$): I got a problem of GLM(). Plotting multiple model over a time period. 
 * **Elspeth** Hi, I just started learning R last week as well. Just here to learn generally, no specific problem :)
 * **Paula** CAI. I want to show you between and near for filters, using tidyverse
 * **Evan** (QBI) Been using R for stats for about 3 years, will be doing some bioinformatics for PhD, and joining in to meet other people also using R (no specific problem - yet)
@@ -32,7 +31,7 @@ Please add your name and the problem you'd like some help with!
 
 * Jemima's CLMM and stats questions:
     * Patrick: "My biometrician recommended AIC the lower the better"
-    * Evan: "this guide to fitting clmm that mght be helpful as well": https://cran.r-project.org/web/packages/ordinal/vignettes/clmm2_tutorial.pdf 
+    * Evan: "this guide to fitting clmm that might be helpful as well": https://cran.r-project.org/web/packages/ordinal/vignettes/clmm2_tutorial.pdf 
     * Paula: https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=The%20AIC%20function%20is%202K,it%20is%20being%20compared%20to 
     * Fathin recommends this QCIF course: _Exploring and Predicting using Linear Regression in R_ -- https://www.qcif.edu.au/trainingcourses/exploring-and-predicting-using-linear-regression/ 
     * Stéphane: the first warning you saw is related to recent R changes (in R 4.0) and it will be fixed in a future version of ordinal: https://github.com/runehaubo/ordinal/issues/34

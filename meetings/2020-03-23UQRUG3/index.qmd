@@ -1,18 +1,15 @@
 ---
 title: UQRUG 3
 date: '2020-03-23'
+description: 'Cancelled '
 categories: meeting
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2020-03-23: UQRUG 3
 
-_Canceled because of UQ recommendations related to COVID-19._
-
-
+*Cancelled because of UQ recommendations related to COVID-19.*

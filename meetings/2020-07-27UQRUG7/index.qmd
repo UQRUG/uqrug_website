@@ -1,20 +1,18 @@
 ---
 title: UQRUG 7
 date: '2020-07-27'
-categories: meeting
+description: '**Questions**: quosure and quasiquotation, favourite packages, reading XML data, SAS to R migration, RNAseq'
+categories: [meeting, tmap, stylr, raster, ggplot2, ggpubr, thermimage, ggir, mertools, xml, sas]
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2020-07-27: UQRUG 7
 
-On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
-
+On Zoom, 3-5 pm.
 
 #### Attendees and problems
 
@@ -29,7 +27,6 @@ On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
     * https://osca.bioconductor.org
     * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html 
 * **Greg** (Chemical Engineering) Late but here to help. Currently grappling with some nasty XML at the moment that I want to parse efficiently.  Writing my PhD thesis in RMarkdown.
-
 
 #### Favourite packages
 
@@ -47,7 +44,8 @@ On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770
 * Reading XML data into R
     * https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781783989065/1/ch01lvl1sec11/reading-xml-data
     * https://stackoverflow.com/questions/40977885/extracting-nodes-by-name
-    * Greg also this code worked well for missing nodes, but not for reapeated names. Have a try
+    * Greg also this code worked well for missing nodes, but not for repeated names. Have a try
+
 ```
 library(XML)
 library(methods)
@@ -55,6 +53,7 @@ library(methods)
 xmldata <- xmlToDataFrame("data/plant_catalog_incomplete.xml")
 View(xmldata)
 ```
+
 * For Single cell analysis
     * https://osca.bioconductor.org/introduction.html
     * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html
@@ -64,5 +63,3 @@ View(xmldata)
 * SAS to R migration
     * https://www.r-bloggers.com/sas-to-r-migration/
     * https://github.com/asnr/sas-to-r
-
-

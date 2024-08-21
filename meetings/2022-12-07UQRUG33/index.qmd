@@ -1,14 +1,13 @@
 ---
 title: UQRUG 33
 date: '2022-12-07'
-categories: meeting
+description: '**Overview**: gganimate and plotly animations. <br /> **Questions**: barplots, ggplot2, Excel comparison, ggarrange'
+categories: [meeting, gganimate, ggplot2, plotly, ggarrange, excel]
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2022-12-07: UQRUG 33

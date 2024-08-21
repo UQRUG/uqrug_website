@@ -403,7 +403,7 @@
 <p>A basic overview and comparison to common tidyverse functions</p>
 <p>By: Nick Garner for <a href="../..">UQRUG</a></p>
 </div><div class="column" style="width:40%;">
-<p><img data-src="img\DataTable UQRUG0.png"></p>
+<p><img data-src="img/DataTable UQRUG0.png"></p>
 </div></div>
 <div class="footer">
 <p><a href="https://rdatatable.gitlab.io/data.table/" class="uri">https://rdatatable.gitlab.io/data.table/</a></p>
@@ -452,15 +452,15 @@
 <h3 class="r-stretch" id="how-fast-is-it">How fast is it?</h3>
 <p>500MB</p>
 </div><div class="column" style="width:65%;">
-<p><img data-src="img\DataTable UQRUG1.png"></p>
+<p><img data-src="img/DataTable UQRUG1.png"></p>
 </div><div class="column" style="width:35%;">
 <p>5GB</p>
 </div><div class="column" style="width:65%;">
-<p><img data-src="img\DataTable UQRUG2.png"></p>
+<p><img data-src="img/DataTable UQRUG2.png"></p>
 </div><div class="column" style="width:35%;">
 <p>50GB</p>
 </div><div class="column" style="width:65%;">
-<p><img data-src="img\DataTable UQRUG3.png"></p>
+<p><img data-src="img/DataTable UQRUG3.png"></p>
 </div></div>
 <div class="footer">
 <p>Not only faster but less onboard memory used <a href="https://h2oai.github.io/db-benchmark/" class="uri">https://h2oai.github.io/db-benchmark/</a></p>
@@ -484,14 +484,14 @@
 </ul>
 <p>Almost everything you’d need to reshape data</p>
 </div><div class="column" style="width:70%;">
-<p><img data-src="img\DataTable UQRUG4.png"></p>
+<p><img data-src="img/DataTable UQRUG4.png"></p>
 </div></div>
 </section>
 <section id="loading-in-and-writing-out-data" class="slide level2 smaller">
 <h2>Loading in and writing out data</h2>
 <div class="columns">
 <div class="column" style="width:15%;">
-<p><img data-src="img\DataTable UQRUG5.png"></p>
+<p><img data-src="img/DataTable UQRUG5.png"></p>
 </div><div class="column" style="width:85%;">
 <ul>
 <li>Base/ Tidyverse R: <strong>read.csv()</strong> or <strong>read.xls()</strong> -&gt; Becomes a data frame
@@ -502,7 +502,7 @@
 </ul></li>
 </ul>
 </div><div class="column" style="width:15%;">
-<p><img data-src="img\DataTable UQRUG0.png" width="120"></p>
+<p><img data-src="img/DataTable UQRUG0.png" width="120"></p>
 </div><div class="column" style="width:85%;">
 <ul>
 <li>data.table: <strong>fread</strong> <strong>()</strong> -&gt; Straight into a data.table format
@@ -523,7 +523,7 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="text-align: center; font-size: 130%">
-<p><img data-src="img\DataTable UQRUG5.png"> <br> tidyverse</p>
+<p><img data-src="img/DataTable UQRUG5.png"> <br> tidyverse</p>
 </div>
 <p>Ethos: Do one thing at a time</p>
 <p>Each function has an easy to understand name</p>
@@ -537,7 +537,7 @@
 <span id="cb1-7"><a></a><span class="fu">summarise</span>(<span class="at">Weight.mean =</span> <span class="fu">mean</span>(Weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div style="text-align: center; font-size: 130%">
-<p><img data-src="img\DataTable UQRUG0.png" width="129"> <br> data.table</p>
+<p><img data-src="img/DataTable UQRUG0.png" width="129"> <br> data.table</p>
 </div>
 <p>Ethos: Do all functions similarly and concisely</p>
 <p><br> Example:</p>
@@ -545,7 +545,7 @@
 <span id="cb2-2"><a></a>                Weight.mean <span class="sc">:</span><span class="er">=</span> <span class="fu">mean</span>(Weight)<span class="er">)</span>,</span>
 <span id="cb2-3"><a></a>                by <span class="ot">=</span> <span class="st">"Variety"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Will run substantially faster on a big dataset</p>
-<p><img data-src="img\DataTable UQRUG9.png" class="absolute" style="top: -20px; right: -130px; width: 310px; "></p>
+<p><img data-src="img/DataTable UQRUG9.png" class="absolute" style="top: -20px; right: -130px; width: 310px; "></p>
 </div></div>
 </section>
 <section id="the-basic-data.table-syntax" class="slide level2">
@@ -595,7 +595,7 @@
 <p><code>Example[, by = "Fruit", Fruit_Weight := mean(Weight)]</code></p>
 </div><div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img\DataTable UQRUG9.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/DataTable UQRUG9.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -693,7 +693,7 @@
 <div class="columns">
 <div class="column" style="font-size: 75%">
 <div style="text-align: center">
-<p><img data-src="img\DataTable UQRUG5.png"></p>
+<p><img data-src="img/DataTable UQRUG5.png"></p>
 </div>
 <ol type="1">
 <li><p>filter() ,mutate(), group_by ()</p></li>
@@ -707,7 +707,7 @@
 </ol>
 </div><div class="column" style="font-size: 75%">
 <div style="text-align: center;">
-<p><img data-src="img\DataTable UQRUG0.png" width="129"></p>
+<p><img data-src="img/DataTable UQRUG0.png" width="129"></p>
 </div>
 <ol type="1">
 <li><p>Intrinsic df[ filter, mutate, by = ]</p></li>
@@ -723,14 +723,14 @@
 </section>
 <section id="the-lazy-way-improve-your-code-sooner" class="slide level2 smaller">
 <h2>The lazy way – improve your code sooner</h2>
-<p><img data-src="img\DataTable UQRUG17.png" class="absolute" style="top: -10px; right: -50px; "></p>
+<p><img data-src="img/DataTable UQRUG17.png" class="absolute" style="top: -10px; right: -50px; "></p>
 <p>You: *“I really want to use _ data.table* _ to speed things up but I don’t have time to learn it or alter my pre-existing code”</p>
 <p>Me: Give <em>dtplyr</em> a try?</p>
 <p>dtplyr allows you to write dplyr code that is automatically translated to the equivalent data.table code under the hood.</p>
 <p>Just load the package <em>library(</em> <em>dtplyr</em> <em>)</em> and use <em>df2 &lt;-</em> <em>lazy_dt</em> <em>(</em> <em>df</em> <em>)</em> before performing your normal operations. At the end use <em>as.data.table</em> <em>()</em> or <em>as_tibble</em> <em>()</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img\DataTable UQRUG18.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/DataTable UQRUG18.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <div class="footer">

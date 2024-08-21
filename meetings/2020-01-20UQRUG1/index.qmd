@@ -1,7 +1,8 @@
 ---
 title: UQRUG 1
 date: '2020-01-20'
-categories: meeting
+description: '**Questions**: installation, Shiny, BibTex in R Markdown, custom functions, 4.0 changes'
+categories: [meeting, installation, bibtex, rmarkdown, news, tidyverse]
 ---
 
 ```{r setup, include = FALSE}
@@ -15,18 +16,17 @@ library(tidyverse)
 
 Topics discussed:
 
-* Installing R and RStudio
-* Password-protected Shiny apps
-* Referencing with BibTex in R Markdown
-* Suppressing messages in custon functions
-* Data processing with Tidyverse
-* Sharing useful resources and available training
-* Mention upcoming changes in R 4.0 
+-   Installing R and RStudio
+-   Password-protected Shiny apps
+-   Referencing with BibTex in R Markdown
+-   Suppressing messages in custom functions
+-   Data processing with Tidyverse
+-   Sharing useful resources and available training
+-   Mention upcoming changes in R 4.0
 
 Useful Links
 
-* How to create fake data sets: https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf
-* Econ R Resources: 
-    - https://www.core-econ.org/doing-economics/book/text/0-3-contents.html
-    - https://otexts.com/fpp2/
-
+-   How to create fake data sets: https://cran.r-project.org/web/packages/synthpop/vignettes/synthpop.pdf
+-   Econ R Resources:
+    -   https://www.core-econ.org/doing-economics/book/text/0-3-contents.html
+    -   https://otexts.com/fpp2/

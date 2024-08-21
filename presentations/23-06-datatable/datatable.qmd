@@ -17,7 +17,7 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: {.column width="40%"}
-![](img%5CDataTable%20UQRUG0.png)
+![](img/DataTable UQRUG0.png)
 :::
 :::
 
@@ -67,7 +67,7 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: {.column width="65%"}
-![](img%5CDataTable%20UQRUG1.png)
+![](img/DataTable UQRUG1.png)
 :::
 
 ::: {.column width="35%"}
@@ -75,7 +75,7 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: {.column width="65%"}
-![](img%5CDataTable%20UQRUG2.png)
+![](img/DataTable UQRUG2.png)
 :::
 
 ::: {.column width="35%"}
@@ -83,7 +83,7 @@ By: Nick Garner for [UQRUG](/)
 :::
 
 ::: {.column width="65%"}
-![](img%5CDataTable%20UQRUG3.png)
+![](img/DataTable UQRUG3.png)
 :::
 :::
 
@@ -119,7 +119,7 @@ Almost everything you'd need to reshape data
 :::
 
 ::: {.column width="70%"}
-![](img%5CDataTable%20UQRUG4.png)
+![](img/DataTable UQRUG4.png)
 :::
 :::
 
@@ -127,7 +127,7 @@ Almost everything you'd need to reshape data
 
 ::: columns
 ::: {.column width="15%"}
-![](img%5CDataTable%20UQRUG5.png)
+![](img/DataTable UQRUG5.png)
 :::
 
 ::: {.column width="85%"}
@@ -138,7 +138,7 @@ Almost everything you'd need to reshape data
 :::
 
 ::: {.column width="15%"}
-![](img%5CDataTable%20UQRUG0.png){width="120px"}
+![](img/DataTable UQRUG0.png){width="120px"}
 :::
 
 ::: {.column width="85%"}
@@ -159,7 +159,7 @@ Almost everything you'd need to reshape data
 ::: columns
 ::: {.column width="50%"}
 ::: {style="text-align: center; font-size: 130%"}
-![](img%5CDataTable%20UQRUG5.png) </br> tidyverse
+![](img/DataTable UQRUG5.png) </br> tidyverse
 :::
 
 Ethos: Do one thing at a time
@@ -181,7 +181,7 @@ summarise(Weight.mean = mean(Weight))
 
 ::: {.column width="50%"}
 ::: {style="text-align: center; font-size: 130%"}
-![](img%5CDataTable%20UQRUG0.png){width="129px"} </br> data.table
+![](img/DataTable UQRUG0.png){width="129px"} </br> data.table
 :::
 
 Ethos: Do all functions similarly and concisely
@@ -196,7 +196,7 @@ Ex2 <- Example[Fruit == "Apples",
 
 Will run substantially faster on a big dataset
 
-![](img%5CDataTable%20UQRUG9.png){.absolute top="-20" right="-130" width="310"}
+![](img/DataTable UQRUG9.png){.absolute top="-20" right="-130" width="310"}
 :::
 :::
 
@@ -232,7 +232,7 @@ Perform a grouped summary
 `Example[, by = "Fruit", Fruit_Weight := mean(Weight)]`
 :::
 
-![](img%5CDataTable%20UQRUG9.png){fig-align="center"}
+![](img/DataTable UQRUG9.png){fig-align="center"}
 :::
 
 ## Moving from the tidyverse to data.table {.smaller}
@@ -304,7 +304,7 @@ Example dataset:
 ::: columns
 ::: {.column width="50%" style="font-size: 75%"}
 ::: {style="text-align: center"}
-![](img%5CDataTable%20UQRUG5.png)
+![](img/DataTable UQRUG5.png)
 :::
 
 1.  filter() ,mutate(), group_by ()
@@ -326,7 +326,7 @@ Example dataset:
 
 ::: {.column width="50%" style="font-size: 75%"}
 ::: {style="text-align: center;"}
-![](img%5CDataTable%20UQRUG0.png){width="129px"}
+![](img/DataTable UQRUG0.png){width="129px"}
 :::
 
 1.  Intrinsic df\[ filter, mutate, by = \]
@@ -349,7 +349,7 @@ Example dataset:
 
 ## The lazy way -- improve your code sooner {.smaller}
 
-![](img%5CDataTable%20UQRUG17.png){.absolute top="-10" right="-50"}
+![](img/DataTable UQRUG17.png){.absolute top="-10" right="-50"}
 
 You: \*"I really want to use \_ data.table\* \_ to speed things up but I don't have time to learn it or alter my pre-existing code"
 
@@ -359,7 +359,7 @@ dtplyr allows you to write dplyr code that is automatically translated to the eq
 
 Just load the package *library(* *dtplyr* *)* and use *df2 \<-* *lazy_dt* *(* *df* *)* before performing your normal operations. At the end use *as.data.table* *()* or *as_tibble* *()*
 
-![](img%5CDataTable%20UQRUG18.png){fig-align="center"}
+![](img/DataTable UQRUG18.png){fig-align="center"}
 
 ::: footer
 <https://dtplyr.tidyverse.org/>

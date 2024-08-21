@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2020-07-27">
+<meta name="description" content="Questions: quosure and quasiquotation, favourite packages, reading XML data, SAS to R migration, RNAseq">
 
 <title>UQRUG 7 – UQRUG</title>
 <style>
@@ -118,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/uqlibrary/technology-training" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/UQRUG/uqrug_website" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
     <a href="https://demo.hedgedoc.org/s/HJCLW3fWU" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
     <a href="https://www.youtube.com/@UQRUG" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -147,9 +148,24 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">UQRUG 7</h1>
   <div class="quarto-categories">
     <div class="quarto-category">meeting</div>
+    <div class="quarto-category">tmap</div>
+    <div class="quarto-category">stylr</div>
+    <div class="quarto-category">raster</div>
+    <div class="quarto-category">ggplot2</div>
+    <div class="quarto-category">ggpubr</div>
+    <div class="quarto-category">thermimage</div>
+    <div class="quarto-category">ggir</div>
+    <div class="quarto-category">mertools</div>
+    <div class="quarto-category">xml</div>
+    <div class="quarto-category">sas</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    <strong>Questions</strong>: quosure and quasiquotation, favourite packages, reading XML data, SAS to R migration, RNAseq
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -172,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="uqrug-7" class="level3">
 <h3 class="anchored" data-anchor-id="uqrug-7">2020-07-27: UQRUG 7</h3>
-<p>On Zoom, 3-5 pm: https://uqz.zoom.us/j/91844551770</p>
+<p>On Zoom, 3-5 pm.</p>
 <section id="attendees-and-problems" class="level4">
 <h4 class="anchored" data-anchor-id="attendees-and-problems">Attendees and problems</h4>
 <ul>
@@ -212,10 +228,31 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781783989065/1/ch01lvl1sec11/reading-xml-data</li>
 <li>https://stackoverflow.com/questions/40977885/extracting-nodes-by-name</li>
-<li>Greg also this code worked well for missing nodes, but not for reapeated names. Have a try ``` library(XML) library(methods)</li>
+<li>Greg also this code worked well for missing nodes, but not for repeated names. Have a try</li>
 </ul></li>
 </ul>
-<p>xmldata &lt;- xmlToDataFrame(“data/plant_catalog_incomplete.xml”) View(xmldata) ``` * For Single cell analysis * https://osca.bioconductor.org/introduction.html * https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html * For plotting gml data * merTools https://rdrr.io/cran/merTools/man/plotREsim.html * https://easystats.github.io/see/articles/performance.html * SAS to R migration * https://www.r-bloggers.com/sas-to-r-migration/ * https://github.com/asnr/sas-to-r</p>
+<pre><code>library(XML)
+library(methods)
+
+xmldata &lt;- xmlToDataFrame("data/plant_catalog_incomplete.xml")
+View(xmldata)</code></pre>
+<ul>
+<li>For Single cell analysis
+<ul>
+<li>https://osca.bioconductor.org/introduction.html</li>
+<li>https://bioconductor.riken.jp/packages/3.8/workflows/html/simpleSingleCell.html</li>
+</ul></li>
+<li>For plotting gml data
+<ul>
+<li>merTools https://rdrr.io/cran/merTools/man/plotREsim.html</li>
+<li>https://easystats.github.io/see/articles/performance.html</li>
+</ul></li>
+<li>SAS to R migration
+<ul>
+<li>https://www.r-bloggers.com/sas-to-r-migration/</li>
+<li>https://github.com/asnr/sas-to-r</li>
+</ul></li>
+</ul>
 
 
 </section>

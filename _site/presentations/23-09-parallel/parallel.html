@@ -13,7 +13,7 @@
 
   <meta name="author" content="Raúl Riesco">
   <meta name="dcterms.date" content="2023-09-27">
-  <title>UQRUG – quarto-input18b778205fbb2e84</title>
+  <title>UQRUG – quarto-input3fd8f3f6c8998805</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -635,9 +635,6 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb12-9"><a></a></span>
 <span id="cb12-10"><a></a>stopCluster(cl = clust)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: executing %dopar% sequentially: no parallel backend registered</code></pre>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.718282 7.389056</code></pre>
 </div>
@@ -647,30 +644,30 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <h2>Example</h2>
 <p>Determine which numbers on a sample are primes</p>
 <p>Function:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>isprime &lt;- function(num){ </span>
-<span id="cb15-2"><a></a>    prime=TRUE </span>
-<span id="cb15-3"><a></a>    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.</span>
-<span id="cb15-4"><a></a>    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number</span>
-<span id="cb15-5"><a></a>      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop</span>
-<span id="cb15-6"><a></a>        prime = FALSE </span>
-<span id="cb15-7"><a></a>        break </span>
-<span id="cb15-8"><a></a>      }</span>
-<span id="cb15-9"><a></a>      i &lt;- i+1 </span>
-<span id="cb15-10"><a></a>    }</span>
-<span id="cb15-11"><a></a>    return(prime) </span>
-<span id="cb15-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>isprime &lt;- function(num){ </span>
+<span id="cb14-2"><a></a>    prime=TRUE </span>
+<span id="cb14-3"><a></a>    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.</span>
+<span id="cb14-4"><a></a>    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number</span>
+<span id="cb14-5"><a></a>      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop</span>
+<span id="cb14-6"><a></a>        prime = FALSE </span>
+<span id="cb14-7"><a></a>        break </span>
+<span id="cb14-8"><a></a>      }</span>
+<span id="cb14-9"><a></a>      i &lt;- i+1 </span>
+<span id="cb14-10"><a></a>    }</span>
+<span id="cb14-11"><a></a>    return(prime) </span>
+<span id="cb14-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>data (10,000 numbers):</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>listnumbers &lt;- sample(1:100000,10000)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>listnumbers &lt;- sample(1:100000,10000)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="for3" class="slide level2">
 <h2><em>for</em><sup>1</sup></h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>primes&lt;- rep(T,10000)   </span>
-<span id="cb17-2"><a></a></span>
-<span id="cb17-3"><a></a>for(i in 1:length(listnumbers)){</span>
-<span id="cb17-4"><a></a>  primes[i] &lt;- isprime(listnumbers[i])</span>
-<span id="cb17-5"><a></a>}</span>
-<span id="cb17-6"><a></a></span>
-<span id="cb17-7"><a></a>result&lt;-data.frame(number=listnumbers, is_prime=primes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>primes&lt;- rep(T,10000)   </span>
+<span id="cb16-2"><a></a></span>
+<span id="cb16-3"><a></a>for(i in 1:length(listnumbers)){</span>
+<span id="cb16-4"><a></a>  primes[i] &lt;- isprime(listnumbers[i])</span>
+<span id="cb16-5"><a></a>}</span>
+<span id="cb16-6"><a></a></span>
+<span id="cb16-7"><a></a>result&lt;-data.frame(number=listnumbers, is_prime=primes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.308078 secs"</code></pre>
@@ -679,13 +676,13 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn4"><p>In this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process.</p></li></ol></aside></section>
 <section id="foreach4" class="slide level2">
 <h2><em>foreach</em><sup>1</sup></h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a></a>library(foreach)</span>
-<span id="cb19-2"><a></a>   </span>
-<span id="cb19-3"><a></a>primes_fe &lt;-foreach(i = 1:length(listnumbers), .combine="c") %do% { </span>
-<span id="cb19-4"><a></a>                    isprime(listnumbers[i]) </span>
-<span id="cb19-5"><a></a>                    }</span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a>result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>library(foreach)</span>
+<span id="cb18-2"><a></a>   </span>
+<span id="cb18-3"><a></a>primes_fe &lt;-foreach(i = 1:length(listnumbers), .combine="c") %do% { </span>
+<span id="cb18-4"><a></a>                    isprime(listnumbers[i]) </span>
+<span id="cb18-5"><a></a>                    }</span>
+<span id="cb18-6"><a></a></span>
+<span id="cb18-7"><a></a>result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 6.629166 secs"</code></pre>
@@ -694,21 +691,21 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn5"><p>This method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length.</p></li></ol></aside></section>
 <section id="foreach-parallelized" class="slide level2">
 <h2><em>foreach</em> parallelized</h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb21-1"><a></a>library(parallel)</span>
-<span id="cb21-2"><a></a>library(foreach)</span>
-<span id="cb21-3"><a></a>library(doParallel)</span>
-<span id="cb21-4"><a></a></span>
-<span id="cb21-5"><a></a>cores &lt;- detectCores()                 </span>
-<span id="cb21-6"><a></a>clust &lt;- parallel::makeCluster(cores)  </span>
-<span id="cb21-7"><a></a>registerDoParallel(clust)  </span>
-<span id="cb21-8"><a></a> </span>
-<span id="cb21-9"><a></a>primes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine="c") %dopar% { </span>
-<span id="cb21-10"><a></a>isprime(listnumbers[i]) </span>
-<span id="cb21-11"><a></a>}</span>
-<span id="cb21-12"><a></a></span>
-<span id="cb21-13"><a></a>result_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)</span>
-<span id="cb21-14"><a></a></span>
-<span id="cb21-15"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>library(parallel)</span>
+<span id="cb20-2"><a></a>library(foreach)</span>
+<span id="cb20-3"><a></a>library(doParallel)</span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a>cores &lt;- detectCores()                 </span>
+<span id="cb20-6"><a></a>clust &lt;- parallel::makeCluster(cores)  </span>
+<span id="cb20-7"><a></a>registerDoParallel(clust)  </span>
+<span id="cb20-8"><a></a> </span>
+<span id="cb20-9"><a></a>primes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine="c") %dopar% { </span>
+<span id="cb20-10"><a></a>isprime(listnumbers[i]) </span>
+<span id="cb20-11"><a></a>}</span>
+<span id="cb20-12"><a></a></span>
+<span id="cb20-13"><a></a>result_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)</span>
+<span id="cb20-14"><a></a></span>
+<span id="cb20-15"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 2.964536 secs"</code></pre>
@@ -717,9 +714,9 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 </section>
 <section id="sapply-5" class="slide level2">
 <h2><em>sapply</em> <sup>1</sup></h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a></a>primes_sa &lt;- sapply(listnumbers, isprime) </span>
-<span id="cb23-2"><a></a></span>
-<span id="cb23-3"><a></a>result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>primes_sa &lt;- sapply(listnumbers, isprime) </span>
+<span id="cb22-2"><a></a></span>
+<span id="cb22-3"><a></a>result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.478974 secs"</code></pre>
@@ -728,16 +725,16 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn6"><p>apply is more efficient than foreach because it does a memory preallocation step in the background</p></li></ol></aside></section>
 <section id="parsapply" class="slide level2">
 <h2><em>parSapply</em></h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a></a>library(parallel)</span>
-<span id="cb25-2"><a></a></span>
-<span id="cb25-3"><a></a>cores &lt;- detectCores()     </span>
-<span id="cb25-4"><a></a>clust &lt;- parallel::makeCluster(cores)</span>
-<span id="cb25-5"><a></a></span>
-<span id="cb25-6"><a></a>prime_par_sa &lt;- parSapply(clust, listnumbers, isprime)             </span>
-<span id="cb25-7"><a></a></span>
-<span id="cb25-8"><a></a>result_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)</span>
-<span id="cb25-9"><a></a></span>
-<span id="cb25-10"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>library(parallel)</span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>cores &lt;- detectCores()     </span>
+<span id="cb24-4"><a></a>clust &lt;- parallel::makeCluster(cores)</span>
+<span id="cb24-5"><a></a></span>
+<span id="cb24-6"><a></a>prime_par_sa &lt;- parSapply(clust, listnumbers, isprime)             </span>
+<span id="cb24-7"><a></a></span>
+<span id="cb24-8"><a></a>result_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)</span>
+<span id="cb24-9"><a></a></span>
+<span id="cb24-10"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 1.725008 secs"</code></pre>
@@ -750,7 +747,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="parallel_files/figure-html/unnamed-chunk-14-1.png" width="672"></p>
+<p><img data-src="parallel_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -974,6 +971,44 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

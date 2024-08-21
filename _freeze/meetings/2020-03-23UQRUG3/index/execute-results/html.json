@@ -1,8 +1,8 @@
 {
-  "hash": "d789eedbb1ccf32262da800085347072",
+  "hash": "0dd80c98ae8cea47cda74376f6fe61c3",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: UQRUG 3\ndate: '2020-03-23'\ncategories: meeting\n---\n\n\n\n\n\n### 2020-03-23: UQRUG 3\n\n_Canceled because of UQ recommendations related to COVID-19._\n\n\n",
+    "markdown": "---\ntitle: UQRUG 3\ndate: '2020-03-23'\ndescription: 'Cancelled '\ncategories: meeting\n---\n\n\n\n\n\n### 2020-03-23: UQRUG 3\n\n*Cancelled because of UQ recommendations related to COVID-19.*\n",
     "supporting": [
       "index_files"
     ],

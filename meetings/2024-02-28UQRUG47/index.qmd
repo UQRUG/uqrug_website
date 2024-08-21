@@ -1,7 +1,7 @@
 ---
 title: UQRUG 47
 date: '2024-02-28'
-description: '**Overview**: Webscraping with rvest. <br /> **Questions**: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths. '
+description: '**Overview**: Webscraping with rvest.<br /> **Questions**: loading packages, time series data, reading data into R, ggpicrust, dealing with windows file paths.'
 categories: meeting
 toc: true
 toc-depth: 5

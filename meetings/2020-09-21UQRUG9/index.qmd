@@ -1,14 +1,13 @@
 ---
 title: UQRUG 9
 date: '2020-09-21'
-categories: meeting
+description: '**Main**: TidyTuesday.<br /> **Other topics**: Base R, lidr, ggplot2 extensions, ggfortify for PCA.'
+categories: [meeting, tidytuesday, lidr, base, ggplot2, pca, ggfortify]
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2020-09-21: UQRUG 9

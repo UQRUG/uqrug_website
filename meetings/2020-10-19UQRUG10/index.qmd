@@ -1,14 +1,13 @@
 ---
 title: UQRUG 10
 date: '2020-10-19'
-categories: meeting
+description: '**Main**: TidyTuesday.<br /> **Other topics**: dplyr:case_when() to recode, working directory, ggplot2 labels and limits, epiDisplay, lme4, Seurat, reshape2, lattice.'
+categories: [meeting, visualisation, dplyr, ggplot2, visualisation]
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
                       eval= FALSE)
-library(tidyverse)
-
 ```
 
 ### 2020-10-19: UQRUG 10
@@ -118,6 +117,3 @@ Resources shared during the meetup can be listed here:
     * ggplot2 extensions: https://exts.ggplot2.tidyverse.org/gallery/
     * Data to Viz: https://www.data-to-viz.com/
     * lattice: https://www.rdocumentation.org/packages/lattice/versions/0.20-41
-
-
-
