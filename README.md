@@ -12,3 +12,6 @@ In this blog:
 * The `meetings/` directory is for meeting notes, published after the event took place. The `date` value in the `.qmd` source is when the event took place.
 * The `presentations/` directory is for storing slideshows and other documents prepared for an event, that can later on be embedded into other posts. (See [this post](posts/2023-08-30-August-Stats/index.qmd) for an example iframe.)
 
+## Code of Conduct
+
+Note that anyone contributing to or participating in UQRUG needs to abide to our [Code of Conduct](code_of_conduct.qmd).
