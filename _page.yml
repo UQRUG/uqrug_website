@@ -8,7 +8,7 @@ about:
       text: Twitter
       href: https://twitter.com/UQ_RUG
     - icon: file-earmark-text
-      href: https://demo.hedgedoc.org/s/HJCLW3fWU
+      href: https://pad.education/p/uqrug
       text: Collaborative Document
     - icon: github
       text: Github
@@ -17,5 +17,5 @@ about:
       text: UQ Chat
       href: https://chat.uq.edu.au/element/#/room/#uqrug:chat.uq.edu.au
     - icon: globe
-      text: Created with quarto
-      href: https://brisbane-geocommunity.netlify.app/posts/build-blog-w-quarto/
+      text: Created with Quarto
+      href: https://brisbane-geocommunity.netlify.app/posts/2022-11-03-build-blog-w-quarto/
