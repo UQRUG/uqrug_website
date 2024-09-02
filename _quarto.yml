@@ -19,8 +19,11 @@ website:
       - text: Home
         href: index.qmd
       - events.qmd 
-      - pastmeetings.qmd
-      - community.qmd
+      - text: Notes
+        href: pastmeetings.qmd
+      - text: Community
+        href: community.qmd
+      - code_of_conduct.qmd
     tools:
       - icon: github
         href: https://github.com/UQRUG/uqrug_website
