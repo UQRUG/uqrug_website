@@ -1,9 +1,9 @@
 ---
 title: UQRUG 53
-draft: true
+draft: false
 editor: visual
 date: '2024-08-28'
-description: '**Overview**: 2 years of R news overview + drop in session<br /> **Questions**: ...'
+description: '**Overview**: 2 years of R news overview + drop in session<br /> **Questions**: debugging; large datasets; complex time-based recoding'
 categories: meeting
 toc: true
 toc-depth: 5
@@ -18,13 +18,47 @@ knitr::opts_chunk$set(echo = TRUE,
 
 On 2024-08-28, Stéphane highlighted what attracted his attention from the two last years of RStats news.
 
+See the [recording on YouTube](https://www.youtube.com/watch?v=Pkfzo-nTfZU).
+
 ## Attendees
 
 Add your name, where you're from, and why you're here:
 
-| Name             | Where are you from? | What brings you here?    |
-|------------------|---------------------|--------------------------|
-| Stéphane Guillou | Library             | Here to present and help |
-|                  |                     |                          |
+| Name                   | Where are you from?  | What brings you here?                                                        |
+|------------------------|----------------------|------------------------------------------------------------------------------|
+| Stéphane Guillou       | Library              | Here to present and help                                                     |
+| Luke Gaiter            | Library              | Here to help                                                                 |
+| Yuhang Deng            | EAIT                 | Here to learn                                                                |
+| Abhishek Bhattacharjee | EAIT                 | Here to learn                                                                |
+| Peta Cridland          | School of Psychology | Here to learn and for some advice on a roadblock i've hit in my data sorting |
 
 ## Questions
+
+If there is an error with conditions or code in Rstudio, to fix the error do we need to run all the code again like how Python does?
+
+-   Alt + Ctrl + P: run everything up to current line
+
+```{=html}
+<!-- -->
+```
+-   Start with the first error, then move to next one
+
+-   "One-way street": to work cleanly, and check that everything works, start a new session and run the whole script from top to bottom
+
+Efficiency with large tables?
+
+-   [polars](https://pola.rs/) in python
+
+-   Try using purrr in the tidyverse, or data.table, or search for "sparse matrix"
+
+```{=html}
+<!-- -->
+```
+-   parallelisation: <https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/>
+
+```{=html}
+<!-- -->
+```
+-   profiling: integrated in RStudio: select code \> Profile menu \> Profile Selected Lines
+
+    -   <https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE>

@@ -9,9 +9,9 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.56">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <title>UQRUG – datatable</title>
+  <title>UQRUG</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -404,7 +404,8 @@
 <p>By: Nick Garner for <a href="../..">UQRUG</a></p>
 </div><div class="column" style="width:40%;">
 <p><img data-src="img/DataTable UQRUG0.png"></p>
-</div></div>
+</div>
+</div>
 <div class="footer">
 <p><a href="https://rdatatable.gitlab.io/data.table/" class="uri">https://rdatatable.gitlab.io/data.table/</a></p>
 </div>
@@ -461,7 +462,8 @@
 <p>50GB</p>
 </div><div class="column" style="width:65%;">
 <p><img data-src="img/DataTable UQRUG3.png"></p>
-</div></div>
+</div>
+</div>
 <div class="footer">
 <p>Not only faster but less onboard memory used <a href="https://h2oai.github.io/db-benchmark/" class="uri">https://h2oai.github.io/db-benchmark/</a></p>
 </div>
@@ -485,7 +487,8 @@
 <p>Almost everything you’d need to reshape data</p>
 </div><div class="column" style="width:70%;">
 <p><img data-src="img/DataTable UQRUG4.png"></p>
-</div></div>
+</div>
+</div>
 </section>
 <section id="loading-in-and-writing-out-data" class="slide level2 smaller">
 <h2>Loading in and writing out data</h2>
@@ -513,7 +516,8 @@
 <li>Use <strong>fwrite</strong> <strong>()</strong> to also write out data much faster (I’ve come across issues here)</li>
 </ul></li>
 </ul>
-</div></div>
+</div>
+</div>
 <div class="footer">
 <p><em>If this is the only function you want, use “vroom” instead</em></p>
 </div>
@@ -546,14 +550,15 @@
 <span id="cb2-3"><a></a>                by <span class="ot">=</span> <span class="st">"Variety"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Will run substantially faster on a big dataset</p>
 <p><img data-src="img/DataTable UQRUG9.png" class="absolute" style="top: -20px; right: -130px; width: 310px; "></p>
-</div></div>
+</div>
+</div>
 </section>
 <section id="the-basic-data.table-syntax" class="slide level2">
 <h2>The basic data.table syntax</h2>
 <div class="columns">
 <div class="column" style="font-size: 50%; width:25%">
 <p>Example dataset:</p>
-<table class="caption-top">
+<table>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Fruit</th>
@@ -650,7 +655,7 @@
 <span id="cb4-2"><a></a>.[,ItemCost <span class="sc">:</span><span class="er">=</span> (Weight<span class="sc">/</span><span class="dv">1000</span>) <span class="sc">*</span> Cost.kg] <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a></a>.[ItemCost <span class="sc">&gt;=</span> <span class="dv">1</span>] <span class="sc">%&gt;%</span></span>
 <span id="cb4-4"><a></a>.[<span class="fu">order</span>(Item)] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><p>Example dataset:</p><table class="caption-top">
+</div><p>Example dataset:</p><table>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Fruit</th>
@@ -719,7 +724,8 @@
 <li><p>dcast()</p></li>
 <li><p>merge(all = “true”)</p></li>
 </ol>
-</div></div>
+</div>
+</div>
 </section>
 <section id="the-lazy-way-improve-your-code-sooner" class="slide level2 smaller">
 <h2>The lazy way – improve your code sooner</h2>
@@ -1005,7 +1011,18 @@
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1037,29 +1054,7 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1067,7 +1062,7 @@
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

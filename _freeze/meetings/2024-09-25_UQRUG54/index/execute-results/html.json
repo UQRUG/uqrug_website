@@ -1,0 +1,15 @@
+{
+  "hash": "069caf42c5b7106709bea69e61fa7e98",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 54\ndraft: true\neditor: visual\ndate: '2024-09-25'\ndescription: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: ...'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n## Topic: TidyTuesday\n\n...\n\n## Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name             | Where are you from? | What brings you here?    |\n|------------------|---------------------|--------------------------|\n| Stéphane Guillou | Library             | Here to present and help |\n|                  |                     |                          |\n\n## Questions\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

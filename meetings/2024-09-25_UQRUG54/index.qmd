@@ -1,0 +1,30 @@
+---
+title: UQRUG 54
+draft: true
+editor: visual
+date: '2024-09-25'
+description: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: ...'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: TidyTuesday
+
+...
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name             | Where are you from? | What brings you here?    |
+|------------------|---------------------|--------------------------|
+| Stéphane Guillou | Library             | Here to present and help |
+|                  |                     |                          |
+
+## Questions
