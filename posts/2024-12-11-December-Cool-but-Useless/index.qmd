@@ -1,0 +1,34 @@
+---
+title: 'December 11th – UQRUG Drop-in + End of Year "Cool but Useless" Competition'
+editor: visual
+author: 'Stéphane Guillou'
+date: '2024-11-30'
+image: cool_but_useless.png
+slug: dec2024
+categories:
+  - workshop
+tags: [R, Cool but Useless, competition, sillyR, cowsay, fun, drop-in, help]
+DisableComments: no
+---
+
+In this special End of Year edition of UQRUG we will be holding a **competition** to see who can create the **Coolest and Most Useless R code** (on the special date of **Wednesday the 11th of December, 12-2pm**). We're looking for creativity and entertainment value, so perhaps you'll find a hilarious use of an R package, or maybe you can chain together an entertaining string of functions.
+
+For examples of things you could submit, please see [last year's examples](https://uqrug.netlify.app/presentations/23-11-cool/23-11-cool.html) that Nick put together.
+
+The winner will be chosen by those attending. They will not only receive the honourable title of **"Coolest and Most Useless"**, but also a special prize! All other entrants will receive a prize too!
+
+To apply, simply show up to UQRUG on the 11th (or send us an email beforehand with your code if you can't make it)!
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="cool_but_useless.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 11th December, 12 - 2pm
+
+**Where** St Lucia, Duhig North Central Library (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5129067)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
