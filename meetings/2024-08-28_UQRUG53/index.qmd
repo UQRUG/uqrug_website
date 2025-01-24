@@ -24,13 +24,13 @@ See the [recording on YouTube](https://www.youtube.com/watch?v=Pkfzo-nTfZU).
 
 Add your name, where you're from, and why you're here:
 
-| Name                   | Where are you from?  | What brings you here?                                                        |
-|------------------------|----------------------|------------------------------------------------------------------------------|
-| Stéphane Guillou       | Library              | Here to present and help                                                     |
-| Luke Gaiter            | Library              | Here to help                                                                 |
-| Yuhang Deng            | EAIT                 | Here to learn                                                                |
-| Abhishek Bhattacharjee | EAIT                 | Here to learn                                                                |
-| Peta Cridland          | School of Psychology | Here to learn and for some advice on a roadblock i've hit in my data sorting |
+| Name | Where are you from? | What brings you here? |
+|----------------|----------------|-----------------------------------------|
+| Stéphane Guillou | Library | Here to present and help |
+| Luke Gaiter | Library | Here to help |
+| Yuhang Deng | EAIT | Here to learn |
+| Abhishek Bhattacharjee | EAIT | Here to learn |
+| Peta Cridland | School of Psychology | Here to learn and for some advice on a roadblock i've hit in my data sorting |
 
 ## Questions
 
@@ -38,9 +38,8 @@ If there is an error with conditions or code in Rstudio, to fix the error do we 
 
 -   Alt + Ctrl + P: run everything up to current line
 
-```{=html}
 <!-- -->
-```
+
 -   Start with the first error, then move to next one
 
 -   "One-way street": to work cleanly, and check that everything works, start a new session and run the whole script from top to bottom
@@ -51,14 +50,12 @@ Efficiency with large tables?
 
 -   Try using purrr in the tidyverse, or data.table, or search for "sparse matrix"
 
-```{=html}
 <!-- -->
-```
+
 -   parallelisation: <https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/>
 
-```{=html}
 <!-- -->
-```
+
 -   profiling: integrated in RStudio: select code \> Profile menu \> Profile Selected Lines
 
     -   <https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE>
