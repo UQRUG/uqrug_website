@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-08-28">
-<meta name="description" content="Overview: 2 years of R news overview + drop in session  Questions: debugging; large datasets; complex time-based recoding">
+<meta name="author" content="Stéphane Guillou">
+<meta name="dcterms.date" content="2025-01-24">
 
-<title>UQRUG 53 – UQRUG</title>
+<title>January 29th – UQRUG Drop-in + R Environments with renv – UQRUG</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="UQRUG 53 – UQRUG">
+<meta property="og:title" content="January 29th – UQRUG Drop-in + R Environments with renv – UQRUG">
 <meta property="og:description" content="The University of Queensland R Users Group">
-<meta property="og:image" content="images/uqrug_og.png">
+<meta property="og:image" content="renv.svg">
 <meta property="og:site_name" content="UQRUG">
 </head>
 
@@ -135,42 +135,35 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#topic-2-years-of-rstats-news" id="toc-topic-2-years-of-rstats-news" class="nav-link active" data-scroll-target="#topic-2-years-of-rstats-news">Topic: 2 years of RStats news</a></li>
-  <li><a href="#attendees" id="toc-attendees" class="nav-link" data-scroll-target="#attendees">Attendees</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UQRUG 53</h1>
+<h1 class="title">January 29th – UQRUG Drop-in + R Environments with renv</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">meeting</div>
+    <div class="quarto-category">workshop</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    <strong>Overview</strong>: 2 years of R news overview + drop in session<br> <strong>Questions</strong>: debugging; large datasets; complex time-based recoding
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stéphane Guillou </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 28, 2024</p>
+      <p class="date">January 24, 2025</p>
     </div>
   </div>
   
@@ -182,86 +175,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="topic-2-years-of-rstats-news" class="level2">
-<h2 class="anchored" data-anchor-id="topic-2-years-of-rstats-news">Topic: 2 years of RStats news</h2>
-<p>On 2024-08-28, Stéphane highlighted what attracted his attention from the two last years of RStats news.</p>
-<p>See the <a href="https://www.youtube.com/watch?v=Pkfzo-nTfZU">recording on YouTube</a>.</p>
-</section>
-<section id="attendees" class="level2">
-<h2 class="anchored" data-anchor-id="attendees">Attendees</h2>
-<p>Add your name, where you’re from, and why you’re here:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 56%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Where are you from?</th>
-<th>What brings you here?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Stéphane Guillou</td>
-<td>Library</td>
-<td>Here to present and help</td>
-</tr>
-<tr class="even">
-<td>Luke Gaiter</td>
-<td>Library</td>
-<td>Here to help</td>
-</tr>
-<tr class="odd">
-<td>Yuhang Deng</td>
-<td>EAIT</td>
-<td>Here to learn</td>
-</tr>
-<tr class="even">
-<td>Abhishek Bhattacharjee</td>
-<td>EAIT</td>
-<td>Here to learn</td>
-</tr>
-<tr class="odd">
-<td>Peta Cridland</td>
-<td>School of Psychology</td>
-<td>Here to learn and for some advice on a roadblock i’ve hit in my data sorting</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<p>If there is an error with conditions or code in Rstudio, to fix the error do we need to run all the code again like how Python does?</p>
-<ul>
-<li>Alt + Ctrl + P: run everything up to current line</li>
-</ul>
-<!-- -->
-<ul>
-<li><p>Start with the first error, then move to next one</p></li>
-<li><p>“One-way street”: to work cleanly, and check that everything works, start a new session and run the whole script from top to bottom</p></li>
-</ul>
-<p>Efficiency with large tables?</p>
-<ul>
-<li><p><a href="https://pola.rs/">polars</a> in python</p></li>
-<li><p>Try using purrr in the tidyverse, or data.table, or search for “sparse matrix”</p></li>
-</ul>
-<!-- -->
-<ul>
-<li>parallelisation: <a href="https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/" class="uri">https://uqrug.netlify.app/posts/2023-09-27-september-parallelisation/</a></li>
-</ul>
-<!-- -->
-<ul>
-<li><p>profiling: integrated in RStudio: select code &gt; Profile menu &gt; Profile Selected Lines</p>
-<ul>
-<li><a href="https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE" class="uri">https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE</a></li>
-</ul></li>
-</ul>
+<p>For this first UQRUG of 2025, Stéphane will give a quick introduction to using environments in R with the <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> package.</p>
+<p>Environments can be used to improve reproducibility of your projects by tracking the versions of the packages used in your analysis. This information can be shared so others reproducing your results can use exactly the same library of packages.</p>
+<p>We will then get into our usual drop-in session, so bring your questions as well as your latest creations and great resources you’ve discovered!</p>
+<p float="left">
+</p><p><img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"> <img src="renv.svg" height="100" style="margin-right:-0.2em;"></p>
+<p></p>
+<p><strong>When</strong> Wednesday 29th January 2025, 12 - 2pm</p>
+<p><strong>Where</strong> only on Zoom this month, because of the <a href="https://web.library.uq.edu.au/stories/central-library-closed-essential-works-28-january-reopening-11-february">temporary Central Library closure</a>.</p>
+<p>Sign up to the next event on the <a href="https://studenthub.uq.edu.au/students/events/Detail/5489462">Library training page</a></p>
+<p>For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training@library.uq.edu.au</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

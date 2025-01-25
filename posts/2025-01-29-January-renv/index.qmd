@@ -1,0 +1,31 @@
+---
+title: 'January 29th – UQRUG Drop-in + R Environments with renv'
+author: 'Stéphane Guillou'
+date: '2025-01-24'
+image: renv.svg
+slug: jan2025
+categories:
+  - workshop
+tags: [R, environments, renv, reproducibility, drop-in, help]
+DisableComments: no
+---
+
+For this first UQRUG of 2025, Stéphane will give a quick introduction to using environments in R with the [renv](https://rstudio.github.io/renv/articles/renv.html) package.
+
+Environments can be used to improve reproducibility of your projects by tracking the versions of the packages used in your analysis. This information can be shared so others reproducing your results can use exactly the same library of packages.
+
+We will then get into our usual drop-in session, so bring your questions as well as your latest creations and great resources you've discovered!
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="renv.svg" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 29th January 2025, 12 - 2pm
+
+**Where** only on Zoom this month, because of the [temporary Central Library closure](https://web.library.uq.edu.au/stories/central-library-closed-essential-works-28-january-reopening-11-february).
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/Detail/5489462)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>

@@ -627,7 +627,7 @@
     "href": "events.html",
     "title": "Events",
     "section": "",
-    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nDecember 11th – UQRUG Drop-in + End of Year “Cool but Useless” Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 25th – UQRUG Drop-in + TidyTuesday\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAugust 28th – UQRUG Drop-in + 2 years of RStats news\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJuly 31st UQRUG Drop-in + Automate scripts with R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMay 29th UQRUG Drop-in + Using Data to Viz for R visualisation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApril 24th UQRUG Drop-in + Using R and RStudio on the HPC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarch 27th UQRUG Drop-in + Identify Data Problems using visdat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary 28th UQRUG Drop-in + Webscraping with rvest\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJanuary 31st UQRUG Drop-in + Creating a CV / Resume with vitae\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 13th UQRUG Drop-in + End of Year Cool but Useless Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 22nd UQRUG Drop-in + Cool but Useless + ResBazQld\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 25th UQRUG Drop-in + Machine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 27th UQRUG Drop-in + Parallelisation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAugust 30th UQRUG Drop-in + Basic Statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJuly 26th UQRUG Drop-in + Quarto Reveal.js Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJune 28th UQRUG Drop-in + data.table data manipulation basics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Our main purpose is to serve as a drop-in help session for help with R and RStudio, but to keep things interesting we will briefly highlight a useful tool, function or package each week. \n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nJanuary 29th – UQRUG Drop-in + R Environments with renv\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 11th – UQRUG Drop-in + End of Year “Cool but Useless” Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 25th – UQRUG Drop-in + TidyTuesday\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAugust 28th – UQRUG Drop-in + 2 years of RStats news\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJuly 31st UQRUG Drop-in + Automate scripts with R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMay 29th UQRUG Drop-in + Using Data to Viz for R visualisation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApril 24th UQRUG Drop-in + Using R and RStudio on the HPC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarch 27th UQRUG Drop-in + Identify Data Problems using visdat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary 28th UQRUG Drop-in + Webscraping with rvest\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJanuary 31st UQRUG Drop-in + Creating a CV / Resume with vitae\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 13th UQRUG Drop-in + End of Year Cool but Useless Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 22nd UQRUG Drop-in + Cool but Useless + ResBazQld\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 25th UQRUG Drop-in + Machine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 27th UQRUG Drop-in + Parallelisation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAugust 30th UQRUG Drop-in + Basic Statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJuly 26th UQRUG Drop-in + Quarto Reveal.js Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJune 28th UQRUG Drop-in + data.table data manipulation basics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMay 31st UQRUG Drop-in + Sending Emails from R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApril 26th UQRUG Drop-in + Coding with Generative AI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarch 29th UQRUG Drop-in + Websites with Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJanuary 25th UQRUG Drop-in + Dashboard with Flexdashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 7th UQRUG Drop-in + Animated and Interactive Plots\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2023-05-31-May-Sending-emails/index.html",
@@ -644,109 +644,18 @@
     "text": "This month Nick will be going over how to create a CV/Resume using the vitae, rmarkdown, and tinytex packages, and then getting into our regular questions.\n\n   \n\nWhen Wednesday 31st January, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
-    "objectID": "posts/2023-12-13-December-EoY-Competition/index.html",
-    "href": "posts/2023-12-13-December-EoY-Competition/index.html",
-    "title": "December 13th UQRUG Drop-in + End of Year Cool but Useless Competition",
+    "objectID": "posts/2025-01-29-January-renv/index.html",
+    "href": "posts/2025-01-29-January-renv/index.html",
+    "title": "January 29th – UQRUG Drop-in + R Environments with renv",
     "section": "",
-    "text": "In this special End of Year edition of UQRUG we will be holding a competition to see who can create the Coolest and Most Useless R code (on the special date of Wed 13th Dec, 12-2pm). We’re looking for creativity and entertainment value, so perhaps you’ll find a hilarious use of an R package, or maybe you can chain together an entertaining string of functions.\nFor examples of things you could submit, please see last Month’s slides.\nThe winner will be chosen by those attending the next UQRUG. They will not only receive the honourable title of “Coolest and Most Useless”, but also the UQRUG Rug! All other entrants will receive a prize too!\nTo apply, simply show up to UQRUG on December 6th (or send me an email beforehand with your code if you can’t make it)!\n\n \n\nWhen Wednesday 13th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the November RUG:"
+    "text": "For this first UQRUG of 2025, Stéphane will give a quick introduction to using environments in R with the renv package.\nEnvironments can be used to improve reproducibility of your projects by tracking the versions of the packages used in your analysis. This information can be shared so others reproducing your results can use exactly the same library of packages.\nWe will then get into our usual drop-in session, so bring your questions as well as your latest creations and great resources you’ve discovered!\n\n \n\nWhen Wednesday 29th January 2025, 12 - 2pm\nWhere only on Zoom this month, because of the temporary Central Library closure.\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
-    "objectID": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
-    "href": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
-    "title": "May 29th UQRUG Drop-in + Using Data to Viz for R visualisation",
+    "objectID": "posts/2023-06-28-June-data.table/index.html",
+    "href": "posts/2023-06-28-June-data.table/index.html",
+    "title": "June 28th UQRUG Drop-in + data.table data manipulation basics",
     "section": "",
-    "text": "Using Data to Viz to help you visualise your data\nAt UQRUG this month, we have an overview of the Data to Viz website by Luke Gaiter.\nHe will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.\n\n\n  \n\nWhen Wednesday 29th May, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the May RUG (in new window):"
-  },
-  {
-    "objectID": "posts/2024-02-28-February-rvest-webscraping/index.html",
-    "href": "posts/2024-02-28-February-rvest-webscraping/index.html",
-    "title": "February 28th UQRUG Drop-in + Webscraping with rvest",
-    "section": "",
-    "text": "We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest packag, and then will we jump to our questions.\n\n \n\nWhen Wednesday 28th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2024-07-31-July-taskscheduleR/index.html",
-    "href": "posts/2024-07-31-July-taskscheduleR/index.html",
-    "title": "July 31st UQRUG Drop-in + Automate scripts with R",
-    "section": "",
-    "text": "This month Luke will showcase the usage of the taskscheduleR package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering data from a source that updates frequently. Then we will go into our community questions.\n\n\n\nWhen Wednesday 31st July, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
-  },
-  {
-    "objectID": "posts/2023-01-25-January-flexdashboard/index.html",
-    "href": "posts/2023-01-25-January-flexdashboard/index.html",
-    "title": "January 25th UQRUG Drop-in + Dashboard with Flexdashboard",
-    "section": "",
-    "text": "This week Nick will be briefly going over creating quick and easy interactive dashboards to display your data with R using the package flexdashboard (it’s surprisingly straightforward, and uses RMarkdown, so you can export as HTML).\n\n  \n\nWhen Wednesday 25th January, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
-    "href": "posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
-    "title": "November 22nd UQRUG Drop-in + Cool but Useless + ResBazQld",
-    "section": "",
-    "text": "In this special edition of UQRUG we will be at ResBazQld (at the special date and time of Wed 22nd Nov, 3-5pm). For our overview we will be looking at some Cool but Useless ways we can use R. From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete.\nCoding and acaedmia can get stuffy and work focused, so this month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n \n\nWhen Wednesday 22nd November, 3 - 5pm\nWhere St Lucia, Michie Building (9) Level 2, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the November RUG:"
-  },
-  {
-    "objectID": "posts/2023-10-25-October-Machine-Learning/index.html",
-    "href": "posts/2023-10-25-October-Machine-Learning/index.html",
-    "title": "October 25th UQRUG Drop-in + Machine Learning",
-    "section": "",
-    "text": "Do you want to learn the basics of machine learning in R and why it’s useful? Before the help session this month at UQRUG, Raimundo Sanchez will be providing an overview of supervised machine learning using the tidymodels framework in R.\n\n \n\nWhen Wednesday 25th October, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the September RUG:\n\n\n\nThe tidymodels logo was sourced from RStudio hex stickers and is licensed CC0"
-  },
-  {
-    "objectID": "posts/2023-03-29-March-quarto/index.html",
-    "href": "posts/2023-03-29-March-quarto/index.html",
-    "title": "March 29th UQRUG Drop-in + Websites with Quarto",
-    "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a customisable website or blog in R using the quarto package.\nWe were considering a spatial session this month, but the Geospatial Community are running an R Spatial session this Thursday March 23rd.\n\n \n\nWhen Wednesday 29th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2023-04-26-April-AI/index.html",
-    "href": "posts/2023-04-26-April-AI/index.html",
-    "title": "April 26th UQRUG Drop-in + Coding with Generative AI",
-    "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Luke will be going over using generative AI (mostly ChatGPT) to help solve coding hurdles, including tips, examples, and a whole project made by the AI.\n\n \n\nWhen Wednesday 26th April, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2023-08-30-August-Stats/index.html",
-    "href": "posts/2023-08-30-August-Stats/index.html",
-    "title": "August 30th UQRUG Drop-in + Basic Statistics",
-    "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.\n\n \n\nWhen Wednesday 30th August, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the full code in slide form from the August RUG:\n\n\nYou can find the full raw code and datasets here.\nThe R logo is © 2016 The R Foundation."
-  },
-  {
-    "objectID": "posts/2024-12-11-December-Cool-but-Useless/index.html",
-    "href": "posts/2024-12-11-December-Cool-but-Useless/index.html",
-    "title": "December 11th – UQRUG Drop-in + End of Year “Cool but Useless” Competition",
-    "section": "",
-    "text": "In this special End of Year edition of UQRUG we will be holding a competition to see who can create the Coolest and Most Useless R code (on the special date of Wednesday the 11th of December, 12-2pm). We’re looking for creativity and entertainment value, so perhaps you’ll find a hilarious use of an R package, or maybe you can chain together an entertaining string of functions.\nFor examples of things you could submit, please see last year’s examples that Nick put together.\nThe winner will be chosen by those attending. They will not only receive the honourable title of “Coolest and Most Useless”, but also a special prize! All other entrants will receive a prize too!\nTo apply, simply show up to UQRUG on the 11th (or send us an email beforehand with your code if you can’t make it)!\n\n \n\nWhen Wednesday 11th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2022-12-07-December-gganimate-plotly/index.html",
-    "href": "posts/2022-12-07-December-gganimate-plotly/index.html",
-    "title": "December 7th UQRUG Drop-in + Animated and Interactive Plots",
-    "section": "",
-    "text": "This week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWe’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
-  },
-  {
-    "objectID": "posts/2024-03-27-March-visdat/index.html",
-    "href": "posts/2024-03-27-March-visdat/index.html",
-    "title": "March 27th UQRUG Drop-in + Identify Data Problems using visdat",
-    "section": "",
-    "text": "This month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package. Then we will go into our community questions.\nYou can download the R file here and then convert it to Rmd after downloading.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
-  },
-  {
-    "objectID": "posts/2023-07-26-July-Q-Pres/index.html",
-    "href": "posts/2023-07-26-July-Q-Pres/index.html",
-    "title": "July 26th UQRUG Drop-in + Quarto Reveal.js Presentations",
-    "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on creating HTML based presentations in R with Quarto and reveal.js\n\n  \n\nWhen Wednesday 26th Jul7, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\nBrowse the full slides from the July RUG:\n\n\n Quarto uses the GNU GPL, and Reveal.js uses an MIT licence."
-  },
-  {
-    "objectID": "posts/2023-02-22-February-forms/index.html",
-    "href": "posts/2023-02-22-February-forms/index.html",
-    "title": "February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4",
-    "section": "",
-    "text": "This week Nick will be briefly going over how to create a customisable online form in R using the googlesheets4 and Shiny packages.\n\n  \n\nWhen Wednesday 22th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+    "text": "Before we jump into our help session for everyone to ask questions, this month Nick Garner will be providing an overview of the basics of data manipulation with data.table and its advantages compared to using the tidyverse\n\n    \n\nWhen Wednesday 28th June, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\nBrowse the full slides from the June RUG:"
   },
   {
     "objectID": "posts/2024-08-28-August-2-years-of-R/index.html",
@@ -756,11 +665,109 @@
     "text": "This month, Stéphane will highlight what attracted his attention from the two last years of RStats news.\nThen we will go into our usual community questions, collaboratively solving issues!\n\n\n\nWhen Wednesday 28th August, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
   },
   {
-    "objectID": "posts/2023-06-28-June-data.table/index.html",
-    "href": "posts/2023-06-28-June-data.table/index.html",
-    "title": "June 28th UQRUG Drop-in + data.table data manipulation basics",
+    "objectID": "posts/2023-02-22-February-forms/index.html",
+    "href": "posts/2023-02-22-February-forms/index.html",
+    "title": "February 22nd UQRUG Drop-in + Forms with Shiny and Googlesheets4",
     "section": "",
-    "text": "Before we jump into our help session for everyone to ask questions, this month Nick Garner will be providing an overview of the basics of data manipulation with data.table and its advantages compared to using the tidyverse\n\n    \n\nWhen Wednesday 28th June, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\nBrowse the full slides from the June RUG:"
+    "text": "This week Nick will be briefly going over how to create a customisable online form in R using the googlesheets4 and Shiny packages.\n\n  \n\nWhen Wednesday 22th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-07-26-July-Q-Pres/index.html",
+    "href": "posts/2023-07-26-July-Q-Pres/index.html",
+    "title": "July 26th UQRUG Drop-in + Quarto Reveal.js Presentations",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this month Nick will be providing an overview on creating HTML based presentations in R with Quarto and reveal.js\n\n  \n\nWhen Wednesday 26th Jul7, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\nBrowse the full slides from the July RUG:\n\n\n Quarto uses the GNU GPL, and Reveal.js uses an MIT licence."
+  },
+  {
+    "objectID": "posts/2024-03-27-March-visdat/index.html",
+    "href": "posts/2024-03-27-March-visdat/index.html",
+    "title": "March 27th UQRUG Drop-in + Identify Data Problems using visdat",
+    "section": "",
+    "text": "This month Nick will look at how we can use some preliminary exploratory data visualisations to identify data issues using the visdat package. Then we will go into our community questions.\nYou can download the R file here and then convert it to Rmd after downloading.\n\n \n\nWhen Wednesday 27th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
+  },
+  {
+    "objectID": "posts/2022-12-07-December-gganimate-plotly/index.html",
+    "href": "posts/2022-12-07-December-gganimate-plotly/index.html",
+    "title": "December 7th UQRUG Drop-in + Animated and Interactive Plots",
+    "section": "",
+    "text": "This week Nick will be briefly going over creating animated and interactive plots in R using the packages gganimate and plotly.\n\n   \n\nWe’ve pushed back this month’s UQRUG to December 7th due to clashes with end of year events.\nWhen Wednesday 7th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2024-12-11-December-Cool-but-Useless/index.html",
+    "href": "posts/2024-12-11-December-Cool-but-Useless/index.html",
+    "title": "December 11th – UQRUG Drop-in + End of Year “Cool but Useless” Competition",
+    "section": "",
+    "text": "In this special End of Year edition of UQRUG we will be holding a competition to see who can create the Coolest and Most Useless R code (on the special date of Wednesday the 11th of December, 12-2pm). We’re looking for creativity and entertainment value, so perhaps you’ll find a hilarious use of an R package, or maybe you can chain together an entertaining string of functions.\nFor examples of things you could submit, please see last year’s examples that Nick put together.\nThe winner will be chosen by those attending. They will not only receive the honourable title of “Coolest and Most Useless”, but also a special prize! All other entrants will receive a prize too!\nTo apply, simply show up to UQRUG on the 11th (or send us an email beforehand with your code if you can’t make it)!\n\n \n\nWhen Wednesday 11th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-08-30-August-Stats/index.html",
+    "href": "posts/2023-08-30-August-Stats/index.html",
+    "title": "August 30th UQRUG Drop-in + Basic Statistics",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this month Valentina will be going over running some basic statistical analyses using R.\n\n \n\nWhen Wednesday 30th August, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the full code in slide form from the August RUG:\n\n\nYou can find the full raw code and datasets here.\nThe R logo is © 2016 The R Foundation."
+  },
+  {
+    "objectID": "posts/2023-04-26-April-AI/index.html",
+    "href": "posts/2023-04-26-April-AI/index.html",
+    "title": "April 26th UQRUG Drop-in + Coding with Generative AI",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this month Luke will be going over using generative AI (mostly ChatGPT) to help solve coding hurdles, including tips, examples, and a whole project made by the AI.\n\n \n\nWhen Wednesday 26th April, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-03-29-March-quarto/index.html",
+    "href": "posts/2023-03-29-March-quarto/index.html",
+    "title": "March 29th UQRUG Drop-in + Websites with Quarto",
+    "section": "",
+    "text": "Before we jump into our help session for everyone to ask questions, this week Nick will be briefly going over how to create a customisable website or blog in R using the quarto package.\nWe were considering a spatial session this month, but the Geospatial Community are running an R Spatial session this Thursday March 23rd.\n\n \n\nWhen Wednesday 29th March, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2023-10-25-October-Machine-Learning/index.html",
+    "href": "posts/2023-10-25-October-Machine-Learning/index.html",
+    "title": "October 25th UQRUG Drop-in + Machine Learning",
+    "section": "",
+    "text": "Do you want to learn the basics of machine learning in R and why it’s useful? Before the help session this month at UQRUG, Raimundo Sanchez will be providing an overview of supervised machine learning using the tidymodels framework in R.\n\n \n\nWhen Wednesday 25th October, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the September RUG:\n\n\n\nThe tidymodels logo was sourced from RStudio hex stickers and is licensed CC0"
+  },
+  {
+    "objectID": "posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
+    "href": "posts/2023-11-22-November-ResBazQLD-Cool-Useless/index.html",
+    "title": "November 22nd UQRUG Drop-in + Cool but Useless + ResBazQld",
+    "section": "",
+    "text": "In this special edition of UQRUG we will be at ResBazQld (at the special date and time of Wed 22nd Nov, 3-5pm). For our overview we will be looking at some Cool but Useless ways we can use R. From creating emoji art, to using memes in ggplot2, to playing sounds when our code is complete.\nCoding and acaedmia can get stuffy and work focused, so this month we’re going to play with some more entertaining R packages, which can hopefully make the learning process a bit more interesting.\n\n \n\nWhen Wednesday 22nd November, 3 - 5pm\nWhere St Lucia, Michie Building (9) Level 2, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the November RUG:"
+  },
+  {
+    "objectID": "posts/2023-01-25-January-flexdashboard/index.html",
+    "href": "posts/2023-01-25-January-flexdashboard/index.html",
+    "title": "January 25th UQRUG Drop-in + Dashboard with Flexdashboard",
+    "section": "",
+    "text": "This week Nick will be briefly going over creating quick and easy interactive dashboards to display your data with R using the package flexdashboard (it’s surprisingly straightforward, and uses RMarkdown, so you can export as HTML).\n\n  \n\nWhen Wednesday 25th January, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2024-07-31-July-taskscheduleR/index.html",
+    "href": "posts/2024-07-31-July-taskscheduleR/index.html",
+    "title": "July 31st UQRUG Drop-in + Automate scripts with R",
+    "section": "",
+    "text": "This month Luke will showcase the usage of the taskscheduleR package for automating the running of your scripts on a schedule. This is useful is you find yourself gathering data from a source that updates frequently. Then we will go into our community questions.\n\n\n\nWhen Wednesday 31st July, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the March RUG (in new window):"
+  },
+  {
+    "objectID": "posts/2024-02-28-February-rvest-webscraping/index.html",
+    "href": "posts/2024-02-28-February-rvest-webscraping/index.html",
+    "title": "February 28th UQRUG Drop-in + Webscraping with rvest",
+    "section": "",
+    "text": "We will start by looking at some of the basics of scraping data from Bing results and Wikipedia (or any other webpage) using the rvest packag, and then will we jump to our questions.\n\n \n\nWhen Wednesday 28th February, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au"
+  },
+  {
+    "objectID": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
+    "href": "posts/2024-05-29-May-R-Data-to-Viz/index.html",
+    "title": "May 29th UQRUG Drop-in + Using Data to Viz for R visualisation",
+    "section": "",
+    "text": "Using Data to Viz to help you visualise your data\nAt UQRUG this month, we have an overview of the Data to Viz website by Luke Gaiter.\nHe will show how this website can be used to explore different visualisation options available to us in R, as well as work through a couple of examples.\n\n\n  \n\nWhen Wednesday 29th May, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the content from the May RUG (in new window):"
+  },
+  {
+    "objectID": "posts/2023-12-13-December-EoY-Competition/index.html",
+    "href": "posts/2023-12-13-December-EoY-Competition/index.html",
+    "title": "December 13th UQRUG Drop-in + End of Year Cool but Useless Competition",
+    "section": "",
+    "text": "In this special End of Year edition of UQRUG we will be holding a competition to see who can create the Coolest and Most Useless R code (on the special date of Wed 13th Dec, 12-2pm). We’re looking for creativity and entertainment value, so perhaps you’ll find a hilarious use of an R package, or maybe you can chain together an entertaining string of functions.\nFor examples of things you could submit, please see last Month’s slides.\nThe winner will be chosen by those attending the next UQRUG. They will not only receive the honourable title of “Coolest and Most Useless”, but also the UQRUG Rug! All other entrants will receive a prize too!\nTo apply, simply show up to UQRUG on December 6th (or send me an email beforehand with your code if you can’t make it)!\n\n \n\nWhen Wednesday 13th December, 12 - 2pm\nWhere St Lucia, Duhig North Central Library (12), Training room 12-N109, and on Zoom\nSign up to the next event on the Library training page\nFor more information, reach out to the UQ Library training team for more help: training@library.uq.edu.au\n\nBrowse the slides from the November RUG:"
   },
   {
     "objectID": "posts/2024-09-24-September-TidyTuesday/index.html",
@@ -1439,6 +1446,6 @@
     "href": "index.html#next-workshop",
     "title": "UQRUG",
     "section": "Next Workshop",
-    "text": "Next Workshop\n\n\n\n\n\n\n\n\n\n\nDecember 11th – UQRUG Drop-in + End of Year “Cool but Useless” Competition\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2024\n\n\nStéphane Guillou\n\n\n\n\n\n\nNo matching items"
+    "text": "Next Workshop\n\n\n\n\n\n\n\n\n\n\nJanuary 29th – UQRUG Drop-in + R Environments with renv\n\n\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nStéphane Guillou\n\n\n\n\n\n\nNo matching items"
   }
 ]
