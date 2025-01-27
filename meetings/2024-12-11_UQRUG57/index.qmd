@@ -1,9 +1,9 @@
 ---
 title: UQRUG 57
-draft: true
+draft: false
 editor: visual
 date: '2024-12-11'
-description: '**Overview**: Cool but Useless end of year event + drop in session<br /> **Questions**: Getting started'
+description: '**Overview**: Cool but Useless end of year event + drop in session<br /> **Questions**: Getting started, UniProt and API'
 categories: meeting
 toc: true
 toc-depth: 5
