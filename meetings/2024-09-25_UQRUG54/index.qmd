@@ -1,9 +1,9 @@
 ---
 title: UQRUG 54
-draft: true
+draft: false
 editor: visual
 date: '2024-09-25'
-description: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: ...'
+description: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: spatial data; time series modelling; finance'
 categories: meeting
 toc: true
 toc-depth: 5
@@ -16,15 +16,73 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ## Topic: TidyTuesday
 
-...
+Data for this week: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-24/readme.md>
 
 ## Attendees
 
 Add your name, where you're from, and why you're here:
 
-| Name             | Where are you from? | What brings you here?    |
-|------------------|---------------------|--------------------------|
-| Stéphane Guillou | Library             | Here to present and help |
-|                  |                     |                          |
+| Name | Where are you from? | What brings you here? |
+|----|----|----|
+| Lina | SENV, PhD | Here to get used to R |
+| Jocelyn | Bioinformatics |  |
+| Sam |  |  |
+| Gerry Katai | Master of Economics |  |
+| Dawn | Master of Interaction Design | Here to find possibility of R, Newbie |
+| Man | PhD in oral health | Here to get used to R |
+| Prakash | Master of Commerce - Accounting and Finance |  |
+| David Green | RCC |  |
+| Stéphane | Library | Here to help |
+| Luke | Library | Here to attempt to help |
 
-## Questions
+## Questions and resources shared
+
+R for spatial data:
+
+-   ggplot2 has coordinate systems for maps too (with `coord_sf()`)
+
+-   To process vector data: sf <https://r-spatial.github.io/sf/>
+
+-   To process raster data: terra <https://rspatial.github.io/terra/>
+
+-   tmap for static and interactive visualisations: <https://r-tmap.github.io/tmap/>
+
+-   Book: <https://bookdown.org/robinlovelace/geocompr/>
+
+-   CRAN task view on spatial: <https://cran.r-project.org/web/views/Spatial.html>
+
+-   ROpenSci gives access to packages for spatial processing and data downloads: <https://ropensci.org/>
+
+-   Example of acquiring OSM data, using sf and sfnetworks for spatial networks, and tmap for an interactive visualisation: <https://stragu.gitlab.io/blog/2022-06-06-spatial-networks/>
+
+Spatial data sources:
+
+-   <https://earthexplorer.usgs.gov/,> for example for Digital Elevation Model (DEM), there's SRTM
+
+-   <https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/home>
+
+-   <https://digital.atlas.gov.au/>
+
+Community of practice for spatial stuff: <https://brisbane-geocommunity.netlify.app/>
+
+Resources for (time series) modelling:
+
+-   <https://www.tidymodels.org/> which works hand-in-hand with <https://www.tidyverse.org/>
+
+-   `arima()` in core R (stats package)
+
+-   time series modeling with tidymodels: <https://www.tidymodels.org/learn/models/time-series/>
+
+-   Training session for time series: <https://github.com/uqlibrary/technology-training/blob/master/R/timeseries/time_series.md>
+
+Finance:
+
+-   <https://cran.r-project.org/web/views/Finance.html>
+
+-   example of Tesla stocks over-inflated
+
+-   Financial modelling and stock analysis: <https://www.quantmod.com/>
+
+-   Collection of econometric functions for performance and risk analysis: <https://cran.r-project.org/web/packages/PerformanceAnalytics/index.html>
+
+-   Thorough resource about Using R for Predictive Modeling in Finance: <https://machinelearningmastery.com/using-r-for-predictive-modeling-in-finance>
