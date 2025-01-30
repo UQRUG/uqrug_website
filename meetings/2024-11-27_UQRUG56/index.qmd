@@ -1,0 +1,115 @@
+---
+title: UQRUG 56
+draft: false
+editor: visual
+date: '2024-11-27'
+description: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: Getting started, data visualisation, UniProt and API'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: TidyTuesday
+
+Today's dataset, if you want to give it a go: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-12-17/readme.md>
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|------------------------|------------------------|------------------------|
+| Song | Chemical engineering PhD student | learn to use R for data analysis and visualization  |
+| Darshi | Library |  |
+| Stéphane | Library | Here to help! |
+| ... |  |  |
+
+## Questions and shared resources
+
+-   Getting started with R:
+
+    -   Install R: <https://cran.r-project.org/>
+
+    -   Install RStudio: <https://posit.co/download/rstudio-desktop/>
+
+    -   Start coding!
+
+    -   Find relevant packages:
+
+        -   Task Views: <https://cran.r-project.org/web/views/> (as a starting point)
+
+        -   Online search
+
+-   Joining data from UniProt based on pathway similarity
+
+    -   could download tables, or
+
+    -   could use API directly: <https://www.uniprot.org/help/programmatic_access>
+
+        -   with httr2 package: <https://cran.r-project.org/web/packages/httr2/index.html>
+
+    -   or could use an existing package to query the database: <https://cran.r-project.org/web/packages/UniprotR/index.html>
+
+        -   note that some dependencies come from Bioconductor: <https://www.bioconductor.org/>
+
+## Today's script
+
+```{R}
+# comments to document your code
+# BiocManager::install(c("Biostrings", "GenomicAlignments", "IRanges"))
+library(UniprotR)
+#Read Accessions from csv file , Note : Accessions must be in the first column. 
+Accessions <-GetAccessionList("https://s3.amazonaws.com/csvpastebin/uploads/9571fa356c67a0c7c95e8431799a051a/Accessions.csv") 
+#Get Taxanomy Information 
+TaxaObj <- GetNamesTaxa(Accessions) 
+#Visualize Chromosomes localization
+PlotChromosomeInfo(TaxaObj)
+#Visualize protein's gene name as Network 
+PlotGenesNetwork(TaxaObj)
+
+##### some starter commands for R ####
+
+#  operations
+1 + 1
+1 - 2
+1 * 10
+3 / 2
+# objects to store information
+one_number <- 42
+one_number
+one_number * 2
+my_result <- one_number / 9
+# vectors of any length
+dog_ages <- c(1, 2, 7, 4, 3)
+dog_ages * 7
+# functions
+max(dog_ages)
+min(dog_ages)
+mean(dog_ages)
+summary(dog_ages)
+sd(dog_ages)
+
+# statistical methods
+# for example, lm(), aov()...
+
+# (base R) plotting
+plot(dog_ages)
+hist(dog_ages)
+
+# people often go straight ggplot2 for data visualisation
+
+#### image as background ####
+download.file("https://www.r-project.org/logo/Rlogo.png",
+              destfile = "logo.png")
+library(png)
+r_logo <- readPNG("logo.png")
+library(ggpubr)
+ggplot(mapping = aes(1:3,1:3)) +
+  background_image(r_logo) +
+  geom_point()
+```

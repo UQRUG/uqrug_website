@@ -3,7 +3,7 @@ title: UQRUG 57
 draft: false
 editor: visual
 date: '2024-12-11'
-description: '**Overview**: Cool but Useless end of year event + drop in session<br /> **Questions**: Getting started, UniProt and API'
+description: '**Overview**: Cool but Useless end of year event + drop in session'
 categories: meeting
 toc: true
 toc-depth: 5
@@ -54,38 +54,10 @@ Competition entries
 
 ## Questions and shared resources
 
--   Getting started with R:
-
-    -   Install R: <https://cran.r-project.org/>
-
-    -   Install RStudio: <https://posit.co/download/rstudio-desktop/>
-
-    -   Start coding!
-
-    -   Find relevant packages:
-
-        -   Task Views: <https://cran.r-project.org/web/views/> (as a starting point)
-
-        -   Online search
-
--   Joining data from UniProt based on pathway similarity
-
-    -   could download tables, or
-
-    -   could use API directly: <https://www.uniprot.org/help/programmatic_access>
-
-        -   with httr2 package: <https://cran.r-project.org/web/packages/httr2/index.html>
-
-    -   or could use an existing package to query the database: <https://cran.r-project.org/web/packages/UniprotR/index.html>
-
-        -   note that some dependencies come from Bioconductor: <https://www.bioconductor.org/>
-
 Resources shared during the meeting.
 
 -   Cool but Useless' Mastodon: [https://fosstodon.org/\@coolbutuseless](https://fosstodon.org/@coolbutuseless)
 
     -   Their GitHub: <https://github.com/coolbutuseless/>
-
-<!-- -->
 
 -   Gallery of ggplot2 extensions: <https://exts.ggplot2.tidyverse.org/gallery/>
