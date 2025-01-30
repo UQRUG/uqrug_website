@@ -1,0 +1,15 @@
+{
+  "hash": "48c3800b2f8975062805503c19ea62a2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 55\ndraft: false\neditor: visual\ndate: '2024-10-30'\ndescription: '**Overview**: TidyTuesday + drop in session<br /> **Questions**: syntax, RMarkdown'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n\n## Topic: TidyTuesday\n\nData for this week: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-10-29/readme.md>\n\n## Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name | Where are you from? | What brings you here? |\n|------------------------|------------------------|------------------------|\n| Claire |  | Infectious disease modelling |\n| Conan Shing |  | Issue with Rmd Table of Contents not showing everything |\n| David Green | UQ RCC | happy to help |\n| Victor Alvarez | Master in QAAFI | Beginner |\n| Thuy |  |  |\n| Ibrahim Shahwan M Hattan | CAI |  |\n| Luke | Library |  |\n| Stéphane | Library | Here to help! |\n\n## Questions and shared resources\n\n-   Helped Claire with some book exercises\n\n-   Conan had an issue with RMarkdown headings: they stop showing in the table of contents from a certain chunk that contains kable tables\n\n    -   We identified where it started failing but couldn't figure out the actual issue.\n\nShared resources:\n\n-   visdat: <https://docs.ropensci.org/visdat/>\n\n    -   reminds Steph of ggpage for visualisation of text: <https://emilhvitfeldt.github.io/ggpage/>\n\n-   Conan's paper that involves a Shiny app: <https://journals.physiology.org/doi/full/10.1152/jn.00397.2021>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
