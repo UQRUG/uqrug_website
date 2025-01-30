@@ -1,0 +1,89 @@
+---
+title: UQRUG 58
+draft: false
+editor: visual
+date: '2025-01-29'
+description: '**Overview**: R environments with renv + drop in session<br /> **Questions**: renv, Shiny hosting, R version, tmap'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: R environments with renv
+
+You can test cloning the example project: <https://github.com/stragu/renv_example>
+
+From the command line:
+
+``` bash
+git clone https://github.com/stragu/renv_example.git
+```
+
+Then open the project and see what renv does to adapt your local envrionment according to the renv.lock file.
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name | Where are you from? | What brings you here? |
+|----|----|----|
+| Ganesh Channaiah | UQ St Lucia Postgraduate student | Came here to learn R |
+| Chris Mancini | UQ St Lucia, EAIT Civil Eng. Transport Eng, MPhil | great to catch up and learn R  |
+| Weixin Yang | UQ Gatton Master student | here to learn R |
+| Aprezo Maba | UQ St Lucia, SHRS |  |
+| chaimae jraifi | UQ - St Lucia - AGFS | I would like to expand my knowledge about R and how we could use it in multple fields. |
+| Jade Farrugia | UQ St Lucia Masters Student | Want to refresh and learn more about R for spatial data analysis. |
+| Krystie McGregor | UQ St Lucia, Student Affairs | here to learn more about R and use this for the Early Intervention project |
+| Felicity Charles | UQ Gatton PhD student | here to learn more about R |
+| Ret Thaung | UQ Alumni | here to learn R  |
+| David Green | UQ Research Computing Centre | I can help with using R on High Performance Computing and here to learn |
+| Stéphane | Library | Here to help and present |
+
+## Questions and shared resources
+
+-   renv:
+
+    -   Are there specific packages or other functions that you are familiar with that can be heavily affected by the environment or package that was used?
+
+        -   package updates might break your project. If you want to keep working on your project and keep the code maintained, make sure to update your packages regularly and check if the code still works as expected after each update. the "News" page of the packages will list the changes, make sure to check the parts called "Breaking changes".
+
+        -   If you don't plan to work on a project anymore, maybe that's a good time to take a "snapshot" of packages and their versions with renv, so you alway have a record of what setup works as expected.
+
+<!-- -->
+
+-   Installing packages: dependencies
+
+    -   Often many packages pulled in! Make sure you install when you have a few minutes to spare :)
+
+    -   On Linux and macOS, packages will often be built from source instead of using the binary (if development tools are already installed). This might take even more time.
+
+<!-- -->
+
+-   Default R session for when RStudio starts?
+
+    -   Possible to choose R version when launching RStudio with Ctrl key pressed (on Windows)
+
+    -   There should also be an option on Windows in Tools \> Global Options \> General. For this and pointers for other operating systems, see <https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE>
+
+<!-- -->
+
+-   tmap 4 is out!
+
+    -   tmap is a great package for static and intractive thematic maps
+
+    -   Many changes in this new version, including more consistent aesthetic naming, and extensible.
+
+<!-- -->
+
+-   How to setup access to R/RStudio/Posit dashboard on a corporate network?
+
+    -   <https://www.shinyapps.io/> is the default place to upload a Shiny app and have a public link. Free accounts will limit how long the app is used every month, but is enough for small projects.
+
+    -   Shiny Server is open source (at least for the basic functionalities) and can be self-hosted by institutions.
+
+    -   Example of Shiny apps hosted by the RCC: <https://shiny.rcc.uq.edu.au/>
