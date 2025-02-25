@@ -1,0 +1,20 @@
+---
+title: 'February 26th – UQRUG Drop-in'
+author: 'Stéphane Guillou'
+date: '2025-02-26'
+slug: feb2025
+categories:
+  - workshop
+tags: [R, drop-in, help]
+DisableComments: no
+---
+
+Time for our monthly drop-in session, so bring your questions as well as your latest creations and great resources you've discovered!
+
+**When** Wednesday 26th of February 2025, 12 - 2pm
+
+**Where** St Lucia, Central Library in Duhig North (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5595154)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
