@@ -1,0 +1,15 @@
+{
+  "hash": "93d8aab5ee7cddf8acd9952970c80372",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: UQRUG 59\ndraft: false\neditor: visual\ndate: '2025-02-26'\ndescription: '**Overview**: drop in session<br /> **Questions**: renv, Shiny hosting, R version, tmap'\ncategories: meeting\ntoc: true\ntoc-depth: 5\n---\n\n\n\n\n\n## Topic: R environments with renv\n\nYou can test cloning the example project: <https://github.com/stragu/renv_example>\n\nFrom the command line:\n\n``` bash\ngit clone https://github.com/stragu/renv_example.git\n```\n\nThen open the project and see what renv does to adapt your local envrionment according to the renv.lock file.\n\n## Attendees\n\nAdd your name, where you're from, and why you're here:\n\n| Name     | Where are you from? | What brings you here?    |\n|----------|---------------------|--------------------------|\n| Richard  | Civil Engineering   |                          |\n| Hadi     | QAAFI               |                          |\n| Stéphane | Library             | Here to help and present |\n\n## Questions and shared resources\n\n-   \"Cannot move 00LOCK\" error when installing packages\n\n    -   Issue was related to using Docker on WSL, on which staged install fails.\n\n    -   Solution: run this command before installing packages:\n\n    -   `Sys.setenv(R_INSTALL_STAGED = FALSE)`\n\n    -   Found on: <https://github.com/rstudio/renv/issues/239#issuecomment-553021266>\n\n<!-- -->\n\n-   Building phylogenetic tree with ape and phangorn packages\n\n    -   visualisation ideas: <https://exts.ggplot2.tidyverse.org/gallery/>\n\n    -   ggtree:\n\n        -   GitHub: <https://github.com/YuLab-SMU/ggtree>\n\n        -   BioConductor: <https://www.bioconductor.org/packages/release/bioc/html/ggtree.html>\n\n        -   book: <https://yulab-smu.top/contribution-tree-data/>\n\n## Shared resources\n\nResources shared during the meeting.\n\n-   Hacky Hour, 3-4 pm every Tuesday (online)\n\n    -   <https://rcc.uq.edu.au/training-support/meetups>\n\n    -   ask us for the Zoom link!\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

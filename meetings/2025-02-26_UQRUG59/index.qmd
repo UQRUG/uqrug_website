@@ -1,0 +1,73 @@
+---
+title: UQRUG 59
+draft: false
+editor: visual
+date: '2025-02-26'
+description: '**Overview**: drop in session<br /> **Questions**: renv, Shiny hosting, R version, tmap'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: R environments with renv
+
+You can test cloning the example project: <https://github.com/stragu/renv_example>
+
+From the command line:
+
+``` bash
+git clone https://github.com/stragu/renv_example.git
+```
+
+Then open the project and see what renv does to adapt your local envrionment according to the renv.lock file.
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name     | Where are you from? | What brings you here?    |
+|----------|---------------------|--------------------------|
+| Richard  | Civil Engineering   |                          |
+| Hadi     | QAAFI               |                          |
+| Stéphane | Library             | Here to help and present |
+
+## Questions and shared resources
+
+-   "Cannot move 00LOCK" error when installing packages
+
+    -   Issue was related to using Docker on WSL, on which staged install fails.
+
+    -   Solution: run this command before installing packages:
+
+    -   `Sys.setenv(R_INSTALL_STAGED = FALSE)`
+
+    -   Found on: <https://github.com/rstudio/renv/issues/239#issuecomment-553021266>
+
+<!-- -->
+
+-   Building phylogenetic tree with ape and phangorn packages
+
+    -   visualisation ideas: <https://exts.ggplot2.tidyverse.org/gallery/>
+
+    -   ggtree:
+
+        -   GitHub: <https://github.com/YuLab-SMU/ggtree>
+
+        -   BioConductor: <https://www.bioconductor.org/packages/release/bioc/html/ggtree.html>
+
+        -   book: <https://yulab-smu.top/contribution-tree-data/>
+
+## Shared resources
+
+Resources shared during the meeting.
+
+-   Hacky Hour, 3-4 pm every Tuesday (online)
+
+    -   <https://rcc.uq.edu.au/training-support/meetups>
+
+    -   ask us for the Zoom link!
