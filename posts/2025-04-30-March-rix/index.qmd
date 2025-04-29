@@ -1,5 +1,5 @@
 ---
-title: 'March 30th – UQRUG Drop-in + rix'
+title: 'April 30th – UQRUG Drop-in + rix'
 author: 'Stéphane Guillou'
 date: '2025-04-30'
 slug: apr2025
