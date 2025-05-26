@@ -1,0 +1,30 @@
+---
+title: 'May 30th – UQRUG Drop-in + Profvis'
+author: 'Nicholas Wiggins'
+date: '2025-05-28'
+slug: may2025
+categories:
+  - workshop
+tags: [R, drop-in, help, profiler, profvis, fast, efficient]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, Stéphane will be providing an overview on how to **make your code faster and more efficient** using the [**RStudio Profiler: Profvis**](https://profvis.r-lib.org/).
+
+
+Drop-in, and bring your questions as well as your latest creations and great resources you've discovered!
+
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> <img src="profvis.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Wednesday 28th of May 2025, 12 - 2pm
+
+**Where** St Lucia, Central Library in Duhig North (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5669021)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
