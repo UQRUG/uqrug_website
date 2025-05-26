@@ -1,5 +1,5 @@
 ---
-title: 'May 30th – UQRUG Drop-in + Profvis'
+title: 'May 28th – UQRUG Drop-in + Profvis'
 author: 'Nicholas Wiggins'
 date: '2025-05-28'
 slug: may2025
