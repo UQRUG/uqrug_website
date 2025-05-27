@@ -1,0 +1,90 @@
+---
+title: UQRUG 61
+draft: false
+editor: visual
+date: '2025-04-30'
+description: '**Overview**: rix<br /> **Questions**: renv, Docker, rix, Nix, maintenance'
+categories: meeting
+toc: true
+toc-depth: 5
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval= FALSE)
+```
+
+## Topic: reproducible environments with rix
+
+Some links to documentation and alternatives:
+
+-   renv (and its predecessor packrat): only manages R packages - <https://rstudio.github.io/renv/articles/renv.html>
+
+-   Docker (and rocker): whole environment, but quite a bit to learn to get started - <https://www.docker.com/>
+
+    -   rocker service for Docker images useful to the R community: <https://rocker-project.org/>
+
+<!-- -->
+
+-   rix: leverages the Nix package manager, which was built \_for\_ reproducibility
+
+    -   rix: <https://docs.ropensci.org/rix/>
+
+    -   Nix: <https://nixos.org/download/>
+
+## Attendees
+
+Add your name, where you're from, and why you're here:
+
+| Name     | Where are you from? | What brings you here?    |
+|----------|---------------------|--------------------------|
+| Richard  | Civil Engineering   |                          |
+| Sushila  |                     |                          |
+| Dumini   |                     |                          |
+| Anguara  |                     |                          |
+| David    | RCC                 |                          |
+| Stéphane | Library             | Here to help and present |
+
+## Questions and shared resources
+
+### How likely is it that my code will break?
+
+Somewhat likely, as the R ecosystem keeps evolving!
+
+Recommendations:
+
+-   Record versions of R and packages that worked, in case it needs to be restored at a future date (for example with rix / Nix)
+
+-   Update R and packages regularly, so issues are easier to spot and fix
+
+-   If possible, stick to core R functions and tools to reduce number of dependencies. This makes it less likely to run into issues when the dependencies change, and is nicer for others who use your code and appreciate having to install less things.
+
+-   You can also create tests as you develop your project, and run those tests regularly to see if they fail. (For example: "Check that the value returned by this function is exactly this number.") A useful package for that is {testthat}: <https://testthat.r-lib.org/>
+
+### How do I switch R version in RStudio?
+
+-   In Windows (possibly also Mac)   Tools / Global Options / General / R Sessions ... R Version (select one that is already installed)
+
+<!-- -->
+
+-   In linux use the utility ... \[\@Stephane\] ?
+
+<!-- -->
+
+-   To select R version on starting RStudio, hold the Ctrl key as RStudio starts. 
+
+<!-- -->
+
+-   The change of default R version seems to stick afterwards.
+
+How to update the R version, using the {installr} package on Windows: [https://www.youtube.com/watch?v=P11imusqX0U](https://www.youtube.com/watch?v=P11imusqX0U&ab_channel=ModernValuationGroup)
+
+## Shared resources
+
+Resources shared during the meeting.
+
+-   Hacky Hour, 3-4 pm every Tuesday (online)
+
+    -   <https://rcc.uq.edu.au/training-support/meetups>
+
+    -   ask us for the Zoom link!

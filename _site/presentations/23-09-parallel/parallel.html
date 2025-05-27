@@ -1,409 +1,225 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Raúl Riesco">
-<meta name="dcterms.date" content="2023-09-27">
-
-<title>quarto-input5cf5fe93612316c5 – UQRUG</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
-
-
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
+<html lang="en"><head>
 <link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6e5a5027aec1b096cef8c6d9f890f2df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-cff3dccb75276adba07613a0a9f3573c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-6e5a5027aec1b096cef8c6d9f890f2df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
 
-
-<link rel="stylesheet" href="../../styles.css">
+  <meta name="author" content="Raúl Riesco">
+  <meta name="dcterms.date" content="2023-09-27">
+  <title>UQRUG – quarto-input3d704ece61920b8d</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
 <meta property="og:title" content="">
 <meta property="og:description" content="The University of Queensland R Users Group">
 <meta property="og:image" content="images/uqrug_og.png">
 <meta property="og:site_name" content="UQRUG">
 </head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
-    </a>
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">UQRUG</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../events.html"> 
-<span class="menu-text">Events</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../pastmeetings.html"> 
-<span class="menu-text">Notes</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../community.html"> 
-<span class="menu-text">Community</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../code_of_conduct.html"> 
-<span class="menu-text">Code of Conduct</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/UQRUG/uqrug_website" title="" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
-    <a href="https://pad.education/p/uqrug" title="" class="quarto-navigation-tool px-1" aria-label="Collaborative Document"><i class="bi bi-file-earmark-text"></i></a>
-    <a href="https://www.youtube.com/@UQRUG" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-to-parallelize" id="toc-why-to-parallelize" class="nav-link active" data-scroll-target="#why-to-parallelize">Why to parallelize</a></li>
-  <li><a href="#parallelization-in-r" id="toc-parallelization-in-r" class="nav-link" data-scroll-target="#parallelization-in-r">Parallelization in R</a></li>
-  <li><a href="#cores-in-our-pc-and-management-of-clusters" id="toc-cores-in-our-pc-and-management-of-clusters" class="nav-link" data-scroll-target="#cores-in-our-pc-and-management-of-clusters">Cores in our PC and management of clusters</a></li>
-  <li><a href="#methods-of-paralleization" id="toc-methods-of-paralleization" class="nav-link" data-scroll-target="#methods-of-paralleization">Methods of Paralleization</a></li>
-  <li><a href="#socket-pros-and-cons" id="toc-socket-pros-and-cons" class="nav-link" data-scroll-target="#socket-pros-and-cons">Socket pros and cons</a></li>
-  <li><a href="#forking-pros-and-cons6" id="toc-forking-pros-and-cons6" class="nav-link" data-scroll-target="#forking-pros-and-cons6">Forking pros and cons</a></li>
-  <li><a href="#parallel-and-apply" id="toc-parallel-and-apply" class="nav-link" data-scroll-target="#parallel-and-apply"><em>parallel</em> and <em>apply</em></a></li>
-  <li><a href="#foreach" id="toc-foreach" class="nav-link" data-scroll-target="#foreach"><em>foreach</em></a></li>
-  <li><a href="#foreach2" id="toc-foreach2" class="nav-link" data-scroll-target="#foreach2"><em>foreach</em></a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  <li><a href="#for3" id="toc-for3" class="nav-link" data-scroll-target="#for3"><em>for</em></a></li>
-  <li><a href="#foreach4" id="toc-foreach4" class="nav-link" data-scroll-target="#foreach4"><em>foreach</em></a></li>
-  <li><a href="#foreach-parallelized" id="toc-foreach-parallelized" class="nav-link" data-scroll-target="#foreach-parallelized"><em>foreach</em> parallelized</a></li>
-  <li><a href="#sapply-5" id="toc-sapply-5" class="nav-link" data-scroll-target="#sapply-5"><em>sapply</em> </a></li>
-  <li><a href="#parsapply" id="toc-parsapply" class="nav-link" data-scroll-target="#parsapply"><em>parSapply</em></a></li>
-  <li><a href="#has-the-processing-time-improved" id="toc-has-the-processing-time-improved" class="nav-link" data-scroll-target="#has-the-processing-time-improved">Has the processing time improved?</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="parallel.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><div style="color: #51247A;">
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><div style="color: #51247A;">
 <u>Parallelization in R</u><br><span style="font-size: 0.6em;"> <em><a href="https://rdocumentation.org/packages/parallel/versions/3.6.2">parallel</a></em> and <em><a href="https://www.rdocumentation.org/packages/foreach/versions/1.5.2">foreach</a></em></span>
 </div></h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
-
-
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Raúl Riesco <a href="mailto:r.riescojarrin@uq.edu.au // raul.riescoj@usal.es" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
+<div class="quarto-title-author-email">
+<a href="mailto:r.riescojarrin@uq.edu.au // raul.riescoj@usal.es">r.riescojarrin@uq.edu.au // raul.riescoj@usal.es</a>
+</div>
+        <p class="quarto-title-affiliation">
             Australian Centre for Ecogenomics // University of Salamanca
           </p>
-      </div>
-  </div>
-
-<div class="quarto-title-meta">
-
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 27, 2023</p>
     </div>
-  </div>
-  
-    
-  </div>
-  
+</div>
 
-
-</header>
-
-
-<section id="why-to-parallelize" class="level2">
-<h2 class="anchored" data-anchor-id="why-to-parallelize">Why to parallelize</h2>
+  <p class="date">September 27, 2023</p>
+</section>
+<section id="why-to-parallelize" class="slide level2">
+<h2>Why to parallelize</h2>
 <div class="cell">
 <style type="text/css">
 .justify {
@@ -421,23 +237,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 </div>
-<div class="incremental">
+<div>
 <p>Have you ever noticed that RStudio never reaches 100% CPU usage even when running a very demanding task?</p>
-<ul class="incremental">
-<li><p>R runs only on a single thread on the CPU by default</p></li>
-<li><p>Is it the most efficient way to run functions?</p>
-<ul class="incremental">
-<li>Independent operations</li>
+<ul>
+<li class="fragment"><p>R runs only on a single thread on the CPU by default</p></li>
+<li class="fragment"><p>Is it the most efficient way to run functions?</p>
+<ul>
+<li class="fragment">Independent operations</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(num <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    results[num]<span class="ot">&lt;-</span>num<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>results <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="cf">for</span>(num <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb1-4"><a></a>  {</span>
+<span id="cb1-5"><a></a>    results[num]<span class="ot">&lt;-</span>num<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb1-6"><a></a>  }</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]   1   4   9  16  25  36  49  64  81 100</code></pre>
 </div>
@@ -445,101 +261,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </section>
-<section id="parallelization-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="parallelization-in-r">Parallelization in R</h2>
+<section id="parallelization-in-r" class="slide level2">
+<h2>Parallelization in R</h2>
 <p>It is possible to parallelize processes in R using specialized packages.</p>
 <p><u><strong>parallel</strong></u></p>
 <ul>
-<li>Most used package</li>
-<li>Part of r-core.</li>
+<li class="fragment">Most used package</li>
+<li class="fragment">Part of r-core.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(parallel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(parallel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="cores-in-our-pc-and-management-of-clusters" class="level2">
-<h2 class="anchored" data-anchor-id="cores-in-our-pc-and-management-of-clusters">Cores in our PC and management of clusters</h2>
+<section id="cores-in-our-pc-and-management-of-clusters" class="slide level2">
+<h2>Cores in our PC and management of clusters</h2>
 <p><strong>Basic concepts</strong></p>
 <ul>
-<li><u>Core</u>: an individual processing unit within a CPU</li>
-<li><u>Cluster</u>: R background sessions that allows parallelization of processes.</li>
+<li class="fragment"><u>Core</u>: an individual processing unit within a CPU</li>
+<li class="fragment"><u>Cluster</u>: R background sessions that allows parallelization of processes.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<pre class="{`r}"><code>Load the package
-  library(parallel)
-
-number of cores
-  cores&lt;- detectCores()
-  
-make cluster
-  clust &lt;- makeCluster(cores)
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Load the package</span>
+<span id="cb4-2"><a></a>  library(parallel)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>number of cores</span>
+<span id="cb4-5"><a></a>  cores&lt;- detectCores()</span>
+<span id="cb4-6"><a></a>  </span>
+<span id="cb4-7"><a></a>make cluster</span>
+<span id="cb4-8"><a></a>  clust &lt;- makeCluster(cores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<pre class="{`r}"><code>start created cluster
-  registerDoParallel(clust)
-  
-status of the clusters
-  showConnections()
-
-close the cluster
-  stopCluster(cl = clust) 
-  </code></pre>
-</div>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>start created cluster</span>
+<span id="cb5-2"><a></a>  registerDoParallel(clust)</span>
+<span id="cb5-3"><a></a>  </span>
+<span id="cb5-4"><a></a>status of the clusters</span>
+<span id="cb5-5"><a></a>  showConnections()</span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a>close the cluster</span>
+<span id="cb5-8"><a></a>  stopCluster(cl = clust) </span>
+<span id="cb5-9"><a></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </section>
-<section id="methods-of-paralleization" class="level2">
-<h2 class="anchored" data-anchor-id="methods-of-paralleization">Methods of Paralleization</h2>
+<section id="methods-of-paralleization" class="slide level2">
+<h2>Methods of Paralleization</h2>
 <div class="justify">
 <p>There are two main ways in which code can be parallelized, via <strong>sockets</strong> or via <strong>forking</strong></p>
 <ul>
-<li><u><strong>Socket approach</strong></u>: launches a new version of R on each core</li>
-<li><u><strong>Forking approach</strong></u>: copies the entire current version of R and moves it to a new core</li>
+<li class="fragment"><u><strong>Socket approach</strong></u>: launches a new version of R on each core</li>
+<li class="fragment"><u><strong>Forking approach</strong></u>: copies the entire current version of R and moves it to a new core</li>
 </ul>
 </div>
 </section>
-<section id="socket-pros-and-cons" class="level2">
-<h2 class="anchored" data-anchor-id="socket-pros-and-cons">Socket pros and cons</h2>
+<section id="socket-pros-and-cons" class="slide level2">
+<h2>Socket pros and cons</h2>
 <div class="justify">
 <ul>
-<li>Pros
+<li class="fragment">Pros
 <ul>
-<li><span style="color:darkgreen">Works on every OS.</span></li>
-<li><span style="color:darkgreen">Each process on each node are 100% independent.</span></li>
+<li class="fragment"><span style="color:darkgreen">Works on every OS.</span></li>
+<li class="fragment"><span style="color:darkgreen">Each process on each node are 100% independent.</span></li>
 </ul></li>
-<li>Cons
+<li class="fragment">Cons
 <ul>
-<li><span style="color:darkred">Each process is unique so it will be slower</span></li>
-<li><span style="color:darkred">Variables and packages must be imported to the created cores.</span></li>
-<li><span style="color:darkred">More complicated to implement.</span></li>
+<li class="fragment"><span style="color:darkred">Each process is unique so it will be slower</span></li>
+<li class="fragment"><span style="color:darkred">Variables and packages must be imported to the created cores.</span></li>
+<li class="fragment"><span style="color:darkred">More complicated to implement.</span></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="forking-pros-and-cons6" class="level2">
-<h2 class="anchored" data-anchor-id="forking-pros-and-cons6">Forking pros and cons<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<section id="forking-pros-and-cons6" class="slide level2">
+<h2>Forking pros and cons<sup>1</sup></h2>
 <div class="justify">
 <ul>
-<li>Pros
+<li class="fragment">Pros
 <ul>
-<li><span style="color:darkgreen">Faster.</span></li>
-<li><span style="color:darkgreen">Not necessary to import the variables and packages.</span></li>
-<li><span style="color:darkgreen">Relatively easier to implement.</span></li>
+<li class="fragment"><span style="color:darkgreen">Faster.</span></li>
+<li class="fragment"><span style="color:darkgreen">Not necessary to import the variables and packages.</span></li>
+<li class="fragment"><span style="color:darkgreen">Relatively easier to implement.</span></li>
 </ul></li>
-<li>Cons
+<li class="fragment">Cons
 <ul>
-<li><span style="color:darkred">Does NOT work on Windows</span></li>
-<li><span style="color:darkred">Processes are not totally independent, and can cause weird behaviors when runned in RStudio .</span></li>
+<li class="fragment"><span style="color:darkred">Does NOT work on Windows</span></li>
+<li class="fragment"><span style="color:darkred">Processes are not totally independent, and can cause weird behaviors when runned in RStudio .</span></li>
 </ul></li>
 </ul>
 </div>
-</section>
-<section id="parallel-and-apply" class="level2">
-<h2 class="anchored" data-anchor-id="parallel-and-apply"><em>parallel</em> and <em>apply</em></h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Code in this session wont be optimized for forking. Check <a href="https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/parallel.html">mclapply()</a> for more info.</p></li></ol></aside></section>
+<section id="parallel-and-apply" class="slide level2">
+<h2><em>parallel</em> and <em>apply</em></h2>
 <div class="justify">
 <p><em>parallel</em> is designed to work with functions, and it is analogous to the use of functions like <em>apply</em>, as well as its derivatives <em>lapply</em> and <em>sapply</em></p>
 <div class="small-table">
-<table class="table-striped table-hover caption-top table">
+<table class="table-striped table-hover caption-top">
 <caption>Equivalent functions to the apply family</caption>
 <colgroup>
 <col style="width: 31%">
@@ -558,7 +372,7 @@ close the cluster
 <tbody>
 <tr class="odd">
 <td>apply</td>
-<td style="text-align: left;">parApply (parRapply, parCapply)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td style="text-align: left;">parApply (parRapply, parCapply)<sup>1</sup></td>
 <td style="text-align: right;">data.frame, matrix</td>
 <td style="text-align: right;">vector, list, array</td>
 </tr>
@@ -578,13 +392,13 @@ close the cluster
 </table>
 </div>
 </div>
-</section>
-<section id="foreach" class="level2">
-<h2 class="anchored" data-anchor-id="foreach"><em>foreach</em></h2>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>parRapply, parCapply are <em>parallel</em> row and column apply functions for a matrix x; they may be slightly more efficient than parApply but do less post-processing of the result.</p></li></ol></aside></section>
+<section id="foreach" class="slide level2">
+<h2><em>foreach</em></h2>
 <p><em>foreach</em> is a package designed for looping. It also allows to combine results in diferent formats.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreach)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb6-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] 2.718282
@@ -594,659 +408,624 @@ close the cluster
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreach)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb8-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.718282 7.389056</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreach)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">foreach</span>(<span class="at">a=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, <span class="at">b=</span><span class="fu">rep</span>(<span class="dv">10</span>, <span class="dv">2</span>), <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> {a<span class="sc">+</span>b}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb10-2"><a></a><span class="fu">foreach</span>(<span class="at">a=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, <span class="at">b=</span><span class="fu">rep</span>(<span class="dv">10</span>, <span class="dv">2</span>), <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> {a<span class="sc">+</span>b}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11 12</code></pre>
 </div>
 </div>
 </section>
-<section id="foreach2" class="level2">
-<h2 class="anchored" data-anchor-id="foreach2"><em>foreach</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h2>
+<section id="foreach2" class="slide level2">
+<h2><em>foreach</em><sup>1</sup></h2>
 <p>By itself, <em>foreach</em> do not parallelize, but it can be combined with <em>parallel</em> and <em>doParallel</em> to allow paralellization</p>
-<pre class="{'r}"><code>library(foreach)
-library(parallel)
-library(doParallel)
-
-clust &lt;- makeCluster(2)
-registerDoParallel(clust)
-
-foreach(i=1:2, .combine='c') %dopar% exp(i)
-
-stopCluster(cl = clust)</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>library(foreach)</span>
+<span id="cb12-2"><a></a>library(parallel)</span>
+<span id="cb12-3"><a></a>library(doParallel)</span>
+<span id="cb12-4"><a></a></span>
+<span id="cb12-5"><a></a>clust &lt;- makeCluster(2)</span>
+<span id="cb12-6"><a></a>registerDoParallel(clust)</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a>foreach(i=1:2, .combine='c') %dopar% exp(i)</span>
+<span id="cb12-9"><a></a></span>
+<span id="cb12-10"><a></a>stopCluster(cl = clust)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.718282 7.389056</code></pre>
 </div>
 </div>
-</section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><u>.combine=</u>: <u><strong>’c’</strong></u>:concatenate into a vector, <u><strong>’cbind’</strong></u> and <u><strong>’rbind’</strong></u>: combine vectors into a matrix. <u><strong>Operators (’+’, ’*’)</strong></u>: process numeric data</p></li></ol></aside></section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
 <p>Determine which numbers on a sample are primes</p>
 <p>Function:</p>
-<pre class="{'r}"><code>isprime &lt;- function(num){ 
-    prime=TRUE 
-    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.
-    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number
-      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop
-        prime = FALSE 
-        break 
-      }
-      i &lt;- i+1 
-    }
-    return(prime) 
-  }</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>isprime &lt;- function(num){ </span>
+<span id="cb14-2"><a></a>    prime=TRUE </span>
+<span id="cb14-3"><a></a>    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.</span>
+<span id="cb14-4"><a></a>    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number</span>
+<span id="cb14-5"><a></a>      if ((num %% i) == 0){     #The '%%' operator calculates the remainder when our number is divided by 'i.' If the remainder is 0, it will terminate the loop</span>
+<span id="cb14-6"><a></a>        prime = FALSE </span>
+<span id="cb14-7"><a></a>        break </span>
+<span id="cb14-8"><a></a>      }</span>
+<span id="cb14-9"><a></a>      i &lt;- i+1 </span>
+<span id="cb14-10"><a></a>    }</span>
+<span id="cb14-11"><a></a>    return(prime) </span>
+<span id="cb14-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>data (10,000 numbers):</p>
-<pre class="{'r}"><code>listnumbers &lt;- sample(1:100000,10000)</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>listnumbers &lt;- sample(1:100000,10000)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="for3" class="level2">
-<h2 class="anchored" data-anchor-id="for3"><em>for</em><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></h2>
-<pre class="{`r}"><code>primes&lt;- rep(T,10000)   
-
-for(i in 1:length(listnumbers)){
-  primes[i] &lt;- isprime(listnumbers[i])
-}
-
-result&lt;-data.frame(number=listnumbers, is_prime=primes)</code></pre>
+<section id="for3" class="slide level2">
+<h2><em>for</em><sup>1</sup></h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>primes&lt;- rep(T,10000)   </span>
+<span id="cb16-2"><a></a></span>
+<span id="cb16-3"><a></a>for(i in 1:length(listnumbers)){</span>
+<span id="cb16-4"><a></a>  primes[i] &lt;- isprime(listnumbers[i])</span>
+<span id="cb16-5"><a></a>}</span>
+<span id="cb16-6"><a></a></span>
+<span id="cb16-7"><a></a>result&lt;-data.frame(number=listnumbers, is_prime=primes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.308078 secs"</code></pre>
 </div>
 </div>
-</section>
-<section id="foreach4" class="level2">
-<h2 class="anchored" data-anchor-id="foreach4"><em>foreach</em><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></h2>
-<pre class="{`r}"><code>library(foreach)
-   
-primes_fe &lt;-foreach(i = 1:length(listnumbers), .combine="c") %do% { 
-                    isprime(listnumbers[i]) 
-                    }
-
-result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</code></pre>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>In this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process.</p></li></ol></aside></section>
+<section id="foreach4" class="slide level2">
+<h2><em>foreach</em><sup>1</sup></h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>library(foreach)</span>
+<span id="cb18-2"><a></a>   </span>
+<span id="cb18-3"><a></a>primes_fe &lt;-foreach(i = 1:length(listnumbers), .combine="c") %do% { </span>
+<span id="cb18-4"><a></a>                    isprime(listnumbers[i]) </span>
+<span id="cb18-5"><a></a>                    }</span>
+<span id="cb18-6"><a></a></span>
+<span id="cb18-7"><a></a>result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 6.629166 secs"</code></pre>
 </div>
 </div>
-</section>
-<section id="foreach-parallelized" class="level2">
-<h2 class="anchored" data-anchor-id="foreach-parallelized"><em>foreach</em> parallelized</h2>
-<pre class="{`r}"><code>library(parallel)
-library(foreach)
-library(doParallel)
-
-cores &lt;- detectCores()                 
-clust &lt;- parallel::makeCluster(cores)  
-registerDoParallel(clust)  
- 
-primes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine="c") %dopar% { 
-isprime(listnumbers[i]) 
-}
-
-result_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)
-
-parallel::stopCluster(cl = clust) 
-</code></pre>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>This method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length.</p></li></ol></aside></section>
+<section id="foreach-parallelized" class="slide level2">
+<h2><em>foreach</em> parallelized</h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>library(parallel)</span>
+<span id="cb20-2"><a></a>library(foreach)</span>
+<span id="cb20-3"><a></a>library(doParallel)</span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a>cores &lt;- detectCores()                 </span>
+<span id="cb20-6"><a></a>clust &lt;- parallel::makeCluster(cores)  </span>
+<span id="cb20-7"><a></a>registerDoParallel(clust)  </span>
+<span id="cb20-8"><a></a> </span>
+<span id="cb20-9"><a></a>primes_par_fe &lt;- foreach(i = 1:length(listnumbers), .combine="c") %dopar% { </span>
+<span id="cb20-10"><a></a>isprime(listnumbers[i]) </span>
+<span id="cb20-11"><a></a>}</span>
+<span id="cb20-12"><a></a></span>
+<span id="cb20-13"><a></a>result_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)</span>
+<span id="cb20-14"><a></a></span>
+<span id="cb20-15"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 2.964536 secs"</code></pre>
 </div>
 </div>
 </section>
-<section id="sapply-5" class="level2">
-<h2 class="anchored" data-anchor-id="sapply-5"><em>sapply</em> <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></h2>
-<pre class="{`r}"><code>primes_sa &lt;- sapply(listnumbers, isprime) 
-
-result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</code></pre>
+<section id="sapply-5" class="slide level2">
+<h2><em>sapply</em> <sup>1</sup></h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>primes_sa &lt;- sapply(listnumbers, isprime) </span>
+<span id="cb22-2"><a></a></span>
+<span id="cb22-3"><a></a>result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.478974 secs"</code></pre>
 </div>
 </div>
-</section>
-<section id="parsapply" class="level2">
-<h2 class="anchored" data-anchor-id="parsapply"><em>parSapply</em></h2>
-<pre class="{`r}"><code>library(parallel)
-
-cores &lt;- detectCores()     
-clust &lt;- parallel::makeCluster(cores)
-
-prime_par_sa &lt;- parSapply(clust, listnumbers, isprime)             
-
-result_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)
-
-parallel::stopCluster(cl = clust) </code></pre>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>apply is more efficient than foreach because it does a memory preallocation step in the background</p></li></ol></aside></section>
+<section id="parsapply" class="slide level2">
+<h2><em>parSapply</em></h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>library(parallel)</span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>cores &lt;- detectCores()     </span>
+<span id="cb24-4"><a></a>clust &lt;- parallel::makeCluster(cores)</span>
+<span id="cb24-5"><a></a></span>
+<span id="cb24-6"><a></a>prime_par_sa &lt;- parSapply(clust, listnumbers, isprime)             </span>
+<span id="cb24-7"><a></a></span>
+<span id="cb24-8"><a></a>result_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)</span>
+<span id="cb24-9"><a></a></span>
+<span id="cb24-10"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 1.725008 secs"</code></pre>
 </div>
 </div>
 </section>
-<section id="has-the-processing-time-improved" class="level2">
-<h2 class="anchored" data-anchor-id="has-the-processing-time-improved">Has the processing time improved?</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="parallel_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
+<section id="has-the-processing-time-improved" class="slide level2">
+<h2>Has the processing time improved?</h2>
+
+
+
+<img data-src="parallel_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="img/UQlogo-Purple-rgb.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
 </div>
-</div>
-</div>
+</div></div>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
 
-</section>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
+  <script>
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
 
-<ol>
-<li id="fn1"><p>Code in this session wont be optimized for forking. Check <a href="https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/parallel.html">mclapply()</a> for more info.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>parRapply, parCapply are <em>parallel</em> row and column apply functions for a matrix x; they may be slightly more efficient than parApply but do less post-processing of the result.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><u>.combine=</u>: <u><strong>’c’</strong></u>:concatenate into a vector, <u><strong>’cbind’</strong></u> and <u><strong>’rbind’</strong></u>: combine vectors into a matrix. <u><strong>Operators (’+’, ’*’)</strong></u>: process numeric data<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>In this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>This method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>apply is more efficient than foreach because it does a memory preallocation step in the background<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
 
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
 
-<script>
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
 
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+        // Display a presentation progress bar
+        progress: true,
 
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+        // Display the page number of the current slide
+        slideNumber: false,
 
-  // slide changes (different for each slide format).
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
 
-  (function () {
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
 
-    // dispatch for htmlwidgets
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
 
-    function fireSlideEnter() {
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
 
-      const event = window.document.createEvent("Event");
+        // Push each slide change to the browser history
+        history: true,
 
-      event.initEvent("slideenter", true, true);
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
 
-      window.document.dispatchEvent(event);
+        // Enable the slide overview mode
+        overview: true,
 
-    }
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
 
+        // Vertical centering of slides
+        center: false,
 
+        // Enables touch navigation on devices with touch input
+        touch: true,
 
-    function fireSlideChanged(previousSlide, currentSlide) {
+        // Loop the presentation
+        loop: false,
 
-      fireSlideEnter();
+        // Change the presentation direction to be RTL
+        rtl: false,
 
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
 
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
 
-      // dispatch for shiny
+        // Turns fragments on and off globally
+        fragments: true,
 
-      if (window.jQuery) {
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
 
-        if (previousSlide) {
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
 
-          window.jQuery(previousSlide).trigger("hidden");
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
 
-        }
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
 
-        if (currentSlide) {
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
 
-          window.jQuery(currentSlide).trigger("shown");
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
 
-        }
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
 
-      }
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
 
-    }
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
 
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
 
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
 
-    // hookup for slidy
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
 
-    if (window.w3c_slidy) {
+        // The display mode that will be used to show slides
+        display: 'block',
 
-      window.w3c_slidy.add_observer(function (slide_num) {
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
 
-        // slide_num starts at position 1
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
 
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
 
-      });
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
 
-    }
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
 
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
 
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
 
-  })();
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
 
-</script>
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
 
+        height: 700,
 
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
 
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
         },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
+    </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
           }
         }
+        return false;
       }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
           }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+          return codeEl.innerText;
       }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
+          if (note) {
+            return note.innerHTML;
           } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+            return "";
           }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
         });
       }
-    }
-  });
-  </script>
-</div> <!-- /content -->
-
-
-
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
 
 </body></html>
