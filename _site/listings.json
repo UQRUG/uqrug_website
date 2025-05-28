@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/events.html",
     "items": [
       "/posts/2025-05-26-May-profiler/index.html",
       "/posts/2025-04-30-March-rix/index.html",
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "listing": "/events.html",
+    "listing": "/index.html",
     "items": [
       "/posts/2025-05-26-May-profiler/index.html",
       "/posts/2025-04-30-March-rix/index.html",
@@ -66,6 +66,7 @@
   {
     "listing": "/pastmeetings.html",
     "items": [
+      "/meetings/2025-05-28_UQRUG62/index.html",
       "/meetings/2025-04-30_UQRUG61/index.html",
       "/meetings/2025-02-26_UQRUG59/index.html",
       "/meetings/2025-01-29_UQRUG58/index.html",

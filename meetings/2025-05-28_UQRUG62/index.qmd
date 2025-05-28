@@ -1,0 +1,237 @@
+---
+title: UQRUG 62
+draft: false
+editor: visual
+date: '2025-05-28'
+description: '**Overview**: profvis<br /> **Questions**: tidyr, dplyr, tmap.mapgl, maplibre, stata, spss'
+categories: meeting
+toc: true
+toc-depth: 5
+echo: true
+eval: false
+---
+
+## Topic: code profiling with profvis
+
+-   Profvis website: <https://profvis.r-lib.org/>
+-   How to use it in RStudio: <https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE#using-the-flame-graph>
+
+Sample code to test:
+
+``` R
+# example dataset from ggplot2
+library(ggplot2)
+diamonds
+
+# function to convert diamond price from USD to AUD
+usd_to_aud <- function (x) {
+  Sys.sleep(0.02) # wait a little, so our problem is more obvious later on
+  x * 1.55
+}
+
+# process our data
+library(dplyr)
+diamonds |> 
+  # filter out cheaper diamonds
+  filter(price > 500) |>
+  # sort by carat
+  arrange(carat) |> 
+  # how big is each carat group?
+  group_by(carat) |> 
+  mutate(carat_group_size = n()) |>
+  # convert price to AUD
+  mutate(price = usd_to_aud(price))
+```
+
+The last block of code is very slow! Why is that?
+
+Let's use profiling to find out! In RStudio:
+
+-   use the menu "Profile - Start profiling"
+
+-   run the problematic block of code
+
+-   click "Stop profiling" above the console
+
+A new "Profile 1" tab should open with two types of visualisation of your code's performance:
+
+-   A Flame Graph tab
+
+-   A Data tab
+
+Use them to spot the processes that use most of the time.
+
+You can also use the profvis package directly by wrapping the code into the `profvis()` function:
+
+```{r}
+library(profvis)
+profvis({
+  diamonds |> 
+    # filter out cheaper diamonds
+    filter(price > 500) |>
+    # sort by carat
+    arrange(carat) |> 
+    # how big is each carat group?
+    group_by(carat) |> 
+    mutate(carat_group_size = n()) |>
+    # convert price to AUD
+    mutate(price = usd_to_aud(price))
+})
+```
+
+Looks like our custom function takes most of the time, and is executed several times! The issue is that we didn't ungroup after the first mutate, and therefore the second mutate is unnecessarily split between groups instead of running once on the whole column.
+
+Fix it with an `ungroup()` step and compare the time it takes to execute:
+
+``` R
+profvis({
+  diamonds |> 
+    # filter out cheaper diamonds
+    filter(price > 500) |>
+    # sort by carat
+    arrange(carat) |> 
+    # how big is each carat group?
+    group_by(carat) |> 
+    mutate(carat_group_size = n()) |>
+    # remove grouping now that we don't need it!
+    ungroup() |> 
+    # convert price to AUD
+    mutate(price = usd_to_aud(price))
+})
+```
+
+## Attendees
+
+| Name            | Where are you from?   | What brings you here?    |
+|-----------------|-----------------------|--------------------------|
+| Thi Quynh Chang | student               | learn R tips             |
+| Catherine       | UQ/QUT                | profvis                  |
+| Haileyesus      | HDR student at Gatton |                          |
+| Tianti          | HDR student at Gatton |                          |
+| Aprezo          |                       |                          |
+| Rodrigo         | HDR at SAFS           |                          |
+| Lamees          |                       |                          |
+| Stéphane        | Library               | Here to help and present |
+
+## Questions and shared resources
+
+### Does the computer go to sleep while executing code that takes ages?
+
+-   RStudio should inhibit sleep until finished (as *should* any app that executes code)
+
+<!-- -->
+
+-   But we can change power saving options in OS settings, to be extra sure (if the computer is sleeping, computation is halted and only resumes once waking it up).
+
+<!-- -->
+
+-   We can use the {tictoc} package, and its tic() and toc() functions to time a process (or profvis):
+
+``` R
+# time script
+library(tictoc)
+tic()
+diamonds |> 
+  # filter out cheaper diamonds
+  filter(price > 500) |>
+  # sort by carat
+  arrange(carat) |> 
+  # how big is each carat group?
+  group_by(carat) |> 
+  mutate(carat_group_size = n()) |>
+  # convert price to AUD
+  mutate(price = usd_to_aud(price))
+toc()
+```
+
+### Is `group_by()` similar to `reshape()` ?
+
+Base R's reshape() is equivalent to `pivot_longer()` and `pivot_wider()`, from the package {tidyr}, in the Tidyverse. See <https://rstudio.github.io/cheatsheets/tidyr.pdf> for a visual of what they do
+
+On the other hand, `group_by()` changes the scope of operation (for example, summarising per group rather than the whole dataset).
+
+``` R
+# summarise whole column to single value
+diamonds |> 
+  summarise(mean(price))
+
+# summarise per group:
+diamonds |> 
+  group_by(color) |> 
+  summarise(mean(price))
+
+# group by two variables
+diamonds |> 
+  group_by(color, cut) |> 
+  summarise(mean(price))
+# "peels off" the last grouping at each summarising operation
+```
+
+### Transitioning from SPSS and Stata to R
+
+The {haven} package is useful for importing data from both SPSS and Stata.
+
+Recommended resources to get started:
+
+-   Library courses! <https://web.library.uq.edu.au/study-and-learning-support/training-and-workshops/online-and-person-workshops>
+
+<!-- -->
+
+-   If you can't make it, here's the Heatmaps session recording: <https://www.youtube.com/watch?v=V-IRkO4NIHU>
+
+-   *R Graphics Cookbook*: <https://r-graphics.org/>
+
+<!-- -->
+
+-   *R 4 Data Science* book: <https://r4ds.hadley.nz/>
+
+<!-- -->
+
+-   *Data Visualization with R*, course by Andrew Weiss: <https://datavizf24.classes.andrewheiss.com/>
+
+### Interactive 3D map with tmap.mapgl
+
+For a bit of fun, example of getting data from OSM and rendering 3D buildings with a {tmap} extension that makes use of the maplibre library:
+
+``` R
+# get vector buildings for UQ, St Lucia
+library(osmdata)
+buildings <- opq(bbox = "UQ, St Lucia") |>
+  add_osm_feature(key = "building") |>
+  osmdata_sf()
+
+library(dplyr)
+# only keep polygons
+buildings_poly <- buildings$osm_polygons |>
+  # convert height and levels from string to numeric
+  mutate(levels = as.numeric(`building:levels`),
+         # if height column does not exist, fill it with NA
+         height = if ("height" %in% colnames(buildings$osm_polygons)) as.numeric(height) else NA_real_) |>
+  # assume 2 levels if NA
+  mutate(levels = if_else(is.na(levels), 2, levels),
+         # assume height of 3 m per level if no height
+         height = if_else(is.na(height), levels * 3, height))
+
+# visualise
+library(tmap)
+library(tmap.mapgl)
+tmap_mode("maplibre")
+tm_shape(buildings_poly) +
+  tm_polygons_3d(height = "height",
+                 options = opt_tm_polygons_3d(
+                   height.max = max(buildings_poly$height))
+                 ) +
+  tm_maplibre(pitch = 45)
+```
+
+![Static screenshot the interactive map](images/clipboard-2753904182.png){fig-alt="angle view of grey 3D buildings laid on top of an OSM basemap, showing UQ's St Lucia campus"}
+
+## Shared resources
+
+Resources shared during the meeting.
+
+-   Hacky Hour, 3-4 pm every Tuesday (online)
+
+    -   <https://rcc.uq.edu.au/training-support/meetups>
+
+    -   ask us for the Zoom link!
