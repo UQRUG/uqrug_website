@@ -1,0 +1,28 @@
+---
+title: 'August 27th – UQRUG Drop-in + tinyplot'
+author: 'Stéphane Guillou'
+date: '2025-08-27'
+slug: aug2025
+categories:
+  - workshop
+tags: [R, drop-in, help, tinyplot, visualisation, dataviz]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, Stéphane will be providing an overview of the [tinyplot](https://grantmcdermott.com/tinyplot/) data visualisation package: a powerful, lightweight alternative to base R plots and ggplot2.
+
+Drop in, and bring your questions as well as your latest creations and great resources you've discovered!
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> ![tinyplot logo](tinyplot.svg){style="margin-right:-0.2em;" width="87"}
+
+</p>
+
+**When** Wednesday 27th of August 2025, 12 - 2pm
+
+**Where** St Lucia, Central Library in Duhig North (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5888980)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
