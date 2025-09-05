@@ -29,11 +29,12 @@ metadata-files:
     }
 </script>
 ```
+
 UQRUG is a **gathering for R users of all skills**, to help each other solve problems, to share resources and tips, and to simply hang out with a nice community.
 
 ### When do we meet?
 
-We meet **every last Wednesday of the month** 12-2 pm, online and in person: sign up to the next event by searching for UQRUG on the [Library training page](https://web.library.uq.edu.au/library-services/training)
+We meet **every last Thursday of the month** 10-12 pm, online and in person: sign up to the next event by searching for UQRUG on the [Library training page](https://web.library.uq.edu.au/library-services/training)
 
 ### How do I get the Zoom link?
 
