@@ -1,0 +1,195 @@
+---
+title: UQRUG 64
+draft: false
+editor: visual
+date: '2025-08-27'
+description: '**Overview**: tinyplot<br /> **Questions**: xlsx, publishing, pdf, GAM, genAI, date as quarter'
+categories: meeting
+toc: true
+toc-depth: 5
+echo: true
+eval: false
+---
+
+## Topic: lightweight visualisations with tinyplot
+
+-   tinyplot website: <https://grantmcdermott.com/tinyplot/>
+-   Recording of the presentation: <https://www.youtube.com/watch?v=xwGkYBU67PU>
+
+Script written during the presentation:
+
+``` r
+# base R is powerful
+# but:
+# - obscure argument names
+# - arguments buried into other functions
+# - needs lots of tinkering for some plots
+
+# tinyplot is an extension to base plots
+
+# base R plot
+plot(1:10)
+barplot()
+hist()
+#...
+
+View(penguins)
+# base R
+plot(bill_len ~ flipper_len, data = penguins)
+
+# tinyplot equivalent
+library(tinyplot)
+tinyplot(bill_len ~ flipper_len, data = penguins)
+# can use the alias plt()
+plt(bill_len ~ flipper_len, data = penguins)
+# group it by species
+plt(bill_len ~ flipper_len | species, data = penguins)
+
+# ggplot2 equivalent
+library(ggplot2)
+ggplot(penguins,
+       aes(flipper_len, bill_len, colour = species)) +
+  geom_point()
+
+# change the shape with pch
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    pch = 20)
+# shapes?
+?pch
+# documentation
+?plot
+?tinyplot
+# use any character
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    pch = c("A", "C", "😄"))
+
+# color palettes
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    pch = 20,
+    palette = "Dark2")
+# what palettes are available?
+palette.pals()
+hcl.pals()
+
+# theming
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    pch = 20,
+    palette = "Dark2",
+    grid = TRUE, frame = FALSE)
+
+# apply a persistent theme
+tinytheme("clean2")
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    pch = 20)
+
+# faceting
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    facet = island)
+
+# types
+plt( ~ flipper_len | species,
+     data = penguins,
+     type = "density",
+     fill = "by")
+# histogram instead
+plt( ~ flipper_len | species,
+     data = penguins,
+     type = "histogram",
+     fill = "by")
+# does not stack the bars by default!
+plt( ~ flipper_len | species,
+     data = penguins,
+     type = "histogram")
+# boxplot
+plt(bill_len ~ species,
+    data = penguins,
+    type = "boxplot")
+# violin
+plt(bill_len ~ species,
+    data = penguins,
+    type = "violin")
+# linear model
+plt(bill_len ~ flipper_len | species,
+    data = penguins,
+    type = "lm")
+
+# layering
+plt(bill_len ~ flipper_len | species,
+    data = penguins)
+plt_add(type = "lm")
+```
+
+## Attendees
+
+| Name | Where are you from? | What brings you here? |
+|------------------------|------------------------|------------------------|
+| ? | final year PhD | tinyplot |
+| Val | 1st year PhD on volcanic eruption triggers | learn R for research |
+| Haileyesus | HDR student at Gatton |  |
+| David | RCC |  |
+| Angel |  |  |
+| Harsimran |  |  |
+| Man | School of Dentistry, 2nd year PhD |  |
+| Kan |  |  |
+| Stéphane | Library | Here to help and present |
+
+## Questions and shared resources
+
+### Write several data.frames to Excel file (into sheets)
+
+Use writexl, which exports a list of dataframes to a multi-sheet workbook. For example:
+
+``` r
+library(writexl)
+write_xlsx(list(penguins1 = penguins,
+                penguins2 = penguins),
+           path = "test.xlsx")
+```
+
+### Publish article as pdf or other?
+
+Use Quarto, which comes with RStudio: <https://quarto.org/>
+
+Quarto training often run at the Library: <https://web.library.uq.edu.au/study-and-learning-support/training-and-workshops/online-and-person-workshops#keyword=rstudio;campus=;weekstart=>
+
+Quarto can create articles, books, websites, slide decks, dashboards.... and publish them on Quarto.Pub, see for example: <https://stragu.quarto.pub/rodents-report/>
+
+### Help with / course on GAM
+
+-   Data Science CRP has support and stats courses: <https://research-support.uq.edu.au/resources-and-support/facilities-and-infrastructure/data-science-collaborative-research-platform>
+-   For HMBS: <https://research-support.uq.edu.au/research-support/researcher-development/statistical-support>
+-   Online course: <https://noamross.github.io/gams-in-r-course/>
+-   Same person, shorter course: <https://rstudio-pubs-static.s3.amazonaws.com/849498_ad97788983c043c0beba4c360058a7ea.html>
+
+### Using assistance from genAI, and reducing dependencies
+
+Lealem uses Copilot to learn, reduce the size of code, explain sections, and points it to the packages he wants it to stick to (to reduce dependencies and to make the code more easily understandable.
+
+### Import date as quarter without needing Zoo?
+
+> I always have to use `zoo::as.yearqtr()` after importing data. How can I import directly as the right data type?
+
+-   `readr::read_csv()` does not seem to support year quarters as a data type for its col_types specification.
+-   have to use zoo, or possibly the options offered by `lubridate::quarter()` if one wants to stick to the tidyverse, to convert to quarters.
+
+``` r
+library(lubridate)
+a_date <- lubridate::date("2025-08-27")
+a_quarter <- quarter(a_date)
+class(a_quarter) # just an integer! but other options:
+a_quarter <- quarter(a_date, type = "year.quarter")
+class(a_quarter) # numeric
+a_quarter <- quarter(a_date, type = "date_first")
+class(a_quarter) # Date
+a_quarter <- quarter(a_date, type = "year_start/end")
+class(a_quarter) # character
+library(zoo)
+zoo::as.yearqtr(lubridate::date("2025-08-27")) |> class()
+# different class to lubridate's
+```

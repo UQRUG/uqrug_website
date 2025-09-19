@@ -1,0 +1,30 @@
+---
+title: 'September 25th – UQRUG Drop-in + genAI for coding'
+author: 'Stéphane Guillou'
+date: '2025-09-25'
+slug: sep2025
+categories:
+  - workshop
+tags: [R, drop-in, help, genAI, AI, coding assistant, pair programming, copilot]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, **Lealem Amenu** will share his experience and recommendations on **how to use genAI (and Copilot specifically) to help with writing R code**.
+
+Drop in, and bring your questions as well as your latest creations and great resources you've discovered!
+
+Note that starting this month, UQRUG happens every **last Thursday of the month, 10 am - 12 pm**.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When** Thursday 25th of September 2025, 10 am - 12 pm
+
+**Where** St Lucia, Central Library in Duhig North (12), Training room **12-N109**, and on Zoom
+
+Sign up to the next event on the [Library training page](https://studenthub.uq.edu.au/students/events/detail/5897007)
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
