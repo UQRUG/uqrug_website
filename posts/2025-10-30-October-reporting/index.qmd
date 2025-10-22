@@ -1,0 +1,36 @@
+---
+title: 'October 30th – UQRUG Drop-in + Data Manipulation, Tabling and Reporting R'
+author: 'Stéphane Guillou'
+date: '2025-10-30'
+slug: oct2025
+categories:
+  - workshop
+tags: [R, drop-in, help, dplyr, kableExtra, reporting, R Markdown, tables, data manipulation]
+DisableComments: no
+---
+
+Before we jump into our help session for everyone to ask questions, **Kar** will present about data manipulation, creating tables and compiling everything into reports. In Kar's words:
+
+> **Data Manipulation, Tabling and Reporting with R: dplyr, kableExtra, and RMarkdown**
+>
+> I will share how I use prestigious functions in the *dplyr* package for data manipulation, along with layering techniques for the *kableExtra* package to create polished tables in an R Markdown report.
+>
+> This is Kar, a senior anti-money laundering data analyst for the Bank of Queensland (BOQ). R has been my best buddy for 8 years for DA and DS, I also run R training sessions at BOQ for BOQ data science community as a R facilitator.
+
+Drop in, and bring your questions as well as your latest creations and great resources you've discovered!
+
+Note that since last month, UQRUG happens every **last Thursday of the month, 10 am - 12 pm**.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When:** Thursday 30th of October 2025, 10 am - 12 pm
+
+**Where:** St Lucia, Central Library in Duhig North (12), Training room **12-N109**, and on Zoom
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/5913961).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
