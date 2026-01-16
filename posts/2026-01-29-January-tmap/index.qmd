@@ -1,0 +1,30 @@
+---
+title: 'January 29th – UQRUG and R Intensive + tmap'
+author: 'Stéphane Guillou'
+date: '2026-01-16'
+slug: jan2026
+categories:
+  - workshop
+tags: [R, drop-in, help, tmap, gis, intensive, R spatial]
+DisableComments: no
+---
+
+This month, the participants in the Library's [R Intensive](https://uqlibrary.github.io/technology-training-intensives/r/setup.html) meet RUG!
+
+Nick will start with a quickfire intro to visualising spatial data with [tmap](https://r-tmap.github.io/tmap/), before we do our usual collaborative help session.
+
+As the R Intensive runs all day that day, RUG will happen at the same time. This is an opportunity to welcome our new R users to RUG, and still bring a question and share helpful resources if you have them!
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/>
+
+</p>
+
+**When:** Thursday 29th of January 2026, 10 am - 11 am
+
+**Where:** on Zoom
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6119426).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
