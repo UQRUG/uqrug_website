@@ -1,5 +1,5 @@
 ---
-title: 'February 26th – UQRUG and R Intensive + tmap'
+title: 'February 26th – UQRUG Drop-in + Positron'
 author: 'Stéphane Guillou'
 date: '2026-02-24'
 slug: feb2026
