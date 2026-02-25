@@ -1,0 +1,28 @@
+---
+title: 'February 26th – UQRUG and R Intensive + tmap'
+author: 'Stéphane Guillou'
+date: '2026-02-24'
+slug: feb2026
+categories:
+  - workshop
+tags: [R, drop-in, help, Positron, IDE, Posit]
+DisableComments: no
+---
+
+This month's RUG is a quick intro to **Positron**, followed by our usual drop-in, collaborative session.
+
+[Positron](https://positron.posit.co) is an Integrated Development Environment (IDE) developed by Posit (ex-RStudio) and based on VS Code. It can be seen as the successor to RStudio. You can download and install it before the event if you want to follow along.
+
+<p float="left">
+
+<img src="https://uqrug.netlify.app/uqrug.png" height="100" style="margin-right:-0.2em;"/> ![Positron logo](positron.png){style="margin-right:-0.2em;" width="87"}
+
+</p>
+
+**When:** Thursday 26th of February 2026, 10 am - 12 pm
+
+**Where:** in person (Central Library, St Lucia campus) or online (Zoom)
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6190074).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
