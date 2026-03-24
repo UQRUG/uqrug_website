@@ -1,0 +1,78 @@
+---
+title: UQRUG 68
+draft: false
+editor: source
+date: '2026-02-26'
+description: '**Overview**: Positron<br /> **Questions**: ...'
+categories: meeting
+toc: true
+toc-depth: 5
+echo: true
+eval: false
+---
+
+## Topic: Positron
+
+-   [Positron website](https://positron.posit.co/)
+-   [Report Positron issues on GitHub](https://github.com/posit-dev/positron/issues)
+-   [Recording of the presentation](https://youtu.be/Qn8MOEisYAU)
+
+Script written during the presentation:
+
+``` r
+#### Introducing Positron ####
+
+num1 <- 42
+# Ctrl + Enter: run from script
+# Alt + -: assignment operator
+
+# Ctrl + Shift + M: pipe
+my_nums <- 2.345 |> 
+  round(digits = 2) |> 
+  rep.int(10)
+
+# F1: help pages
+
+# define a function
+greeter <- function (name) {
+  paste("Hello", name, "!")
+}
+
+greeter("Nick")
+
+# some things still don't work as well: this opens in a separate window
+data()
+# also: no "Packages" tab to manage and install them
+
+# load some data
+library(ggplot2)
+data(msleep)
+msleep
+
+# plot
+p <- ggplot(msleep, aes(sleep_total, sleep_rem, colour = vore)) +
+  geom_point()
+p
+
+# interactive
+library(plotly)
+ggplotly(p)
+
+#### headings do work! ####
+
+#### command palette ####
+
+# ctrl + shift + P
+
+# integrates Git and Quarto!
+```
+
+## Attendees
+
+| Name     | Where are you from? | What brings you here?    |
+|----------|---------------------|--------------------------|
+| Clarissa | APS (Canberra)      | Keep up to date with R   |
+| Cameron  | Library / SMP       | Learn and help a little  |
+| Sandhya  | SMP                 |                          |
+| Nick     | Library             | Here to help and learn   |
+| Steph    | Library             | Here to help and present |

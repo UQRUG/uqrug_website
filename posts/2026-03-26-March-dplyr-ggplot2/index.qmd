@@ -12,7 +12,9 @@ DisableComments: no
 For this month's RUG, we will give a quick update on the **latest features in ggplot2 and dplyr**. We will follow with our usual drop-in, collaborative session.
 
 <p float="left">
-![dplyr logo](/images/uqrug.png){style="margin-right:-0.2em;" height="100"} ![dplyr logo](https://dplyr.tidyverse.org/logo.png){style="margin-right:-0.2em;" height="100"} ![ggplot2 logo](https://ggplot2.tidyverse.org/){style="margin-right:-0.2em;" height="100"}
+
+<img src="/images/uqrug.png" alt="RUG logo" height="100" hspace="5" vspace="5"/> <img src="https://dplyr.tidyverse.org/logo.png" alt="dplyr logo" height="100" hspace="5" vspace="5"/> <img src="https://ggplot2.tidyverse.org/logo.png" alt="ggplot2 logo" height="100" hspace="5" vspace="5"/>
+
 </p>
 
 **When:** Thursday 26th of March 2026, 10 am - 12 pm
