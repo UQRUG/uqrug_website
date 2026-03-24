@@ -12,7 +12,11 @@ In this blog:
 -   The `meetings/` directory is for meeting notes, published after the event took place. The `date` value in the `.qmd` source is when the event took place.
 -   The `presentations/` directory is for storing slideshows and other documents prepared for an event, that can later on be embedded into other posts. (See [this post](posts/2023-08-30-August-Stats/index.qmd) for an example iframe.)
 
-Once a post is modified, or a new post is added, it needs to be rendered locally. This can be done with the command `quarto render` or RStudio's "Render Website" button in the "Build" tab.
+Once a post is modified, or a new post is added, it needs to be rendered locally. This can be done with either of:
+
+* the command `quarto render`
+* RStudio's "Render Website" button in the "Build" tab
+* Positron's "Preview" button above the editor
 
 ## Code of Conduct
 
