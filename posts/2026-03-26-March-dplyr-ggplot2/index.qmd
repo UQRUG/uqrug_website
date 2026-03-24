@@ -1,0 +1,24 @@
+---
+title: "March 26th – What's new in ggplot2 and dplyr"
+author: 'Stéphane Guillou'
+date: '2026-03-24'
+slug: mar2026
+categories:
+  - workshop
+tags: [R, drop-in, help, ggplot2, dplyr]
+DisableComments: no
+---
+
+For this month's RUG, we will give a quick update on the **latest features in ggplot2 and dplyr**. We will follow with our usual drop-in, collaborative session.
+
+<p float="left">
+![dplyr logo](/images/uqrug.png){style="margin-right:-0.2em;" height="100"} ![dplyr logo](https://dplyr.tidyverse.org/logo.png){style="margin-right:-0.2em;" height="100"} ![ggplot2 logo](https://ggplot2.tidyverse.org/){style="margin-right:-0.2em;" height="100"}
+</p>
+
+**When:** Thursday 26th of March 2026, 10 am - 12 pm
+
+**Where:** in person (Central Library, St Lucia campus) or online (Zoom)
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6246549).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
