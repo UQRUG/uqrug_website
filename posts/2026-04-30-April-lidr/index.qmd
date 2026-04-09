@@ -13,7 +13,7 @@ For this month's RUG, Nick will give an overview of **lidR and lasR**, and explo
 
 <p float="left">
 
-<img src="/images/uqrug.png" alt="RUG logo" height="100" hspace="5" vspace="5"/> <img src="https://raw.githubusercontent.com/r-lidar/lidR/master/man/figures/logo200x231.png" alt="lidR logo" height="100" hspace="5" vspace="5"/> <img src="https://raw.githubusercontent.com/r-lidar/lasR/refs/heads/main/man/figures/lasR200x231.png" alt="lasR logo" height="100" hspace="5" vspace="5"/>
+<img src="/images/uqrug.png" alt="RUG logo" height="100" hspace="5" vspace="5"/> ![R-Lidar logo](r-lidar.png){style="margin-right:-0.2em;" width="87"} <img src="https://raw.githubusercontent.com/r-lidar/lidR/master/man/figures/logo200x231.png" alt="lidR logo" height="100" hspace="5" vspace="5"/> <img src="https://raw.githubusercontent.com/r-lidar/lasR/refs/heads/main/man/figures/lasR200x231.png" alt="lasR logo" height="100" hspace="5" vspace="5"/>
 
 </p>
 
