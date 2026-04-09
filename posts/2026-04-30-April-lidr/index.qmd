@@ -1,0 +1,26 @@
+---
+title: "April 30th – LiDAR and 3D Point Clouds with lidR and lasR"
+author: 'Nicholas Wiggins'
+date: '2026-04-30'
+slug: apr2026
+categories:
+  - workshop
+tags: [R, drop-in, help, lidR, lasR, lidar, 3D, spatial, GIS, DEM, CHM, pointcloud]
+DisableComments: no
+---
+
+For this month's RUG, Nick will give an overview of **lidR and lasR**, and explore how you can use these to process and analyse LiDAR data to create spatial files like a DEM or CHM. We will follow with our usual drop-in, collaborative session.
+
+<p float="left">
+
+<img src="/images/uqrug.png" alt="RUG logo" height="100" hspace="5" vspace="5"/> <img src="https://raw.githubusercontent.com/r-lidar/lidR/master/man/figures/logo200x231.png" alt="lidR logo" height="100" hspace="5" vspace="5"/> <img src="https://raw.githubusercontent.com/r-lidar/lasR/refs/heads/main/man/figures/lasR200x231.png" alt="lasR logo" height="100" hspace="5" vspace="5"/>
+
+</p>
+
+**When:** Thursday 30th of April 2026, 10 am - 12 pm
+
+**Where:** in person (Central Library, St Lucia campus) or online (Zoom)
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6246549).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
