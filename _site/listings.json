@@ -69,6 +69,7 @@
   {
     "listing": "/events.html",
     "items": [
+      "/posts/2026-04-30-April-lidr/index.html",
       "/posts/2026-03-26-March-dplyr-ggplot2/index.html",
       "/posts/2026-02-26-February-positron/index.html",
       "/posts/2026-01-29-January-tmap/index.html",
@@ -107,6 +108,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-04-30-April-lidr/index.html",
       "/posts/2026-03-26-March-dplyr-ggplot2/index.html",
       "/posts/2026-02-26-February-positron/index.html",
       "/posts/2026-01-29-January-tmap/index.html",
