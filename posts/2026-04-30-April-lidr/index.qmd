@@ -22,6 +22,6 @@ For this month's RUG, Nick will give an overview of **lidR and lasR**, and explo
 
 **Where:** in person (Central Library, St Lucia campus) or online (Zoom)
 
-Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6246549).
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6252489).
 
 For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
