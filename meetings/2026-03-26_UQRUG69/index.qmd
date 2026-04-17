@@ -1,0 +1,197 @@
+---
+title: UQRUG 69
+draft: false
+editor: source
+date: '2026-03-26'
+description: '**Overview**: ggplot2 and dplyr news<br /> **Questions**: recoding, data structures, missing data, shell'
+categories: meeting
+toc: true
+toc-depth: 5
+echo: true
+eval: false
+---
+
+In March, 13 ruggers met to learn about what's new in the latest ggplot2 and dplyr major releases.
+
+## Topic: What's new in ggplot2 and dplyr?
+
+What are some of the main new features in ggplot2 4.0 and dplyr 1.2?
+
+[Recording of the presentation](https://youtu.be/B0EeA15IeUQ)
+
+Script written during the presentation:
+
+``` r
+#### ggplot2 4.0 ####
+
+library(ggplot2)
+
+#### themes ####
+
+# originally:
+ggplot(penguins, aes(x = bill_len, y = flipper_len)) +
+  geom_point(colour = "brown") +
+  geom_density2d(colour = "orange") +
+  geom_smooth(colour = "orange") +
+  theme_minimal() +
+  theme(plot.background = element_rect(fill = "beige"))
+
+# now, you can use "paper", "ink" and "accent":
+ggplot(penguins, aes(x = bill_len, y = flipper_len)) +
+  geom_point() +
+  geom_density2d() +
+  geom_smooth() +
+  theme_minimal(paper = "beige",
+                ink = "brown",
+                accent = "orange")
+
+# define geometry options into the theme
+ggplot(penguins, aes(x = species, y = body_mass)) +
+  geom_jitter() +
+  geom_boxplot() +
+  theme(geom = element_geom(ink = "pink",
+                            paper = "purple"))
+
+# aside: styling changes in geometries
+ggplot(penguins, aes(x = species, y = body_mass)) +
+  geom_jitter() +
+  geom_boxplot(box.linewidth = 3,
+               whisker.colour = "black") +
+  theme(geom = element_geom(ink = "pink",
+                            paper = "purple"))
+
+# other geoms have styling updates. We always could apply gradient to points:
+ggplot(economics, aes(date, unemploy, colour = uempmed)) +
+  geom_point()
+# now you can also for an area geom:
+ggplot(economics, aes(date, unemploy, fill = uempmed)) +
+  geom_area()
+# other styling updates: violin, ribbon, label
+
+# back to themes
+# distinction between borders and lines:
+ggplot(penguins, aes(x = bill_len, y = flipper_len)) +
+  geom_bin2d(bins = 10, colour = "black") +
+  geom_smooth() +
+  # change the direction of filling with facets
+  facet_wrap(vars(species), dir = "br") +
+  theme(geom = element_geom(borderwidth = 0.5,
+                            linewidth = 2),
+        # change the palette in the theme:
+        palette.colour.continuous = c("pink", "purple")) +
+  # fixed size for panels:
+  theme_sub_panel(widths = unit(1:3, "cm"))
+# different to the size of image in ggsave()!
+
+#### labels ####
+
+# column labels:
+attr(penguins$flipper_len, "label") <- "Flipper length (cm)"
+# see it
+penguins$flipper_len
+
+# now used automatically for titles on the plot:
+ggplot(penguins, aes(y = bill_len, x = flipper_len)) +
+  geom_bin2d(bins = 10, colour = "black") +
+  geom_smooth()
+# labs(dictionary = ...) also works if they are stored in a separate table
+
+#### scale breaks ####
+ggplot(penguins, aes(y = bill_len, x = flipper_len)) +
+  geom_bin2d(bins = 10, colour = "black") +
+  geom_smooth() +
+  scale_x_continuous(breaks = c("two hundred" = 200,
+                                "thirty more" = 230))
+
+#### aesthetics in positions of geometry ####
+
+ggplot(penguins, aes(x = species, fill = island)) +
+  geom_bar(position = position_dodge2(preserve = "single"))
+
+#### dplyr ####
+
+library(dplyr)
+
+#### filter_out() ####
+penguins |> 
+  as_tibble() |> 
+  filter(species != "Adelie")
+# now, we can use filter_out():
+penguins |> 
+  as_tibble() |> 
+  filter_out(species == "Adelie")
+
+# filter() is for keeping rows, it drops NAs
+# filter_out() is for removing rows, it KEEPS NAs.
+
+#### recoding / replacing ####
+
+# in addition to case_when(), we now have more functions to recode and replace values.
+
+# recode: create a new column based on an existing one
+# replace: replace values in existing column
+
+# original:
+recoded <- penguins |> 
+  mutate(spec_short = case_when(species == "Adelie" ~ "Ad",
+                                species == "Gentoo" ~ "Gen",
+                                species == "Chinstrap" ~ "Chin"))
+# with recode_values() instead:
+recoded <- penguins |> 
+  mutate(spec_short = recode_values(species,
+                                    "Adelie" ~ "Ad",
+                                    "Gentoo" ~ "Gen",
+                                    "Chinstrap" ~ "Chin"))
+```
+
+Here are the corresponding blog posts to learn more about these releases:
+
+-   [ggplot2](https://tidyverse.org/blog/2025/09/ggplot2-4-0-0)
+-   [dplyr](https://tidyverse.org/blog/2026/02/dplyr-1-2-0/)
+
+## Questions
+
+We also discussed recoding variable a bit further, as well as R data structure / types, dealing with missing data, and executing shell commands from R:
+
+```r
+# recode body mass into categorical variable
+range(penguins$body_mass, na.rm = TRUE)
+
+# from continuous to discrete
+categorised <- penguins |> 
+  mutate(mass_cat = case_when(body_mass < 3000 ~ "light",
+                              body_mass < 5000 ~ "mid",
+                              is.na(body_mass) ~ NA,
+                              .default = "heavy"),
+         .after = body_mass)
+
+# dealing with NAs
+library(tidyr)
+replace_na(penguins, list(body_mass = 0,
+                          bill_dep = mean(penguins$bill_dep,
+                                          na.rm = TRUE)))
+
+# vectors:
+single_value <- 1
+my_vector <- c(1, 5, 3, NA, 1)
+typeof(my_vector)
+my_vector[5] <- 1.45
+# convert to a different type:
+my_int_vector <- as.integer(my_vector)
+my_int_vector[5] <- 1.45 # silently converts to double
+
+# matrices:
+matrix(1:10, 2)
+
+# list: more flexible
+my_list <- list(my_vector,
+                penguins,
+                another_number = 1,
+                list(1, 2, 5, "a string"))
+
+# technically, a dataframe is a list
+# (of vectors of same length)
+
+# run bash/shell script from R:
+system("echo 'hi'")
+```

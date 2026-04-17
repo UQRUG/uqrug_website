@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>UQRUG – stats</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-091ebfb71d12db7fc524ec91495e1509.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-327cab17de08e4a17faa7d61f48ae591.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -218,7 +218,7 @@
 </section>
 <section id="load-the-libraries-and-data" class="slide level2">
 <h2>Load the libraries and data</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co">#Packages and libraries</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co">#Packages and libraries</span></span>
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a></a><span class="fu">library</span>(lattice)</span>
 <span id="cb1-4"><a></a></span>
@@ -230,13 +230,13 @@
 <span id="cb1-10"><a></a></span>
 <span id="cb1-11"><a></a><span class="co">#Creating objects</span></span>
 <span id="cb1-12"><a></a>Y<span class="ot">&lt;-</span>mtcars<span class="sc">$</span>mpg</span>
-<span id="cb1-13"><a></a>X<span class="ot">&lt;-</span>mtcars<span class="sc">$</span>wt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a></a>X<span class="ot">&lt;-</span>mtcars<span class="sc">$</span>wt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="explore-the-data-structure" class="slide level2">
 <h2>Explore the data structure</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co">#Basic exploration of data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co">#Basic exploration of data</span></span>
 <span id="cb2-2"><a></a><span class="fu">View</span>(data1)</span>
-<span id="cb2-3"><a></a><span class="fu">str</span>(data1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a></a><span class="fu">str</span>(data1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   32 obs. of  11 variables:
@@ -257,7 +257,7 @@
 <section id="descriptive-statistics" class="slide level2">
 <h2>Descriptive statistics</h2>
 <p>The summary() function provides quick and easy descriptive statistics, and is useful initial step:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">summary</span>(data1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">summary</span>(data1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>      mpg             cyl             disp             hp       
@@ -287,20 +287,20 @@
 <section id="visualise-the-data" class="slide level2">
 <h2>Visualise the data</h2>
 <p>With histogram() we can quickly view the descriptive stats plots per variable</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">histogram</span>(Y) <span class="co"># the same as histogram(data$Y) or histogram(~Y,data)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">histogram</span>(Y) <span class="co"># the same as histogram(data$Y) or histogram(~Y,data)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <img data-src="stats_files/figure-revealjs/Visualise the data-1.png" width="960" class="r-stretch"></section>
 <section id="visualise-the-data-1" class="slide level2">
 <h2>Visualise the data</h2>
 <p>Box and whisker plots are another useful way to visualise our data spread quickly and easily with bwplot()</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">bwplot</span>(Y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">bwplot</span>(Y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <img data-src="stats_files/figure-revealjs/Box and Whisker Plot-1.png" width="960" class="r-stretch"></section>
 <section id="inferential-statistics" class="slide level2">
 <h2>Inferential statistics</h2>
 <p>The classic two sample t-test can easily be run with the t.test() function</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co">#two sample t-test</span></span>
-<span id="cb8-2"><a></a><span class="fu">t.test</span>(time<span class="sc">~</span>daytime,data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co">#two sample t-test</span></span>
+<span id="cb8-2"><a></a><span class="fu">t.test</span>(time<span class="sc">~</span>daytime,data2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -320,16 +320,16 @@ mean in group 1 mean in group 2
 <section id="anova-visualisation" class="slide level2">
 <h2>ANOVA visualisation</h2>
 <p>Before we run the ANOVA test, it can be a good idea to visualise our data with a boxplot, which ggplot2 also has</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#ANOVA aov(Y ~ X, data)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#ANOVA aov(Y ~ X, data)</span></span>
 <span id="cb10-2"><a></a><span class="fu">ggplot</span>(data3)<span class="sc">+</span></span>
 <span id="cb10-3"><a></a>  <span class="fu">aes</span>(mode, students, <span class="at">group =</span> mode)<span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <img data-src="stats_files/figure-revealjs/Visualise ANOVA-1.png" width="960" class="r-stretch"></section>
 <section id="anova" class="slide level2">
 <h2>ANOVA</h2>
 <p>An ANOVA is a good test to determine if the means of multiple independent variables are equal</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">summary</span>(<span class="fu">aov</span>(students<span class="sc">~</span>mode,<span class="at">data=</span>data3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">summary</span>(<span class="fu">aov</span>(students<span class="sc">~</span>mode,<span class="at">data=</span>data3))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>            Df Sum Sq  Mean Sq F value Pr(&gt;F)  
@@ -343,23 +343,23 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="correlation" class="slide level2">
 <h2>Correlation</h2>
 <p>Before running a corrlelation test, it is good to visualise the relationship of the data with a simple scatterplot such as the lattice xyplot()</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co">#Relationship</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co">#Relationship</span></span>
 <span id="cb13-2"><a></a><span class="co">#Scatterplot</span></span>
-<span id="cb13-3"><a></a><span class="fu">xyplot</span>(FXRUSD<span class="sc">~</span>FXREUR,data4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-3"><a></a><span class="fu">xyplot</span>(FXRUSD<span class="sc">~</span>FXREUR,data4)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <img data-src="stats_files/figure-revealjs/Visualise Relational Data-1.png" width="960" class="r-stretch"></section>
 <section id="correlation-1" class="slide level2">
 <h2>Correlation</h2>
 <p>We can now test for correlation using a Pearson or Spearman test</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#correlation (Pearson)</span></span>
-<span id="cb14-2"><a></a><span class="fu">cor</span>(data4<span class="sc">$</span>FXRUSD,data4<span class="sc">$</span>FXREUR,<span class="at">method=</span><span class="st">"pearson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#correlation (Pearson)</span></span>
+<span id="cb14-2"><a></a><span class="fu">cor</span>(data4<span class="sc">$</span>FXRUSD,data4<span class="sc">$</span>FXREUR,<span class="at">method=</span><span class="st">"pearson"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.933557</code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co">#correlation (Spearman)</span></span>
-<span id="cb16-2"><a></a><span class="fu">cor</span>(data4<span class="sc">$</span>FXRUSD,data4<span class="sc">$</span>FXREUR,<span class="at">method=</span><span class="st">"spearman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co">#correlation (Spearman)</span></span>
+<span id="cb16-2"><a></a><span class="fu">cor</span>(data4<span class="sc">$</span>FXRUSD,data4<span class="sc">$</span>FXREUR,<span class="at">method=</span><span class="st">"spearman"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.872435</code></pre>
@@ -368,8 +368,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 <section id="linear-regression" class="slide level2">
 <h2>Linear Regression</h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#linear regression</span></span>
-<span id="cb18-2"><a></a><span class="fu">lm</span>(FXRUSD<span class="sc">~</span>FXREUR,data4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#linear regression</span></span>
+<span id="cb18-2"><a></a><span class="fu">lm</span>(FXRUSD<span class="sc">~</span>FXREUR,data4)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -573,7 +573,7 @@ Coefficients:
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -723,13 +723,14 @@ Coefficients:
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,18 +70,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../images/uqrug_fav.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6e5a5027aec1b096cef8c6d9f890f2df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-cff3dccb75276adba07613a0a9f3573c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-6e5a5027aec1b096cef8c6d9f890f2df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6d8dc4c374486d17e02c64972b0e4c34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-588b957815940fe9c5d305acf9effd7d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6d8dc4c374486d17e02c64972b0e4c34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -288,7 +289,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../images/uqrug.png" alt="" class="navbar-logo">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/uqrug.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">UQRUG</span>
@@ -471,11 +473,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="q1---andy---problems-with-loading-packages" class="level4">
 <h4 class="anchored" data-anchor-id="q1---andy---problems-with-loading-packages">Q1 - Andy - Problems with loading packages</h4>
 <p>Previously, I never needed to install packages everytime I start RStudio. Now, it seems that I get these errors whenever I run a line of code such as:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(tidyverse)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">library</span>(tidyverse) <span class="sc">:</span> there is no package called ‘tidyverse’</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(dplyr)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Error<span class="sc">:</span> package or namespace load failed <span class="cf">for</span> ‘dplyr’ <span class="cf">in</span> <span class="fu">loadNamespace</span>(j <span class="ot">&lt;-</span> i[[<span class="dv">1</span>L]], <span class="fu">c</span>(lib.loc, <span class="fu">.libPaths</span>()), <span class="at">versionCheck =</span> vI[[j]])<span class="sc">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> namespace ‘lifecycle’ <span class="dv">1</span>.<span class="fl">0.0</span> is already loaded, but <span class="sc">&gt;=</span> <span class="dv">1</span>.<span class="fl">0.1</span> is required</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> namespace ‘lifecycle’ <span class="dv">1</span>.<span class="fl">0.0</span> is already loaded, but <span class="sc">&gt;=</span> <span class="dv">1</span>.<span class="fl">0.1</span> is required</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here’s an error that will appear when I try to install tidyverse: Execution halted ERROR: lazy loading failed for package ‘ggplot2’ removing ‘C:/Users/s4434877/Documents/R/win-library/4.0/ggplot2’</p>
 <p><strong>Answers</strong></p>
 <ul>
@@ -507,8 +509,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you" class="level4">
 <h4 class="anchored" data-anchor-id="q4---erda--would-like-to-ask-if-i-can-get-help-using-ggpicrust-package.-thank-you">Q4 - Erda- would like to ask if I can get help using ggpicrust package. thank you</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">ggpicrust2</span>(<span class="at">data =</span> abundance_data, <span class="at">metadata =</span> metadata_Nepal_kath,  <span class="sc">:</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Notice<span class="sc">:</span> There are no statistically significant biomarkers <span class="cf">in</span> the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance <span class="fu">threshold</span> (p<span class="sc">&lt;=</span><span class="fl">0.05</span>). You may refer to the tutorial<span class="st">'s FAQ for further help and suggestions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="fu">ggpicrust2</span>(<span class="at">data =</span> abundance_data, <span class="at">metadata =</span> metadata_Nepal_kath,  <span class="sc">:</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Notice<span class="sc">:</span> There are no statistically significant biomarkers <span class="cf">in</span> the dataset. This is not an error, but it might indicate that the data do not contain any biomarkers passing the set significance <span class="fu">threshold</span> (p<span class="sc">&lt;=</span><span class="fl">0.05</span>). You may refer to the tutorial<span class="st">'s FAQ for further help and suggestions</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Answers</strong></p>
 <ul>
 <li>Look through the FAQ and Issues on the github, and if those don’t help, raise an issue yourself. https://github.com/cafferychen777/ggpicrust2</li>
@@ -527,8 +529,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes" class="level4">
 <h4 class="anchored" data-anchor-id="q6---elegant-way-to-paste-windows-paths-in-r-by-reversing-the-slashes">Q6 - Elegant way to paste windows paths in R by reversing the slashes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>snippet pp</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"`r gsub('"', "", gsub("</span><span class="sc">\\\\</span><span class="st">", "/", readClipboard()))`"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>snippet pp</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"`r gsub('"', "", gsub("</span><span class="sc">\\\\</span><span class="st">", "/", readClipboard()))`"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Copied from Josh Gilfillan at <a href="https://stackoverflow.com/a/39989341">stackoverflow</a></p>
 <hr>
@@ -603,13 +605,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

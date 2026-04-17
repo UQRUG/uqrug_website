@@ -1,7 +1,7 @@
 ---
 title: "April 30th – LiDAR and 3D Point Clouds with lidR and lasR"
 author: 'Nicholas Wiggins'
-date: '2026-04-30'
+date: '2026-04-09'
 image: "r-lidar.png"
 slug: apr2026
 categories:

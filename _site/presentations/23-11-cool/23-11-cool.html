@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>UQRUG – UQRUG Presents: Cool But Useless</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -311,7 +311,7 @@
 </div>
 </div>
 <div id="tabset-1-2">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Packages</span></span>
 <span id="cb1-2"><a></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-4"><a></a><span class="fu">library</span>(ggthemes)</span>
@@ -378,7 +378,7 @@
 <span id="cb1-65"><a></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
 <span id="cb1-66"><a></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>()</span>
 <span id="cb1-67"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb1-68"><a></a>  <span class="fu">transition_reveal</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-68"><a></a>  <span class="fu">transition_reveal</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -387,15 +387,15 @@
 <section id="beepr" class="slide level2">
 <h2>beepr</h2>
 <p>This package will play a sound.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("beepr")</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("beepr")</span></span>
 <span id="cb2-2"><a></a><span class="fu">library</span>(beepr)</span>
 <span id="cb2-3"><a></a><span class="fu">beep</span>(<span class="dv">1</span>)</span>
-<span id="cb2-4"><a></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a></a><span class="fu">beep</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I actually use this at the end of a long piece of code so I know when it’s done. But I have a useless example on the next slide</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="cf">repeat</span>{</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="cf">repeat</span>{</span>
 <span id="cb3-2"><a></a>  <span class="co"># statement to be executed multiple times</span></span>
 <span id="cb3-3"><a></a>  <span class="fu">print</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%I:%M %p'</span>))</span>
 <span id="cb3-4"><a></a>  <span class="co"># checking the stop condition</span></span>
@@ -415,7 +415,7 @@
 <span id="cb3-18"><a></a>  <span class="fu">Sys.sleep</span>(<span class="dv">60</span><span class="sc">-</span><span class="fu">as.numeric</span>(<span class="fu">format</span>(<span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>()), <span class="at">format =</span> <span class="st">'%OS'</span>)))</span>
 <span id="cb3-19"><a></a>  </span>
 <span id="cb3-20"><a></a>  </span>
-<span id="cb3-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-21"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="carelesswhisper" class="slide level2">
 <h2>Carelesswhisper</h2>
@@ -429,7 +429,7 @@
 <p>Just you wait</p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># install.package('remotes')</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># install.package('remotes')</span></span>
 <span id="cb4-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/carelesswhisper'</span>)</span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a><span class="fu">library</span>(carelesswhisper)</span>
@@ -449,7 +449,7 @@
 <span id="cb4-18"><a></a></span>
 <span id="cb4-19"><a></a><span class="co"># export and import the audio file</span></span>
 <span id="cb4-20"><a></a><span class="fu">saveRDS</span>(snd, <span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span>
-<span id="cb4-21"><a></a>recording <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-21"><a></a>recording <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">"my_recording.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="cowsay" class="slide level2">
@@ -479,13 +479,13 @@ Cowsay will create an ascii creature saying what you want it to
 </section>
 <section id="cowsay-carelesswhisper" class="slide level2">
 <h2>Cowsay + Carelesswhisper</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">30100</span>)</span>
-<span id="cb6-2"><a></a><span class="fu">say</span>(snd_text, <span class="st">"random"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(snd, <span class="at">rate =</span> <span class="dv">30100</span>)</span>
+<span id="cb6-2"><a></a><span class="fu">say</span>(snd_text, <span class="st">"random"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="rsoundfont" class="slide level2">
 <h2>rsoundfont</h2>
 <p>Want to play musical instruments with R?</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># install.package('remotes')</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># install.package('remotes')</span></span>
 <span id="cb7-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/rsoundfont'</span>)</span>
 <span id="cb7-3"><a></a></span>
 <span id="cb7-4"><a></a><span class="fu">library</span>(rsoundfont)</span>
@@ -518,17 +518,17 @@ Cowsay will create an ascii creature saying what you want it to
 <span id="cb7-31"><a></a><span class="fu">Sys.sleep</span>(<span class="fl">0.5</span>)</span>
 <span id="cb7-32"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo E4"</span> , <span class="dv">1</span>))</span>
 <span id="cb7-33"><a></a><span class="fu">Sys.sleep</span>(.<span class="dv">9</span>)</span>
-<span id="cb7-34"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-34"><a></a>audio<span class="sc">::</span><span class="fu">play</span>(<span class="fu">create_sample</span>(sf, <span class="st">"KBJ100 Banjo C4"</span> , <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="wordle" class="slide level2">
 <h2>Wordle</h2>
 <p>Want to play Wordle in R?</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># install.packages('remotes')</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># install.packages('remotes')</span></span>
 <span id="cb8-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'coolbutuseless/wordle'</span>)</span>
 <span id="cb8-3"><a></a></span>
 <span id="cb8-4"><a></a><span class="fu">library</span>(wordle)</span>
 <span id="cb8-5"><a></a></span>
-<span id="cb8-6"><a></a><span class="fu">play_wordle</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a></a><span class="fu">play_wordle</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="uqrug-cool-but-useless-competition" class="slide level2">
 <h2>UQRUG Cool but Useless Competition</h2>
@@ -738,7 +738,7 @@ Cowsay will create an ascii creature saying what you want it to
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -888,13 +888,14 @@ Cowsay will create an ascii creature saying what you want it to
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

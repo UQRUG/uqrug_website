@@ -7,12 +7,12 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Raúl Riesco">
   <meta name="dcterms.date" content="2023-09-27">
-  <title>UQRUG – quarto-inputf73553f91b15ee1d</title>
+  <title>UQRUG – quarto-inputfcf75bf63c32a578</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -246,14 +246,14 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <li class="fragment">Independent operations</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>results <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>results <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a><span class="cf">for</span>(num <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
 <span id="cb1-4"><a></a>  {</span>
 <span id="cb1-5"><a></a>    results[num]<span class="ot">&lt;-</span>num<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb1-6"><a></a>  }</span>
 <span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a></a>results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]   1   4   9  16  25  36  49  64  81 100</code></pre>
 </div>
@@ -269,7 +269,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <li class="fragment">Part of r-core.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(parallel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(parallel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="cores-in-our-pc-and-management-of-clusters" class="slide level2">
@@ -281,16 +281,16 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Load the package</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Load the package</span>
 <span id="cb4-2"><a></a>  library(parallel)</span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a>number of cores</span>
 <span id="cb4-5"><a></a>  cores&lt;- detectCores()</span>
 <span id="cb4-6"><a></a>  </span>
 <span id="cb4-7"><a></a>make cluster</span>
-<span id="cb4-8"><a></a>  clust &lt;- makeCluster(cores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-8"><a></a>  clust &lt;- makeCluster(cores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>start created cluster</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>start created cluster</span>
 <span id="cb5-2"><a></a>  registerDoParallel(clust)</span>
 <span id="cb5-3"><a></a>  </span>
 <span id="cb5-4"><a></a>status of the clusters</span>
@@ -298,7 +298,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb5-6"><a></a></span>
 <span id="cb5-7"><a></a>close the cluster</span>
 <span id="cb5-8"><a></a>  stopCluster(cl = clust) </span>
-<span id="cb5-9"><a></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a></a>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="methods-of-paralleization" class="slide level2">
@@ -396,8 +396,8 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <h2><em>foreach</em></h2>
 <p><em>foreach</em> is a package designed for looping. It also allows to combine results in diferent formats.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(foreach)</span>
-<span id="cb6-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb6-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] 2.718282
@@ -407,15 +407,15 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(foreach)</span>
-<span id="cb8-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb8-2"><a></a><span class="fu">foreach</span>(<span class="at">i=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> <span class="fu">exp</span>(i)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.718282 7.389056</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(foreach)</span>
-<span id="cb10-2"><a></a><span class="fu">foreach</span>(<span class="at">a=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, <span class="at">b=</span><span class="fu">rep</span>(<span class="dv">10</span>, <span class="dv">2</span>), <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> {a<span class="sc">+</span>b}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(foreach)</span>
+<span id="cb10-2"><a></a><span class="fu">foreach</span>(<span class="at">a=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, <span class="at">b=</span><span class="fu">rep</span>(<span class="dv">10</span>, <span class="dv">2</span>), <span class="at">.combine=</span><span class="st">'c'</span>) <span class="sc">%do%</span> {a<span class="sc">+</span>b}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11 12</code></pre>
 </div>
@@ -424,7 +424,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <section id="foreach2" class="slide level2">
 <h2><em>foreach</em><sup>1</sup></h2>
 <p>By itself, <em>foreach</em> do not parallelize, but it can be combined with <em>parallel</em> and <em>doParallel</em> to allow paralellization</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>library(foreach)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>library(foreach)</span>
 <span id="cb12-2"><a></a>library(parallel)</span>
 <span id="cb12-3"><a></a>library(doParallel)</span>
 <span id="cb12-4"><a></a></span>
@@ -433,7 +433,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb12-7"><a></a></span>
 <span id="cb12-8"><a></a>foreach(i=1:2, .combine='c') %dopar% exp(i)</span>
 <span id="cb12-9"><a></a></span>
-<span id="cb12-10"><a></a>stopCluster(cl = clust)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-10"><a></a>stopCluster(cl = clust)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.718282 7.389056</code></pre>
@@ -444,7 +444,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <h2>Example</h2>
 <p>Determine which numbers on a sample are primes</p>
 <p>Function:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>isprime &lt;- function(num){ </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>isprime &lt;- function(num){ </span>
 <span id="cb14-2"><a></a>    prime=TRUE </span>
 <span id="cb14-3"><a></a>    i=2                         #I need to start from 2, as prime numbers can only be divided by 1 and themselves.</span>
 <span id="cb14-4"><a></a>    while(i&lt;num){               #The while loop will continue running as long as the value of 'i' is less than the specified number</span>
@@ -455,19 +455,19 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb14-9"><a></a>      i &lt;- i+1 </span>
 <span id="cb14-10"><a></a>    }</span>
 <span id="cb14-11"><a></a>    return(prime) </span>
-<span id="cb14-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-12"><a></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>data (10,000 numbers):</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>listnumbers &lt;- sample(1:100000,10000)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {'r} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>listnumbers &lt;- sample(1:100000,10000)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="for3" class="slide level2">
 <h2><em>for</em><sup>1</sup></h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>primes&lt;- rep(T,10000)   </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>primes&lt;- rep(T,10000)   </span>
 <span id="cb16-2"><a></a></span>
 <span id="cb16-3"><a></a>for(i in 1:length(listnumbers)){</span>
 <span id="cb16-4"><a></a>  primes[i] &lt;- isprime(listnumbers[i])</span>
 <span id="cb16-5"><a></a>}</span>
 <span id="cb16-6"><a></a></span>
-<span id="cb16-7"><a></a>result&lt;-data.frame(number=listnumbers, is_prime=primes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-7"><a></a>result&lt;-data.frame(number=listnumbers, is_prime=primes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.308078 secs"</code></pre>
@@ -476,13 +476,13 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn4"><p>In this script, before actually doing the calculation, I explicitly created a vector with the same dimensions as the final result of the loop output. This is important not only because this particular function needs it, but because it allows a preallocation of memory, speding up the process.</p></li></ol></aside></section>
 <section id="foreach4" class="slide level2">
 <h2><em>foreach</em><sup>1</sup></h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>library(foreach)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>library(foreach)</span>
 <span id="cb18-2"><a></a>   </span>
 <span id="cb18-3"><a></a>primes_fe &lt;-foreach(i = 1:length(listnumbers), .combine="c") %do% { </span>
 <span id="cb18-4"><a></a>                    isprime(listnumbers[i]) </span>
 <span id="cb18-5"><a></a>                    }</span>
 <span id="cb18-6"><a></a></span>
-<span id="cb18-7"><a></a>result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-7"><a></a>result_fe&lt;-data.frame(number=listnumbers, is_prime=primes_fe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 6.629166 secs"</code></pre>
@@ -491,7 +491,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn5"><p>This method is more or less equivalent to for, but in this case is slower because it does not optimize memory preallocation. The main advantage of the forEach syntax is that is shorter and easier to read, which is why some developers prefer it over for. It also allows simple parallelization and a native combination of results that will be handy to reduce code length.</p></li></ol></aside></section>
 <section id="foreach-parallelized" class="slide level2">
 <h2><em>foreach</em> parallelized</h2>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>library(parallel)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>library(parallel)</span>
 <span id="cb20-2"><a></a>library(foreach)</span>
 <span id="cb20-3"><a></a>library(doParallel)</span>
 <span id="cb20-4"><a></a></span>
@@ -505,7 +505,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb20-12"><a></a></span>
 <span id="cb20-13"><a></a>result_par_fe&lt;-data.frame(number=listnumbers, is_prime=primes_par_fe)</span>
 <span id="cb20-14"><a></a></span>
-<span id="cb20-15"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-15"><a></a>parallel::stopCluster(cl = clust) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 2.964536 secs"</code></pre>
@@ -514,9 +514,9 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 </section>
 <section id="sapply-5" class="slide level2">
 <h2><em>sapply</em> <sup>1</sup></h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>primes_sa &lt;- sapply(listnumbers, isprime) </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>primes_sa &lt;- sapply(listnumbers, isprime) </span>
 <span id="cb22-2"><a></a></span>
-<span id="cb22-3"><a></a>result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-3"><a></a>result_sa&lt;-data.frame(number=listnumbers, is_prime=primes_sa)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 5.478974 secs"</code></pre>
@@ -525,7 +525,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <aside><ol class="aside-footnotes"><li id="fn6"><p>apply is more efficient than foreach because it does a memory preallocation step in the background</p></li></ol></aside></section>
 <section id="parsapply" class="slide level2">
 <h2><em>parSapply</em></h2>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>library(parallel)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {`r} number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>library(parallel)</span>
 <span id="cb24-2"><a></a></span>
 <span id="cb24-3"><a></a>cores &lt;- detectCores()     </span>
 <span id="cb24-4"><a></a>clust &lt;- parallel::makeCluster(cores)</span>
@@ -534,7 +534,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
 <span id="cb24-7"><a></a></span>
 <span id="cb24-8"><a></a>result_par_sa&lt;-data.frame(number=listnumbers, is_prime=prime_par_sa)</span>
 <span id="cb24-9"><a></a></span>
-<span id="cb24-10"><a></a>parallel::stopCluster(cl = clust) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-10"><a></a>parallel::stopCluster(cl = clust) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Time difference of 1.725008 secs"</code></pre>
@@ -738,7 +738,7 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -888,13 +888,14 @@ Raúl Riesco <a href="https://orcid.org/0000-0001-8257-7601" class="quarto-title
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
