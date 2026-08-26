@@ -1,0 +1,32 @@
+---
+title: "August 27th – Endurance Sports Analysis using R"
+author: 'Stéphane Guillou'
+date: '2026-08-26'
+image: "/images/uqrug.png"
+slug: aug2026
+categories:
+  - workshop
+tags: [R, drop-in, help, gps, movement, geospatial, sport, spatial, GIS]
+editor: source
+DisableComments: no
+---
+
+For this month's RUG, Raimundo Sanchez will demonstrate **how to use R and geospatial techniques to analyze GPS data from endurance athletes**.
+
+Raimundo is a researcher with a PhD in complex systems engineering, specialising in studying human movement in free living conditions.
+
+We will follow with our usual drop-in, collaborative session.
+
+<p float="left">
+
+<img src="/images/uqrug.png" alt="RUG logo" height="100" hspace="5" vspace="5"/>
+
+</p>
+
+**When:** Thursday 27th of August 2026, 10 am - 12 pm
+
+**Where:** in person (Central Library, St Lucia campus) or online (Zoom)
+
+Sign up to the event [on StudentHub](https://studenthub.uq.edu.au/students/events/detail/6415569).
+
+For more information, reach out to the UQ Library training team for more help: <a href="javascript:void(0);" onclick="copyEvent('copy')" id="copy" title="Click to copy email address">training\@library.uq.edu.au</a>
